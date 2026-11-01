@@ -1,3 +1,28 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Commands
+
+- Build: `dotnet build movie-date.csproj`
+- Run (dev): `dotnet run` — serves on `http://localhost:5069` / `https://localhost:7117`
+- Format: `dotnet format`
+- Dependency vulnerability check: `dotnet list package --vulnerable --include-transitive`
+- Tests: no test project exists yet — see Architecture
+
+## Architecture
+
+Single ASP.NET Core Web API project (`movie-date.csproj`, minimal-API style, target `net10.0`, nullable reference types + implicit usings enabled, root namespace `MovieDate`). Everything currently lives in `Program.cs`, which is still the unmodified scaffold template (the `/weatherforecast` sample endpoint) — no application code has been written yet.
+
+Domain rules, functional requirements, and stack decisions are recorded in `context/foundation/` — read them before implementing instead of asking; don't duplicate their content here:
+- `@context/foundation/prd.md` — functional requirements (FR-001..007), the matching/scoring business logic, access control, non-goals
+- `@context/foundation/tech-stack.md` — chosen starter, deployment target (Fly.io), CI plan
+- `@context/foundation/stack-assessment.md` — agent-friendliness gaps and the planned module layout below
+
+**Module layout rule — follow this when adding any endpoint, do not grow `Program.cs`:** put endpoints in `Endpoints/` (one static class per feature, e.g. `MoviesEndpoints`, exposing `MapXxxEndpoints(this IEndpointRouteBuilder)`), business logic in `Services/` (e.g. `MatchScoringService`, `MatchRecomputeService`), DbContext/entities/seed data in `Data/`, and request/response records in `Contracts/` — endpoints must never return entities directly. This is a deliberate choice compensating for the minimal-API template's lack of a built-in convention (see `stack-assessment.md`), not yet validated by an A/B run — if you catch an agent ignoring it, note that in `context/foundation/lessons.md`.
+
+No database, auth, or frontend exist yet; those remain open decisions tracked in the foundation docs above, not in code.
+
 <!-- BEGIN @przeprogramowani/10x-cli -->
 
 ## 10xDevs AI Toolkit — Module 1, Lesson 4
@@ -36,51 +61,9 @@ The PRD → tech-stack → bootstrap chain ships from Lessons 1–3 (re-included
 - **`/10x-lesson` captures**: one entry per invocation with a short imperative H2 title (the title IS the rule), Context (subsystem / phase / file pattern, specific enough to pattern-match), Problem (what concretely breaks without the rule, ideally with a past incident), Rule (1–2 imperative sentences pasteable verbatim into a future review finding), Applies to (subset of `frame`, `research`, `plan`, `plan-review`, `implement`, `impl-review`, or `all`).
 - **`/10x-lesson` does NOT** edit or remove existing lessons — the file is append-only by design (rewriting recurring rules without thought is the failure mode this convention prevents); it does NOT batch multiple rules per invocation; it does NOT pre-fill fields proactively (the user does the writing — that's the price of capturing rules outside a structured review).
 
-### The inclusion test (the filter for AGENTS.md / CLAUDE.md)
+### Rule-file hygiene
 
-Before you add a rule to any rules-for-AI file, ask: *could the agent know this without this file? Could public training data — books, blogs, repos in this stack — have prepared it for this?* If yes, drop it. If no, keep it. The file is onboarding for an agent that already knows TypeScript / Python / your framework but does NOT know your local conventions.
-
-Belongs:
-- non-obvious project conventions (error-response shape, file naming, allowed import paths)
-- project-specific traps and "embarrassing" workarounds tied to history or dependency bugs
-- referenced canonical files via `@`-paths (e.g. `@src/features/users/user.service.ts` as a pattern reference, not pasted code)
-
-Does NOT belong:
-- mainstream framework documentation
-- README content the agent will read anyway (link with `@README.md`)
-- popular generic advice ("use TypeScript strict mode") that's already enforced by config
-- intention statements ("write clean code", "follow good practices") — convert to a checkable behaviour or drop
-
-### U-shaped attention and granular rules
-
-LLMs attend most strongly to the start and end of context (Lost-in-the-Middle / U-shaped attention). A long monolithic `CLAUDE.md` puts its middle rules in the weakest attention zone. Two practical consequences:
-
-1. **Most important rules go to the top** of any rule file.
-2. **Per-area rules belong next to their code** — nested `AGENTS.md` / `CLAUDE.md` inside `src/api/`, `.cursor/rules/*.mdc` with file globs, etc. Granular files are loaded selectively and arrive whole near the start of their own section, instead of being buried at line 400 of one big file.
-
-`/10x-rule-review` Check 5 (reorder) operationalizes consequence (1); the inclusion test plus directory-level `/10x-agents-md` operationalizes consequence (2).
-
-### The five-pattern calibration drill
-
-Before writing a rule, validate that the agent actually breaks the convention without it. Pick one pattern from your project (error-response shape, file naming, import style, module structure, date handling). Then:
-
-1. Ask the agent to implement against the pattern 3–5 times from a clean state, no rule.
-2. Note where it broke the convention; capture run time, files explored, and visible cost/tokens if the host surfaces them.
-3. Add a 1–3-sentence rule to the appropriate scope (root or area-level).
-4. Re-run the same task in a fresh session and compare convention adherence, time, files, and iterations.
-
-If the agent already trends toward the convention without the rule, you don't need the rule. If it systematically picks the wrong pattern, you've found a high-leverage rule to add. This drill is what "earning a rule from a recurring failure" actually looks like.
-
-### Hierarchy and tool interop
-
-- **Claude Code** loads `CLAUDE.md` from the user dir (`~/.claude/CLAUDE.md`), the repo root, and any subdirectory the agent works under. Deeper files override or supplement higher ones.
-- **Codex** and **GitHub Copilot** load `AGENTS.md` from the current directory upward — closest file wins.
-- One canonical file is preferable to three duplicates. A common pattern: `AGENTS.md` as source of truth, `CLAUDE.md` as a thin Claude-Code shim with `@AGENTS.md` import, `.github/copilot-instructions.md` only if Copilot needs its own additions. Symlink (`ln -s AGENTS.md CLAUDE.md`) is the simplest deduplication when tools require both names.
-- Auto-memory (e.g. Claude Code's `~/.claude/projects/<dir-with-slashes-as-dashes>/memory/MEMORY.md`) is local to the machine and not a substitute for `AGENTS.md`. Team-binding rules live in the repo; auto-memory is a personal cache, periodically reviewable.
-
-### Inner-loop hooks (deterministic feedback without prompting)
-
-Mechanical, non-pickable checks belong in hooks (e.g. Claude Code's `PostToolUse`), not in the rule file. The agent finishes an edit; a formatter or fast lint runs; the result feeds back without you reminding it. Settings template (`settings.json.template`) ships in the lesson pack as the wiring entry point. Keep procedural workflows (deeper review, release checklist, deploy on sandbox) in skills, and reserve hooks for deterministic tool signals.
+One canonical file is preferable to three duplicates. A common pattern: `AGENTS.md` as source of truth, `CLAUDE.md` as a thin Claude-Code shim with `@AGENTS.md` import, `.github/copilot-instructions.md` only if Copilot needs its own additions. Symlink (`ln -s AGENTS.md CLAUDE.md`) is the simplest deduplication when tools require both names.
 
 ### Foundation paths used by this lesson
 
@@ -91,7 +74,7 @@ Mechanical, non-pickable checks belong in hooks (e.g. Claude Code's `PostToolUse
 
 ### Universal language
 
-The shipped skills carry no 10xDevs / cohort / certification references. `/10x-agents-md` discovers from the repo it's invoked in; `/10x-rule-review` is tool-agnostic and treats every file as "a rules-for-AI artifact"; `/10x-lesson` writes one entry shape regardless of project domain. The 5-pattern calibration drill is illustrative — substitute patterns from your own stack.
+The shipped skills carry no 10xDevs / cohort / certification references. `/10x-agents-md` discovers from the repo it's invoked in; `/10x-rule-review` is tool-agnostic and treats every file as "a rules-for-AI artifact"; `/10x-lesson` writes one entry shape regardless of project domain.
 
 Skills must not write to `context/archive/`. Archived changes are immutable; if a resolved target path starts with `context/archive/`, abort with: "This change is archived. Open a new change with `/10x-new` instead."
 
