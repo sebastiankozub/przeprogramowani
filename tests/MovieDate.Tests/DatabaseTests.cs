@@ -9,7 +9,7 @@ namespace MovieDate.Tests;
 public sealed class DatabaseTests(PostgresAppFixture factory)
 {
     [Fact]
-    public async Task Migrate_applies_InitialCreate()
+    public async Task Fixture_migration_applied_InitialCreate()
     {
         await using var scope = factory.Services.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -17,7 +17,6 @@ public sealed class DatabaseTests(PostgresAppFixture factory)
         // Guard: the app must talk to the test container, not the dev DB from appsettings.Development.json.
         Assert.Equal(factory.ConnectionString, db.Database.GetConnectionString());
 
-        await db.Database.MigrateAsync();
         var applied = await db.Database.GetAppliedMigrationsAsync();
 
         Assert.Contains(applied, id => id.EndsWith("_InitialCreate", StringComparison.Ordinal));

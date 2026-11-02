@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using MovieDate.Data;
 using Testcontainers.PostgreSql;
 
 namespace MovieDate.Tests;
@@ -21,7 +22,19 @@ public sealed class PostgresAppFixture : WebApplicationFactory<Program>, IAsyncL
         builder.UseSetting("ConnectionStrings:Default", ConnectionString);
     }
 
-    public Task InitializeAsync() => _postgres.StartAsync();
+    public async Task InitializeAsync()
+    {
+        await _postgres.StartAsync();
+
+        // Migrate once per collection through the same code path as Fly's release_command (--migrate),
+        // so every test starts from the current schema regardless of execution order.
+        var exitCode = await MigrationRunner.RunAsync(Services);
+        if (exitCode != 0)
+        {
+            throw new InvalidOperationException(
+                $"Test database migration failed (MigrationRunner exit code {exitCode}).");
+        }
+    }
 
     async Task IAsyncLifetime.DisposeAsync()
     {

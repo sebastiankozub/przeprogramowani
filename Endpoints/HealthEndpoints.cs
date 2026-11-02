@@ -1,10 +1,19 @@
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using MovieDate.Data;
 
 namespace MovieDate.Endpoints;
 
 public static class HealthEndpoints
 {
     public const string DbTag = "db";
+
+    public static IServiceCollection AddAppHealthChecks(this IServiceCollection services)
+    {
+        services.AddHealthChecks()
+            .AddDbContextCheck<AppDbContext>(tags: [DbTag]);
+
+        return services;
+    }
 
     public static IEndpointRouteBuilder MapHealthEndpoints(this IEndpointRouteBuilder app)
     {
