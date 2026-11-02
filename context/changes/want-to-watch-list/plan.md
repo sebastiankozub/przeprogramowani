@@ -291,11 +291,11 @@ Single-user lists of tens of rows; one indexed query each (PK `(UserId, MovieId)
 
 #### Automated
 
-- [x] 3.1 New release completes
-- [x] 3.2 Prod `/api/watchlist` → `401`
-- [x] 3.3 Prod `/health` → `{"status":"ok"}`
+- [x] 3.1 New release completes — 8974532
+- [x] 3.2 Prod `/api/watchlist` → `401` — 8974532
+- [x] 3.3 Prod `/health` → `{"status":"ok"}` — 8974532
 
 #### Manual
 
-- [x] 3.4 Prod flow: add, mark watched, remove; survives reload
-- [x] 3.5 `deploy-plan.md` updated with the new known-good release
+- [x] 3.4 Prod flow: add, mark watched, remove; survives reload — 8974532
+- [x] 3.5 `deploy-plan.md` updated with the new known-good release — 8974532
