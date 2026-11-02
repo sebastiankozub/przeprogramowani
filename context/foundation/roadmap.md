@@ -3,7 +3,7 @@ project: MovieDate
 version: 1
 status: draft                    # draft | active | locked
 created: 2026-11-02
-updated: 2026-11-03
+updated: 2026-11-02
 prd_version: 1
 main_goal: speed
 top_blocker: decisions
@@ -45,7 +45,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | done |
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | done |
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | proposed |
-| S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | in-progress |
+| S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | done |
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | proposed |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | proposed |
 | S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
@@ -143,7 +143,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Low; reuses the movie catalog and picker from S-02. Kept separate so S-02 stays a single user action, and so the recompute trigger (S-06) has both inputs in place.
-- **Status:** in-progress
+- **Status:** done
 
 ### S-05: Ranked match list
 
@@ -237,3 +237,4 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **F-01: (foundation) the deployed app connects to a managed Postgres outside Fly using a secret connection string, schema migrations are applied on deploy, and a database health check passes in production; local development runs the same database engine in a container.** — Archived 2026-11-02 → `context/archive/2026-11-02-prod-postgres-connection/`. Lesson: `context/foundation/lessons.md` → "Keep migrations backward-compatible with the previous release".
 - **S-01: user can register with email + password, log in, log out, and land on a gated home page; an unauthenticated visitor hitting any product route is sent to login.** — Archived 2026-11-02 → `context/archive/2026-11-02-register-and-login/`. Lesson: `context/foundation/lessons.md` → "Key per-user data on the user id, never on the email claim".
 - **S-02: user can search the local movie catalog, add a watched movie with a rating, edit the rating, remove it, and see their rated list.** — Archived 2026-11-02 → `context/archive/2026-11-02-rate-watched-movies/`. Lesson: —.
+- **S-04: user can add a catalog movie to their "want to watch" list, remove it, and see the list.** — Archived 2026-11-02 → `context/archive/2026-11-03-want-to-watch-list/`. Lesson: —.
