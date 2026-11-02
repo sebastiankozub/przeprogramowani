@@ -186,6 +186,9 @@ public sealed class WatchedMoviesTests(PostgresAppFixture factory)
 
         Assert.Equal(HttpStatusCode.Created, (await Add(alice, movieId, 7)).StatusCode);
         Assert.Equal(HttpStatusCode.Created, (await Add(bob, movieId, 3)).StatusCode);
+
+        Assert.Equal(7, Assert.Single(await List(alice)).Rating);
+        Assert.Equal(3, Assert.Single(await List(bob)).Rating);
     }
 
     [Fact]

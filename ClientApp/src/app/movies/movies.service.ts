@@ -27,7 +27,15 @@ const SESSION_EXPIRED = 'Sesja wygasła. Zaloguj się ponownie.';
 export const DUPLICATE_MESSAGE = 'Ten film jest już na Twojej liście — zmień ocenę poniżej.';
 
 /** Error carrying a user-facing (Polish) message, emitted by MoviesService methods. */
-export class MoviesError extends Error {}
+export class MoviesError extends Error {
+  /** HTTP status of the failed call (0 = network error or non-HTTP failure). */
+  constructor(
+    message: string,
+    readonly status = 0,
+  ) {
+    super(message);
+  }
+}
 
 /** Thin wrapper over the movie catalog and the signed-in user's watched list. */
 @Injectable({ providedIn: 'root' })
@@ -49,6 +57,7 @@ export class MoviesService {
   add(movieId: number, rating: number): Observable<WatchedMovie> {
     return this.http.post<WatchedMovie>(WATCHED_API, { movieId, rating }).pipe(
       mapErrors({
+        badRequest: INVALID_RATING,
         notFound: 'Nie znaleziono tego filmu w katalogu.',
         fallback: 'Nie udało się dodać filmu.',
       }),
@@ -58,6 +67,7 @@ export class MoviesService {
   updateRating(movieId: number, rating: number): Observable<WatchedMovie> {
     return this.http.put<WatchedMovie>(`${WATCHED_API}/${movieId}`, { rating }).pipe(
       mapErrors({
+        badRequest: INVALID_RATING,
         notFound: 'Tego filmu nie ma już na Twojej liście.',
         fallback: 'Nie udało się zmienić oceny.',
       }),
@@ -76,6 +86,8 @@ export class MoviesService {
 }
 
 interface ErrorMessages {
+  /** Only operations that send a rating can fail validation; others fall back. */
+  badRequest?: string;
   notFound?: string;
   fallback: string;
 }
@@ -83,7 +95,7 @@ interface ErrorMessages {
 /** Converts HTTP failures into MoviesError with a Polish message (401 redirect is the interceptor's job). */
 function mapErrors<T>(messages: ErrorMessages) {
   return catchError<T, Observable<never>>((err: unknown) =>
-    throwError(() => new MoviesError(errorMessage(err, messages))),
+    throwError(() => new MoviesError(errorMessage(err, messages), err instanceof HttpErrorResponse ? err.status : 0)),
   );
 }
 
@@ -95,7 +107,7 @@ function errorMessage(err: unknown, messages: ErrorMessages): string {
     case 0:
       return NETWORK_ERROR;
     case 400:
-      return INVALID_RATING;
+      return messages.badRequest ?? messages.fallback;
     case 401:
       return SESSION_EXPIRED;
     case 404:

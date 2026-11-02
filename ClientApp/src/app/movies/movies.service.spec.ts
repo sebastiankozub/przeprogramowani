@@ -56,5 +56,16 @@ describe('MoviesService', () => {
     const err = await call.catch((e: unknown) => e);
     expect(err).toBeInstanceOf(MoviesError);
     expect((err as MoviesError).message).toBe(DUPLICATE_MESSAGE);
+    expect((err as MoviesError).status).toBe(409);
+  });
+
+  it('shows the rating message for a 400 only on operations that send a rating', async () => {
+    const add = firstValueFrom(service.add(1, 11)).catch((e: unknown) => e);
+    http.expectOne('/api/watched').flush({}, { status: 400, statusText: 'Bad Request' });
+    expect(((await add) as MoviesError).message).toContain('od 1 do 10');
+
+    const search = firstValueFrom(service.search('zz')).catch((e: unknown) => e);
+    http.expectOne((r) => r.url === '/api/movies').flush({}, { status: 400, statusText: 'Bad Request' });
+    expect(((await search) as MoviesError).message).toBe('Nie udało się wyszukać filmów.');
   });
 });

@@ -88,6 +88,40 @@ public sealed class MoviesTests(PostgresAppFixture factory)
         Assert.Empty(results);
     }
 
+    [Fact]
+    public async Task Search_matches_literal_percent_and_underscore_in_titles()
+    {
+        // Two titles: one with a literal "_x%", and a decoy that an unescaped "_x%" pattern would also match
+        // ("_" = any char, "%" = any run). (Avoids "%_"/"%%" so the empty-result theory above stays valid.)
+        var token = Guid.NewGuid().ToString("N")[..8];
+        await using (var scope = factory.Services.CreateAsyncScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            db.Movies.AddRange(
+                new Movie { WikidataId = $"QT-{token}a", Title = $"Zq{token}_x%Zq literal" },
+                new Movie { WikidataId = $"QT-{token}b", Title = $"Zq{token}AxBZq decoy" });
+            await db.SaveChangesAsync();
+        }
+
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        var results = await Search(client, $"zq{token}_x%zq");
+
+        var found = Assert.Single(results);
+        Assert.Equal($"Zq{token}_x%Zq literal", found.Title);
+    }
+
+    [Fact]
+    public async Task Search_caps_overlong_query()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        // 100-character cap: the first 100 characters ("godfather" + padding) still match nothing, but must not fail.
+        var results = await Search(client, "godfather" + new string('x', 500));
+
+        Assert.Empty(results);
+    }
+
     [Theory]
     [InlineData("o")]
     [InlineData("  o  ")]

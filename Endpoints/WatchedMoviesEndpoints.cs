@@ -43,7 +43,8 @@ public static class WatchedMoviesEndpoints
 
                 var result = await service.AddAsync(userId, request.MovieId, request.Rating, ct);
                 return result.Outcome == WatchedMovieOutcome.Success
-                    ? Results.Created($"{RoutePrefix}/{request.MovieId}", result.Value)
+                    // 201 without a Location header: there is no GET for a single entry (only PUT/DELETE).
+                    ? Results.Json(result.Value, statusCode: StatusCodes.Status201Created)
                     : ToErrorResult(result.Outcome);
             })
             .WithName("AddWatchedMovie");

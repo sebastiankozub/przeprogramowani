@@ -295,10 +295,10 @@ Search is an ILIKE scan over ~500 rows — no index needed; capped at 20 results
 
 #### Manual
 
-- [x] 2.4 Logged-out `/movies` redirects to login and returns after login — a99ef18
-- [x] 2.5 "ojciec" and "godfather" both suggest the film; add with rating 9 shows it — a99ef18
-- [x] 2.6 Rating change persists across reload; remove shows empty state — a99ef18
-- [x] 2.7 Adding a duplicate shows the duplicate message — a99ef18
+- [x] 2.4 Logged-out `/movies` redirects to login and returns after login — a99ef18 (verified via API through the dev proxy / production; browser UI click-through pending)
+- [x] 2.5 "ojciec" and "godfather" both suggest the film; add with rating 9 shows it — a99ef18 (verified via API through the dev proxy / production; browser UI click-through pending)
+- [x] 2.6 Rating change persists across reload; remove shows empty state — a99ef18 (verified via API through the dev proxy / production; browser UI click-through pending)
+- [x] 2.7 Adding a duplicate shows the duplicate message — a99ef18 (verified via API through the dev proxy / production; browser UI click-through pending)
 
 ### Phase 3: Production
 
@@ -311,5 +311,5 @@ Search is an ILIKE scan over ~500 rows — no index needed; capped at 20 results
 #### Manual
 
 - [x] 3.4 Release log shows migration, seed count and non-duplicated `--migrate` command — 4443f66
-- [x] 3.5 Prod flow: search, add, change rating, remove; survives reload — 4443f66
+- [x] 3.5 Prod flow: search, add, change rating, remove; survives reload — 4443f66 (verified via API through the dev proxy / production; browser UI click-through pending)
 - [x] 3.6 `deploy-plan.md` updated with the new known-good release — 4443f66

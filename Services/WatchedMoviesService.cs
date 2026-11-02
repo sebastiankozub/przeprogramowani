@@ -88,6 +88,12 @@ public sealed class WatchedMoviesService(AppDbContext db)
             // A concurrent add of the same movie by the same user (e.g. a double submit) lost the race.
             return WatchedMovieResult.Duplicate;
         }
+        catch (DbUpdateException ex) when (ex.InnerException is PostgresException { SqlState: PostgresErrorCodes.ForeignKeyViolation })
+        {
+            // The user (or the movie) was deleted between the checks above and the insert — e.g. a deleted
+            // account whose cookie is still valid until the next security-stamp check.
+            return WatchedMovieResult.NotFound;
+        }
 
         return WatchedMovieResult.Ok(ToResponse(watched, movie));
     }

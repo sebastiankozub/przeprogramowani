@@ -1,6 +1,6 @@
 # Movie catalog seed for MovieDate (Data/Seed/movies.json).
-# Manual corrections applied to movies.json after normalization (re-apply if regenerated):
-#   Q165713 originalTitle "…Phantom Menace9999" (Wikidata vandalism) -> "Star Wars: Episode I – The Phantom Menace".
+# Normalize the result with Data/Seed/normalize.mjs (see its header); it also applies manual
+# corrections for upstream Wikidata errors (e.g. Q165713 "…Phantom Menace9999").
 # Top 500 films (instance of Q11424) by number of Wikipedia sitelinks, with the Polish and English
 # labels (title = Polish, fallback English — applied during normalization), the original title (P1476)
 # and the earliest plausible publication year (P577).

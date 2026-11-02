@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
-import { catchError, debounceTime, distinctUntilChanged, firstValueFrom, map, of, startWith, switchMap } from 'rxjs';
+import { catchError, debounceTime, distinctUntilChanged, firstValueFrom, map, of, startWith, switchMap, tap } from 'rxjs';
 import { MAX_RATING, MIN_RATING, Movie, MoviesError, MoviesService, WatchedMovie } from './movies.service';
 
 const SEARCH_DEBOUNCE_MS = 300;
@@ -48,6 +48,8 @@ export class MoviesComponent implements OnInit {
 
   /** Inline message for the last failed operation. */
   protected readonly error = signal<string | null>(null);
+  /** The message currently shown because of a failed search, cleared by the next successful one. */
+  private searchError: string | null = null;
 
   protected readonly options = toSignal(
     this.movieControl.valueChanges.pipe(
@@ -59,8 +61,10 @@ export class MoviesComponent implements OnInit {
         q.length < MIN_QUERY_LENGTH
           ? of<Movie[]>([])
           : this.movies.search(q).pipe(
+              tap(() => this.clearSearchError()),
               catchError((err: unknown) => {
-                this.error.set(errorMessage(err));
+                this.searchError = errorMessage(err);
+                this.error.set(this.searchError);
                 return of<Movie[]>([]);
               }),
             ),
@@ -108,6 +112,8 @@ export class MoviesComponent implements OnInit {
       this.form.reset();
     } catch (err) {
       this.error.set(errorMessage(err));
+      // 409: the entry exists but may be missing locally (added in another tab) — show the server's list.
+      await this.reloadIfStale(err, 409);
     } finally {
       this.adding.set(false);
     }
@@ -120,11 +126,13 @@ export class MoviesComponent implements OnInit {
     this.error.set(null);
     try {
       const updated = await firstValueFrom(this.movies.updateRating(movieId, rating));
-      this.watched.update((list) => list.map((entry) => (entry.movie.id === movieId ? updated : entry)));
+      // The server lists most recently updated first — mirror that so a reload does not reorder.
+      this.watched.update((list) => [updated, ...list.filter((entry) => entry.movie.id !== movieId)]);
     } catch (err) {
       // Show the rating that is actually stored.
       select.value = item.rating;
       this.error.set(errorMessage(err));
+      await this.reloadIfStale(err, 404);
     } finally {
       this.setBusy(movieId, false);
     }
@@ -139,9 +147,29 @@ export class MoviesComponent implements OnInit {
       this.watched.update((list) => list.filter((entry) => entry.movie.id !== movieId));
     } catch (err) {
       this.error.set(errorMessage(err));
+      await this.reloadIfStale(err, 404);
     } finally {
       this.setBusy(movieId, false);
     }
+  }
+
+  /** After a status that means "local list is out of date", replace it with the server's list (error stays shown). */
+  private async reloadIfStale(err: unknown, staleStatus: number): Promise<void> {
+    if (!(err instanceof MoviesError) || err.status !== staleStatus) {
+      return;
+    }
+    try {
+      this.watched.set(await firstValueFrom(this.movies.listWatched()));
+    } catch {
+      // Keep the current list; the original error message is already shown.
+    }
+  }
+
+  private clearSearchError(): void {
+    if (this.searchError !== null && this.error() === this.searchError) {
+      this.error.set(null);
+    }
+    this.searchError = null;
   }
 
   protected isBusy(movieId: number): boolean {

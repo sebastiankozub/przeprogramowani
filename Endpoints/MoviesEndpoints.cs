@@ -9,6 +9,7 @@ public static class MoviesEndpoints
     public const string RoutePrefix = "/api/movies";
     public const int MinQueryLength = 2;
     public const int MaxResults = 20;
+    public const int MaxQueryLength = 100;
 
     private const string LikeEscape = "\\";
 
@@ -23,6 +24,12 @@ public static class MoviesEndpoints
                 if (term.Length < MinQueryLength)
                 {
                     return Results.Ok(Array.Empty<MovieResponse>());
+                }
+
+                // No real title is longer; capping bounds the ILIKE pattern size.
+                if (term.Length > MaxQueryLength)
+                {
+                    term = term[..MaxQueryLength];
                 }
 
                 var escaped = EscapeLikePattern(term);
