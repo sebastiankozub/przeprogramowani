@@ -296,14 +296,14 @@ Deploy, verify the full flow on production across both machines, and record it.
 
 #### Automated
 
-- [x] 3.1 New release completes
-- [x] 3.2 Prod `/api/auth/me` → `401`
-- [x] 3.3 Prod `/health` → `{"status":"ok"}`
+- [x] 3.1 New release completes — 9e0b945
+- [x] 3.2 Prod `/api/auth/me` → `401` — 9e0b945
+- [x] 3.3 Prod `/health` → `{"status":"ok"}` — 9e0b945
 
 #### Manual
 
-- [x] 3.4 Release log shows `AddIdentity` applied and no duplicated command prefix
-- [x] 3.5 Prod flow: register, home, reload keeps session, logout, gated redirect
-- [x] 3.6 Cookie accepted by each of the 2 machines (`fly-force-instance-id`)
-- [x] 3.7 Session survives restart of both machines
-- [x] 3.8 `deploy-plan.md` updated with the new known-good release
+- [x] 3.4 Release log shows `AddIdentity` applied and no duplicated command prefix — 9e0b945
+- [x] 3.5 Prod flow: register, home, reload keeps session, logout, gated redirect — 9e0b945
+- [x] 3.6 Cookie accepted by each of the 2 machines (`fly-force-instance-id`) — 9e0b945
+- [x] 3.7 Session survives restart of both machines — 9e0b945
+- [x] 3.8 `deploy-plan.md` updated with the new known-good release — 9e0b945
