@@ -274,16 +274,16 @@ Search is an ILIKE scan over ~500 rows — no index needed; capped at 20 results
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddMoviesAndRatings` exists and is additive
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 Local migrate applies the migration and seeds ~500 movies; second run inserts 0
-- [x] 1.5 `/api/movies?q=god` → `401` with the app running
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 089592d
+- [x] 1.2 Migration `AddMoviesAndRatings` exists and is additive — 089592d
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 089592d
+- [x] 1.4 Local migrate applies the migration and seeds ~500 movies; second run inserts 0 — 089592d
+- [x] 1.5 `/api/movies?q=god` → `401` with the app running — 089592d
 
 #### Manual
 
-- [x] 1.6 Search by Polish and original title; add/update/delete per contract via `movie-date.http`
-- [x] 1.7 `movies.json` spot-check: Polish titles correct, no empty titles
+- [x] 1.6 Search by Polish and original title; add/update/delete per contract via `movie-date.http` — 089592d
+- [x] 1.7 `movies.json` spot-check: Polish titles correct, no empty titles — 089592d
 
 ### Phase 2: Frontend — /movies screen
 
