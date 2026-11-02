@@ -304,15 +304,15 @@ First migration on an empty Neon database; nothing to preserve. Rollback of a ba
 
 #### Automated
 
-- [x] 3.1 `fly.toml` contains `release_command` under `[deploy]`
-- [x] 3.2 Deploy workflow run completes `success`
-- [x] 3.3 Prod `/health/db` → `200`
-- [x] 3.4 Prod `/health` → `{"status":"ok"}`
-- [x] 3.5 Prod SPA fallback → `200`
+- [x] 3.1 `fly.toml` contains `release_command` under `[deploy]` — 43f221d
+- [x] 3.2 Deploy workflow run completes `success` — 43f221d
+- [x] 3.3 Prod `/health/db` → `200` — 43f221d
+- [x] 3.4 Prod `/health` → `{"status":"ok"}` — 43f221d
+- [x] 3.5 Prod SPA fallback → `200` — 43f221d
 
 #### Manual
 
-- [x] 3.6 `fly logs` shows the release machine applying migrations before rollout
-- [x] 3.7 Neon console shows `__EFMigrationsHistory` with `InitialCreate`
-- [x] 3.8 Neon compute suspends after ~5 minutes idle
-- [x] 3.9 `deploy-plan.md` updated with the new known-good image reference
+- [x] 3.6 `fly logs` shows the release machine applying migrations before rollout — 43f221d
+- [x] 3.7 Neon console shows `__EFMigrationsHistory` with `InitialCreate` — 43f221d
+- [x] 3.8 Neon compute suspends after ~5 minutes idle — 43f221d
+- [x] 3.9 `deploy-plan.md` updated with the new known-good image reference — 43f221d
