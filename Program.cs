@@ -1,10 +1,22 @@
+using MovieDate.Data;
+using MovieDate.Endpoints;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddAppDatabase(builder.Configuration, builder.Environment);
+builder.Services.AddHealthChecks()
+    .AddDbContextCheck<AppDbContext>(tags: [HealthEndpoints.DbTag]);
 
 var app = builder.Build();
+
+// `dotnet movie-date.dll --migrate`: apply pending migrations and exit without starting the web server.
+if (args.Contains(MigrationRunner.Flag))
+{
+    return await MigrationRunner.RunAsync(app.Services);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -16,8 +28,7 @@ if (app.Environment.IsDevelopment())
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.MapGet("/health", () => Results.Ok(new { status = "ok" }))
-    .WithName("HealthCheck");
+app.MapHealthEndpoints();
 
 var summaries = new[]
 {
@@ -42,6 +53,7 @@ app.MapGet("/weatherforecast", () =>
 app.MapFallbackToFile("index.html"); // SPA fallback — must stay last so it doesn't swallow /health or /api/*.
 
 app.Run();
+return 0;
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {

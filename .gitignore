@@ -483,3 +483,5 @@ $RECYCLE.BIN/
 
 # Stray local screenshots
 Screenshot*.png
+.neon
+.env.local

@@ -10,3 +10,8 @@ context/
 ClientApp/node_modules/
 ClientApp/dist/
 ClientApp/.angular/
+.env
+.env.*
+.neon
+node_modules/
+tests/

@@ -1,0 +1,20 @@
+# Local development database only — credentials below are dev-only and must never be used elsewhere.
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: moviedate
+      POSTGRES_PASSWORD: moviedate_dev
+      POSTGRES_DB: moviedate
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U moviedate -d moviedate"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db-data:
