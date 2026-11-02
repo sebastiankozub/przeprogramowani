@@ -42,7 +42,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | ID   | Change ID                | Outcome (user can …)                                                                 | Prerequisites    | PRD refs                          | Status   |
 | ---- | ------------------------ | ------------------------------------------------------------------------------------ | ---------------- | --------------------------------- | -------- |
 | F-01 | prod-postgres-connection | (foundation) production app reads/writes a managed Postgres; schema migrates on deploy | —                | FR-001, NFR-03                    | done |
-| S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | proposed |
+| S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | in-progress |
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | proposed |
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | proposed |
 | S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | proposed |
@@ -104,7 +104,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Unknowns:**
   - Is OAuth sign-in required for MVP, or does email + password satisfy FR-001? — Owner: user. Block: no (email + password first; OAuth parked unless answered otherwise).
 - **Risk:** Every later slice is per-user, so identity must exist first; the risk is the SPA ↔ API session handshake, which is easiest to debug while the app has a single feature.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-02: Rate watched movies
 

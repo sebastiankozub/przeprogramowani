@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddAppDatabase(builder.Configuration, builder.Environment);
 builder.Services.AddAppHealthChecks();
+builder.Services.AddAppAuth(builder.Environment);
 
 var app = builder.Build();
 
@@ -27,7 +28,11 @@ if (app.Environment.IsDevelopment())
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapHealthEndpoints();
+app.MapAuthEndpoints();
 
 var summaries = new[]
 {

@@ -4,3 +4,30 @@ GET {{MovieDate_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+### Auth — register (password: min 8 chars, no class requirements)
+POST {{MovieDate_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "password1"
+}
+
+### Auth — login with cookie (expect Set-Cookie: HttpOnly; SameSite=Strict)
+POST {{MovieDate_HostAddress}}/api/auth/login?useCookies=true
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "password1"
+}
+
+### Auth — current user (200 with cookie, 401 without)
+GET {{MovieDate_HostAddress}}/api/auth/me
+Accept: application/json
+
+### Auth — logout (204; 401 when not signed in)
+POST {{MovieDate_HostAddress}}/api/auth/logout
+
+###
