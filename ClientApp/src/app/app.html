@@ -1,5 +1,20 @@
 <mat-toolbar>
   <span>MovieDate</span>
+  @if (user()) {
+    <nav class="app-nav">
+      <a
+        mat-button
+        routerLink="/"
+        routerLinkActive="app-nav-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        >Start</a
+      >
+      <a mat-button routerLink="/movies" routerLinkActive="app-nav-active" ariaCurrentWhenActive="page"
+        >Obejrzane filmy</a
+      >
+    </nav>
+  }
 </mat-toolbar>
 <main>
   <router-outlet />

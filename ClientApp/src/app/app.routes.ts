@@ -8,5 +8,11 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent, title: 'Logowanie' },
   { path: 'register', component: RegisterComponent, title: 'Rejestracja' },
   { path: '', component: HomeComponent, canActivate: [authGuard], pathMatch: 'full' },
+  {
+    path: 'movies',
+    loadComponent: () => import('./movies/movies.component').then((m) => m.MoviesComponent),
+    canActivate: [authGuard],
+    title: 'Obejrzane filmy',
+  },
   { path: '**', redirectTo: '' },
 ];

@@ -1,0 +1,77 @@
+<section class="movies">
+  <h1>Obejrzane filmy</h1>
+
+  <form class="movies-add" [formGroup]="form" (ngSubmit)="add()">
+    <mat-form-field class="movies-search">
+      <mat-label>Szukaj filmu</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="movie"
+        [matAutocomplete]="auto"
+        placeholder="Wpisz co najmniej 2 znaki"
+      />
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayMovie">
+        @for (movie of options(); track movie.id) {
+          <mat-option [value]="movie">{{ movieLabel(movie) }}</mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="movies-rating">
+      <mat-label>Ocena</mat-label>
+      <mat-select formControlName="rating">
+        @for (rating of ratings; track rating) {
+          <mat-option [value]="rating">{{ rating }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <button mat-flat-button type="submit" [disabled]="!canAdd()">Dodaj</button>
+  </form>
+
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+
+  @if (loaded()) {
+    @if (watched().length === 0) {
+      <p>Nie oceniłeś jeszcze żadnego filmu.</p>
+    } @else {
+      <ul class="movies-list">
+        @for (item of watched(); track item.movie.id) {
+          <li class="movies-item">
+            <div class="movies-item-text">
+              <strong>{{ item.movie.title }}</strong>
+              @if (item.movie.originalTitle && item.movie.originalTitle !== item.movie.title) {
+                <span>{{ item.movie.originalTitle }}</span>
+              }
+              @if (item.movie.year) {
+                <span>{{ item.movie.year }}</span>
+              }
+            </div>
+            <mat-form-field class="movies-rating" subscriptSizing="dynamic">
+              <mat-label>Ocena</mat-label>
+              <mat-select
+                #ratingSelect
+                [value]="item.rating"
+                [disabled]="isBusy(item.movie.id)"
+                (selectionChange)="changeRating(item, ratingSelect)"
+              >
+                @for (rating of ratings; track rating) {
+                  <mat-option [value]="rating">{{ rating }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+            <button
+              mat-stroked-button
+              type="button"
+              [disabled]="isBusy(item.movie.id)"
+              (click)="remove(item)"
+            >
+              Usuń
+            </button>
+          </li>
+        }
+      </ul>
+    }
+  }
+</section>

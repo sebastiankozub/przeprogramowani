@@ -1,11 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthError, AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-home',
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, RouterLink],
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
