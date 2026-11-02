@@ -258,15 +258,15 @@ Single-user lists of tens of rows; one indexed query each (PK `(UserId, MovieId)
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddWatchlist` exists and is additive
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 Local migrate applies `AddWatchlist`
-- [x] 1.5 `/api/watchlist` → `401` with the app running
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 1949428
+- [x] 1.2 Migration `AddWatchlist` exists and is additive — 1949428
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 1949428
+- [x] 1.4 Local migrate applies `AddWatchlist` — 1949428
+- [x] 1.5 `/api/watchlist` → `401` with the app running — 1949428
 
 #### Manual
 
-- [x] 1.6 Add, list, mark watched, remove per contract via `movie-date.http`
+- [x] 1.6 Add, list, mark watched, remove per contract via `movie-date.http` — 1949428
 
 ### Phase 2: Frontend — /watchlist screen
 
