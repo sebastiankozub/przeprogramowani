@@ -10,6 +10,7 @@ builder.Services.AddAppDatabase(builder.Configuration, builder.Environment);
 builder.Services.AddAppHealthChecks();
 builder.Services.AddAppAuth(builder.Environment);
 builder.Services.AddAppWatchedMovies();
+builder.Services.AddAppWatchlist();
 
 var app = builder.Build();
 
@@ -36,6 +37,7 @@ app.MapHealthEndpoints();
 app.MapAuthEndpoints();
 app.MapMoviesEndpoints();
 app.MapWatchedMoviesEndpoints();
+app.MapWatchlistEndpoints();
 
 var summaries = new[]
 {

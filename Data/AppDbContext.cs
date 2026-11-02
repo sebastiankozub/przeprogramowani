@@ -14,6 +14,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
 
     public DbSet<WatchedMovie> WatchedMovies => Set<WatchedMovie>();
 
+    public DbSet<WatchlistItem> WatchlistItems => Set<WatchlistItem>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -45,6 +47,23 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
             watched.ToTable(t => t.HasCheckConstraint(
                 "CK_WatchedMovies_Rating",
                 $"\"Rating\" BETWEEN {WatchedMovie.MinRating} AND {WatchedMovie.MaxRating}"));
+        });
+
+        builder.Entity<WatchlistItem>(item =>
+        {
+            item.HasKey(w => new { w.UserId, w.MovieId });
+
+            // Keyed on AspNetUsers.Id (never the email) — deleting the account removes its watchlist.
+            item.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(w => w.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Catalog rows are never deleted while on a watchlist.
+            item.HasOne(w => w.Movie)
+                .WithMany()
+                .HasForeignKey(w => w.MovieId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
     }
 }

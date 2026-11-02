@@ -3,7 +3,7 @@ project: MovieDate
 version: 1
 status: draft                    # draft | active | locked
 created: 2026-11-02
-updated: 2026-11-02
+updated: 2026-11-03
 prd_version: 1
 main_goal: speed
 top_blocker: decisions
@@ -45,7 +45,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | done |
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | done |
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | proposed |
-| S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | proposed |
+| S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | in-progress |
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | proposed |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | proposed |
 | S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
@@ -143,7 +143,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Low; reuses the movie catalog and picker from S-02. Kept separate so S-02 stays a single user action, and so the recompute trigger (S-06) has both inputs in place.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-05: Ranked match list
 

@@ -67,3 +67,29 @@ Content-Type: application/json
 DELETE {{MovieDate_HostAddress}}/api/watched/{{movieId}}
 
 ###
+
+### Watchlist — my want-to-watch list (most recently added first)
+GET {{MovieDate_HostAddress}}/api/watchlist
+Accept: application/json
+
+### Watchlist — add (201; 404 unknown movie; 409 already on the watchlist)
+POST {{MovieDate_HostAddress}}/api/watchlist
+Content-Type: application/json
+
+{
+  "movieId": {{movieId}}
+}
+
+### Watchlist — mark watched: moves the entry to /api/watched with a rating
+### (200; 404 not on my watchlist; 400 rating outside 1–10; 409 already rated — entry stays on the watchlist)
+POST {{MovieDate_HostAddress}}/api/watchlist/{{movieId}}/watched
+Content-Type: application/json
+
+{
+  "rating": 8
+}
+
+### Watchlist — remove (204; 404 when not on my watchlist)
+DELETE {{MovieDate_HostAddress}}/api/watchlist/{{movieId}}
+
+###

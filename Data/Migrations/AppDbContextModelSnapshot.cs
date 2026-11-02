@@ -297,6 +297,24 @@ namespace MovieDate.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MovieDate.Data.WatchlistItem", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset>("AddedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("UserId", "MovieId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("WatchlistItems");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -349,6 +367,23 @@ namespace MovieDate.Data.Migrations
                 });
 
             modelBuilder.Entity("MovieDate.Data.WatchedMovie", b =>
+                {
+                    b.HasOne("MovieDate.Data.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("MovieDate.Data.WatchlistItem", b =>
                 {
                     b.HasOne("MovieDate.Data.Movie", "Movie")
                         .WithMany()
