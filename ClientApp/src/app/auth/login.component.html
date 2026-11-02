@@ -18,10 +18,11 @@
         <input matInput type="password" formControlName="password" autocomplete="current-password" />
         @if (form.controls.password.hasError('required')) {
           <mat-error>Podaj hasło.</mat-error>
-        } @else if (form.controls.password.hasError('minlength')) {
-          <mat-error>Hasło musi mieć co najmniej 8 znaków.</mat-error>
         }
       </mat-form-field>
+      @if (registered) {
+        <p role="status">Konto zostało utworzone. Zaloguj się.</p>
+      }
       @if (error(); as message) {
         <p class="auth-error" role="alert">{{ message }}</p>
       }

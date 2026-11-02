@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
-import { AuthError, AuthService } from './auth.service';
+import { AccountCreatedError, AuthError, AuthService } from './auth.service';
 
 @Component({
   selector: 'app-register',
@@ -34,6 +34,10 @@ export class RegisterComponent {
       await this.auth.register(this.form.getRawValue());
       await this.router.navigateByUrl('/');
     } catch (err) {
+      if (err instanceof AccountCreatedError) {
+        await this.router.navigate(['/login'], { queryParams: { registered: 1 } });
+        return;
+      }
       this.error.set(err instanceof AuthError ? err.message : 'Wystąpił nieoczekiwany błąd.');
     } finally {
       this.pending.set(false);

@@ -258,6 +258,12 @@ Deploy, verify the full flow on production across both machines, and record it.
 - Prior change: `context/archive/2026-11-02-prod-postgres-connection/`
 - Patterns: `Endpoints/HealthEndpoints.cs` (Add/Map extension pair), `tests/MovieDate.Tests/PostgresAppFixture.cs`
 
+## Review Addenda (impl-review 2026-11-02)
+
+- `options.User.RequireUniqueEmail = true` was added (not planned); duplicate registration returns both `DuplicateUserName` and `DuplicateEmail`. Accepted — the enumeration risk in "What We're NOT Doing" is unchanged.
+- Angular 22's `ng add @angular/material` generated a custom M3 `mat.theme()` (`src/material-theme.scss`, azure) instead of a prebuilt CSS theme, and `index.html` loads Roboto + Material Symbols from Google Fonts — an external runtime dependency. Accepted as schematic output.
+- Added after review: functional `authInterceptor` (401 from product APIs → clear session, redirect to `/login?returnUrl=…`); logout keeps the session on non-401 errors; login takes the email from `/me`; login form validates `required` only; register-succeeded-but-login-failed → `/login?registered=1`.
+
 ## Progress
 
 > Convention: `- [ ]` pending, `- [x]` done. Append ` — <commit sha>` when a step lands. Do not rename step titles. See `references/progress-format.md`.
@@ -302,7 +308,7 @@ Deploy, verify the full flow on production across both machines, and record it.
 
 #### Manual
 
-- [x] 3.4 Release log shows `AddIdentity` applied and no duplicated command prefix — 9e0b945
+- [x] 3.4 Release log shows `AddIdentity` applied and no duplicated command prefix — 9e0b945 (partially verified: the release machine's `Preparing to run` line had rotated out of the log buffer; AddIdentity output and single-command web machines were observed — confirm on next deploy)
 - [x] 3.5 Prod flow: register, home, reload keeps session, logout, gated redirect — 9e0b945
 - [x] 3.6 Cookie accepted by each of the 2 machines (`fly-force-instance-id`) — 9e0b945
 - [x] 3.7 Session survives restart of both machines — 9e0b945

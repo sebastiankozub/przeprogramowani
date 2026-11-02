@@ -19,10 +19,12 @@ export class LoginComponent {
 
   protected readonly form = inject(NonNullableFormBuilder).group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(8)]],
+    // Only `required`: the length policy belongs to registration and must not block existing accounts.
+    password: ['', [Validators.required]],
   });
   protected readonly pending = signal(false);
   protected readonly error = signal<string | null>(null);
+  protected readonly registered = this.route.snapshot.queryParamMap.has('registered');
 
   protected async submit(): Promise<void> {
     if (this.form.invalid) {

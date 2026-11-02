@@ -1,4 +1,7 @@
 <section class="home">
   <p>Zalogowany jako <strong>{{ user()?.email }}</strong></p>
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
   <button mat-stroked-button type="button" (click)="logout()">Wyloguj się</button>
 </section>

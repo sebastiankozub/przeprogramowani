@@ -26,6 +26,9 @@ const NETWORK_ERROR = 'Nie udało się połączyć z serwerem. Spróbuj ponownie
 /** Error carrying a user-facing (Polish) message, thrown by AuthService methods. */
 export class AuthError extends Error {}
 
+/** Registration succeeded but the follow-up login failed — the account exists, the user should log in. */
+export class AccountCreatedError extends AuthError {}
+
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private readonly http = inject(HttpClient);
@@ -37,9 +40,16 @@ export class AuthService {
 
   /** Resolves the session once (cached); 401 and network errors resolve to anonymous, never reject. */
   loadMe(): Promise<CurrentUser | null> {
-    this.me ??= firstValueFrom(this.http.get<CurrentUser>(`${API}/me`)).then(
-      (me) => this.setUser({ email: me.email }),
+    if (this.me) {
+      return this.me;
+    }
+    const request: Promise<CurrentUser | null> = firstValueFrom(this.http.get<CurrentUser>(`${API}/me`)).then(
+      // A superseded request (login/logout/clearSession happened meanwhile) must not overwrite newer state.
+      (me) => (request === this.me ? this.setUser({ email: me.email }) : this.user()),
       (err: unknown) => {
+        if (request !== this.me) {
+          return this.user();
+        }
         // Only a definitive 401 is cached; transient failures are retried on the next navigation.
         if (!(err instanceof HttpErrorResponse && err.status === 401)) {
           this.me = null;
@@ -48,7 +58,13 @@ export class AuthService {
         return null;
       },
     );
-    return this.me;
+    this.me = request;
+    return request;
+  }
+
+  /** Drops the cached session without calling the API — used when any API call answers 401. */
+  clearSession(): void {
+    this.setUser(null);
   }
 
   async login(credentials: Credentials): Promise<void> {
@@ -57,7 +73,11 @@ export class AuthService {
     } catch (err) {
       throw new AuthError(loginErrorMessage(err));
     }
-    this.setUser({ email: credentials.email });
+    // Take the email as the server stores it, not as typed.
+    this.me = null;
+    if (!(await this.loadMe())) {
+      throw new AuthError(NETWORK_ERROR);
+    }
   }
 
   /** The register endpoint does not set a cookie, so a successful registration is followed by login. */
@@ -67,14 +87,21 @@ export class AuthService {
     } catch (err) {
       throw new AuthError(registerErrorMessage(err));
     }
-    await this.login(credentials);
+    try {
+      await this.login(credentials);
+    } catch {
+      throw new AccountCreatedError('Konto zostało utworzone. Zaloguj się.');
+    }
   }
 
+  /** Clears the client state only when the server confirms the session is gone (204, or 401 = already gone). */
   async logout(): Promise<void> {
     try {
       await firstValueFrom(this.http.post(`${API}/logout`, null));
-    } catch {
-      // 401 means the session is already gone; either way the client is anonymous now.
+    } catch (err) {
+      if (!(err instanceof HttpErrorResponse && err.status === 401)) {
+        throw new AuthError('Nie udało się wylogować. Spróbuj ponownie.');
+      }
     }
     this.setUser(null);
   }
