@@ -1,10 +1,10 @@
 ---
 change_id: rate-watched-movies
 title: Rate watched movies
-status: impl_reviewed
+status: archived
 created: 2026-11-02
 updated: 2026-11-02
-archived_at: null
+archived_at: 2026-11-02T23:04:15Z
 ---
 
 ## Notes
