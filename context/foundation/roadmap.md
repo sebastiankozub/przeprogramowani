@@ -41,7 +41,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 
 | ID   | Change ID                | Outcome (user can …)                                                                 | Prerequisites    | PRD refs                          | Status   |
 | ---- | ------------------------ | ------------------------------------------------------------------------------------ | ---------------- | --------------------------------- | -------- |
-| F-01 | prod-postgres-connection | (foundation) production app reads/writes a managed Postgres; schema migrates on deploy | —                | FR-001, NFR-03                    | in-progress |
+| F-01 | prod-postgres-connection | (foundation) production app reads/writes a managed Postgres; schema migrates on deploy | —                | FR-001, NFR-03                    | done |
 | S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | proposed |
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | proposed |
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | proposed |
@@ -89,7 +89,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Unknowns:**
   - Which free-tier provider (Neon vs. Supabase) and which region closest to Fly `fra`; how cold-start on the free tier affects NFR-01 (< 2 s). — Owner: user. Block: no (decided as the first step of `/10x-plan prod-postgres-connection`).
 - **Risk:** Kept deliberately minimal — connection, migration mechanism, health check, no domain tables; entities arrive with the slices that need them. Sequenced first because the deploy pipeline already exists, so a missing secret or migration-on-deploy failure surfaces now rather than mid-slice.
-- **Status:** in-progress
+- **Status:** done
 
 ## Slices
 
@@ -233,3 +233,5 @@ Foundations below assume these are present and do NOT re-scaffold them.
 ## Milestone History
 
 ## Done
+
+- **F-01: (foundation) the deployed app connects to a managed Postgres outside Fly using a secret connection string, schema migrations are applied on deploy, and a database health check passes in production; local development runs the same database engine in a container.** — Archived 2026-11-02 → `context/archive/2026-11-02-prod-postgres-connection/`. Lesson: `context/foundation/lessons.md` → "Keep migrations backward-compatible with the previous release".
