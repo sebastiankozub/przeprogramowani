@@ -304,12 +304,12 @@ Search is an ILIKE scan over ~500 rows — no index needed; capped at 20 results
 
 #### Automated
 
-- [x] 3.1 New release completes
-- [x] 3.2 Prod `/api/movies?q=god` → `401`
-- [x] 3.3 Prod `/health` → `{"status":"ok"}`
+- [x] 3.1 New release completes — 4443f66
+- [x] 3.2 Prod `/api/movies?q=god` → `401` — 4443f66
+- [x] 3.3 Prod `/health` → `{"status":"ok"}` — 4443f66
 
 #### Manual
 
-- [x] 3.4 Release log shows migration, seed count and non-duplicated `--migrate` command
-- [x] 3.5 Prod flow: search, add, change rating, remove; survives reload
-- [x] 3.6 `deploy-plan.md` updated with the new known-good release
+- [x] 3.4 Release log shows migration, seed count and non-duplicated `--migrate` command — 4443f66
+- [x] 3.5 Prod flow: search, add, change rating, remove; survives reload — 4443f66
+- [x] 3.6 `deploy-plan.md` updated with the new known-good release — 4443f66
