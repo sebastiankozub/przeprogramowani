@@ -142,7 +142,11 @@ export class WatchlistComponent implements OnInit {
       return;
     }
     try {
-      this.items.set(await firstValueFrom(this.watchlist.list()));
+      const items = await firstValueFrom(this.watchlist.list());
+      this.items.set(items);
+      // Forget ratings picked for entries that are no longer on the list.
+      const ids = new Set(items.map((item) => item.movie.id));
+      this.pickedRatings.update((ratings) => new Map([...ratings].filter(([movieId]) => ids.has(movieId))));
     } catch {
       // Keep the current list; the original error message is already shown.
     }

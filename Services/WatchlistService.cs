@@ -57,7 +57,7 @@ public sealed class WatchlistService(AppDbContext db, WatchedMoviesService watch
             return WatchlistResult.Duplicate;
         }
 
-        var item = new WatchlistItem { UserId = userId, MovieId = movieId, AddedAt = Now() };
+        var item = new WatchlistItem { UserId = userId, MovieId = movieId, AddedAt = Clock.Now() };
         db.WatchlistItems.Add(item);
 
         try
@@ -108,44 +108,80 @@ public sealed class WatchlistService(AppDbContext db, WatchedMoviesService watch
         }
 
         // A user-initiated transaction must run inside the retrying execution strategy (EnableRetryOnFailure);
-        // each attempt is replayed from scratch.
+        // each attempt is replayed from scratch. verifySucceeded covers a commit whose acknowledgement was lost:
+        // the replay would otherwise find the entry gone and report a false NotFound.
         var strategy = db.Database.CreateExecutionStrategy();
-        return await strategy.ExecuteAsync(async () =>
+        return await strategy.ExecuteAsync(
+            (userId, movieId, rating),
+            (_, state, token) => MoveToWatchedAsync(state.userId, state.movieId, state.rating, token),
+            (_, state, token) => VerifyMovedAsync(state.userId, state.movieId, state.rating, token),
+            ct);
+    }
+
+    private async Task<WatchedMovieResult> MoveToWatchedAsync(string userId, int movieId, int rating, CancellationToken ct)
+    {
+        await using var transaction = await db.Database.BeginTransactionAsync(ct);
+        try
         {
-            await using var transaction = await db.Database.BeginTransactionAsync(ct);
-            try
+            // Re-watch: an already-rated movie gets the new rating (latest opinion wins, as on /movies).
+            var alreadyRated = await db.WatchedMovies.AnyAsync(w => w.UserId == userId && w.MovieId == movieId, ct);
+            var result = alreadyRated
+                ? await watched.UpdateRatingAsync(userId, movieId, rating, ct)
+                : await watched.AddAsync(userId, movieId, rating, ct);
+            if (alreadyRated && result.Outcome == WatchedMovieOutcome.NotFound)
             {
-                // Re-watch: an already-rated movie gets the new rating (latest opinion wins, as on /movies).
-                var alreadyRated = await db.WatchedMovies.AnyAsync(w => w.UserId == userId && w.MovieId == movieId, ct);
-                var result = alreadyRated
-                    ? await watched.UpdateRatingAsync(userId, movieId, rating, ct)
-                    : await watched.AddAsync(userId, movieId, rating, ct);
-                if (result.Outcome != WatchedMovieOutcome.Success)
-                {
-                    await RollBackAsync(transaction);
-                    return result;
-                }
+                // The rating was deleted concurrently after the check — rate it afresh instead.
+                result = await watched.AddAsync(userId, movieId, rating, ct);
+            }
 
-                var removed = await db.WatchlistItems
-                    .Where(w => w.UserId == userId && w.MovieId == movieId)
-                    .ExecuteDeleteAsync(ct);
-                if (removed == 0)
-                {
-                    // Removed concurrently after the precondition check — the rating must not stick either.
-                    await RollBackAsync(transaction);
-                    return WatchedMovieResult.NotFound;
-                }
-
-                await transaction.CommitAsync(ct);
+            if (result.Outcome != WatchedMovieOutcome.Success)
+            {
+                await RollBackAsync(transaction);
                 return result;
             }
-            catch
+
+            var removed = await db.WatchlistItems
+                .Where(w => w.UserId == userId && w.MovieId == movieId)
+                .ExecuteDeleteAsync(ct);
+            if (removed == 0)
             {
-                // Drop the WatchedMovie added by AddAsync so neither a retry nor a later SaveChanges persists it.
-                db.ChangeTracker.Clear();
-                throw;
+                // Removed concurrently after the precondition check — the rating must not stick either.
+                await RollBackAsync(transaction);
+                return WatchedMovieResult.NotFound;
             }
-        });
+
+            await transaction.CommitAsync(ct);
+            return result;
+        }
+        catch
+        {
+            // Drop the WatchedMovie added by AddAsync so neither a retry nor a later SaveChanges persists it.
+            db.ChangeTracker.Clear();
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Called by the execution strategy after a transient failure, before retrying: if the move is already
+    /// in the database (the requested rating is stored and the watchlist entry is gone), it succeeded.
+    /// </summary>
+    private async Task<ExecutionResult<WatchedMovieResult>> VerifyMovedAsync(
+        string userId, int movieId, int rating, CancellationToken ct)
+    {
+        var stored = await db.WatchedMovies
+            .AsNoTracking()
+            .Where(w => w.UserId == userId && w.MovieId == movieId && w.Rating == rating)
+            .Select(w => new WatchedMovieResponse(
+                new MovieResponse(w.Movie.Id, w.Movie.Title, w.Movie.OriginalTitle, w.Movie.Year),
+                w.Rating,
+                w.UpdatedAt))
+            .FirstOrDefaultAsync(ct);
+        var moved = stored is not null
+            && !await db.WatchlistItems.AnyAsync(w => w.UserId == userId && w.MovieId == movieId, ct);
+
+        return moved
+            ? new ExecutionResult<WatchedMovieResult>(true, WatchedMovieResult.Ok(stored))
+            : new ExecutionResult<WatchedMovieResult>(false, WatchedMovieResult.NotFound);
     }
 
     private async Task RollBackAsync(IDbContextTransaction transaction)
@@ -155,12 +191,5 @@ public sealed class WatchlistService(AppDbContext db, WatchedMoviesService watch
         // A failed insert leaves its WatchedMovie tracked as Added; a rolled-back one stays tracked as Unchanged.
         // Either way it no longer exists in the database, so it must not stay in the tracker.
         db.ChangeTracker.Clear();
-    }
-
-    // Postgres timestamptz stores microseconds; truncate so the returned value equals what a later read returns.
-    private static DateTimeOffset Now()
-    {
-        var now = DateTimeOffset.UtcNow;
-        return now.AddTicks(-(now.Ticks % 10));
     }
 }

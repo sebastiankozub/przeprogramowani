@@ -68,7 +68,7 @@ public sealed class WatchedMoviesService(AppDbContext db)
             return WatchedMovieResult.Duplicate;
         }
 
-        var now = Now();
+        var now = Clock.Now();
         var watched = new WatchedMovie
         {
             UserId = userId,
@@ -114,7 +114,7 @@ public sealed class WatchedMoviesService(AppDbContext db)
         }
 
         watched.Rating = (short)rating;
-        watched.UpdatedAt = Now();
+        watched.UpdatedAt = Clock.Now();
         await db.SaveChangesAsync(ct);
 
         return WatchedMovieResult.Ok(ToResponse(watched, watched.Movie));
@@ -131,11 +131,4 @@ public sealed class WatchedMoviesService(AppDbContext db)
 
     private static WatchedMovieResponse ToResponse(WatchedMovie watched, Movie movie) =>
         new(new MovieResponse(movie.Id, movie.Title, movie.OriginalTitle, movie.Year), watched.Rating, watched.UpdatedAt);
-
-    // Postgres timestamptz stores microseconds; truncate so the returned value equals what a later read returns.
-    private static DateTimeOffset Now()
-    {
-        var now = DateTimeOffset.UtcNow;
-        return now.AddTicks(-(now.Ticks % 10));
-    }
 }

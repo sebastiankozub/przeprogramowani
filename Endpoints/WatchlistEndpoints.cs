@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using MovieDate.Contracts;
 using MovieDate.Data;
 using MovieDate.Services;
@@ -12,6 +13,9 @@ public static class WatchlistEndpoints
 
     public static IServiceCollection AddAppWatchlist(this IServiceCollection services)
     {
+        // WatchlistService depends on WatchedMoviesService; TryAdd keeps a single registration if
+        // AddAppWatchedMovies is called too.
+        services.TryAddScoped<WatchedMoviesService>();
         services.AddScoped<WatchlistService>();
         return services;
     }

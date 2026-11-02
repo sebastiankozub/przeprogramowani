@@ -58,7 +58,7 @@ describe('WatchlistService', () => {
     const markWatched = firstValueFrom(service.markWatched(1, 8)).catch((e: unknown) => e);
     http
       .expectOne('/api/watchlist/1/watched')
-      .flush({ title: 'This movie is already on your watched list.' }, { status: 409, statusText: 'Conflict' });
+      .flush({ title: 'This movie was rated concurrently; try again.' }, { status: 409, statusText: 'Conflict' });
     const markErr = await markWatched;
     expect(markErr).toBeInstanceOf(MoviesError);
     expect((markErr as MoviesError).message).toBe(ALREADY_WATCHED);

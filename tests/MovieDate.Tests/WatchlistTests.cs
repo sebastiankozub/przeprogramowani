@@ -1,8 +1,13 @@
+using System.Data.Common;
 using System.Net;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using MovieDate.Data;
+using MovieDate.Services;
+using Npgsql;
 
 namespace MovieDate.Tests;
 
@@ -211,6 +216,98 @@ public sealed class WatchlistTests(PostgresAppFixture factory)
         Assert.Equal(HttpStatusCode.NotFound, (await MarkWatched(client, movieId, 9)).StatusCode);
         Assert.Equal(HttpStatusCode.NotFound, (await MarkWatched(client, movieId, 0)).StatusCode);
         Assert.Empty(await Watched(client));
+    }
+
+    [Theory]
+    [InlineData(null)] // first rating: the INSERT is rolled back
+    [InlineData(4)] // re-watch: the UPDATE is rolled back, the original rating stays
+    public async Task Mark_watched_rolls_back_rating_when_entry_is_removed_concurrently(int? previousRating)
+    {
+        var userId = await NewUserId();
+        var movieId = await MovieId(Godfather);
+        await using (var seed = NewDbContext())
+        {
+            var watched = new WatchedMoviesService(seed);
+            if (previousRating is { } previous)
+            {
+                Assert.Equal(WatchedMovieOutcome.Success, (await watched.AddAsync(userId, movieId, previous)).Outcome);
+            }
+
+            Assert.Equal(WatchlistOutcome.Success, (await new WatchlistService(seed, watched).AddAsync(userId, movieId)).Outcome);
+        }
+
+        // Right after the rating is written, another connection removes the watchlist entry, so the
+        // service's delete finds nothing and must roll the rating back.
+        await using var db = NewDbContext(new RemoveWatchlistEntryAfterRatingWrite(factory.ConnectionString, userId, movieId));
+        var service = new WatchlistService(db, new WatchedMoviesService(db));
+
+        var result = await service.MarkWatchedAsync(userId, movieId, 9);
+
+        Assert.Equal(WatchedMovieOutcome.NotFound, result.Outcome);
+        Assert.Empty(db.ChangeTracker.Entries());
+        await using var check = NewDbContext();
+        var stored = await check.WatchedMovies
+            .Where(w => w.UserId == userId && w.MovieId == movieId)
+            .Select(w => (int?)w.Rating)
+            .SingleOrDefaultAsync();
+        Assert.Equal(previousRating, stored);
+    }
+
+    private AppDbContext NewDbContext(params IInterceptor[] interceptors) =>
+        new(new DbContextOptionsBuilder<AppDbContext>()
+            .UseNpgsql(factory.ConnectionString, npgsql => npgsql.EnableRetryOnFailure())
+            .AddInterceptors(interceptors)
+            .Options);
+
+    private async Task<string> NewUserId()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var users = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+        var email = TestUsers.UniqueEmail();
+        var user = new AppUser { UserName = email, Email = email };
+        Assert.True((await users.CreateAsync(user, TestUsers.Password)).Succeeded);
+        return user.Id;
+    }
+
+    /// <summary>
+    /// Simulates a concurrent DELETE /api/watchlist/{id}: once the INSERT/UPDATE into "WatchedMovies" has run,
+    /// deletes the user's watchlist entry through a separate connection (outside the service's transaction).
+    /// </summary>
+    private sealed class RemoveWatchlistEntryAfterRatingWrite(string connectionString, string userId, int movieId)
+        : DbCommandInterceptor
+    {
+        public override async ValueTask<DbDataReader> ReaderExecutedAsync(DbCommand command,
+            CommandExecutedEventData eventData, DbDataReader result, CancellationToken cancellationToken = default)
+        {
+            await RemoveIfRatingWrite(command, cancellationToken);
+            return result;
+        }
+
+        public override async ValueTask<int> NonQueryExecutedAsync(DbCommand command,
+            CommandExecutedEventData eventData, int result, CancellationToken cancellationToken = default)
+        {
+            await RemoveIfRatingWrite(command, cancellationToken);
+            return result;
+        }
+
+        private async Task RemoveIfRatingWrite(DbCommand command, CancellationToken ct)
+        {
+            var sql = command.CommandText;
+            var isRatingWrite = sql.Contains("\"WatchedMovies\"")
+                && (sql.Contains("INSERT INTO", StringComparison.Ordinal) || sql.Contains("UPDATE ", StringComparison.Ordinal));
+            if (!isRatingWrite)
+            {
+                return;
+            }
+
+            await using var connection = new NpgsqlConnection(connectionString);
+            await connection.OpenAsync(ct);
+            await using var delete = new NpgsqlCommand(
+                "DELETE FROM \"WatchlistItems\" WHERE \"UserId\" = @userId AND \"MovieId\" = @movieId", connection);
+            delete.Parameters.AddWithValue("userId", userId);
+            delete.Parameters.AddWithValue("movieId", movieId);
+            Assert.Equal(1, await delete.ExecuteNonQueryAsync(ct));
+        }
     }
 
     [Fact]

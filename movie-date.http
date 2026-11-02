@@ -81,7 +81,8 @@ Content-Type: application/json
 }
 
 ### Watchlist — mark watched: moves the entry to /api/watched with a rating
-### (200; 404 not on my watchlist; 400 rating outside 1–10; 409 already rated — entry stays on the watchlist)
+### (200; 404 not on my watchlist; 400 rating outside 1–10; an already-rated movie (re-watch) gets the new rating;
+### 409 only when the movie is rated concurrently between the check and the insert — entry stays on the watchlist)
 POST {{MovieDate_HostAddress}}/api/watchlist/{{movieId}}/watched
 Content-Type: application/json
 
