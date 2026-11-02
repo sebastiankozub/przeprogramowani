@@ -276,16 +276,16 @@ Single-user lists of tens of rows; one indexed query each (PK `(UserId, MovieId)
 
 #### Automated
 
-- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [x] 2.2 Frontend production build passes within budget
-- [x] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false` — 21eb865
+- [x] 2.2 Frontend production build passes within budget — 21eb865
+- [x] 2.3 Docker image builds — 21eb865
 
 #### Manual
 
-- [x] 2.4 `/movies` still works after the search refactor
-- [x] 2.5 `/watchlist` add, duplicate message, remove, empty state
-- [x] 2.6 "Obejrzałem" with rating 8 moves the movie to `/movies`
-- [x] 2.7 Logged-out `/watchlist` redirects to login and returns
+- [x] 2.4 `/movies` still works after the search refactor — 21eb865
+- [x] 2.5 `/watchlist` add, duplicate message, remove, empty state — 21eb865
+- [x] 2.6 "Obejrzałem" with rating 8 moves the movie to `/movies` — 21eb865
+- [x] 2.7 Logged-out `/watchlist` redirects to login and returns — 21eb865
 
 ### Phase 3: Production
 
