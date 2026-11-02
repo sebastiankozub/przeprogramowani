@@ -266,31 +266,31 @@ Deploy, verify the full flow on production across both machines, and record it.
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddIdentity` exists and is additive
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 Local migrate applies `AddIdentity`
-- [x] 1.5 `/api/auth/me` → `401` with the app running
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 6470d5d
+- [x] 1.2 Migration `AddIdentity` exists and is additive — 6470d5d
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 6470d5d
+- [x] 1.4 Local migrate applies `AddIdentity` — 6470d5d
+- [x] 1.5 `/api/auth/me` → `401` with the app running — 6470d5d
 
 #### Manual
 
-- [x] 1.6 Login `Set-Cookie` is `HttpOnly` and `SameSite=Strict`
-- [x] 1.7 `DataProtectionKeys` table contains a key after the first login
+- [x] 1.6 Login `Set-Cookie` is `HttpOnly` and `SameSite=Strict` — 6470d5d
+- [x] 1.7 `DataProtectionKeys` table contains a key after the first login — 6470d5d
 
 ### Phase 2: Frontend — Angular Material + auth screens
 
 #### Automated
 
-- [ ] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [ ] 2.2 Frontend production build passes: `npm run build`
-- [ ] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
+- [x] 2.2 Frontend production build passes: `npm run build`
+- [x] 2.3 Docker image builds
 
 #### Manual
 
-- [ ] 2.4 Logged-out `/` redirects to `/login?returnUrl=%2F`
-- [ ] 2.5 Register lands on home with the email; reload keeps the session
-- [ ] 2.6 Logout returns to `/login`; `/` redirects again
-- [ ] 2.7 Wrong password and 7-character password show errors
+- [x] 2.4 Logged-out `/` redirects to `/login?returnUrl=%2F`
+- [x] 2.5 Register lands on home with the email; reload keeps the session
+- [x] 2.6 Logout returns to `/login`; `/` redirects again
+- [x] 2.7 Wrong password and 7-character password show errors
 
 ### Phase 3: Production
 

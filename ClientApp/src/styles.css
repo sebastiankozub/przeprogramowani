@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Shared by the login and register screens. */
+.auth-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.auth-error {
+  color: var(--mat-sys-error);
+  margin: 0 0 8px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
