@@ -281,16 +281,16 @@ Deploy, verify the full flow on production across both machines, and record it.
 
 #### Automated
 
-- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [x] 2.2 Frontend production build passes: `npm run build`
-- [x] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false` — 2f21255
+- [x] 2.2 Frontend production build passes: `npm run build` — 2f21255
+- [x] 2.3 Docker image builds — 2f21255
 
 #### Manual
 
-- [x] 2.4 Logged-out `/` redirects to `/login?returnUrl=%2F`
-- [x] 2.5 Register lands on home with the email; reload keeps the session
-- [x] 2.6 Logout returns to `/login`; `/` redirects again
-- [x] 2.7 Wrong password and 7-character password show errors
+- [x] 2.4 Logged-out `/` redirects to `/login?returnUrl=%2F` — 2f21255
+- [x] 2.5 Register lands on home with the email; reload keeps the session — 2f21255
+- [x] 2.6 Logout returns to `/login`; `/` redirects again — 2f21255
+- [x] 2.7 Wrong password and 7-character password show errors — 2f21255
 
 ### Phase 3: Production
 
