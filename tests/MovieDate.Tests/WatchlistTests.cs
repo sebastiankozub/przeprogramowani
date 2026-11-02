@@ -185,8 +185,9 @@ public sealed class WatchlistTests(PostgresAppFixture factory)
     }
 
     [Fact]
-    public async Task Mark_watched_already_rated_returns_409_and_keeps_entry()
+    public async Task Mark_watched_already_rated_overwrites_rating_and_removes_entry()
     {
+        // Re-watch: the movie is rated (4) and wanted again; marking it watched with 9 keeps one entry with 9.
         using var client = await TestUsers.NewSignedInClient(factory);
         var movieId = await MovieId(Godfather);
         Assert.Equal(HttpStatusCode.Created, (await Rate(client, movieId, 4)).StatusCode);
@@ -194,9 +195,11 @@ public sealed class WatchlistTests(PostgresAppFixture factory)
 
         var response = await MarkWatched(client, movieId, 9);
 
-        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
-        Assert.Equal(movieId, Assert.Single(await List(client)).Movie.Id);
-        Assert.Equal(4, Assert.Single(await Watched(client)).Rating);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Empty(await List(client));
+        var entry = Assert.Single(await Watched(client));
+        Assert.Equal(movieId, entry.Movie.Id);
+        Assert.Equal(9, entry.Rating);
     }
 
     [Fact]

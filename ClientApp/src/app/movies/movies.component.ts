@@ -1,49 +1,29 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal, viewChild } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
-import { catchError, debounceTime, distinctUntilChanged, firstValueFrom, map, of, startWith, switchMap, tap } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
+import { MovieSearchComponent } from './movie-search.component';
 import { MAX_RATING, MIN_RATING, Movie, MoviesError, MoviesService, WatchedMovie } from './movies.service';
-
-const SEARCH_DEBOUNCE_MS = 300;
-const MIN_QUERY_LENGTH = 2;
-
-/** "Tytuł (Oryginalny, rok)" — parts that are missing or equal to the title are skipped. */
-export function movieLabel(movie: Movie): string {
-  const details = [
-    movie.originalTitle && movie.originalTitle !== movie.title ? movie.originalTitle : null,
-    movie.year,
-  ].filter((part) => part !== null && part !== '');
-  return details.length > 0 ? `${movie.title} (${details.join(', ')})` : movie.title;
-}
 
 @Component({
   selector: 'app-movies',
-  imports: [
-    ReactiveFormsModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-  ],
+  imports: [ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MovieSearchComponent],
   templateUrl: './movies.component.html',
 })
 export class MoviesComponent implements OnInit {
   private readonly movies = inject(MoviesService);
+  private readonly search = viewChild.required(MovieSearchComponent);
 
   protected readonly ratings = Array.from({ length: MAX_RATING - MIN_RATING + 1 }, (_, i) => MIN_RATING + i);
 
-  /** Typed text while searching, the chosen Movie once an option is selected. */
-  protected readonly movieControl = new FormControl<string | Movie | null>(null);
   protected readonly ratingControl = new FormControl<number | null>(null);
-  protected readonly form = new FormGroup({ movie: this.movieControl, rating: this.ratingControl });
+  protected readonly form = new FormGroup({ rating: this.ratingControl });
 
-  private readonly movieValue = toSignal(this.movieControl.valueChanges, { initialValue: null });
+  /** The movie chosen in the shared search, null while the user is typing. */
+  protected readonly selectedMovie = signal<Movie | null>(null);
   private readonly ratingValue = toSignal(this.ratingControl.valueChanges, { initialValue: null });
 
   /** Inline message for the last failed operation. */
@@ -51,37 +31,11 @@ export class MoviesComponent implements OnInit {
   /** The message currently shown because of a failed search, cleared by the next successful one. */
   private searchError: string | null = null;
 
-  protected readonly options = toSignal(
-    this.movieControl.valueChanges.pipe(
-      startWith(this.movieControl.value),
-      map((value) => (typeof value === 'string' ? value.trim() : '')),
-      debounceTime(SEARCH_DEBOUNCE_MS),
-      distinctUntilChanged(),
-      switchMap((q) =>
-        q.length < MIN_QUERY_LENGTH
-          ? of<Movie[]>([])
-          : this.movies.search(q).pipe(
-              tap(() => this.clearSearchError()),
-              catchError((err: unknown) => {
-                this.searchError = errorMessage(err);
-                this.error.set(this.searchError);
-                return of<Movie[]>([]);
-              }),
-            ),
-      ),
-    ),
-    { initialValue: [] },
-  );
-
   protected readonly watched = signal<WatchedMovie[]>([]);
   protected readonly loaded = signal(false);
   protected readonly adding = signal(false);
   /** Movie ids with a rating change or removal in flight. */
   protected readonly busy = signal<ReadonlySet<number>>(new Set());
-
-  protected readonly movieLabel = movieLabel;
-  protected readonly displayMovie = (value: string | Movie | null): string =>
-    value && typeof value === 'object' ? movieLabel(value) : (value ?? '');
 
   async ngOnInit(): Promise<void> {
     try {
@@ -94,14 +48,13 @@ export class MoviesComponent implements OnInit {
   }
 
   protected canAdd(): boolean {
-    const movie = this.movieValue();
-    return !this.adding() && movie !== null && typeof movie === 'object' && this.ratingValue() !== null;
+    return !this.adding() && this.selectedMovie() !== null && this.ratingValue() !== null;
   }
 
   protected async add(): Promise<void> {
-    const movie = this.movieControl.value;
+    const movie = this.selectedMovie();
     const rating = this.ratingControl.value;
-    if (!movie || typeof movie !== 'object' || rating === null || this.adding()) {
+    if (!movie || rating === null || this.adding()) {
       return;
     }
     this.adding.set(true);
@@ -109,6 +62,7 @@ export class MoviesComponent implements OnInit {
     try {
       const entry = await firstValueFrom(this.movies.add(movie.id, rating));
       this.watched.update((list) => [entry, ...list.filter((item) => item.movie.id !== entry.movie.id)]);
+      this.search().reset();
       this.form.reset();
     } catch (err) {
       this.error.set(errorMessage(err));
@@ -162,6 +116,15 @@ export class MoviesComponent implements OnInit {
       this.watched.set(await firstValueFrom(this.movies.listWatched()));
     } catch {
       // Keep the current list; the original error message is already shown.
+    }
+  }
+
+  protected onSearchError(message: string | null): void {
+    if (message === null) {
+      this.clearSearchError();
+    } else {
+      this.searchError = message;
+      this.error.set(message);
     }
   }
 

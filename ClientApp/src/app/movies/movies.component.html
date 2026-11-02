@@ -2,21 +2,7 @@
   <h1>Obejrzane filmy</h1>
 
   <form class="movies-add" [formGroup]="form" (ngSubmit)="add()">
-    <mat-form-field class="movies-search">
-      <mat-label>Szukaj filmu</mat-label>
-      <input
-        matInput
-        type="text"
-        formControlName="movie"
-        [matAutocomplete]="auto"
-        placeholder="Wpisz co najmniej 2 znaki"
-      />
-      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayMovie">
-        @for (movie of options(); track movie.id) {
-          <mat-option [value]="movie">{{ movieLabel(movie) }}</mat-option>
-        }
-      </mat-autocomplete>
-    </mat-form-field>
+    <app-movie-search (movieSelected)="selectedMovie.set($event)" (searchError)="onSearchError($event)" />
     <mat-form-field class="movies-rating">
       <mat-label>Ocena</mat-label>
       <mat-select formControlName="rating">

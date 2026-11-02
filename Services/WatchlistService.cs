@@ -91,7 +91,8 @@ public sealed class WatchlistService(AppDbContext db, WatchedMoviesService watch
     /// <summary>
     /// Moves a watchlist entry to the watched list with the given rating, atomically: either the movie is
     /// rated and leaves the watchlist, or nothing changes. Outcome order: not on the watchlist → NotFound,
-    /// then rating → InvalidRating, then already rated → Duplicate.
+    /// then rating → InvalidRating. An already-rated movie (re-watch) gets the new rating; Duplicate only
+    /// surfaces if a concurrent add wins the race between the check and the insert.
     /// </summary>
     public async Task<WatchedMovieResult> MarkWatchedAsync(string userId, int movieId, int rating, CancellationToken ct = default)
     {
@@ -114,7 +115,11 @@ public sealed class WatchlistService(AppDbContext db, WatchedMoviesService watch
             await using var transaction = await db.Database.BeginTransactionAsync(ct);
             try
             {
-                var result = await watched.AddAsync(userId, movieId, rating, ct);
+                // Re-watch: an already-rated movie gets the new rating (latest opinion wins, as on /movies).
+                var alreadyRated = await db.WatchedMovies.AnyAsync(w => w.UserId == userId && w.MovieId == movieId, ct);
+                var result = alreadyRated
+                    ? await watched.UpdateRatingAsync(userId, movieId, rating, ct)
+                    : await watched.AddAsync(userId, movieId, rating, ct);
                 if (result.Outcome != WatchedMovieOutcome.Success)
                 {
                     await RollBackAsync(transaction);

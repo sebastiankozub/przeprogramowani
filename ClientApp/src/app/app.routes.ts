@@ -14,5 +14,11 @@ export const routes: Routes = [
     canActivate: [authGuard],
     title: 'Obejrzane filmy',
   },
+  {
+    path: 'watchlist',
+    loadComponent: () => import('./watchlist/watchlist.component').then((m) => m.WatchlistComponent),
+    canActivate: [authGuard],
+    title: 'Do obejrzenia',
+  },
   { path: '**', redirectTo: '' },
 ];

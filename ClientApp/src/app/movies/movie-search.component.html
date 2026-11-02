@@ -1,0 +1,15 @@
+<mat-form-field class="movies-search-field">
+  <mat-label>{{ label() }}</mat-label>
+  <input
+    matInput
+    type="text"
+    [formControl]="control"
+    [matAutocomplete]="auto"
+    placeholder="Wpisz co najmniej 2 znaki"
+  />
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayMovie">
+    @for (movie of options(); track movie.id) {
+      <mat-option [value]="movie">{{ movieLabel(movie) }}</mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>

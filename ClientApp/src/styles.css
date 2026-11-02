@@ -38,6 +38,7 @@
 }
 
 .movies-search {
+  display: block;
   flex: 1 1 280px;
 }
 
@@ -64,4 +65,8 @@
   display: flex;
   flex: 1 1 200px;
   flex-direction: column;
+}
+
+.movies-search-field {
+  width: 100%;
 }

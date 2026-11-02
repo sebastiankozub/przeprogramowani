@@ -22,7 +22,7 @@ const MOVIES_API = '/api/movies';
 const WATCHED_API = '/api/watched';
 
 const NETWORK_ERROR = 'Nie udało się połączyć z serwerem. Spróbuj ponownie.';
-const INVALID_RATING = `Ocena musi być liczbą od ${MIN_RATING} do ${MAX_RATING}.`;
+export const INVALID_RATING = `Ocena musi być liczbą od ${MIN_RATING} do ${MAX_RATING}.`;
 const SESSION_EXPIRED = 'Sesja wygasła. Zaloguj się ponownie.';
 export const DUPLICATE_MESSAGE = 'Ten film jest już na Twojej liście — zmień ocenę poniżej.';
 
@@ -85,15 +85,17 @@ export class MoviesService {
   }
 }
 
-interface ErrorMessages {
+export interface ErrorMessages {
   /** Only operations that send a rating can fail validation; others fall back. */
   badRequest?: string;
   notFound?: string;
+  /** Defaults to the watched-list duplicate message. */
+  conflict?: string;
   fallback: string;
 }
 
 /** Converts HTTP failures into MoviesError with a Polish message (401 redirect is the interceptor's job). */
-function mapErrors<T>(messages: ErrorMessages) {
+export function mapErrors<T>(messages: ErrorMessages) {
   return catchError<T, Observable<never>>((err: unknown) =>
     throwError(() => new MoviesError(errorMessage(err, messages), err instanceof HttpErrorResponse ? err.status : 0)),
   );
@@ -113,7 +115,7 @@ function errorMessage(err: unknown, messages: ErrorMessages): string {
     case 404:
       return messages.notFound ?? messages.fallback;
     case 409:
-      return DUPLICATE_MESSAGE;
+      return messages.conflict ?? DUPLICATE_MESSAGE;
     default:
       return messages.fallback;
   }

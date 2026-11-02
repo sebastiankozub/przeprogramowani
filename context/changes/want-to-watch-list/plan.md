@@ -250,6 +250,10 @@ Single-user lists of tens of rows; one indexed query each (PK `(UserId, MovieId)
 - Prior change: `context/archive/2026-11-02-rate-watched-movies/` (patterns, review F2/F5/F8)
 - Patterns: `Services/WatchedMoviesService.cs`, `Endpoints/WatchedMoviesEndpoints.cs`, `tests/MovieDate.Tests/WatchedMoviesTests.cs`, `ClientApp/src/app/movies/*`
 
+## Review Addenda (implementation, 2026-11-03)
+
+- **Re-watch (user decision during Phase 2):** "Obejrzałem" on a movie that is already rated no longer returns 409 — it overwrites the rating with the new one (latest opinion wins, as on /movies) and removes the watchlist entry in the same transaction. 409 remains only for a concurrent-rating race. Outcome order is now: not on the watchlist → 404, then rating → 400. Supersedes the "already rated → 409" parts of Critical Implementation Details, Phase 1 §5–6 and the mark-watched 409 message in Phase 2 §2.
+
 ## Progress
 
 > Convention: `- [ ]` pending, `- [x]` done. Append ` — <commit sha>` when a step lands. Do not rename step titles. See `references/progress-format.md`.
@@ -272,16 +276,16 @@ Single-user lists of tens of rows; one indexed query each (PK `(UserId, MovieId)
 
 #### Automated
 
-- [ ] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [ ] 2.2 Frontend production build passes within budget
-- [ ] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
+- [x] 2.2 Frontend production build passes within budget
+- [x] 2.3 Docker image builds
 
 #### Manual
 
-- [ ] 2.4 `/movies` still works after the search refactor
-- [ ] 2.5 `/watchlist` add, duplicate message, remove, empty state
-- [ ] 2.6 "Obejrzałem" with rating 8 moves the movie to `/movies`
-- [ ] 2.7 Logged-out `/watchlist` redirects to login and returns
+- [x] 2.4 `/movies` still works after the search refactor
+- [x] 2.5 `/watchlist` add, duplicate message, remove, empty state
+- [x] 2.6 "Obejrzałem" with rating 8 moves the movie to `/movies`
+- [x] 2.7 Logged-out `/watchlist` redirects to login and returns
 
 ### Phase 3: Production
 

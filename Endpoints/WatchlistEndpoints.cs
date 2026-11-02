@@ -90,7 +90,7 @@ public static class WatchlistEndpoints
                     }),
                     WatchedMovieOutcome.Duplicate => Results.Problem(
                         statusCode: StatusCodes.Status409Conflict,
-                        title: "This movie is already on your watched list."),
+                        title: "This movie was rated concurrently; try again."),
                     _ => throw new ArgumentOutOfRangeException(nameof(result.Outcome), result.Outcome, null),
                 };
             })

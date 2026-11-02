@@ -1,6 +1,7 @@
 <section class="home">
   <p>Zalogowany jako <strong>{{ user()?.email }}</strong></p>
   <a mat-flat-button routerLink="/movies">Obejrzane filmy</a>
+  <a mat-flat-button routerLink="/watchlist">Do obejrzenia</a>
   @if (error(); as message) {
     <p class="auth-error" role="alert">{{ message }}</p>
   }

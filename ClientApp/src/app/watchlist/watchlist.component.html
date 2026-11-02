@@ -1,0 +1,62 @@
+<section class="movies">
+  <h1>Do obejrzenia</h1>
+
+  <form class="movies-add" (submit)="$event.preventDefault(); add()">
+    <app-movie-search (movieSelected)="selectedMovie.set($event)" (searchError)="onSearchError($event)" />
+    <button mat-flat-button type="submit" [disabled]="!canAdd()">Dodaj</button>
+  </form>
+
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+
+  @if (loaded()) {
+    @if (items().length === 0) {
+      <p>Twoja lista do obejrzenia jest pusta.</p>
+    } @else {
+      <ul class="movies-list">
+        @for (item of items(); track item.movie.id) {
+          <li class="movies-item">
+            <div class="movies-item-text">
+              <strong>{{ item.movie.title }}</strong>
+              @if (item.movie.originalTitle && item.movie.originalTitle !== item.movie.title) {
+                <span>{{ item.movie.originalTitle }}</span>
+              }
+              @if (item.movie.year) {
+                <span>{{ item.movie.year }}</span>
+              }
+            </div>
+            <mat-form-field class="movies-rating" subscriptSizing="dynamic">
+              <mat-label>Ocena</mat-label>
+              <mat-select
+                [value]="pickedRating(item.movie.id)"
+                [disabled]="isBusy(item.movie.id)"
+                (selectionChange)="pickRating(item.movie.id, $event.value)"
+              >
+                @for (rating of ratings; track rating) {
+                  <mat-option [value]="rating">{{ rating }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+            <button
+              mat-flat-button
+              type="button"
+              [disabled]="isBusy(item.movie.id) || pickedRating(item.movie.id) === null"
+              (click)="markWatched(item)"
+            >
+              Obejrzałem
+            </button>
+            <button
+              mat-stroked-button
+              type="button"
+              [disabled]="isBusy(item.movie.id)"
+              (click)="remove(item)"
+            >
+              Usuń
+            </button>
+          </li>
+        }
+      </ul>
+    }
+  }
+</section>
