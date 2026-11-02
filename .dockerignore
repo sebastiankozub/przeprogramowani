@@ -1,0 +1,12 @@
+bin/
+obj/
+context/
+.git/
+.github/
+.claude/
+.vs/
+**/*.user
+*.md
+ClientApp/node_modules/
+ClientApp/dist/
+ClientApp/.angular/

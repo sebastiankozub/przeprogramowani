@@ -10,9 +10,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseHttpsRedirection(); // Fly's edge proxy handles TLS/redirect in production; container only listens on plain HTTP.
 }
 
-app.UseHttpsRedirection();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.MapGet("/health", () => Results.Ok(new { status = "ok" }))
+    .WithName("HealthCheck");
 
 var summaries = new[]
 {
@@ -32,6 +37,9 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+// Any future app.MapGroup("/api") / other API routes must be registered ABOVE this line.
+app.MapFallbackToFile("index.html"); // SPA fallback — must stay last so it doesn't swallow /health or /api/*.
 
 app.Run();
 

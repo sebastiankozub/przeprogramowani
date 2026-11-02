@@ -1,0 +1,33 @@
+app = "moviedate-sk"             # placeholder — confirm/update after `fly apps create` to match the actually-reserved app name
+primary_region = "fra"        # Frankfurt — "waw" is deprecated on Fly (confirmed at deploy time, not in docs); fra is the closest non-deprecated region to Poland (PRD: Poland-only MVP scope)
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1    # avoid cold-start latency vs. PRD's <2s NFR; acceptable cost for a low-traffic MVP
+  processes = ["web"]         # required once named [processes] exist — ties this service to the web group only.
+  # When a `worker` process group is added (Module 2, async match recompute — FR-002/003/005),
+  # it must NOT be added here — worker stays off [[http_service.checks]]/inbound traffic.
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/health"
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[processes]
+  web = "dotnet movie-date.dll"
+  # TODO (Module 2): add `worker = "dotnet movie-date.dll --worker"` (or equivalent) once the
+  # async match-recompute job exists in code, WITH its own explicit min_machines_running = 1 —
+  # do not rely on Fly's scale-to-zero default, which would silently stop recompute with no error.
+  # See context/foundation/infrastructure.md risk register.
