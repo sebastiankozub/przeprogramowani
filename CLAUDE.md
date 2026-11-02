@@ -8,11 +8,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Run (dev): `dotnet run` — serves on `http://localhost:5069` / `https://localhost:7117`
 - Format: `dotnet format`
 - Dependency vulnerability check: `dotnet list package --vulnerable --include-transitive`
-- Tests: no test project exists yet — see Architecture
+- Local DB for `dotnet run`: `docker compose up -d`
+- Tests: `dotnet test tests/MovieDate.Tests` (requires Docker running — integration tests start their own throwaway Postgres container via Testcontainers; independent of the compose DB)
 
 ## Architecture
 
-Single ASP.NET Core Web API project (`movie-date.csproj`, minimal-API style, target `net10.0`, nullable reference types + implicit usings enabled, root namespace `MovieDate`). Everything currently lives in `Program.cs`, which is still the unmodified scaffold template (the `/weatherforecast` sample endpoint) — no application code has been written yet.
+Single ASP.NET Core Web API project (`movie-date.csproj`, minimal-API style, target `net10.0`, nullable reference types + implicit usings enabled, root namespace `MovieDate`). `Program.cs` holds only wiring; EF Core + Npgsql data access lives in `Data/` (empty `AppDbContext`, migrations in `Data/Migrations`, `--migrate` mode used by Fly's release command), health endpoints in `Endpoints/HealthEndpoints.cs` (`/health` DB-free for Fly checks, `/health/db` on demand). The template `/weatherforecast` endpoint is still present.
 
 Domain rules, functional requirements, and stack decisions are recorded in `context/foundation/` — read them before implementing instead of asking; don't duplicate their content here:
 - `@context/foundation/prd.md` — functional requirements (FR-001..007), the matching/scoring business logic, access control, non-goals

@@ -275,30 +275,30 @@ First migration on an empty Neon database; nothing to preserve. Rollback of a ba
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Local Postgres starts: `docker compose up -d` and `docker compose ps` shows `db` healthy/running
-- [x] 1.3 Migration mode applies and exits 0: `dotnet run --project movie-date.csproj -- --migrate`
-- [x] 1.4 Migration history present: `__EFMigrationsHistory` lists `InitialCreate`
-- [x] 1.5 `/health/db` → `200` while `dotnet run` is up
-- [x] 1.6 `/health` unchanged → `200` with `{"status":"ok"}`
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 2a2965e
+- [x] 1.2 Local Postgres starts: `docker compose up -d` and `docker compose ps` shows `db` healthy/running — 2a2965e
+- [x] 1.3 Migration mode applies and exits 0: `dotnet run --project movie-date.csproj -- --migrate` — 2a2965e
+- [x] 1.4 Migration history present: `__EFMigrationsHistory` lists `InitialCreate` — 2a2965e
+- [x] 1.5 `/health/db` → `200` while `dotnet run` is up — 2a2965e
+- [x] 1.6 `/health` unchanged → `200` with `{"status":"ok"}` — 2a2965e
 
 #### Manual
 
-- [x] 1.7 With `docker compose stop db`, `/health/db` returns 503 while `/health` still returns 200
-- [x] 1.8 `Program.cs` only gained wiring calls
+- [x] 1.7 With `docker compose stop db`, `/health/db` returns 503 while `/health` still returns 200 — 2a2965e
+- [x] 1.8 `Program.cs` only gained wiring calls — 2a2965e
 
 ### Phase 2: Test project
 
 #### Automated
 
-- [ ] 2.1 App still builds alone: `dotnet build movie-date.csproj`
-- [ ] 2.2 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [ ] 2.3 Docker image still builds: `docker build -t moviedate-local .`
-- [ ] 2.5 Tests are independent of the compose DB
+- [x] 2.1 App still builds alone: `dotnet build movie-date.csproj`
+- [x] 2.2 Tests pass: `dotnet test tests/MovieDate.Tests`
+- [x] 2.3 Docker image still builds: `docker build -t moviedate-local .`
+- [x] 2.5 Tests are independent of the compose DB
 
 #### Manual
 
-- [ ] 2.4 No leftover test containers after the run
+- [x] 2.4 No leftover test containers after the run
 
 ### Phase 3: Production — Neon + Fly release command
 
