@@ -291,28 +291,28 @@ First migration on an empty Neon database; nothing to preserve. Rollback of a ba
 
 #### Automated
 
-- [x] 2.1 App still builds alone: `dotnet build movie-date.csproj`
-- [x] 2.2 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 2.3 Docker image still builds: `docker build -t moviedate-local .`
-- [x] 2.5 Tests are independent of the compose DB
+- [x] 2.1 App still builds alone: `dotnet build movie-date.csproj` — ef8f4f3
+- [x] 2.2 Tests pass: `dotnet test tests/MovieDate.Tests` — ef8f4f3
+- [x] 2.3 Docker image still builds: `docker build -t moviedate-local .` — ef8f4f3
+- [x] 2.5 Tests are independent of the compose DB — ef8f4f3
 
 #### Manual
 
-- [x] 2.4 No leftover test containers after the run
+- [x] 2.4 No leftover test containers after the run — ef8f4f3
 
 ### Phase 3: Production — Neon + Fly release command
 
 #### Automated
 
-- [ ] 3.1 `fly.toml` contains `release_command` under `[deploy]`
-- [ ] 3.2 Deploy workflow run completes `success`
-- [ ] 3.3 Prod `/health/db` → `200`
-- [ ] 3.4 Prod `/health` → `{"status":"ok"}`
-- [ ] 3.5 Prod SPA fallback → `200`
+- [x] 3.1 `fly.toml` contains `release_command` under `[deploy]`
+- [x] 3.2 Deploy workflow run completes `success`
+- [x] 3.3 Prod `/health/db` → `200`
+- [x] 3.4 Prod `/health` → `{"status":"ok"}`
+- [x] 3.5 Prod SPA fallback → `200`
 
 #### Manual
 
-- [ ] 3.6 `fly logs` shows the release machine applying migrations before rollout
-- [ ] 3.7 Neon console shows `__EFMigrationsHistory` with `InitialCreate`
-- [ ] 3.8 Neon compute suspends after ~5 minutes idle
-- [ ] 3.9 `deploy-plan.md` updated with the new known-good image reference
+- [x] 3.6 `fly logs` shows the release machine applying migrations before rollout
+- [x] 3.7 Neon console shows `__EFMigrationsHistory` with `InitialCreate`
+- [x] 3.8 Neon compute suspends after ~5 minutes idle
+- [x] 3.9 `deploy-plan.md` updated with the new known-good image reference

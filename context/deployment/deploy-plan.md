@@ -92,8 +92,11 @@ This plan is the direct output of `/10x-infra-research` (→ `context/foundation
 
 ## What's still open (for Module 2, not this deployment)
 
-- **Postgres**: not provisioned. No `DbContext` exists yet. Decide (managed Fly Postgres from $38/mo vs. self-managed with a backup script) when the first `DbContext` is added.
-- **`worker` process group**: not in `fly.toml` yet. When FR-002/003/005's async recompute job is implemented, add a `worker` entry under `[processes]` with its own explicit `min_machines_running = 1` — do not rely on Fly's scale-to-zero default (see `infrastructure.md` risk register — this exact failure mode was the pre-mortem's main scenario).
+- **Postgres**: ✅ resolved 2026-11-02 by change `prod-postgres-connection` (roadmap F-01). Neon free tier, project `moviedate-sk` (`patient-pond-88799426`), AWS Frankfurt, direct (non-pooled) endpoint. Fly secret `ConnectionStrings__Default` (Npgsql key-value form). Migrations run via `[deploy] release_command = "dotnet movie-date.dll --migrate"`; a failed migration or missing secret aborts the deploy. `/health/db` checks the DB on demand — deliberately NOT a Fly check (would keep Neon awake). Release **v5** (`registry.fly.io/moviedate-sk:deployment-01M6E9X1MYF9AGYT2H46XWQQV2`) is the new known-good image. **Rollback caveat:** rolling back to a pre-database image (v3/v4) with the current `fly.toml` would run `--migrate` on an image that doesn't know the flag — the release machine would start a web server instead of exiting. Roll back pre-DB images only with the `release_command` removed.
+- **`worker` process group**: ❌ no longer planned — match recompute runs as an in-process hosted service (`tech-stack.md`, decisions 2026-11-02).
+- **Fly trial limit**: the account is on the Fly trial — logs show `Trial machine stopping. To run for longer than 5m0s, add a credit card`. Machines stop after 5 minutes and cold-start on the next request, overriding `min_machines_running = 1`. Add a payment method before relying on NFR-01 (< 2 s) in a demo.
+- **Duplicated process args**: the Dockerfile `ENTRYPOINT ["dotnet", "movie-date.dll"]` plus the `fly.toml` process/release commands produce `dotnet movie-date.dll dotnet movie-date.dll [--migrate]`. Harmless today (extra args are ignored, `--migrate` is still detected), but worth cleaning up (switch the Dockerfile to `CMD` or drop the prefix from fly commands).
+- **Npgsql log noise**: `Cannot load library libgssapi_krb5.so.2` on startup — Npgsql probes for Kerberos/GSSAPI, which the `aspnet` image lacks. Harmless (password auth); silence by installing `libgssapi-krb5-2` in the runtime stage if desired.
 - **Auth (FR-001)**: not implemented, not deployed.
 
 ### Critical files
