@@ -289,16 +289,16 @@ Search is an ILIKE scan over ~500 rows — no index needed; capped at 20 results
 
 #### Automated
 
-- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [x] 2.2 Frontend production build passes: `npm run build`
-- [x] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false` — a99ef18
+- [x] 2.2 Frontend production build passes: `npm run build` — a99ef18
+- [x] 2.3 Docker image builds — a99ef18
 
 #### Manual
 
-- [x] 2.4 Logged-out `/movies` redirects to login and returns after login
-- [x] 2.5 "ojciec" and "godfather" both suggest the film; add with rating 9 shows it
-- [x] 2.6 Rating change persists across reload; remove shows empty state
-- [x] 2.7 Adding a duplicate shows the duplicate message
+- [x] 2.4 Logged-out `/movies` redirects to login and returns after login — a99ef18
+- [x] 2.5 "ojciec" and "godfather" both suggest the film; add with rating 9 shows it — a99ef18
+- [x] 2.6 Rating change persists across reload; remove shows empty state — a99ef18
+- [x] 2.7 Adding a duplicate shows the duplicate message — a99ef18
 
 ### Phase 3: Production
 
