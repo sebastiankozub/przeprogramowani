@@ -6,7 +6,10 @@ public static class MigrationRunner
 {
     public const string Flag = "--migrate";
 
-    /// <summary>Applies pending EF Core migrations; returns a process exit code (0 = success).</summary>
+    /// <summary>
+    /// Applies pending EF Core migrations, then upserts the movie catalog seed;
+    /// returns a process exit code (0 = success). A seed failure fails the release like a migration failure.
+    /// </summary>
     public static async Task<int> RunAsync(IServiceProvider services)
     {
         var logger = services.GetRequiredService<ILoggerFactory>().CreateLogger(typeof(MigrationRunner));
@@ -23,11 +26,15 @@ public static class MigrationRunner
             await db.Database.MigrateAsync();
 
             logger.LogInformation("Database migrations applied successfully.");
+
+            var (inserted, updated) = await MovieCatalogSeeder.SeedAsync(db);
+            logger.LogInformation("Movie catalog seeded: {Inserted} inserted, {Updated} updated.", inserted, updated);
+
             return 0;
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Database migration failed.");
+            logger.LogError(ex, "Database migration or seeding failed.");
             return 1;
         }
     }

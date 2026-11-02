@@ -1,0 +1,2990 @@
+[
+  {
+    "wikidataId": "Q44578",
+    "title": "Titanic",
+    "originalTitle": "Titanic",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q47703",
+    "title": "Ojciec chrzestny",
+    "originalTitle": "The Godfather",
+    "year": 1972
+  },
+  {
+    "wikidataId": "Q24871",
+    "title": "Avatar",
+    "originalTitle": "Avatar",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q83495",
+    "title": "Matrix",
+    "originalTitle": "The Matrix",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q128518",
+    "title": "Gladiator",
+    "originalTitle": "Gladiator",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q172241",
+    "title": "Skazani na Shawshank",
+    "originalTitle": "The Shawshank Redemption",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q104123",
+    "title": "Pulp Fiction",
+    "originalTitle": "Pulp Fiction",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q132689",
+    "title": "Casablanca",
+    "originalTitle": "Casablanca",
+    "year": 1942
+  },
+  {
+    "wikidataId": "Q163872",
+    "title": "Mroczny rycerz",
+    "originalTitle": "The Dark Knight",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q91540",
+    "title": "Powrót do przyszłości",
+    "originalTitle": "Back to the Future",
+    "year": 1985
+  },
+  {
+    "wikidataId": "Q133654",
+    "title": "Milczenie owiec",
+    "originalTitle": "The Silence of the Lambs",
+    "year": 1991
+  },
+  {
+    "wikidataId": "Q483941",
+    "title": "Lista Schindlera",
+    "originalTitle": "Schindler's List",
+    "year": 1993
+  },
+  {
+    "wikidataId": "Q190050",
+    "title": "Podziemny krąg",
+    "originalTitle": "Fight Club",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q162255",
+    "title": "Terminator",
+    "originalTitle": "The Terminator",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q167726",
+    "title": "Jurassic Park",
+    "originalTitle": "Jurassic Park",
+    "year": 1993
+  },
+  {
+    "wikidataId": "Q102438",
+    "title": "Harry Potter i Kamień Filozoficzny",
+    "originalTitle": "Harry Potter and the Sorcerer's Stone",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q5890",
+    "title": "V jak Vendetta",
+    "originalTitle": "V for Vendetta",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q13417189",
+    "title": "Interstellar",
+    "originalTitle": "Interstellar",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q2875",
+    "title": "Przeminęło z wiatrem",
+    "originalTitle": "Gone with the Wind",
+    "year": 1939
+  },
+  {
+    "wikidataId": "Q25188",
+    "title": "Incepcja",
+    "originalTitle": "Inception",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q127367",
+    "title": "Władca Pierścieni: Drużyna Pierścienia",
+    "originalTitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q17738",
+    "title": "Gwiezdne wojny: część IV – Nowa nadzieja",
+    "originalTitle": "Star Wars",
+    "year": 1977
+  },
+  {
+    "wikidataId": "Q182218",
+    "title": "Avengers",
+    "originalTitle": "The Avengers",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q41483",
+    "title": "Dobry, zły i brzydki",
+    "originalTitle": "Il buono, il brutto, il cattivo",
+    "year": 1966
+  },
+  {
+    "wikidataId": "Q102244",
+    "title": "Harry Potter i Komnata Tajemnic",
+    "originalTitle": "Harry Potter and the Chamber of Secrets",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q170564",
+    "title": "Terminator 2: Dzień sądu",
+    "originalTitle": "Terminator 2",
+    "year": 1991
+  },
+  {
+    "wikidataId": "Q131074",
+    "title": "Władca Pierścieni: Powrót króla",
+    "originalTitle": "The Lord of the Rings: The Return of the King",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q162729",
+    "title": "Braveheart. Waleczne serce",
+    "originalTitle": "Braveheart",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q165713",
+    "title": "Gwiezdne wojny: część I – Mroczne widmo",
+    "originalTitle": "Star Wars: Episode I – The Phantom Menace",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q102225",
+    "title": "Harry Potter i Czara Ognia",
+    "originalTitle": "Harry Potter and the Goblet of Fire",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q102448",
+    "title": "Harry Potter i więzień Azkabanu",
+    "originalTitle": "Harry Potter and the Prisoner of Azkaban",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q103474",
+    "title": "2001: Odyseja kosmiczna",
+    "originalTitle": "2001: A Space Odyssey",
+    "year": 1968
+  },
+  {
+    "wikidataId": "Q23781155",
+    "title": "Avengers: Koniec gry",
+    "originalTitle": "Avengers: Endgame",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q46717",
+    "title": "Piraci z Karaibów: Klątwa Czarnej Perły",
+    "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q125076",
+    "title": "Slumdog. Milioner z ulicy",
+    "originalTitle": "Slumdog Millionaire",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q161687",
+    "title": "Harry Potter i Książę Półkrwi",
+    "originalTitle": "Harry Potter and the Half-Blood Prince",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q102235",
+    "title": "Harry Potter i Zakon Feniksa",
+    "originalTitle": "Harry Potter and the Order of the Phoenix",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q164963",
+    "title": "Władca Pierścieni: Dwie wieże",
+    "originalTitle": "The Lord of the Rings: The Two Towers",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q106316",
+    "title": "Stowarzyszenie Umarłych Poetów",
+    "originalTitle": "Dead Poets Society",
+    "year": 1989
+  },
+  {
+    "wikidataId": "Q184768",
+    "title": "Ojciec chrzestny II",
+    "originalTitle": "The Godfather Part II",
+    "year": 1974
+  },
+  {
+    "wikidataId": "Q164103",
+    "title": "Piękny umysł",
+    "originalTitle": "A Beautiful Mind",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q23780914",
+    "title": "Avengers: Wojna bez granic",
+    "originalTitle": "Avengers: Infinity War",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q42051",
+    "title": "Gwiezdne wojny: część III – Zemsta Sithów",
+    "originalTitle": "Star Wars Episode III",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q165817",
+    "title": "Szeregowiec Ryan",
+    "originalTitle": "Saving Private Ryan",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q166262",
+    "title": "Batman: Początek",
+    "originalTitle": "Batman Begins",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q160618",
+    "title": "Tajemnica Brokeback Mountain",
+    "originalTitle": "Brokeback Mountain",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q54274",
+    "title": "Piraci z Karaibów: Na krańcu świata",
+    "originalTitle": "Pirates of the Caribbean: At World's End",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q24815",
+    "title": "Obywatel Kane",
+    "originalTitle": "Citizen Kane",
+    "year": 1941
+  },
+  {
+    "wikidataId": "Q181795",
+    "title": "Gwiezdne wojny: część V – Imperium kontratakuje",
+    "originalTitle": "Star Wars: Episode V",
+    "year": 1980
+  },
+  {
+    "wikidataId": "Q182692",
+    "title": "Czas apokalipsy",
+    "originalTitle": "Apocalypse Now",
+    "year": 1979
+  },
+  {
+    "wikidataId": "Q184843",
+    "title": "Łowca androidów",
+    "originalTitle": "Blade Runner",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q161087",
+    "title": "Piraci z Karaibów: Skrzynia umarlaka",
+    "originalTitle": "Pirates of the Caribbean: Dead Man's Chest",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q484442",
+    "title": "Spider-Man",
+    "originalTitle": "Spider-Man",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q192724",
+    "title": "Iron Man",
+    "originalTitle": "Iron Man",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q103569",
+    "title": "Obcy – ósmy pasażer Nostromo",
+    "originalTitle": "Alien",
+    "year": 1979
+  },
+  {
+    "wikidataId": "Q131390",
+    "title": "300",
+    "originalTitle": "300",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q181803",
+    "title": "Gwiezdne wojny: część VI – Powrót Jedi",
+    "originalTitle": "Star Wars Episode VI: Return of the Jedi",
+    "year": 1983
+  },
+  {
+    "wikidataId": "Q161678",
+    "title": "Harry Potter i Insygnia Śmierci: Część I",
+    "originalTitle": "Harry Potter and the Deathly Hallows – Part 1",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q105031",
+    "title": "Kevin sam w domu",
+    "originalTitle": "Home Alone",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q181069",
+    "title": "Gwiezdne wojny: część II – Atak klonów",
+    "originalTitle": "Star Wars: Episode II – Attack of the Clones",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q14171368",
+    "title": "Avengers: Age of Ultron",
+    "originalTitle": "Avengers: Age of Ultron",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q109116",
+    "title": "Dyktator",
+    "originalTitle": "The Great Dictator",
+    "year": 1940
+  },
+  {
+    "wikidataId": "Q232009",
+    "title": "Harry Potter i Insygnia Śmierci: Część II",
+    "originalTitle": "Harry Potter and the Deathly Hallows – Part 2",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q190086",
+    "title": "Pół żartem, pół serio",
+    "originalTitle": "Some Like It Hot",
+    "year": 1959
+  },
+  {
+    "wikidataId": "Q61448040",
+    "title": "Parasite",
+    "originalTitle": "기생충",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q108839994",
+    "title": "Oppenheimer",
+    "originalTitle": "Oppenheimer",
+    "year": 2023
+  },
+  {
+    "wikidataId": "Q172975",
+    "title": "Infiltracja",
+    "originalTitle": "The Departed",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q174284",
+    "title": "Poszukiwacze zaginionej Arki",
+    "originalTitle": "Raiders of the Lost Ark",
+    "year": 1981
+  },
+  {
+    "wikidataId": "Q19355",
+    "title": "Życie jest piękne",
+    "originalTitle": "La vita è bella",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q153723",
+    "title": "Bękarty wojny",
+    "originalTitle": "Inglourious Basterds",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q25139",
+    "title": "American Beauty",
+    "originalTitle": "American Beauty",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q275120",
+    "title": "Kapitan Ameryka: Pierwsze starcie",
+    "originalTitle": "Captain America: The First Avenger",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q183081",
+    "title": "To nie jest kraj dla starych ludzi",
+    "originalTitle": "No Country for Old Men",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q47221",
+    "title": "Taksówkarz",
+    "originalTitle": "Taxi Driver",
+    "year": 1976
+  },
+  {
+    "wikidataId": "Q228186",
+    "title": "Lawrence z Arabii",
+    "originalTitle": "Lawrence of Arabia",
+    "year": 1962
+  },
+  {
+    "wikidataId": "Q171669",
+    "title": "Lot nad kukułczym gniazdem",
+    "originalTitle": "One Flew Over the Cuckoo's Nest",
+    "year": 1975
+  },
+  {
+    "wikidataId": "Q4941",
+    "title": "Skyfall",
+    "originalTitle": "Skyfall",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q105598",
+    "title": "Szklana pułapka",
+    "originalTitle": "Die Hard",
+    "year": 1988
+  },
+  {
+    "wikidataId": "Q180098",
+    "title": "Ben-Hur",
+    "originalTitle": "Ben-Hur",
+    "year": 1959
+  },
+  {
+    "wikidataId": "Q150804",
+    "title": "Pianista",
+    "originalTitle": "The Pianist",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q3023357",
+    "title": "Zniewolony",
+    "originalTitle": "12 Years a Slave",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q217020",
+    "title": "Thor",
+    "originalTitle": "Thor",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q160060",
+    "title": "Jak zostać królem",
+    "originalTitle": "The King's Speech",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q163038",
+    "title": "Psychoza",
+    "originalTitle": "Psycho",
+    "year": 1960
+  },
+  {
+    "wikidataId": "Q484048",
+    "title": "Amelia",
+    "originalTitle": "Le Fabuleux Destin d'Amélie Poulain",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q46551",
+    "title": "Prestiż",
+    "originalTitle": "The Prestige",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q208263",
+    "title": "Zielona mila",
+    "originalTitle": "The Green Mile",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q2579784",
+    "title": "Grawitacja",
+    "originalTitle": "Gravity",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q23780734",
+    "title": "Czarna Pantera",
+    "originalTitle": "Black Panther",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q42759035",
+    "title": "Joker",
+    "originalTitle": "Joker",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q208108",
+    "title": "Złap mnie, jeśli potrafisz",
+    "originalTitle": "Catch Me If You Can",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q2345",
+    "title": "Dwunastu gniewnych ludzi",
+    "originalTitle": "12 Angry Men",
+    "year": 1957
+  },
+  {
+    "wikidataId": "Q102754",
+    "title": "Doktor No",
+    "originalTitle": "Dr. No",
+    "year": 1962
+  },
+  {
+    "wikidataId": "Q270470",
+    "title": "Piotruś Pan",
+    "originalTitle": "Peter Pan",
+    "year": 1953
+  },
+  {
+    "wikidataId": "Q202326",
+    "title": "Ojciec chrzestny III",
+    "originalTitle": "The Godfather Part III",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q6074",
+    "title": "Gwiezdne wojny: Przebudzenie Mocy",
+    "originalTitle": "Star Wars: The Force Awakens",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q1392744",
+    "title": "Wilk z Wall Street",
+    "originalTitle": "The Wolf of Wall Street",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q186341",
+    "title": "Lśnienie",
+    "originalTitle": "The Shining",
+    "year": 1980
+  },
+  {
+    "wikidataId": "Q186587",
+    "title": "Troja",
+    "originalTitle": "Troy",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q23010088",
+    "title": "Spider-Man: Homecoming",
+    "originalTitle": "Spider-Man: Homecoming",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q205028",
+    "title": "Iron Man 2",
+    "originalTitle": "Iron Man 2",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q80379",
+    "title": "Hobbit: Niezwykła podróż",
+    "originalTitle": "The Hobbit: An Unexpected Journey",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q180214",
+    "title": "Czarny łabędź",
+    "originalTitle": "Black Swan",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q571032",
+    "title": "Django",
+    "originalTitle": "Django Unchained",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q842306",
+    "title": "Saludos Amigos",
+    "originalTitle": "Saludos Amigos",
+    "year": 1942
+  },
+  {
+    "wikidataId": "Q183555",
+    "title": "Piraci z Karaibów: Na nieznanych wodach",
+    "originalTitle": "Pirates of the Caribbean: On Stranger Tides",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q185888",
+    "title": "The Social Network",
+    "originalTitle": "The Social Network",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q160071",
+    "title": "Zmierzch",
+    "originalTitle": "Twilight",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q13255497",
+    "title": "Birdman",
+    "originalTitle": "Birdman",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q188845",
+    "title": "Rain Man",
+    "originalTitle": "Rain Man",
+    "year": 1988
+  },
+  {
+    "wikidataId": "Q171861",
+    "title": "Artysta",
+    "originalTitle": "The Artist",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q212965",
+    "title": "Igrzyska śmierci",
+    "originalTitle": "The Hunger Games",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q214801",
+    "title": "Truman Show",
+    "originalTitle": "The Truman Show",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q184605",
+    "title": "2012",
+    "originalTitle": "2012",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q152780",
+    "title": "Życie Pi",
+    "originalTitle": "Life of Pi",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q484675",
+    "title": "Leon zawodowiec",
+    "originalTitle": "The Professional",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q42047",
+    "title": "Chłopcy z ferajny",
+    "originalTitle": "Goodfellas",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q18002795",
+    "title": "Zjawa",
+    "originalTitle": "The Revenant",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q18406872",
+    "title": "Doktor Strange",
+    "originalTitle": "Doctor Strange",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q189540",
+    "title": "Siedmiu samurajów",
+    "originalTitle": "七人の侍",
+    "year": 1954
+  },
+  {
+    "wikidataId": "Q190908",
+    "title": "Siedem",
+    "originalTitle": "Seven",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q174385",
+    "title": "Alicja w Krainie Czarów",
+    "originalTitle": "Alice in Wonderland",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q105702",
+    "title": "Doktor Strangelove, czyli jak przestałem się martwić i pokochałem bombę",
+    "originalTitle": "Dr. Strangelove",
+    "year": 1964
+  },
+  {
+    "wikidataId": "Q109331",
+    "title": "Powrót do przyszłości II",
+    "originalTitle": "Back to the Future Part II",
+    "year": 1989
+  },
+  {
+    "wikidataId": "Q181086",
+    "title": "Mechaniczna pomarańcza",
+    "originalTitle": "A Clockwork Orange",
+    "year": 1971
+  },
+  {
+    "wikidataId": "Q182944",
+    "title": "Zakochany Szekspir",
+    "originalTitle": "Shakespeare in Love",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q47075",
+    "title": "Człowiek z blizną",
+    "originalTitle": "Scarface",
+    "year": 1983
+  },
+  {
+    "wikidataId": "Q5887360",
+    "title": "Strażnicy Galaktyki",
+    "originalTitle": "Guardians of the Galaxy",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q63026",
+    "title": "Angielski pacjent",
+    "originalTitle": "The English Patient",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q18547944",
+    "title": "Marsjanin",
+    "originalTitle": "The Martian",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q19347291",
+    "title": "Deadpool",
+    "originalTitle": "Deadpool",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q188652",
+    "title": "Rocky",
+    "originalTitle": "Rocky",
+    "year": 1976
+  },
+  {
+    "wikidataId": "Q189505",
+    "title": "Szczęki",
+    "originalTitle": "Jaws",
+    "year": 1975
+  },
+  {
+    "wikidataId": "Q190525",
+    "title": "Memento",
+    "originalTitle": "Memento",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q190956",
+    "title": "Amadeusz",
+    "originalTitle": "Amadeus",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q209538",
+    "title": "Iron Man 3",
+    "originalTitle": "Iron Man 3",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q210364",
+    "title": "Wyspa tajemnic",
+    "originalTitle": "Shutter Island",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q105387",
+    "title": "Dzień Niepodległości",
+    "originalTitle": "Independence Day",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q736731",
+    "title": "Trzej Caballeros",
+    "originalTitle": "The Three Caballeros",
+    "year": 1944
+  },
+  {
+    "wikidataId": "Q1765358",
+    "title": "Kapitan Ameryka: Zimowy żołnierz",
+    "originalTitle": "Captain America: The Winter Soldier",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q184255",
+    "title": "Za wszelką cenę",
+    "originalTitle": "Million Dollar Baby",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q151904",
+    "title": "Casino Royale",
+    "originalTitle": "Casino Royale",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q152350",
+    "title": "Pancernik Potiomkin",
+    "originalTitle": "Броненосец «Потёмкин»",
+    "year": 1925
+  },
+  {
+    "wikidataId": "Q22665878",
+    "title": "Thor: Ragnarok",
+    "originalTitle": "Thor: Ragnarok",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q3604746",
+    "title": "Avatar: Istota wody",
+    "originalTitle": "Avatar: The Way of Water",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q202508",
+    "title": "Mumia",
+    "originalTitle": "The Mummy",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q20502242",
+    "title": "Wonder Woman",
+    "originalTitle": "Wonder Woman",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q60072",
+    "title": "Dźwięki muzyki",
+    "originalTitle": "The Sound of Music",
+    "year": 1965
+  },
+  {
+    "wikidataId": "Q18407657",
+    "title": "Kapitan Ameryka: Wojna bohaterów",
+    "originalTitle": "Captain America: Civil War",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q188718",
+    "title": "Most na rzece Kwai",
+    "originalTitle": "The Bridge on the River Kwai",
+    "year": 1957
+  },
+  {
+    "wikidataId": "Q189330",
+    "title": "Mroczny rycerz powstaje",
+    "originalTitle": "The Dark Knight Rises",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q48673898",
+    "title": "Green Book",
+    "originalTitle": "Green Book",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q55436290",
+    "title": "Barbie",
+    "originalTitle": "Barbie",
+    "year": 2023
+  },
+  {
+    "wikidataId": "Q179215",
+    "title": "Indiana Jones i Świątynia Zagłady",
+    "originalTitle": "Indiana Jones and the Temple of Doom",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q72962",
+    "title": "Wściekłe psy",
+    "originalTitle": "Reservoir Dogs",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q104814",
+    "title": "Obcy - decydujące starcie",
+    "originalTitle": "Aliens",
+    "year": 1986
+  },
+  {
+    "wikidataId": "Q719915",
+    "title": "Hobbit: Pustkowie Smauga",
+    "originalTitle": "The Hobbit: The Desolation of Smaug",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q160560",
+    "title": "Kod da Vinci",
+    "originalTitle": "The Da Vinci Code",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q26698156",
+    "title": "Kształt wody",
+    "originalTitle": "The Shape of Water",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q193835",
+    "title": "Buntownik z wyboru",
+    "originalTitle": "Good Will Hunting",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q201293",
+    "title": "Rzymskie wakacje",
+    "originalTitle": "Roman Holiday",
+    "year": 1953
+  },
+  {
+    "wikidataId": "Q13619743",
+    "title": "Minionki",
+    "originalTitle": "Minions",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q204191",
+    "title": "To wspaniałe życie",
+    "originalTitle": "It's a Wonderful Life",
+    "year": 1946
+  },
+  {
+    "wikidataId": "Q18602670",
+    "title": "Spectre",
+    "originalTitle": "Spectre",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q190145",
+    "title": "Spider-Man 2",
+    "originalTitle": "Spider-Man 2",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q27985819",
+    "title": "Spider-Man: Daleko od domu",
+    "originalTitle": "Spider-Man: Far from Home",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q60834962",
+    "title": "Diuna",
+    "originalTitle": "Dune",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q68934496",
+    "title": "Spider-Man: Bez drogi do domu",
+    "originalTitle": "Spider-Man: No Way Home",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q11621",
+    "title": "E.T.",
+    "originalTitle": "E.T. the Extra-Terrestrial",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q20456",
+    "title": "Tańczący z wilkami",
+    "originalTitle": "Dances with Wolves",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q107270",
+    "title": "Między słowami",
+    "originalTitle": "Lost in Translation",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q181540",
+    "title": "007 Quantum of Solace",
+    "originalTitle": "Quantum of Solace",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q622769",
+    "title": "Człowiek ze stali",
+    "originalTitle": "Man of Steel",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q213411",
+    "title": "Cast Away: Poza światem",
+    "originalTitle": "Cast Away",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q183066",
+    "title": "W pułapce wojny",
+    "originalTitle": "The Hurt Locker",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q5901134",
+    "title": "Ant-Man",
+    "originalTitle": "Ant-Man",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q190588",
+    "title": "To właśnie miłość",
+    "originalTitle": "Love Actually",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q47300912",
+    "title": "Pewnego razu… w Hollywood",
+    "originalTitle": "Once Upon a Time in Hollywood",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q171453",
+    "title": "Transformers",
+    "originalTitle": "Transformers",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q19089",
+    "title": "GoldenEye",
+    "originalTitle": "GoldenEye",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q151599",
+    "title": "Metropolis",
+    "originalTitle": "Metropolis",
+    "year": 1927
+  },
+  {
+    "wikidataId": "Q1201853",
+    "title": "Thor: Mroczny świat",
+    "originalTitle": "Thor: The Dark World",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q132351",
+    "title": "Podejrzani",
+    "originalTitle": "The Usual Suspects",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q182212",
+    "title": "Spider-Man 3",
+    "originalTitle": "Spider-Man 3",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q183063",
+    "title": "Szósty zmysł",
+    "originalTitle": "The Sixth Sense",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q185658",
+    "title": "Indiana Jones i ostatnia krucjata",
+    "originalTitle": "Indiana Jones and the Last Crusade",
+    "year": 1989
+  },
+  {
+    "wikidataId": "Q154581",
+    "title": "Gangi Nowego Jorku",
+    "originalTitle": "Gangs of New York",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q200299",
+    "title": "Wszystko o Ewie",
+    "originalTitle": "All About Eve",
+    "year": 1950
+  },
+  {
+    "wikidataId": "Q202211",
+    "title": "Gandhi",
+    "originalTitle": "Gandhi",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q220741",
+    "title": "Miasto Boga",
+    "originalTitle": "Cidade de Deus",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q131547207",
+    "title": "Odyseja",
+    "originalTitle": "The Odyssey",
+    "year": 2026
+  },
+  {
+    "wikidataId": "Q207698",
+    "title": "Królestwo niebieskie",
+    "originalTitle": "Kingdom of Heaven",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q208269",
+    "title": "Zakochany bez pamięci",
+    "originalTitle": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q108297",
+    "title": "Spartakus",
+    "originalTitle": "Spartacus",
+    "year": 1960
+  },
+  {
+    "wikidataId": "Q486239",
+    "title": "Piła",
+    "originalTitle": "Saw",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q919649",
+    "title": "Hobbit: Bitwa Pięciu Armii",
+    "originalTitle": "The Hobbit: The Battle of the Five Armies",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q186323",
+    "title": "Borat: Podpatrzone w Ameryce, aby Kazachstan rósł w siłę, a ludzie żyli dostatniej",
+    "originalTitle": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q155476",
+    "title": "Szybcy i wściekli",
+    "originalTitle": "The Fast and the Furious",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q193695",
+    "title": "Czarnoksiężnik z Oz",
+    "originalTitle": "The Wizard of Oz",
+    "year": 1939
+  },
+  {
+    "wikidataId": "Q20001199",
+    "title": "Strażnicy Galaktyki vol. 2",
+    "originalTitle": "Guardians of the Galaxy Vol. 2",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q221202",
+    "title": "Kevin sam w Nowym Jorku",
+    "originalTitle": "Home Alone 2: Lost in New York",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q229808",
+    "title": "Niesamowity Spider-Man",
+    "originalTitle": "The Amazing Spider-Man",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q172837",
+    "title": "Złodzieje rowerów",
+    "originalTitle": "Ladri di biciclette",
+    "year": 1948
+  },
+  {
+    "wikidataId": "Q14320",
+    "title": "Pojutrze",
+    "originalTitle": "The Day After Tomorrow",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q106440",
+    "title": "Goldfinger",
+    "originalTitle": "Goldfinger",
+    "year": 1964
+  },
+  {
+    "wikidataId": "Q273978",
+    "title": "Przyczajony tygrys, ukryty smok",
+    "originalTitle": "臥虎藏龍",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q853718",
+    "title": "Figle i androny",
+    "originalTitle": "Fun and Fancy Free",
+    "year": 1947
+  },
+  {
+    "wikidataId": "Q218235",
+    "title": "Charlie i fabryka czekolady",
+    "originalTitle": "Charlie and the Chocolate Factory",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q219421",
+    "title": "Maska",
+    "originalTitle": "The Mask",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q200396",
+    "title": "Sherlock Holmes",
+    "originalTitle": "Sherlock Holmes",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q200804",
+    "title": "Predator",
+    "originalTitle": "Predator",
+    "year": 1987
+  },
+  {
+    "wikidataId": "Q230552",
+    "title": "Powrót do przyszłości III",
+    "originalTitle": "Back to the Future Part III",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q4254026",
+    "title": "Niesamowity Spider-Man 2",
+    "originalTitle": "The Amazing Spider-Man 2",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q202548",
+    "title": "Zawrót głowy",
+    "originalTitle": "Vertigo",
+    "year": 1958
+  },
+  {
+    "wikidataId": "Q20382729",
+    "title": "Nowy początek",
+    "originalTitle": "Arrival",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q18199330",
+    "title": "Fantastyczne zwierzęta i jak je znaleźć",
+    "originalTitle": "Fantastic Beasts and Where to Find Them",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q18604504",
+    "title": "Legion samobójców",
+    "originalTitle": "Suicide Squad",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q188035",
+    "title": "Apocalypto",
+    "originalTitle": "Apocalypto",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q189600",
+    "title": "Matrix Reaktywacja",
+    "originalTitle": "The Matrix Reloaded",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q190643",
+    "title": "Pluton",
+    "originalTitle": "Platoon",
+    "year": 1986
+  },
+  {
+    "wikidataId": "Q29054009",
+    "title": "Terminator 3: Bunt maszyn",
+    "originalTitle": "Terminator 3: Rise of the Machines",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q175038",
+    "title": "12 małp",
+    "originalTitle": "12 Monkeys",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q207130",
+    "title": "Ostatni samuraj",
+    "originalTitle": "The Last Samurai",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q207536",
+    "title": "Matrix Rewolucje",
+    "originalTitle": "The Matrix Revolutions",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q76479",
+    "title": "Za garść dolarów",
+    "originalTitle": "Per un pugno di dollari",
+    "year": 1964
+  },
+  {
+    "wikidataId": "Q116852",
+    "title": "Batman",
+    "originalTitle": "Batman",
+    "year": 1989
+  },
+  {
+    "wikidataId": "Q212775",
+    "title": "Ostatni cesarz",
+    "originalTitle": "The Last Emperor",
+    "year": 1987
+  },
+  {
+    "wikidataId": "Q182373",
+    "title": "Indiana Jones i Królestwo Kryształowej Czaszki",
+    "originalTitle": "Indiana Jones and the Kingdom of the Crystal Skull",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q200873",
+    "title": "Zaginiony świat: Jurassic Park",
+    "originalTitle": "The Lost World: Jurassic Park",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q233464",
+    "title": "Annie Hall",
+    "originalTitle": "Annie Hall",
+    "year": 1977
+  },
+  {
+    "wikidataId": "Q14772351",
+    "title": "Batman v Superman: Świt Sprawiedliwości",
+    "originalTitle": "Batman v Superman: Dawn of Justice",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q15079318",
+    "title": "Teoria wszystkiego",
+    "originalTitle": "The Theory of Everything",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q201924",
+    "title": "Aviator",
+    "originalTitle": "The Aviator",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q51416",
+    "title": "Faceci w czerni",
+    "originalTitle": "Men in Black",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q59653",
+    "title": "Operacja Argo",
+    "originalTitle": "Argo",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q192686",
+    "title": "Prometeusz",
+    "originalTitle": "Prometheus",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q229633",
+    "title": "3 Idiots",
+    "originalTitle": "थ्री ईडियट्स",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q206124",
+    "title": "O północy w Paryżu",
+    "originalTitle": "Midnight in Paris",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q208572",
+    "title": "Więzień nienawiści",
+    "originalTitle": "American History X",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q209170",
+    "title": "Mary Poppins",
+    "originalTitle": "Mary Poppins",
+    "year": 1964
+  },
+  {
+    "wikidataId": "Q74958",
+    "title": "Krwawy diament",
+    "originalTitle": "Blood Diamond",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q104137",
+    "title": "Bez przebaczenia",
+    "originalTitle": "Unforgiven",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q106182",
+    "title": "X-Men",
+    "originalTitle": "X-Men",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q106428",
+    "title": "Apollo 13",
+    "originalTitle": "Apollo 13",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q106506",
+    "title": "Piąty element",
+    "originalTitle": "The Fifth Element",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q106571",
+    "title": "Pozdrowienia z Rosji",
+    "originalTitle": "From Russia with Love",
+    "year": 1963
+  },
+  {
+    "wikidataId": "Q109135",
+    "title": "Trainspotting",
+    "originalTitle": "Trainspotting",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q318766",
+    "title": "Terminal",
+    "originalTitle": "The Terminal",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q217189",
+    "title": "Siódma pieczęć",
+    "originalTitle": "Det sjunde inseglet",
+    "year": 1957
+  },
+  {
+    "wikidataId": "Q153677",
+    "title": "Za kilka dolarów więcej",
+    "originalTitle": "Per qualche dollaro in più",
+    "year": 1965
+  },
+  {
+    "wikidataId": "Q21935651",
+    "title": "Dunkierka",
+    "originalTitle": "Dunkirk",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q22957393",
+    "title": "Ant-Man i Osa",
+    "originalTitle": "Ant-Man and the Wasp",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q22998395",
+    "title": "Aquaman",
+    "originalTitle": "Aquaman",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q23006268",
+    "title": "Venom",
+    "originalTitle": "Venom",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q23781129",
+    "title": "Kapitan Marvel",
+    "originalTitle": "Captain Marvel",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q14918344",
+    "title": "Gra tajemnic",
+    "originalTitle": "The Imitation Game",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q10350033",
+    "title": "Piraci z Karaibów: Martwi głosu nie mają",
+    "originalTitle": "Pirates of the Caribbean: Dead Men Tell No Tales",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q426828",
+    "title": "Donnie Darko",
+    "originalTitle": "Donnie Darko",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q189889",
+    "title": "Chicago",
+    "originalTitle": "Chicago",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q191040",
+    "title": "Pan i Pani Smith",
+    "originalTitle": "Mr. & Mrs. Smith",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q61117344",
+    "title": "The Batman",
+    "originalTitle": "The Batman",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q168154",
+    "title": "Pewnego razu na Dzikim Zachodzie",
+    "originalTitle": "Once Upon a Time in the West",
+    "year": 1968
+  },
+  {
+    "wikidataId": "Q172271",
+    "title": "Czarownica",
+    "originalTitle": "Maleficent",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q206388",
+    "title": "Dawno temu w Ameryce",
+    "originalTitle": "Once Upon a Time in America",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q206576",
+    "title": "Hugo i jego wynalazek",
+    "originalTitle": "Hugo",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q209481",
+    "title": "Oczy szeroko zamknięte",
+    "originalTitle": "Eyes Wide Shut",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q274167",
+    "title": "Egzorcysta",
+    "originalTitle": "The Exorcist",
+    "year": 1973
+  },
+  {
+    "wikidataId": "Q135465",
+    "title": "Rashōmon",
+    "originalTitle": "羅生門",
+    "year": 1950
+  },
+  {
+    "wikidataId": "Q183239",
+    "title": "Ciekawy przypadek Benjamina Buttona",
+    "originalTitle": "The Curious Case of Benjamin Button",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q152857",
+    "title": "Upadek",
+    "originalTitle": "Der Untergang",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q153882",
+    "title": "Życie na podsłuchu",
+    "originalTitle": "Das Leben der Anderen",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q25136757",
+    "title": "Tamte dni, tamte noce",
+    "originalTitle": "Call Me by Your Name",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q201674",
+    "title": "Łowca jeleni",
+    "originalTitle": "The Deer Hunter",
+    "year": 1978
+  },
+  {
+    "wikidataId": "Q243439",
+    "title": "Full Metal Jacket",
+    "originalTitle": "Full Metal Jacket",
+    "year": 1987
+  },
+  {
+    "wikidataId": "Q271830",
+    "title": "Trzeci człowiek",
+    "originalTitle": "The Third Man",
+    "year": 1949
+  },
+  {
+    "wikidataId": "Q3512046",
+    "title": "Jurassic World",
+    "originalTitle": "Jurassic World",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q204212",
+    "title": "Rebeka",
+    "originalTitle": "Rebecca",
+    "year": 1940
+  },
+  {
+    "wikidataId": "Q34414",
+    "title": "Okno na podwórze",
+    "originalTitle": "Rear Window",
+    "year": 1954
+  },
+  {
+    "wikidataId": "Q466611",
+    "title": "Incredible Hulk",
+    "originalTitle": "The Incredible Hulk",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q15648198",
+    "title": "Whiplash",
+    "originalTitle": "Whiplash",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q16857406",
+    "title": "Księga dżungli",
+    "originalTitle": "The Jungle Book",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q18154496",
+    "title": "Spotlight",
+    "originalTitle": "Spotlight",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q192115",
+    "title": "Sin City: Miasto grzechu",
+    "originalTitle": "Sin City",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q27188178",
+    "title": "Aladyn",
+    "originalTitle": "Aladdin",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q27894574",
+    "title": "Bohemian Rhapsody",
+    "originalTitle": "Bohemian Rhapsody",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q169082",
+    "title": "Zakochana złośnica",
+    "originalTitle": "10 Things I Hate About You",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q208266",
+    "title": "Pożegnanie z Afryką",
+    "originalTitle": "Out of Africa",
+    "year": 1985
+  },
+  {
+    "wikidataId": "Q595",
+    "title": "Nietykalni",
+    "originalTitle": "Intouchables",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q12018",
+    "title": "8½",
+    "originalTitle": "Otto e mezzo",
+    "year": 1963
+  },
+  {
+    "wikidataId": "Q18407",
+    "title": "Słodkie życie",
+    "originalTitle": "La dolce vita",
+    "year": 1960
+  },
+  {
+    "wikidataId": "Q19069",
+    "title": "Siedmiu wspaniałych",
+    "originalTitle": "The Magnificent Seven",
+    "year": 1960
+  },
+  {
+    "wikidataId": "Q105624",
+    "title": "Tożsamość Bourne'a",
+    "originalTitle": "The Bourne Identity",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q107226",
+    "title": "Ultimatum Bourne'a",
+    "originalTitle": "The Bourne Ultimatum",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q110138",
+    "title": "Top Gun",
+    "originalTitle": "Top Gun",
+    "year": 1986
+  },
+  {
+    "wikidataId": "Q272608",
+    "title": "Mulholland Drive",
+    "originalTitle": "Mulholland Drive",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q321561",
+    "title": "Zapach kobiety",
+    "originalTitle": "Scent of a Woman",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q337078",
+    "title": "Big Lebowski",
+    "originalTitle": "The Big Lebowski",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q487181",
+    "title": "Requiem dla snu",
+    "originalTitle": "Requiem for a Dream",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q488655",
+    "title": "Dzień Świstaka",
+    "originalTitle": "Groundhog Day",
+    "year": 1993
+  },
+  {
+    "wikidataId": "Q869741",
+    "title": "Kolorowe melodie",
+    "originalTitle": "Melody Time",
+    "year": 1948
+  },
+  {
+    "wikidataId": "Q1757288",
+    "title": "Mad Max: Na drodze gniewu",
+    "originalTitle": "Mad Max: Fury Road",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q116928",
+    "title": "Saga „Zmierzch”: Księżyc w nowiu",
+    "originalTitle": "The Twilight Saga: New Moon",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q211372",
+    "title": "Na nabrzeżach",
+    "originalTitle": "On the Waterfront",
+    "year": 1954
+  },
+  {
+    "wikidataId": "Q212145",
+    "title": "Świat to za mało",
+    "originalTitle": "The World Is Not Enough",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q212689",
+    "title": "Jestem legendą",
+    "originalTitle": "I Am Legend",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q213208",
+    "title": "Szybcy i wściekli: Tokio Drift",
+    "originalTitle": "The Fast and the Furious: Tokyo Drift",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q193570",
+    "title": "Bulwar Zachodzącego Słońca",
+    "originalTitle": "Sunset Boulevard",
+    "year": 1950
+  },
+  {
+    "wikidataId": "Q193577",
+    "title": "Sprawa Kramerów",
+    "originalTitle": "Kramer vs. Kramer",
+    "year": 1979
+  },
+  {
+    "wikidataId": "Q232774",
+    "title": "Transformers 3",
+    "originalTitle": "Transformers: Dark of the Moon",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q243643",
+    "title": "Sherlock Holmes: Gra cieni",
+    "originalTitle": "Sherlock Holmes: A Game of Shadows",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q244963",
+    "title": "Rambo - Pierwsza krew",
+    "originalTitle": "First Blood",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q15624215",
+    "title": "Lucy",
+    "originalTitle": "Lucy",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q272599",
+    "title": "Na Zachodzie bez zmian",
+    "originalTitle": "All Quiet on the Western Front",
+    "year": 1930
+  },
+  {
+    "wikidataId": "Q30931",
+    "title": "Śmierć nadejdzie jutro",
+    "originalTitle": "Die Another Day",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q18486021",
+    "title": "Gwiezdne wojny: Ostatni Jedi",
+    "originalTitle": "Star Wars: The Last Jedi",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q188000",
+    "title": "Miasto gniewu",
+    "originalTitle": "Crash",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q192934",
+    "title": "Anioły i demony",
+    "originalTitle": "Angels & Demons",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q193066",
+    "title": "Śniadanie u Tiffany'ego",
+    "originalTitle": "Breakfast at Tiffany's",
+    "year": 1961
+  },
+  {
+    "wikidataId": "Q222720",
+    "title": "Fargo",
+    "originalTitle": "Fargo",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q222939",
+    "title": "Jumanji",
+    "originalTitle": "Jumanji",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q207916",
+    "title": "Jutro nie umiera nigdy",
+    "originalTitle": "Zajtrajšok nikdy nezomiera",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q207954",
+    "title": "Pretty Woman",
+    "originalTitle": "Pretty Woman",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q24953",
+    "title": "Żywot Briana",
+    "originalTitle": "Monty Python’s Life of Brian",
+    "year": 1979
+  },
+  {
+    "wikidataId": "Q107761",
+    "title": "Żyje się tylko dwa razy",
+    "originalTitle": "You Only Live Twice",
+    "year": 1967
+  },
+  {
+    "wikidataId": "Q323827",
+    "title": "Doktor Żywago",
+    "originalTitle": "Doctor Zhivago",
+    "year": 1965
+  },
+  {
+    "wikidataId": "Q379873",
+    "title": "Kto wrobił królika Rogera?",
+    "originalTitle": "Who Framed Roger Rabbit",
+    "year": 1988
+  },
+  {
+    "wikidataId": "Q644987",
+    "title": "Chinatown",
+    "originalTitle": "Chinatown",
+    "year": 1974
+  },
+  {
+    "wikidataId": "Q788822",
+    "title": "Ona",
+    "originalTitle": "Her",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q1102220",
+    "title": "Jurassic Park III",
+    "originalTitle": "Jurassic Park III",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q146673",
+    "title": "Nagi instynkt",
+    "originalTitle": "Basic Instinct",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q213081",
+    "title": "Star Trek",
+    "originalTitle": "Star Trek",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q219776",
+    "title": "X-Men 2",
+    "originalTitle": "X2",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q152456",
+    "title": "Monachium",
+    "originalTitle": "Munich",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q21500755",
+    "title": "Blade Runner 2049",
+    "originalTitle": "Blade Runner 2049",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q21534241",
+    "title": "Nie czas umierać",
+    "originalTitle": "No Time to Die",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q24053263",
+    "title": "Logan",
+    "originalTitle": "Logan",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q27044293",
+    "title": "Król lew",
+    "originalTitle": "The Lion King",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q201215",
+    "title": "My Fair Lady",
+    "originalTitle": "My Fair Lady",
+    "year": 1964
+  },
+  {
+    "wikidataId": "Q201687",
+    "title": "Obywatel Milk",
+    "originalTitle": "Milk",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q14650496",
+    "title": "Szybcy i Wściekli",
+    "originalTitle": "Furious 7",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q45602",
+    "title": "Dzisiejsze czasy",
+    "originalTitle": "Modern Times",
+    "year": 1936
+  },
+  {
+    "wikidataId": "Q50861",
+    "title": "Szklana pułapka 4.0",
+    "originalTitle": "Live Free or Die Hard",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q3521099",
+    "title": "Grand Budapest Hotel",
+    "originalTitle": "The Grand Budapest Hotel",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q4985891",
+    "title": "X-Men: Przeszłość, która nadejdzie",
+    "originalTitle": "X-Men: Days of Future Past",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q27411",
+    "title": "Krzyk",
+    "originalTitle": "Scream",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q401976",
+    "title": "Szybcy i wściekli 5",
+    "originalTitle": "Fast Five",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q475693",
+    "title": "Oldboy",
+    "originalTitle": "올드보이",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q191074",
+    "title": "Babel",
+    "originalTitle": "Babel",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q29906232",
+    "title": "Sonic. Szybki Jak Błyskawica",
+    "originalTitle": "Sonic the Hedgehog",
+    "year": 2020
+  },
+  {
+    "wikidataId": "Q62721520",
+    "title": "1917",
+    "originalTitle": "1917",
+    "year": 2019
+  },
+  {
+    "wikidataId": "Q64211112",
+    "title": "Doktor Strange w multiwersum obłędu",
+    "originalTitle": "Doctor Strange in the Multiverse of Madness",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q205447",
+    "title": "Ocean’s Eleven: Ryzykowna gra",
+    "originalTitle": "Ocean's Eleven",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q207588",
+    "title": "Stąd do wieczności",
+    "originalTitle": "From Here to Eternity",
+    "year": 1953
+  },
+  {
+    "wikidataId": "Q207921",
+    "title": "Rydwany ognia",
+    "originalTitle": "Chariots of Fire",
+    "year": 1981
+  },
+  {
+    "wikidataId": "Q107724",
+    "title": "Operacja Piorun",
+    "originalTitle": "Thunderball",
+    "year": 1965
+  },
+  {
+    "wikidataId": "Q107914",
+    "title": "Diamenty są wieczne",
+    "originalTitle": "Diamonds Are Forever",
+    "year": 1971
+  },
+  {
+    "wikidataId": "Q108745",
+    "title": "Pogromcy duchów",
+    "originalTitle": "Ghostbusters",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q110043",
+    "title": "Ptaki",
+    "originalTitle": "The Birds",
+    "year": 1963
+  },
+  {
+    "wikidataId": "Q380996",
+    "title": "Szybko i wściekle",
+    "originalTitle": "Fast & Furious",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q892735",
+    "title": "Wielki Gatsby",
+    "originalTitle": "The Great Gatsby",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q114819",
+    "title": "Diuna",
+    "originalTitle": "Dune",
+    "year": 1984
+  },
+  {
+    "wikidataId": "Q151895",
+    "title": "Nosferatu - symfonia grozy",
+    "originalTitle": "Nosferatu – Eine Symphonie des Grauens",
+    "year": 1922
+  },
+  {
+    "wikidataId": "Q21010856",
+    "title": "Przełęcz ocalonych",
+    "originalTitle": "Hacksaw Ridge",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q23894626",
+    "title": "Czarna Wdowa",
+    "originalTitle": "Black Widow",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q193573",
+    "title": "Moulin Rouge!",
+    "originalTitle": "Moulin Rouge!",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q238211",
+    "title": "Światła wielkiego miasta",
+    "originalTitle": "City Lights",
+    "year": 1931
+  },
+  {
+    "wikidataId": "Q244315",
+    "title": "Aż poleje się krew",
+    "originalTitle": "There Will Be Blood",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q14920425",
+    "title": "Zaginiona dziewczyna",
+    "originalTitle": "Gone Girl",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q42198",
+    "title": "Gorączka",
+    "originalTitle": "Heat",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q269912",
+    "title": "Wszystko za życie",
+    "originalTitle": "Into the Wild",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q51668",
+    "title": "Pasja",
+    "originalTitle": "The Passion of the Christ",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q471716",
+    "title": "Barry Lyndon",
+    "originalTitle": "Barry Lyndon",
+    "year": 1975
+  },
+  {
+    "wikidataId": "Q19946102",
+    "title": "Piękna i Bestia",
+    "originalTitle": "Beauty and the Beast",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q191543",
+    "title": "Terminator: Ocalenie",
+    "originalTitle": "Terminator Salvation",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q220780",
+    "title": "Wściekły byk",
+    "originalTitle": "Raging Bull",
+    "year": 1980
+  },
+  {
+    "wikidataId": "Q221103",
+    "title": "Halloween",
+    "originalTitle": "Halloween",
+    "year": 1978
+  },
+  {
+    "wikidataId": "Q221168",
+    "title": "X-Men: Ostatni bastion",
+    "originalTitle": "X-Men: The Last Stand",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q221249",
+    "title": "Tootsie",
+    "originalTitle": "Tootsie",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q221594",
+    "title": "Lepiej być nie może",
+    "originalTitle": "As Good as It Gets",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q222867",
+    "title": "Za szybcy, za wściekli",
+    "originalTitle": "2 Fast 2 Furious",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q223139",
+    "title": "Północ, północny zachód",
+    "originalTitle": "North by Northwest",
+    "year": 1959
+  },
+  {
+    "wikidataId": "Q60997779",
+    "title": "Minionki: Wejście Gru",
+    "originalTitle": "Minions: The Rise of Gru",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q83808444",
+    "title": "Wszystko wszędzie naraz",
+    "originalTitle": "Everything Everywhere All at Once",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q171711",
+    "title": "W ciemność. Star Trek",
+    "originalTitle": "Star Trek Into Darkness",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q204374",
+    "title": "Służące",
+    "originalTitle": "The Help",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q206374",
+    "title": "Niezniszczalni",
+    "originalTitle": "The Expendables",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q207659",
+    "title": "Kosmiczny mecz",
+    "originalTitle": "Space Jam",
+    "year": 1996
+  },
+  {
+    "wikidataId": "Q208632",
+    "title": "Ich noce",
+    "originalTitle": "It Happened One Night",
+    "year": 1934
+  },
+  {
+    "wikidataId": "Q27204",
+    "title": "Żyj i pozwól umrzeć",
+    "originalTitle": "Live and Let Die",
+    "year": 1973
+  },
+  {
+    "wikidataId": "Q108006",
+    "title": "Speed: Niebezpieczna prędkość",
+    "originalTitle": "Speed",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q631103",
+    "title": "Wredne dziewczyny",
+    "originalTitle": "Mean Girls",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q660950",
+    "title": "Blue Velvet",
+    "originalTitle": "Blue Velvet",
+    "year": 1986
+  },
+  {
+    "wikidataId": "Q747570",
+    "title": "Amerykanin w Paryżu",
+    "originalTitle": "An American in Paris",
+    "year": 1951
+  },
+  {
+    "wikidataId": "Q1405126",
+    "title": "American Psycho",
+    "originalTitle": "American Psycho",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q116845",
+    "title": "Poradnik pozytywnego myślenia",
+    "originalTitle": "Silver Linings Playbook",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q156608",
+    "title": "Krucjata Bourne'a",
+    "originalTitle": "The Bourne Supremacy",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q159063",
+    "title": "Lektor",
+    "originalTitle": "The Reader",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q160215",
+    "title": "King Kong",
+    "originalTitle": "King Kong",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q162277",
+    "title": "Aleksander",
+    "originalTitle": "Alexander",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q21527875",
+    "title": "Moonlight",
+    "originalTitle": "Moonlight",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q25136484",
+    "title": "To",
+    "originalTitle": "It",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q200437",
+    "title": "Stalker",
+    "originalTitle": "Сталкер",
+    "year": 1979
+  },
+  {
+    "wikidataId": "Q200572",
+    "title": "Ja",
+    "originalTitle": "I, Robot",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q201819",
+    "title": "Dystrykt 9",
+    "originalTitle": "District 9",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q485803",
+    "title": "Opowieści z Narnii: Lew, Czarownica i stara szafa",
+    "originalTitle": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q239756",
+    "title": "Tam, gdzie rosną poziomki",
+    "originalTitle": "Smultronstället",
+    "year": 1957
+  },
+  {
+    "wikidataId": "Q49003",
+    "title": "Uwierz w ducha",
+    "originalTitle": "Ghost",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q9013673",
+    "title": "American Hustle: Jak się skubie w Ameryce",
+    "originalTitle": "American Hustle",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q18225084",
+    "title": "Nienawistna ósemka",
+    "originalTitle": "The Hateful Eight",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q19829521",
+    "title": "Szybcy i wściekli 8",
+    "originalTitle": "The Fate of the Furious",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q189054",
+    "title": "Powrót Batmana",
+    "originalTitle": "Batman Returns",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q191100",
+    "title": "Transformers: Zemsta upadłych",
+    "originalTitle": "Transformers: Revenge of the Fallen",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q221113",
+    "title": "A.I. Sztuczna inteligencja",
+    "originalTitle": "A.I. Artificial Intelligence",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q223316",
+    "title": "Diabeł ubiera się u Prady",
+    "originalTitle": "The Devil Wears Prada",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q223559",
+    "title": "Robin Hood",
+    "originalTitle": "Robin Hood",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q223884",
+    "title": "Hotel Ruanda",
+    "originalTitle": "Hotel Rwanda",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q63985561",
+    "title": "Tenet",
+    "originalTitle": "Tenet",
+    "year": 2020
+  },
+  {
+    "wikidataId": "Q174371",
+    "title": "127 godzin",
+    "originalTitle": "127 Hours",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q208344",
+    "title": "Armageddon",
+    "originalTitle": "Armageddon",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q286868",
+    "title": "Noe: Wybrany przez Boga",
+    "originalTitle": "Noah",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q320461",
+    "title": "Mumia powraca",
+    "originalTitle": "The Mummy Returns",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q335160",
+    "title": "Przekręt",
+    "originalTitle": "Snatch",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q337881",
+    "title": "Johnny English",
+    "originalTitle": "Johnny English",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q372514",
+    "title": "RoboCop",
+    "originalTitle": "RoboCop",
+    "year": 1987
+  },
+  {
+    "wikidataId": "Q213012",
+    "title": "Sezon na misia",
+    "originalTitle": "Open Season",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q216006",
+    "title": "Labirynt fauna",
+    "originalTitle": "El laberinto del fauno",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q217182",
+    "title": "Edward Nożycoręki",
+    "originalTitle": "Edward Scissorhands",
+    "year": 1990
+  },
+  {
+    "wikidataId": "Q217627",
+    "title": "Absolwent",
+    "originalTitle": "The Graduate",
+    "year": 1967
+  },
+  {
+    "wikidataId": "Q23894629",
+    "title": "Eternals",
+    "originalTitle": "Eternals",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q270215",
+    "title": "Kontakt",
+    "originalTitle": "Contact",
+    "year": 1997
+  },
+  {
+    "wikidataId": "Q270385",
+    "title": "Duma i uprzedzenie",
+    "originalTitle": "Pride & Prejudice",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q270510",
+    "title": "Garsoniera",
+    "originalTitle": "The Apartment",
+    "year": 1960
+  },
+  {
+    "wikidataId": "Q272064",
+    "title": "W obliczu śmierci",
+    "originalTitle": "The Living Daylights",
+    "year": 1987
+  },
+  {
+    "wikidataId": "Q202028",
+    "title": "Wojna światów",
+    "originalTitle": "War of the Worlds",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q32433",
+    "title": "Lincoln",
+    "originalTitle": "Lincoln",
+    "year": 2012
+  },
+  {
+    "wikidataId": "Q61696",
+    "title": "Nocny kowboj",
+    "originalTitle": "Midnight Cowboy",
+    "year": 1969
+  },
+  {
+    "wikidataId": "Q18067135",
+    "title": "Most szpiegów",
+    "originalTitle": "Bridge of Spies",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q19590955",
+    "title": "Łotr Jeden. Gwiezdne wojny – historie",
+    "originalTitle": "Rogue One: A Star Wars Story",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q220394",
+    "title": "Narodziny narodu",
+    "originalTitle": "The Birth of a Nation",
+    "year": 1915
+  },
+  {
+    "wikidataId": "Q220515",
+    "title": "W pogoni za szczęściem",
+    "originalTitle": "The Pursuit of Happyness",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q220713",
+    "title": "American Pie",
+    "originalTitle": "American Pie",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q223374",
+    "title": "Pamiętnik",
+    "originalTitle": "The Notebook",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q224130",
+    "title": "Fantastyczna Czwórka",
+    "originalTitle": "Fantastic Four",
+    "year": 2005
+  },
+  {
+    "wikidataId": "Q54021143",
+    "title": "Połączeni",
+    "originalTitle": "The Mitchells vs. The Machines",
+    "year": 2021
+  },
+  {
+    "wikidataId": "Q109228991",
+    "title": "Diuna: Część druga",
+    "originalTitle": "Dune: Part Two",
+    "year": 2024
+  },
+  {
+    "wikidataId": "Q204398",
+    "title": "Ośmiorniczka",
+    "originalTitle": "Octopussy",
+    "year": 1983
+  },
+  {
+    "wikidataId": "Q18428",
+    "title": "Amarcord",
+    "originalTitle": "Amarcord",
+    "year": 1973
+  },
+  {
+    "wikidataId": "Q106871",
+    "title": "Szklana pułapka 3",
+    "originalTitle": "Die Hard with a Vengeance",
+    "year": 1995
+  },
+  {
+    "wikidataId": "Q107894",
+    "title": "W tajnej służbie Jej Królewskiej Mości",
+    "originalTitle": "On Her Majesty's Secret Service",
+    "year": 1969
+  },
+  {
+    "wikidataId": "Q272860",
+    "title": "Człowiek słoń",
+    "originalTitle": "The Elephant Man",
+    "year": 1980
+  },
+  {
+    "wikidataId": "Q329805",
+    "title": "Wszystko o mojej matce",
+    "originalTitle": "Todo sobre mi madre",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q374172",
+    "title": "Brzdąc",
+    "originalTitle": "The Kid",
+    "year": 1921
+  },
+  {
+    "wikidataId": "Q387601",
+    "title": "Noc w muzeum",
+    "originalTitle": "Night at the Museum",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q570567",
+    "title": "Ostatnie tango w Paryżu",
+    "originalTitle": "Ultimo tango a Parigi",
+    "year": 1972
+  },
+  {
+    "wikidataId": "Q2937646",
+    "title": "Kapitan Phillips",
+    "originalTitle": "Captain Phillips",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q125772",
+    "title": "Solaris",
+    "originalTitle": "Солярис",
+    "year": 1972
+  },
+  {
+    "wikidataId": "Q126699",
+    "title": "Gran Torino",
+    "originalTitle": "Gran Torino",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q211009",
+    "title": "Van Helsing",
+    "originalTitle": "Van Helsing",
+    "year": 2004
+  },
+  {
+    "wikidataId": "Q212041",
+    "title": "Sweeney Todd: Demoniczny golibroda z Fleet Street",
+    "originalTitle": "Sweeney Todd: The Demon Barber of Fleet Street",
+    "year": 2007
+  },
+  {
+    "wikidataId": "Q214723",
+    "title": "Gorączka złota",
+    "originalTitle": "The Gold Rush",
+    "year": 1925
+  },
+  {
+    "wikidataId": "Q217220",
+    "title": "Patton",
+    "originalTitle": "Patton",
+    "year": 1970
+  },
+  {
+    "wikidataId": "Q217552",
+    "title": "X-Men Geneza: Wolverine",
+    "originalTitle": "X-Men Origins: Wolverine",
+    "year": 2009
+  },
+  {
+    "wikidataId": "Q153484",
+    "title": "Resident Evil",
+    "originalTitle": "Resident Evil",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q157044",
+    "title": "Godziny",
+    "originalTitle": "The Hours",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q24053277",
+    "title": "Trzy billboardy za Ebbing, Missouri",
+    "originalTitle": "Three Billboards Outside Ebbing, Missouri",
+    "year": 2017
+  },
+  {
+    "wikidataId": "Q25431158",
+    "title": "Deadpool 2",
+    "originalTitle": "Deadpool 2",
+    "year": 2018
+  },
+  {
+    "wikidataId": "Q194413",
+    "title": "Pearl Harbor",
+    "originalTitle": "Pearl Harbor",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q200672",
+    "title": "Notting Hill",
+    "originalTitle": "Notting Hill",
+    "year": 1999
+  },
+  {
+    "wikidataId": "Q243983",
+    "title": "Geneza planety małp",
+    "originalTitle": "Rise of the Planet of the Apes",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q244604",
+    "title": "Raport mniejszości",
+    "originalTitle": "Minority Report",
+    "year": 2002
+  },
+  {
+    "wikidataId": "Q15068238",
+    "title": "Kingsman: Tajne służby",
+    "originalTitle": "Kingsman: The Secret Service",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q15140437",
+    "title": "Terminator: Genisys",
+    "originalTitle": "Terminator Genisys",
+    "year": 2015
+  },
+  {
+    "wikidataId": "Q165325",
+    "title": "Kill Bill",
+    "originalTitle": null,
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q28196",
+    "title": "World War Z",
+    "originalTitle": "World War Z",
+    "year": 2013
+  },
+  {
+    "wikidataId": "Q454398",
+    "title": "Smerfy",
+    "originalTitle": "The Smurfs",
+    "year": 2011
+  },
+  {
+    "wikidataId": "Q483852",
+    "title": "Pani Doubtfire",
+    "originalTitle": "Mrs. Doubtfire",
+    "year": 1993
+  },
+  {
+    "wikidataId": "Q16970789",
+    "title": "Snajper",
+    "originalTitle": "American Sniper",
+    "year": 2014
+  },
+  {
+    "wikidataId": "Q17042878",
+    "title": "X-Men: Apocalypse",
+    "originalTitle": "X-Men: Apocalypse",
+    "year": 2016
+  },
+  {
+    "wikidataId": "Q188850",
+    "title": "Mamma Mia!",
+    "originalTitle": "Mamma Mia!",
+    "year": 2008
+  },
+  {
+    "wikidataId": "Q221090",
+    "title": "Ludzkie dzieci",
+    "originalTitle": "Children of Men",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q221491",
+    "title": "Cienka czerwona linia",
+    "originalTitle": "The Thin Red Line",
+    "year": 1998
+  },
+  {
+    "wikidataId": "Q221586",
+    "title": "Rzeka tajemnic",
+    "originalTitle": "Mystic River",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q65768604",
+    "title": "Thor: Miłość i grom",
+    "originalTitle": "Thor: Love and Thunder",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q105970894",
+    "title": "Sonic 2: Szybki jak błyskawica",
+    "originalTitle": "Sonic the Hedgehog 2",
+    "year": 2022
+  },
+  {
+    "wikidataId": "Q207816",
+    "title": "Bruce Wszechmogący",
+    "originalTitle": "Bruce Almighty",
+    "year": 2003
+  },
+  {
+    "wikidataId": "Q210756",
+    "title": "Coś",
+    "originalTitle": "The Thing",
+    "year": 1982
+  },
+  {
+    "wikidataId": "Q18402",
+    "title": "La strada",
+    "originalTitle": "La strada",
+    "year": 1954
+  },
+  {
+    "wikidataId": "Q25043",
+    "title": "Monty Python i Święty Graal",
+    "originalTitle": "Monty Python and the Holy Grail",
+    "year": 1975
+  },
+  {
+    "wikidataId": "Q105801",
+    "title": "Gwiezdne wrota",
+    "originalTitle": "Stargate",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q107325",
+    "title": "Drakula",
+    "originalTitle": "Bram Stoker's Dracula",
+    "year": 1992
+  },
+  {
+    "wikidataId": "Q110206",
+    "title": "Brudny Harry",
+    "originalTitle": "Dirty Harry",
+    "year": 1971
+  },
+  {
+    "wikidataId": "Q332368",
+    "title": "Zabójczy widok",
+    "originalTitle": "A View to a Kill",
+    "year": 1985
+  },
+  {
+    "wikidataId": "Q340138",
+    "title": "Ace Ventura: Psi detektyw",
+    "originalTitle": "Ace Ventura: Pet Detective",
+    "year": 1994
+  },
+  {
+    "wikidataId": "Q126800",
+    "title": "Happy Feet: Tupot małych stóp",
+    "originalTitle": "Happy Feet",
+    "year": 2006
+  },
+  {
+    "wikidataId": "Q217010",
+    "title": "Saga „Zmierzch”: Zaćmienie",
+    "originalTitle": "The Twilight Saga: Eclipse",
+    "year": 2010
+  },
+  {
+    "wikidataId": "Q110278",
+    "title": "Vanilla Sky",
+    "originalTitle": "Vanilla Sky",
+    "year": 2001
+  },
+  {
+    "wikidataId": "Q219424",
+    "title": "Straszny film",
+    "originalTitle": "Scary Movie",
+    "year": 2000
+  },
+  {
+    "wikidataId": "Q204057",
+    "title": "Filadelfia",
+    "originalTitle": "Philadelphia",
+    "year": 1993
+  }
+]

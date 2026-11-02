@@ -31,3 +31,39 @@ Accept: application/json
 POST {{MovieDate_HostAddress}}/api/auth/logout
 
 ###
+
+### Movies — search the catalog (signed in; q < 2 chars → []; 401 without cookie)
+GET {{MovieDate_HostAddress}}/api/movies?q=ojciec
+Accept: application/json
+
+### Movies — search by original title
+GET {{MovieDate_HostAddress}}/api/movies?q=godfather
+Accept: application/json
+
+### Watched — my list (most recently updated first)
+GET {{MovieDate_HostAddress}}/api/watched
+Accept: application/json
+
+### Watched — add (201; 400 rating outside 1–10; 404 unknown movie; 409 already on the list)
+# Take movieId from a search result above.
+@movieId = 1
+POST {{MovieDate_HostAddress}}/api/watched
+Content-Type: application/json
+
+{
+  "movieId": {{movieId}},
+  "rating": 9
+}
+
+### Watched — update rating (200; 400; 404 when not on my list)
+PUT {{MovieDate_HostAddress}}/api/watched/{{movieId}}
+Content-Type: application/json
+
+{
+  "rating": 10
+}
+
+### Watched — remove (204; 404 when not on my list)
+DELETE {{MovieDate_HostAddress}}/api/watched/{{movieId}}
+
+###

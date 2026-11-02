@@ -1,0 +1,36 @@
+# Movie catalog seed for MovieDate (Data/Seed/movies.json).
+# Manual corrections applied to movies.json after normalization (re-apply if regenerated):
+#   Q165713 originalTitle "…Phantom Menace9999" (Wikidata vandalism) -> "Star Wars: Episode I – The Phantom Menace".
+# Top 500 films (instance of Q11424) by number of Wikipedia sitelinks, with the Polish and English
+# labels (title = Polish, fallback English — applied during normalization), the original title (P1476)
+# and the earliest plausible publication year (P577).
+# The inner subquery pre-filters on sitelinks so ordering does not scan every film (timeout).
+# P1476 can hold several values (translations, vandalism), so all are returned as "lang|title" and the
+# normalizer picks the one in the film's original language (P364 -> P218), else English, else the first.
+# Run:
+#   curl -G https://query.wikidata.org/sparql --data-urlencode query@Data/Seed/movies.sparql \
+#     -H "Accept: application/sparql-results+json" -H "User-Agent: MovieDate-seed/1.0 (course project)"
+SELECT ?film ?links
+       (SAMPLE(?plLabel) AS ?pl)
+       (SAMPLE(?enLabel) AS ?en)
+       (GROUP_CONCAT(DISTINCT CONCAT(LANG(?title), "|", STR(?title)); SEPARATOR = "\u001F") AS ?originalTitles)
+       (GROUP_CONCAT(DISTINCT ?langCode; SEPARATOR = ",") AS ?originalLangs)
+       (MIN(YEAR(?date)) AS ?year)
+WHERE {
+  {
+    SELECT ?film ?links WHERE {
+      ?film wdt:P31 wd:Q11424 ;
+            wikibase:sitelinks ?links .
+      FILTER(?links > 40)
+    }
+    ORDER BY DESC(?links)
+    LIMIT 500
+  }
+  OPTIONAL { ?film rdfs:label ?plLabel . FILTER(LANG(?plLabel) = "pl") }
+  OPTIONAL { ?film rdfs:label ?enLabel . FILTER(LANG(?enLabel) = "en") }
+  OPTIONAL { ?film wdt:P1476 ?title . }
+  OPTIONAL { ?film wdt:P364/wdt:P218 ?langCode . }
+  OPTIONAL { ?film wdt:P577 ?date . FILTER(YEAR(?date) >= 1878) }
+}
+GROUP BY ?film ?links
+ORDER BY DESC(?links)

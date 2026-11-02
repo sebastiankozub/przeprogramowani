@@ -19,6 +19,13 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
+  <!-- Movie catalog seed (generated from Data/Seed/movies.sparql), upserted by MigrationRunner. -->
+  <ItemGroup>
+    <None Remove="Data/Seed/movies.json" />
+    <Content Remove="Data/Seed/movies.json" />
+    <EmbeddedResource Include="Data/Seed/movies.json" LogicalName="MovieDate.Data.Seed.movies.json" />
+  </ItemGroup>
+
   <!-- Test projects live under tests/ and are built separately; keep them out of the app's compilation. -->
   <ItemGroup>
     <Compile Remove="tests/**" />
