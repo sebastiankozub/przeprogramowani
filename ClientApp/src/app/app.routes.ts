@@ -27,6 +27,18 @@ export const routes: Routes = [
     title: 'Dopasowania',
   },
   {
+    path: 'friends',
+    loadComponent: () => import('./friends/friends.component').then((m) => m.FriendsComponent),
+    canActivate: [authGuard],
+    title: 'Znajomi',
+  },
+  {
+    path: 'friends/:userId',
+    loadComponent: () => import('./friends/conversation.component').then((m) => m.ConversationComponent),
+    canActivate: [authGuard],
+    title: 'Rozmowa',
+  },
+  {
     path: 'profile',
     loadComponent: () => import('./profile/profile.component').then((m) => m.ProfileComponent),
     canActivate: [authGuard],

@@ -383,13 +383,13 @@ One browser spec for the full journey, gated in CI, then delivery through a PR a
 
 #### Automated
 
-- [x] 1.1 Build passes
-- [x] 1.2 Migration adds only the two new tables
-- [x] 1.3 All backend tests pass, including the new friends and conversation tests
+- [x] 1.1 Build passes — e6f9fa6
+- [x] 1.2 Migration adds only the two new tables — e6f9fa6
+- [x] 1.3 All backend tests pass, including the new friends and conversation tests — e6f9fa6
 
 #### Manual
 
-- [x] 1.4 Friend and conversation endpoints behave as specified for a matched local pair
+- [x] 1.4 Friend and conversation endpoints behave as specified for a matched local pair — e6f9fa6
 
 ### Phase 2: SPA — add friend, friends page, conversation
 

@@ -1,0 +1,47 @@
+<section class="movies">
+  <h1 id="friends-heading">Znajomi</h1>
+
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+
+  @if (loaded() && !error()) {
+    @if (isEmpty()) {
+      <p>
+        Nie masz jeszcze znajomych. Dodaj kogoś z listy
+        <a routerLink="/matches">dopasowań</a>.
+      </p>
+    } @else {
+      @if (lists().friends.length === 0) {
+        <p>Twoja lista znajomych jest pusta.</p>
+      } @else {
+        <ul class="movies-list" aria-labelledby="friends-heading">
+          @for (friend of lists().friends; track friend.userId) {
+            <li class="movies-item">
+              <div class="movies-item-text">
+                <strong>{{ friend.displayName }}</strong>
+                <span>{{ cityLabel(friend.city) }}</span>
+              </div>
+              <a mat-stroked-button [routerLink]="['/friends', friend.userId]">Napisz</a>
+            </li>
+          }
+        </ul>
+      }
+
+      @if (lists().addedMe.length > 0) {
+        <h2 id="added-me-heading">Dodali Cię do znajomych</h2>
+        <ul class="movies-list" aria-labelledby="added-me-heading">
+          @for (friend of lists().addedMe; track friend.userId) {
+            <li class="movies-item">
+              <div class="movies-item-text">
+                <strong>{{ friend.displayName }}</strong>
+                <span>{{ cityLabel(friend.city) }}</span>
+              </div>
+              <a mat-stroked-button [routerLink]="['/friends', friend.userId]">Napisz</a>
+            </li>
+          }
+        </ul>
+      }
+    }
+  }
+</section>
