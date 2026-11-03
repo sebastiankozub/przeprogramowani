@@ -391,22 +391,22 @@ Ship the slice, create demo accounts in production through the public API, and v
 #### Manual
 
 - [ ] 3.4 New account: home nudges for name and city disappear after setting them
-- [ ] 3.5 `/matches` without city/name shows the profile message
-- [ ] 3.6 Two local accounts: progress state, ranked list with names, cities, scores, shared titles; reload keeps it
+- [x] 3.5 `/matches` without city/name shows the profile message
+- [x] 3.6 Two local accounts: progress state, ranked list with names, cities, scores, shared titles; reload keeps it
 - [ ] 3.7 Logged-out `/matches` redirects to login and returns
 
 ### Phase 4: Production — deploy + demo accounts
 
 #### Automated
 
-- [ ] 4.1 Demo script exits 0 twice in a row locally
+- [x] 4.1 Demo script exits 0 twice in a row locally
 - [x] 4.2 Release completes on Fly
 - [x] 4.3 Production `/api/matches` → `401`
 - [x] 4.4 Production `/health` → ok
 
 #### Manual
 
-- [ ] 4.5 Demo script run against production exits 0
-- [ ] 4.6 Prod flow: fresh account gets more than one ranked candidate; mirror visible on a demo account
-- [ ] 4.7 `GET /api/matches` < 2 s on a warm machine
-- [ ] 4.8 `deploy-plan.md` updated with the new known-good release
+- [x] 4.5 Demo script run against production exits 0
+- [x] 4.6 Prod flow: fresh account gets more than one ranked candidate; mirror visible on a demo account
+- [x] 4.7 `GET /api/matches` < 2 s on a warm machine
+- [x] 4.8 `deploy-plan.md` updated with the new known-good release
