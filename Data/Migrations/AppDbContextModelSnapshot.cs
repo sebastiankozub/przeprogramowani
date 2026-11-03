@@ -292,6 +292,27 @@ namespace MovieDate.Data.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("MovieDate.Data.Friendship", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FriendId")
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("UserId", "FriendId");
+
+                    b.HasIndex("FriendId");
+
+                    b.ToTable("Friendships", t =>
+                        {
+                            t.HasCheckConstraint("CK_Friendships_NotSelf", "\"UserId\" <> \"FriendId\"");
+                        });
+                });
+
             modelBuilder.Entity("MovieDate.Data.Match", b =>
                 {
                     b.Property<string>("UserId")
@@ -322,6 +343,42 @@ namespace MovieDate.Data.Migrations
                     b.ToTable("Matches", t =>
                         {
                             t.HasCheckConstraint("CK_Matches_NotSelf", "\"UserId\" <> \"CandidateId\"");
+                        });
+                });
+
+            modelBuilder.Entity("MovieDate.Data.Message", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
+
+                    b.Property<string>("RecipientId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SenderId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("SentAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecipientId");
+
+                    b.HasIndex("SenderId", "RecipientId", "SentAt", "Id");
+
+                    b.ToTable("Messages", t =>
+                        {
+                            t.HasCheckConstraint("CK_Messages_NotSelf", "\"SenderId\" <> \"RecipientId\"");
                         });
                 });
 
@@ -464,6 +521,21 @@ namespace MovieDate.Data.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("MovieDate.Data.Friendship", b =>
+                {
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("FriendId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MovieDate.Data.Match", b =>
                 {
                     b.HasOne("MovieDate.Data.AppUser", null)
@@ -475,6 +547,21 @@ namespace MovieDate.Data.Migrations
                     b.HasOne("MovieDate.Data.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MovieDate.Data.Message", b =>
+                {
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("RecipientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

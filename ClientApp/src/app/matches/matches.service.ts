@@ -19,6 +19,8 @@ export interface Match {
   /** At most 5. */
   sharedWatchlist: Movie[];
   firstMatchedAt: string;
+  /** The signed-in user has added this candidate to their friends. */
+  isFriend: boolean;
 }
 
 /** The server recomputes the list in the background after every change that can affect it. */

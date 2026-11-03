@@ -1,0 +1,46 @@
+<section class="movies">
+  @if (other(); as person) {
+    <h1>{{ person.displayName }}</h1>
+  } @else {
+    <h1>Rozmowa</h1>
+  }
+
+  @if (notAllowed()) {
+    <p class="auth-error" role="alert">
+      {{ notAllowedMessage }}
+      <a routerLink="/friends">Wróć do znajomych</a>
+    </p>
+  }
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+
+  @if (loaded() && !notAllowed() && other(); as person) {
+    @if (messages().length === 0) {
+      <p>Nie ma jeszcze wiadomości. Napisz pierwszą!</p>
+    } @else {
+      <ol class="movies-list" aria-label="Wiadomości">
+        @for (message of messages(); track message.id) {
+          <li class="movies-item">
+            <div class="movies-item-text">
+              <span>
+                <strong>{{ message.fromMe ? 'Ty' : person.displayName }}</strong>
+                ·
+                <time [attr.datetime]="message.sentAt">{{ message.sentAt | date: 'd.MM.yyyy HH:mm' }}</time>
+              </span>
+              <span class="conversation-body">{{ message.body }}</span>
+            </div>
+          </li>
+        }
+      </ol>
+    }
+
+    <form class="movies-add" (submit)="$event.preventDefault(); send()">
+      <mat-form-field class="movies-search">
+        <mat-label>Wiadomość</mat-label>
+        <textarea matInput [formControl]="bodyControl" [attr.maxlength]="maxLength" rows="3"></textarea>
+      </mat-form-field>
+      <button mat-flat-button type="submit" [disabled]="!canSend()">Wyślij</button>
+    </form>
+  }
+</section>

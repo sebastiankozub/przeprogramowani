@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { of, throwError } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
+import { ALREADY_FRIEND, Friend, FriendsService, NOT_ON_MATCH_LIST } from '../friends/friends.service';
 import { MoviesError } from '../shared/api-errors';
 import {
   MatchesComponent,
@@ -22,6 +23,7 @@ describe('MatchesComponent', () => {
     ],
     sharedWatchlist: [],
     firstMatchedAt: '2026-11-03T10:00:00Z',
+    isFriend: false,
   };
   const upToDate: MatchStatus = { pending: false, profileComplete: true };
   const pending: MatchStatus = { pending: true, profileComplete: true };
@@ -34,10 +36,14 @@ describe('MatchesComponent', () => {
   beforeEach(() => vi.useFakeTimers());
   afterEach(() => vi.useRealTimers());
 
-  async function render(api: Partial<MatchesService>) {
+  async function render(api: Partial<MatchesService>, friendsApi: Partial<FriendsService> = {}) {
     TestBed.configureTestingModule({
       imports: [MatchesComponent],
-      providers: [provideRouter([]), { provide: MatchesService, useValue: api }],
+      providers: [
+        provideRouter([]),
+        { provide: MatchesService, useValue: api },
+        { provide: FriendsService, useValue: friendsApi },
+      ],
     });
     const fixture = TestBed.createComponent(MatchesComponent);
     fixture.detectChanges();
@@ -72,8 +78,87 @@ describe('MatchesComponent', () => {
   it('has no search button', async () => {
     const fixture = await render({ status: () => of(upToDate), list: () => of([match]) });
 
-    expect((fixture.nativeElement as HTMLElement).querySelector('button')).toBeNull();
+    expect(buttons(fixture).some((b) => b.textContent?.includes('Szukaj dopasowań'))).toBe(false);
     expect(text(fixture)).not.toContain('Szukaj dopasowań');
+  });
+
+  function buttons(fixture: ComponentFixture<MatchesComponent>): HTMLButtonElement[] {
+    return Array.from((fixture.nativeElement as HTMLElement).querySelectorAll('button'));
+  }
+
+  function addButton(fixture: ComponentFixture<MatchesComponent>): HTMLButtonElement | undefined {
+    return buttons(fixture).find((b) => b.textContent?.trim() === 'Dodaj do znajomych');
+  }
+
+  function writeLinks(fixture: ComponentFixture<MatchesComponent>): HTMLAnchorElement[] {
+    return Array.from((fixture.nativeElement as HTMLElement).querySelectorAll('a')).filter(
+      (a) => a.textContent?.trim() === 'Napisz',
+    );
+  }
+
+  it('offers "Dodaj do znajomych" for a non-friend and no conversation link', async () => {
+    const fixture = await render({ status: () => of(upToDate), list: () => of([match]) });
+
+    expect(addButton(fixture)?.disabled).toBe(false);
+    expect(writeLinks(fixture)).toHaveLength(0);
+  });
+
+  it('shows a single "Napisz" link to the conversation for a friend, without the add button', async () => {
+    const fixture = await render({
+      status: () => of(upToDate),
+      list: () => of([{ ...match, isFriend: true }]),
+    });
+
+    expect(addButton(fixture)).toBeUndefined();
+    const links = writeLinks(fixture);
+    expect(links).toHaveLength(1);
+    expect(links[0].getAttribute('href')).toBe('/friends/u-2');
+  });
+
+  it('adds the friend, disables the button while busy and flips the row to the link', async () => {
+    const result = new Subject<Friend>();
+    const add = vi.fn(() => result.asObservable());
+    const fixture = await render({ status: () => of(upToDate), list: () => of([match]) }, { add });
+
+    addButton(fixture)!.click();
+    await settle(fixture);
+
+    expect(add).toHaveBeenCalledWith('u-2');
+    expect(addButton(fixture)?.disabled).toBe(true);
+
+    result.next({ userId: 'u-2', displayName: 'Ania', city: match.city });
+    result.complete();
+    await settle(fixture);
+
+    expect(addButton(fixture)).toBeUndefined();
+    expect(writeLinks(fixture)[0]?.getAttribute('href')).toBe('/friends/u-2');
+    expect((fixture.nativeElement as HTMLElement).querySelector('[role="alert"]')).toBeNull();
+  });
+
+  it('shows a failed add in the inline alert and keeps the button enabled', async () => {
+    const add = vi.fn(() => throwError(() => new MoviesError(NOT_ON_MATCH_LIST, 404)));
+    const fixture = await render({ status: () => of(upToDate), list: () => of([match]) }, { add });
+
+    addButton(fixture)!.click();
+    await settle(fixture);
+
+    const alert = (fixture.nativeElement as HTMLElement).querySelector('[role="alert"]');
+    expect(alert?.textContent).toContain(NOT_ON_MATCH_LIST);
+    expect(addButton(fixture)?.disabled).toBe(false);
+    expect(writeLinks(fixture)).toHaveLength(0);
+  });
+
+  it('treats a 409 on add as already a friend: shows the message and the link', async () => {
+    const add = vi.fn(() => throwError(() => new MoviesError(ALREADY_FRIEND, 409)));
+    const fixture = await render({ status: () => of(upToDate), list: () => of([match]) }, { add });
+
+    addButton(fixture)!.click();
+    await settle(fixture);
+
+    const alert = (fixture.nativeElement as HTMLElement).querySelector('[role="alert"]');
+    expect(alert?.textContent).toContain(ALREADY_FRIEND);
+    expect(alert?.textContent).not.toContain(PROFILE_INCOMPLETE);
+    expect(writeLinks(fixture)).toHaveLength(1);
   });
 
   it('shows the automatic-update empty state when the list is empty', async () => {

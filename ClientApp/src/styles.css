@@ -78,3 +78,8 @@
 .matches-score {
   font-size: 1.25rem;
 }
+
+.conversation-body {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

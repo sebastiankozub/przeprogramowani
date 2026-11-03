@@ -49,7 +49,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | done |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | done |
 | S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
-| S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | proposed |
+| S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | in-progress |
 
 NFR numbering follows the order in PRD §Non-Functional Requirements: NFR-01 match list < 2 s, NFR-02 write is non-blocking + ~10 s visibility, NFR-03 credentials never plain text, NFR-04 only city-level location exposed.
 
@@ -194,7 +194,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** The north star; closes the primary success criterion. The main risk is the privacy guardrail (messages leaking to non-participants), so per-conversation authorization must be tested explicitly.
-- **Status:** proposed
+- **Status:** in-progress
 
 ## Backlog Handoff
 

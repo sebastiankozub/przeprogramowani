@@ -13,6 +13,8 @@ builder.Services.AddAppWatchedMovies();
 builder.Services.AddAppWatchlist();
 builder.Services.AddAppProfile();
 builder.Services.AddAppMatches();
+builder.Services.AddAppFriends();
+builder.Services.AddAppConversations();
 
 var app = builder.Build();
 
@@ -43,6 +45,8 @@ app.MapWatchlistEndpoints();
 app.MapCitiesEndpoints();
 app.MapProfileEndpoints();
 app.MapMatchesEndpoints();
+app.MapFriendsEndpoints();
+app.MapConversationsEndpoints();
 
 var summaries = new[]
 {

@@ -66,6 +66,18 @@
               [attr.aria-label]="'Dopasowanie ' + match.score + ' na 100'"
               >{{ match.score }}/100</strong
             >
+            @if (match.isFriend) {
+              <a mat-stroked-button [routerLink]="['/friends', match.userId]">Napisz</a>
+            } @else {
+              <button
+                mat-flat-button
+                type="button"
+                [disabled]="isBusy(match.userId)"
+                (click)="addFriend(match)"
+              >
+                Dodaj do znajomych
+              </button>
+            }
           </li>
         }
       </ol>

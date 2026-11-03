@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit, inject, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
+import { FriendsService } from '../friends/friends.service';
 import { Movie } from '../movies/movies.service';
 import { cityLabel } from '../profile/profile.service';
 import { MoviesError } from '../shared/api-errors';
@@ -18,11 +20,12 @@ export const STATUS_POLL_TIMEOUT_MS = 30000;
  */
 @Component({
   selector: 'app-matches',
-  imports: [MatProgressBarModule, RouterLink],
+  imports: [MatButtonModule, MatProgressBarModule, RouterLink],
   templateUrl: './matches.component.html',
 })
 export class MatchesComponent implements OnInit, OnDestroy {
   private readonly matchesApi = inject(MatchesService);
+  private readonly friendsApi = inject(FriendsService);
 
   protected readonly matches = signal<Match[]>([]);
   protected readonly loaded = signal(false);
@@ -38,6 +41,9 @@ export class MatchesComponent implements OnInit, OnDestroy {
   protected readonly profileIncompleteMessage = PROFILE_INCOMPLETE;
 
   protected readonly cityLabel = cityLabel;
+
+  /** User ids with an add-friend call in flight. */
+  protected readonly busy = signal<ReadonlySet<string>>(new Set());
 
   private pollTimer: ReturnType<typeof setTimeout> | null = null;
   private pollsLeft = 0;
@@ -81,6 +87,50 @@ export class MatchesComponent implements OnInit, OnDestroy {
   /** How many shared titles the count includes beyond the (at most 5) listed ones; 0 when none are listed. */
   protected moreCount(total: number, listed: readonly Movie[]): number {
     return listed.length === 0 ? 0 : Math.max(0, total - listed.length);
+  }
+
+  protected isBusy(userId: string): boolean {
+    return this.busy().has(userId);
+  }
+
+  /** Adds the candidate to friends; the row then offers the conversation instead. */
+  protected async addFriend(match: Match): Promise<void> {
+    const userId = match.userId;
+    if (match.isFriend || this.isBusy(userId)) {
+      return;
+    }
+    this.setBusy(userId, true);
+    this.error.set(null);
+    try {
+      await firstValueFrom(this.friendsApi.add(userId));
+      this.markFriend(userId);
+    } catch (err) {
+      if (err instanceof MoviesError && err.status === 409) {
+        // Already a friend (added in another tab) — show the row as such, with the message.
+        this.markFriend(userId);
+        this.error.set(err.message);
+      } else {
+        this.showError(err);
+      }
+    } finally {
+      this.setBusy(userId, false);
+    }
+  }
+
+  private markFriend(userId: string): void {
+    this.matches.update((list) => list.map((m) => (m.userId === userId ? { ...m, isFriend: true } : m)));
+  }
+
+  private setBusy(userId: string, busy: boolean): void {
+    this.busy.update((ids) => {
+      const next = new Set(ids);
+      if (busy) {
+        next.add(userId);
+      } else {
+        next.delete(userId);
+      }
+      return next;
+    });
   }
 
   private startPolling(): void {

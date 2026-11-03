@@ -20,6 +20,7 @@ describe('MatchesService', () => {
     sharedFavorites: [movie],
     sharedWatchlist: [],
     firstMatchedAt: '2026-11-03T10:00:00Z',
+    isFriend: false,
   };
 
   beforeEach(() => {
