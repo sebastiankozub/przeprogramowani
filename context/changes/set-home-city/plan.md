@@ -270,16 +270,16 @@ Deploy, verify on production, record it.
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddCities` exists and is additive
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 Local migrate applies `AddCities` and seeds the cities; second run inserts 0
-- [x] 1.5 `/api/cities?q=war` → `401` with the app running
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 2b0f208
+- [x] 1.2 Migration `AddCities` exists and is additive — 2b0f208
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 2b0f208
+- [x] 1.4 Local migrate applies `AddCities` and seeds the cities; second run inserts 0 — 2b0f208
+- [x] 1.5 `/api/cities?q=war` → `401` with the app running — 2b0f208
 
 #### Manual
 
-- [x] 1.6 Search, set and change the city via `movie-date.http`; no coordinates in responses
-- [x] 1.7 `cities.json` spot-check of ~15 known places
+- [x] 1.6 Search, set and change the city via `movie-date.http`; no coordinates in responses — 2b0f208
+- [x] 1.7 `cities.json` spot-check of ~15 known places — 2b0f208
 
 ### Phase 2: Frontend — /profile screen
 
