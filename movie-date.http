@@ -135,3 +135,9 @@ Content-Type: application/json
 }
 
 ###
+
+### Matches — status of my list (200 { pending, profileComplete }; 404 deleted account; 401 without cookie)
+### pending: a recompute was requested by a write (or the list was never computed) and has not run yet;
+### when pending and this machine has nothing queued, the call itself queues the recompute (self-heal).
+GET {{MovieDate_HostAddress}}/api/matches/status
+Accept: application/json

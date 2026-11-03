@@ -20,6 +20,7 @@ public static class WatchedMoviesEndpoints
     {
         // The current user is identified by the NameIdentifier claim (AspNetUsers.Id), never by the email
         // claim — see context/foundation/lessons.md. Foreign entries therefore surface as 404.
+        // Successful writes request a background match recompute (S-06); error outcomes request nothing.
         var group = app.MapGroup(RoutePrefix).RequireAuthorization();
 
         group.MapGet("/", async (ClaimsPrincipal user, UserManager<AppUser> users, WatchedMoviesService service,
@@ -33,7 +34,7 @@ public static class WatchedMoviesEndpoints
             .WithName("ListWatchedMovies");
 
         group.MapPost("/", async (AddWatchedMovieRequest request, ClaimsPrincipal user, UserManager<AppUser> users,
-                WatchedMoviesService service, CancellationToken ct) =>
+                WatchedMoviesService service, MatchRecomputeTrigger trigger, CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -42,15 +43,20 @@ public static class WatchedMoviesEndpoints
                 }
 
                 var result = await service.AddAsync(userId, request.MovieId, request.Rating, ct);
-                return result.Outcome == WatchedMovieOutcome.Success
-                    // 201 without a Location header: there is no GET for a single entry (only PUT/DELETE).
-                    ? Results.Json(result.Value, statusCode: StatusCodes.Status201Created)
-                    : ToErrorResult(result.Outcome);
+                if (result.Outcome != WatchedMovieOutcome.Success)
+                {
+                    return ToErrorResult(result.Outcome);
+                }
+
+                await trigger.RequestAsync(userId, ct);
+                // 201 without a Location header: there is no GET for a single entry (only PUT/DELETE).
+                return Results.Json(result.Value, statusCode: StatusCodes.Status201Created);
             })
             .WithName("AddWatchedMovie");
 
         group.MapPut("/{movieId:int}", async (int movieId, UpdateRatingRequest request, ClaimsPrincipal user,
-                UserManager<AppUser> users, WatchedMoviesService service, CancellationToken ct) =>
+                UserManager<AppUser> users, WatchedMoviesService service, MatchRecomputeTrigger trigger,
+                CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -59,14 +65,18 @@ public static class WatchedMoviesEndpoints
                 }
 
                 var result = await service.UpdateRatingAsync(userId, movieId, request.Rating, ct);
-                return result.Outcome == WatchedMovieOutcome.Success
-                    ? Results.Ok(result.Value)
-                    : ToErrorResult(result.Outcome);
+                if (result.Outcome != WatchedMovieOutcome.Success)
+                {
+                    return ToErrorResult(result.Outcome);
+                }
+
+                await trigger.RequestAsync(userId, ct);
+                return Results.Ok(result.Value);
             })
             .WithName("UpdateWatchedMovieRating");
 
         group.MapDelete("/{movieId:int}", async (int movieId, ClaimsPrincipal user, UserManager<AppUser> users,
-                WatchedMoviesService service, CancellationToken ct) =>
+                WatchedMoviesService service, MatchRecomputeTrigger trigger, CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -75,9 +85,13 @@ public static class WatchedMoviesEndpoints
                 }
 
                 var result = await service.RemoveAsync(userId, movieId, ct);
-                return result.Outcome == WatchedMovieOutcome.Success
-                    ? Results.NoContent()
-                    : ToErrorResult(result.Outcome);
+                if (result.Outcome != WatchedMovieOutcome.Success)
+                {
+                    return ToErrorResult(result.Outcome);
+                }
+
+                await trigger.RequestAsync(userId, ct);
+                return Results.NoContent();
             })
             .WithName("RemoveWatchedMovie");
 

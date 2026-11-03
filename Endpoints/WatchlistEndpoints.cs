@@ -24,6 +24,7 @@ public static class WatchlistEndpoints
     {
         // The current user is identified by the NameIdentifier claim (AspNetUsers.Id), never by the email
         // claim — see context/foundation/lessons.md. Foreign entries therefore surface as 404.
+        // Successful writes request a background match recompute (S-06); error outcomes request nothing.
         var group = app.MapGroup(RoutePrefix).RequireAuthorization();
 
         group.MapGet("/", async (ClaimsPrincipal user, UserManager<AppUser> users, WatchlistService service,
@@ -37,7 +38,7 @@ public static class WatchlistEndpoints
             .WithName("ListWatchlist");
 
         group.MapPost("/", async (AddToWatchlistRequest request, ClaimsPrincipal user, UserManager<AppUser> users,
-                WatchlistService service, CancellationToken ct) =>
+                WatchlistService service, MatchRecomputeTrigger trigger, CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -46,6 +47,11 @@ public static class WatchlistEndpoints
                 }
 
                 var result = await service.AddAsync(userId, request.MovieId, ct);
+                if (result.Outcome == WatchlistOutcome.Success)
+                {
+                    await trigger.RequestAsync(userId, ct);
+                }
+
                 return result.Outcome switch
                 {
                     // 201 without a Location header: there is no GET for a single entry (only DELETE).
@@ -60,7 +66,7 @@ public static class WatchlistEndpoints
             .WithName("AddToWatchlist");
 
         group.MapDelete("/{movieId:int}", async (int movieId, ClaimsPrincipal user, UserManager<AppUser> users,
-                WatchlistService service, CancellationToken ct) =>
+                WatchlistService service, MatchRecomputeTrigger trigger, CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -69,13 +75,20 @@ public static class WatchlistEndpoints
                 }
 
                 var result = await service.RemoveAsync(userId, movieId, ct);
-                return result.Outcome == WatchlistOutcome.Success ? Results.NoContent() : Results.NotFound();
+                if (result.Outcome != WatchlistOutcome.Success)
+                {
+                    return Results.NotFound();
+                }
+
+                await trigger.RequestAsync(userId, ct);
+                return Results.NoContent();
             })
             .WithName("RemoveFromWatchlist");
 
         // Moves the entry to the watched list with a rating; on any error the entry stays on the watchlist.
         group.MapPost("/{movieId:int}/watched", async (int movieId, UpdateRatingRequest request, ClaimsPrincipal user,
-                UserManager<AppUser> users, WatchlistService service, CancellationToken ct) =>
+                UserManager<AppUser> users, WatchlistService service, MatchRecomputeTrigger trigger,
+                CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 if (userId is null)
@@ -84,6 +97,11 @@ public static class WatchlistEndpoints
                 }
 
                 var result = await service.MarkWatchedAsync(userId, movieId, request.Rating, ct);
+                if (result.Outcome == WatchedMovieOutcome.Success)
+                {
+                    await trigger.RequestAsync(userId, ct);
+                }
+
                 return result.Outcome switch
                 {
                     WatchedMovieOutcome.Success => Results.Ok(result.Value),

@@ -32,27 +32,43 @@ public static class ProfileEndpoints
             })
             .WithName("GetProfile");
 
+        // Both setters change who the user can be matched with: a success requests a background match
+        // recompute (S-06); error outcomes request nothing.
         group.MapPut("/city", async (SetCityRequest request, ClaimsPrincipal user, UserManager<AppUser> users,
-                ProfileService service, CancellationToken ct) =>
+                ProfileService service, MatchRecomputeTrigger trigger, CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 return userId is null
                     ? Results.Unauthorized()
-                    : ToResult(await service.SetCityAsync(userId, request.CityId, ct));
+                    : await ToTriggeringResult(await service.SetCityAsync(userId, request.CityId, ct), userId,
+                        trigger, ct);
             })
             .WithName("SetProfileCity");
 
         group.MapPut("/display-name", async (SetDisplayNameRequest request, ClaimsPrincipal user,
-                UserManager<AppUser> users, ProfileService service, CancellationToken ct) =>
+                UserManager<AppUser> users, ProfileService service, MatchRecomputeTrigger trigger,
+                CancellationToken ct) =>
             {
                 var userId = users.GetUserId(user);
                 return userId is null
                     ? Results.Unauthorized()
-                    : ToResult(await service.SetDisplayNameAsync(userId, request.DisplayName, ct));
+                    : await ToTriggeringResult(await service.SetDisplayNameAsync(userId, request.DisplayName, ct),
+                        userId, trigger, ct);
             })
             .WithName("SetProfileDisplayName");
 
         return app;
+    }
+
+    private static async Task<IResult> ToTriggeringResult(ProfileResult result, string userId,
+        MatchRecomputeTrigger trigger, CancellationToken ct)
+    {
+        if (result.Outcome == ProfileOutcome.Success)
+        {
+            await trigger.RequestAsync(userId, ct);
+        }
+
+        return ToResult(result);
     }
 
     private static IResult ToResult(ProfileResult result) => result.Outcome switch

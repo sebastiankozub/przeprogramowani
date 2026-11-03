@@ -47,7 +47,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | done |
 | S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | done |
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | in-progress |
-| S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | proposed |
+| S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | in-progress |
 | S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
 | S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | proposed |
 
@@ -170,7 +170,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Unknowns:**
   - Recompute runs in-process (per `tech-stack.md`), so queued work can be lost on restart or deploy — is "recompute again on next write or next list view" acceptable recovery? — Owner: user. Block: no.
 - **Risk:** Not on the north-star path, so it runs alongside S-07/S-08; with `min_machines_running = 1` and auto-stop off in `fly.toml`, the in-process job doesn't silently stop the way a scaled-to-zero worker would.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-07: Add a match as a friend
 

@@ -1,5 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using MovieDate.Contracts;
 using MovieDate.Data;
 using MovieDate.Services;
 
@@ -15,6 +17,18 @@ public static class MatchesEndpoints
     public static IServiceCollection AddAppMatches(this IServiceCollection services)
     {
         services.AddScoped<MatchService>();
+
+        // Background recompute (S-06): writes call the trigger, the per-machine queue debounces, the worker runs.
+        services.AddOptions<MatchRecomputeOptions>()
+            .BindConfiguration(MatchRecomputeOptions.SectionName)
+            .Validate(
+                o => o.PollInterval > TimeSpan.Zero && o.QuietPeriod >= TimeSpan.Zero && o.MaxDelay >= TimeSpan.Zero,
+                $"{MatchRecomputeOptions.SectionName}: PollInterval must be positive and delays non-negative.")
+            .ValidateOnStart();
+        services.TryAddSingleton(TimeProvider.System);
+        services.AddSingleton<MatchRecomputeQueue>();
+        services.AddScoped<MatchRecomputeTrigger>();
+        services.AddHostedService<MatchRecomputeWorker>();
         return services;
     }
 
@@ -34,6 +48,32 @@ public static class MatchesEndpoints
                     : Results.Ok(await service.ListAsync(userId, ct));
             })
             .WithName("ListMatches");
+
+        // Is the stored list up to date? A pending user this machine has nothing queued for (restart, deploy,
+        // write served by the other machine, never-computed pre-S-06 account) is queued here — self-heal.
+        group.MapGet("/status", async (ClaimsPrincipal user, UserManager<AppUser> users, MatchService service,
+                MatchRecomputeQueue queue, CancellationToken ct) =>
+            {
+                var userId = users.GetUserId(user);
+                if (userId is null)
+                {
+                    return Results.Unauthorized();
+                }
+
+                var status = await service.GetStatusAsync(userId, ct);
+                if (status is null)
+                {
+                    return Results.NotFound();
+                }
+
+                if (status.Pending && !queue.Contains(userId))
+                {
+                    queue.Enqueue(userId);
+                }
+
+                return Results.Ok(new MatchStatusResponse(status.Pending, status.ProfileComplete));
+            })
+            .WithName("GetMatchStatus");
 
         group.MapPost("/recompute", async (ClaimsPrincipal user, UserManager<AppUser> users, MatchService service,
                 CancellationToken ct) =>

@@ -13,10 +13,11 @@ namespace MovieDate.Tests;
 /// End-to-end match rules through the API. The Postgres container is shared across the collection and every
 /// user with a city and a display name is a candidate for everyone, so each test places its users in cities
 /// no other test uses (and distance-0 ties stay inside the test), rates movies no other test uses, and asserts
-/// only on users it created.
+/// only on users it created. The background recompute worker is off for this collection: the setup writes would
+/// otherwise trigger recomputes whose top-ups land on these lists at arbitrary times (covered by MatchRecomputeTests).
 /// </summary>
-[Collection(PostgresAppCollection.Name)]
-public sealed class MatchesTests(PostgresAppFixture factory)
+[Collection(PostgresAppWithoutRecomputeWorkerCollection.Name)]
+public sealed class MatchesTests(PostgresAppWithoutRecomputeWorkerFixture factory)
 {
     // Seed cities (Wikidata QIDs), each reserved for one test below.
     private const string Zakopane = "Q144786";

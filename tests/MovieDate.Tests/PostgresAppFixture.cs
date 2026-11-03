@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using MovieDate.Data;
+using MovieDate.Services;
 using Testcontainers.PostgreSql;
 
 namespace MovieDate.Tests;
@@ -9,8 +13,13 @@ namespace MovieDate.Tests;
 /// Starts a throwaway Postgres 17 container and boots the app against it.
 /// Independent of the local docker-compose database.
 /// </summary>
-public sealed class PostgresAppFixture : WebApplicationFactory<Program>, IAsyncLifetime
+public class PostgresAppFixture : WebApplicationFactory<Program>, IAsyncLifetime
 {
+    // Background match recompute (S-06) with short debounce timings so tests don't wait seconds per write.
+    public static readonly TimeSpan RecomputeQuietPeriod = TimeSpan.FromMilliseconds(300);
+    public static readonly TimeSpan RecomputeMaxDelay = TimeSpan.FromSeconds(2);
+    public static readonly TimeSpan RecomputePollInterval = TimeSpan.FromMilliseconds(50);
+
     private readonly PostgreSqlContainer _postgres = new PostgreSqlBuilder("postgres:17").Build();
 
     public string ConnectionString => _postgres.GetConnectionString();
@@ -20,6 +29,9 @@ public sealed class PostgresAppFixture : WebApplicationFactory<Program>, IAsyncL
         // UseSetting (not ConfigureAppConfiguration): Program.cs reads the connection string from
         // builder.Configuration during top-level code, before ConfigureAppConfiguration callbacks apply.
         builder.UseSetting("ConnectionStrings:Default", ConnectionString);
+        builder.UseSetting("MatchRecompute:QuietPeriod", RecomputeQuietPeriod.ToString("c"));
+        builder.UseSetting("MatchRecompute:MaxDelay", RecomputeMaxDelay.ToString("c"));
+        builder.UseSetting("MatchRecompute:PollInterval", RecomputePollInterval.ToString("c"));
     }
 
     public async Task InitializeAsync()
@@ -47,4 +59,31 @@ public sealed class PostgresAppFixture : WebApplicationFactory<Program>, IAsyncL
 public sealed class PostgresAppCollection : ICollectionFixture<PostgresAppFixture>
 {
     public const string Name = "Postgres app";
+}
+
+/// <summary>
+/// The same app on its own Postgres container, but without the background match recompute worker: writes still
+/// stamp and queue, nothing drains the queue. For tests of the recompute rule itself (through
+/// <c>POST /api/matches/recompute</c>), whose list contents would otherwise depend on when background recomputes
+/// of every user in the shared database happen to run.
+/// </summary>
+public sealed class PostgresAppWithoutRecomputeWorkerFixture : PostgresAppFixture
+{
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+    {
+        base.ConfigureWebHost(builder);
+        builder.ConfigureTestServices(services =>
+        {
+            var worker = services.Single(d =>
+                d.ServiceType == typeof(IHostedService) && d.ImplementationType == typeof(MatchRecomputeWorker));
+            services.Remove(worker);
+        });
+    }
+}
+
+[CollectionDefinition(Name)]
+public sealed class PostgresAppWithoutRecomputeWorkerCollection
+    : ICollectionFixture<PostgresAppWithoutRecomputeWorkerFixture>
+{
+    public const string Name = "Postgres app without recompute worker";
 }

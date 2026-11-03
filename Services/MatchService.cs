@@ -24,10 +24,14 @@ public sealed record MatchResult(MatchOutcome Outcome, IReadOnlyList<MatchRespon
     public static readonly MatchResult NotFound = new(MatchOutcome.NotFound);
 }
 
+/// <summary>Whether the user's stored list is waiting for a recompute, and whether they can be matched at all.</summary>
+public sealed record MatchStatus(bool Pending, bool ProfileComplete);
+
 /// <summary>
 /// The stored, append-only, mirrored match list (FR-005). Every operation is keyed on AspNetUsers.Id, never on
 /// the email. Rows are only ever inserted or re-scored here — never deleted; they disappear solely through the
-/// FK cascade when either account is deleted. S-06 calls <see cref="RecomputeAsync"/> from its background job.
+/// FK cascade when either account is deleted. <see cref="RecomputeAsync"/> runs from
+/// <see cref="MatchRecomputeWorker"/> after writes (S-06) and from <c>POST /api/matches/recompute</c>.
 /// </summary>
 public sealed class MatchService(AppDbContext db)
 {
@@ -95,6 +99,33 @@ public sealed class MatchService(AppDbContext db)
     }
 
     /// <summary>
+    /// The pending rule (S-06): a user with a complete profile is pending until their first recompute, and again
+    /// whenever a write requested one after the last recompute started. Null when the user row is gone.
+    /// </summary>
+    public async Task<MatchStatus?> GetStatusAsync(string userId, CancellationToken ct = default)
+    {
+        var user = await db.Users
+            .AsNoTracking()
+            .Where(u => u.Id == userId)
+            .Select(u => new
+            {
+                ProfileComplete = u.CityId != null && u.DisplayName != null,
+                u.MatchesRequestedAt,
+                u.MatchesComputedAt,
+            })
+            .FirstOrDefaultAsync(ct);
+        if (user is null)
+        {
+            return null;
+        }
+
+        var pending = user.ProfileComplete
+                      && (user.MatchesComputedAt is null
+                          || (user.MatchesRequestedAt is not null && user.MatchesRequestedAt > user.MatchesComputedAt));
+        return new MatchStatus(pending, user.ProfileComplete);
+    }
+
+    /// <summary>
     /// Recompute rule for the requester (plan steps 1–7): re-score the eligible listed candidates, add up to
     /// <see cref="MaxNewStrongCandidates"/> new strong ones, top up with the closest users to
     /// <see cref="MinListSize"/>, and mirror every written row. Returns the refreshed list.
@@ -136,6 +167,10 @@ public sealed class MatchService(AppDbContext db)
     private async Task<MatchOutcome> RecomputeInTransactionAsync(string userId, CancellationToken ct)
     {
         await using var transaction = await db.Database.BeginTransactionAsync(ct);
+
+        // Captured before anything is read: a write that lands while this recompute runs stamps a later
+        // MatchesRequestedAt, so the user stays pending and is recomputed again.
+        var start = Clock.Now();
 
         // 1. The requester must have a city and a display name; nothing is written otherwise.
         var requester = await db.Users
@@ -233,6 +268,12 @@ public sealed class MatchService(AppDbContext db)
         {
             await UpsertMirroredAsync(userId, written, ct);
         }
+
+        // Mark the list as computed as of `start` (S-06) — forward-only, so a slower, older recompute committing
+        // later never moves the stamp back past a newer one.
+        await db.Users
+            .Where(u => u.Id == userId && (u.MatchesComputedAt == null || u.MatchesComputedAt < start))
+            .ExecuteUpdateAsync(s => s.SetProperty(u => u.MatchesComputedAt, start), ct);
 
         await transaction.CommitAsync(ct);
         return MatchOutcome.Success;
