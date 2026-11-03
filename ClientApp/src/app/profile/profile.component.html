@@ -1,0 +1,37 @@
+<section class="movies">
+  <h1>Profil</h1>
+
+  @if (profile(); as current) {
+    <p>Email: <strong>{{ current.email }}</strong></p>
+    @if (current.city; as city) {
+      <p>Twoje miasto: <strong>{{ cityLabel(city) }}</strong></p>
+    } @else {
+      <p>Nie ustawiono miasta</p>
+    }
+  }
+
+  @if (loaded()) {
+    <form class="movies-add" (submit)="$event.preventDefault(); save()">
+      <mat-form-field class="movies-search">
+        <mat-label>Wybierz miasto</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="control"
+          [matAutocomplete]="auto"
+          placeholder="Wpisz co najmniej 2 znaki"
+        />
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayCity">
+          @for (city of options(); track city.id) {
+            <mat-option [value]="city">{{ cityLabel(city) }}</mat-option>
+          }
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-flat-button type="submit" [disabled]="!canSave()">Zapisz</button>
+    </form>
+  }
+
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+</section>

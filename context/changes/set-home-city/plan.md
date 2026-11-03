@@ -285,16 +285,16 @@ Deploy, verify on production, record it.
 
 #### Automated
 
-- [ ] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [ ] 2.2 Frontend production build passes
-- [ ] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
+- [x] 2.2 Frontend production build passes
+- [x] 2.3 Docker image builds
 
 #### Manual
 
-- [ ] 2.4 New account: home nudge links to `/profile`
-- [ ] 2.5 "kra" offers Kraków (małopolskie); saved city shows on `/profile` and home
-- [ ] 2.6 Changing the city persists; no way to clear it
-- [ ] 2.7 Logged-out `/profile` redirects to login and returns
+- [x] 2.4 New account: home nudge links to `/profile`
+- [x] 2.5 "kra" offers Kraków (małopolskie); saved city shows on `/profile` and home
+- [x] 2.6 Changing the city persists; no way to clear it
+- [x] 2.7 Logged-out `/profile` redirects to login and returns
 
 ### Phase 3: Production
 
