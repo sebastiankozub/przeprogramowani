@@ -20,6 +20,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
 
     public DbSet<Match> Matches => Set<Match>();
 
+    public DbSet<Friendship> Friendships => Set<Friendship>();
+
+    public DbSet<Message> Messages => Set<Message>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -109,6 +113,48 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
             match.HasIndex(m => m.CandidateId);
 
             match.ToTable(t => t.HasCheckConstraint("CK_Matches_NotSelf", "\"UserId\" <> \"CandidateId\""));
+        });
+
+        builder.Entity<Friendship>(friendship =>
+        {
+            friendship.HasKey(f => new { f.UserId, f.FriendId });
+
+            // Both sides keyed on AspNetUsers.Id (never the email) — deleting either account removes the friendship.
+            friendship.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(f => f.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            friendship.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(f => f.FriendId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // The PK serves "whom I added"; this index serves "who added me".
+            friendship.HasIndex(f => f.FriendId);
+
+            friendship.ToTable(t => t.HasCheckConstraint("CK_Friendships_NotSelf", "\"UserId\" <> \"FriendId\""));
+        });
+
+        builder.Entity<Message>(message =>
+        {
+            message.Property(m => m.Body).HasMaxLength(Message.BodyMaxLength);
+
+            // Both sides keyed on AspNetUsers.Id (never the email) — deleting either account removes the messages.
+            message.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(m => m.SenderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            message.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(m => m.RecipientId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Serves reading one direction of a pair's conversation by time.
+            message.HasIndex(m => new { m.SenderId, m.RecipientId, m.SentAt, m.Id });
+
+            message.ToTable(t => t.HasCheckConstraint("CK_Messages_NotSelf", "\"SenderId\" <> \"RecipientId\""));
         });
     }
 }

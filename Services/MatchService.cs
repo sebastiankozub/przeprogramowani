@@ -83,6 +83,12 @@ public sealed class MatchService(AppDbContext db)
         var candidateIds = rows.Select(r => r.CandidateId).ToList();
         var favorites = await SharedFavoriteTitlesAsync(userId, candidateIds, ct);
         var watchlist = await SharedWatchlistTitlesAsync(userId, candidateIds, ct);
+        var friends = (await db.Friendships
+                .AsNoTracking()
+                .Where(f => f.UserId == userId)
+                .Select(f => f.FriendId)
+                .ToListAsync(ct))
+            .ToHashSet(StringComparer.Ordinal);
 
         return rows
             .Select(r => new MatchResponse(
@@ -94,7 +100,8 @@ public sealed class MatchService(AppDbContext db)
                 r.SharedWatchlist,
                 favorites.TryGetValue(r.CandidateId, out var f) ? f : [],
                 watchlist.TryGetValue(r.CandidateId, out var w) ? w : [],
-                r.FirstMatchedAt))
+                r.FirstMatchedAt,
+                friends.Contains(r.CandidateId)))
             .ToList();
     }
 
