@@ -359,34 +359,34 @@ Ship the slice, create demo accounts in production through the public API, and v
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddMatches` exists and is additive
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 Local migrate applies `AddMatches` cleanly
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 001ccf5
+- [x] 1.2 Migration `AddMatches` exists and is additive — 001ccf5
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 001ccf5
+- [x] 1.4 Local migrate applies `AddMatches` cleanly — 001ccf5
 
 #### Manual
 
-- [x] 1.5 Set and change the display name via `movie-date.http`; whitespace-only returns 400
+- [x] 1.5 Set and change the display name via `movie-date.http`; whitespace-only returns 400 — 001ccf5
 
 ### Phase 2: Backend — scoring + match API
 
 #### Automated
 
-- [x] 2.1 App builds: `dotnet build movie-date.csproj`
-- [x] 2.2 Tests pass, including the new scoring and matches tests
-- [x] 2.3 `/api/matches` → `401` with the app running
+- [x] 2.1 App builds: `dotnet build movie-date.csproj` — e9d9d2b
+- [x] 2.2 Tests pass, including the new scoring and matches tests — e9d9d2b
+- [x] 2.3 `/api/matches` → `401` with the app running — e9d9d2b
 
 #### Manual
 
-- [x] 2.4 Two local accounts sharing a movie see each other with the same score; no emails or coordinates
+- [x] 2.4 Two local accounts sharing a movie see each other with the same score; no emails or coordinates — e9d9d2b
 
 ### Phase 3: Frontend — display name + /matches screen
 
 #### Automated
 
-- [x] 3.1 Frontend tests pass: `npx ng test --watch=false`
-- [x] 3.2 Frontend production build passes
-- [x] 3.3 Docker image builds
+- [x] 3.1 Frontend tests pass: `npx ng test --watch=false` — 5c617b2
+- [x] 3.2 Frontend production build passes — 5c617b2
+- [x] 3.3 Docker image builds — 5c617b2
 
 #### Manual
 
@@ -400,9 +400,9 @@ Ship the slice, create demo accounts in production through the public API, and v
 #### Automated
 
 - [ ] 4.1 Demo script exits 0 twice in a row locally
-- [ ] 4.2 Release completes on Fly
-- [ ] 4.3 Production `/api/matches` → `401`
-- [ ] 4.4 Production `/health` → ok
+- [x] 4.2 Release completes on Fly
+- [x] 4.3 Production `/api/matches` → `401`
+- [x] 4.4 Production `/health` → ok
 
 #### Manual
 
