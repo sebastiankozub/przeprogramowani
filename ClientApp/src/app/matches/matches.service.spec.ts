@@ -3,7 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 import { MoviesError } from '../shared/api-errors';
-import { Match, MatchesService, PROFILE_INCOMPLETE } from './matches.service';
+import { Match, MatchesService, MatchStatus, PROFILE_INCOMPLETE } from './matches.service';
 
 describe('MatchesService', () => {
   let service: MatchesService;
@@ -42,26 +42,40 @@ describe('MatchesService', () => {
     await expect(call).resolves.toEqual([match]);
   });
 
-  it('recomputes by posting without a body', async () => {
-    const call = firstValueFrom(service.recompute());
-
-    const req = http.expectOne('/api/matches/recompute');
-    expect(req.request.method).toBe('POST');
-    expect(req.request.body).toBeNull();
-    req.flush([match]);
-
-    await expect(call).resolves.toEqual([match]);
-  });
-
-  it('maps a 409 on recompute to the Polish incomplete-profile message', async () => {
-    const call = firstValueFrom(service.recompute()).catch((e: unknown) => e);
+  it('maps a 409 on the list to the Polish incomplete-profile message', async () => {
+    const call = firstValueFrom(service.list()).catch((e: unknown) => e);
     http
-      .expectOne('/api/matches/recompute')
+      .expectOne('/api/matches')
       .flush({ title: 'profile_incomplete' }, { status: 409, statusText: 'Conflict' });
 
     const err = await call;
     expect(err).toBeInstanceOf(MoviesError);
     expect((err as MoviesError).message).toBe(PROFILE_INCOMPLETE);
     expect((err as MoviesError).status).toBe(409);
+  });
+
+  it('reads the recompute status', async () => {
+    const status: MatchStatus = { pending: true, profileComplete: true };
+    const call = firstValueFrom(service.status());
+
+    const req = http.expectOne('/api/matches/status');
+    expect(req.request.method).toBe('GET');
+    req.flush(status);
+
+    await expect(call).resolves.toEqual(status);
+  });
+
+  it('maps a failed status call to a Polish message', async () => {
+    const call = firstValueFrom(service.status()).catch((e: unknown) => e);
+    http.expectOne('/api/matches/status').flush(null, { status: 404, statusText: 'Not Found' });
+
+    const err = await call;
+    expect(err).toBeInstanceOf(MoviesError);
+    expect((err as MoviesError).message).toBe('Nie udało się sprawdzić stanu dopasowań.');
+    expect((err as MoviesError).status).toBe(404);
+  });
+
+  it('no longer exposes an on-demand recompute', () => {
+    expect((service as unknown as Record<string, unknown>)['recompute']).toBeUndefined();
   });
 });

@@ -21,6 +21,14 @@ export interface Match {
   firstMatchedAt: string;
 }
 
+/** The server recomputes the list in the background after every change that can affect it. */
+export interface MatchStatus {
+  /** A recompute was requested and has not finished yet. */
+  pending: boolean;
+  /** The profile has both a city and a display name — without them there is nothing to match on. */
+  profileComplete: boolean;
+}
+
 const MATCHES_API = '/api/matches';
 
 export const PROFILE_INCOMPLETE = 'Uzupełnij miasto i nazwę w profilu, aby szukać dopasowań.';
@@ -40,12 +48,11 @@ export class MatchesService {
     );
   }
 
-  /** Recomputes the list and returns it, best first; 409 when the profile lacks a city or a display name. */
-  recompute(): Observable<Match[]> {
-    return this.http.post<Match[]>(`${MATCHES_API}/recompute`, null).pipe(
+  /** Whether a background recompute of the list is still on its way, and whether the profile allows matching. */
+  status(): Observable<MatchStatus> {
+    return this.http.get<MatchStatus>(`${MATCHES_API}/status`).pipe(
       mapErrors({
-        conflict: PROFILE_INCOMPLETE,
-        fallback: 'Nie udało się wyszukać dopasowań.',
+        fallback: 'Nie udało się sprawdzić stanu dopasowań.',
       }),
     );
   }

@@ -267,22 +267,22 @@ Additive: two nullable columns. Existing users get `NULL` stamps, which the pend
 
 #### Automated
 
-- [x] 1.1 App builds: `dotnet build movie-date.csproj`
-- [x] 1.2 Migration `AddMatchRecomputeStamps` exists and only adds nullable columns
-- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests`
-- [x] 1.4 `/api/matches/status` → `401` with the app running
+- [x] 1.1 App builds: `dotnet build movie-date.csproj` — 3edc850
+- [x] 1.2 Migration `AddMatchRecomputeStamps` exists and only adds nullable columns — 3edc850
+- [x] 1.3 Tests pass: `dotnet test tests/MovieDate.Tests` — 3edc850
+- [x] 1.4 `/api/matches/status` → `401` with the app running — 3edc850
 
 #### Manual
 
-- [x] 1.5 Two local accounts: rating a shared movie on one makes it appear on the other's `GET /api/matches` within ~10 s, with no `POST /recompute`
+- [x] 1.5 Two local accounts: rating a shared movie on one makes it appear on the other's `GET /api/matches` within ~10 s, with no `POST /recompute` — 3edc850
 
 ### Phase 2: Frontend — automatic /matches
 
 #### Automated
 
-- [ ] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [ ] 2.2 Frontend production build passes
-- [ ] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
+- [x] 2.2 Frontend production build passes
+- [x] 2.3 Docker image builds
 
 #### Manual
 

@@ -1,11 +1,16 @@
 <section class="movies">
   <h1>Dopasowania</h1>
 
-  <div class="matches-actions">
-    <button mat-flat-button type="button" [disabled]="searching()" (click)="search()">Szukaj dopasowań</button>
-  </div>
-  @if (searching()) {
-    <mat-progress-bar mode="indeterminate" aria-label="Szukanie dopasowań" />
+  @if (pending()) {
+    <div class="matches-status" role="status">
+      <mat-progress-bar mode="indeterminate" aria-label="Aktualizacja dopasowań" />
+      <p>Trwa aktualizacja dopasowań…</p>
+    </div>
+  }
+  @if (slow()) {
+    <p class="matches-status" role="status">
+      Aktualizacja trwa dłużej niż zwykle — odśwież stronę za chwilę.
+    </p>
   }
 
   @if (profileIncomplete()) {
@@ -20,10 +25,11 @@
 
   @if (loaded()) {
     @if (matches().length === 0) {
-      @if (searched()) {
-        <p>Nie znaleziono jeszcze dopasowań. Oceń więcej filmów lub dodaj je do listy do obejrzenia i spróbuj ponownie.</p>
-      } @else {
-        <p>Nie masz jeszcze dopasowań. Kliknij „Szukaj dopasowań”, aby znaleźć osoby o podobnym guście filmowym.</p>
+      @if (!pending() && !profileIncomplete()) {
+        <p>
+          Nie masz jeszcze dopasowań. Oceń filmy lub dodaj je do listy do obejrzenia — lista
+          zaktualizuje się automatycznie.
+        </p>
       }
     } @else {
       <ol class="movies-list">
@@ -55,7 +61,9 @@
                 </span>
               }
             </div>
-            <strong class="matches-score" [attr.aria-label]="'Dopasowanie ' + match.score + ' na 100'"
+            <strong
+              class="matches-score"
+              [attr.aria-label]="'Dopasowanie ' + match.score + ' na 100'"
               >{{ match.score }}/100</strong
             >
           </li>
