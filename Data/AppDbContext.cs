@@ -16,9 +16,29 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
 
     public DbSet<WatchlistItem> WatchlistItems => Set<WatchlistItem>();
 
+    public DbSet<City> Cities => Set<City>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+
+        builder.Entity<City>(city =>
+        {
+            city.Property(c => c.WikidataId).HasMaxLength(City.WikidataIdMaxLength);
+            city.Property(c => c.Name).HasMaxLength(City.NameMaxLength);
+            city.Property(c => c.Voivodeship).HasMaxLength(City.VoivodeshipMaxLength);
+            city.HasIndex(c => c.WikidataId).IsUnique();
+        });
+
+        builder.Entity<AppUser>(user =>
+        {
+            // Catalog rows are never deleted while a user lives there.
+            user.HasOne(u => u.City)
+                .WithMany()
+                .HasForeignKey(u => u.CityId)
+                .OnDelete(DeleteBehavior.Restrict);
+            user.HasIndex(u => u.CityId);
+        });
 
         builder.Entity<Movie>(movie =>
         {

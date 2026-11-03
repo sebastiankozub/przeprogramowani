@@ -1,0 +1,8242 @@
+[
+  {
+    "wikidataId": "Q325124",
+    "name": "Aleksandrów Kujawski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.87639,
+    "longitude": 18.69333,
+    "population": 11910
+  },
+  {
+    "wikidataId": "Q664371",
+    "name": "Aleksandrów Łódzki",
+    "voivodeship": "łódzkie",
+    "latitude": 51.81667,
+    "longitude": 19.3,
+    "population": 21789
+  },
+  {
+    "wikidataId": "Q983896",
+    "name": "Alwernia",
+    "voivodeship": "małopolskie",
+    "latitude": 50.06056,
+    "longitude": 19.53953,
+    "population": 3306
+  },
+  {
+    "wikidataId": "Q984857",
+    "name": "Andrychów",
+    "voivodeship": "małopolskie",
+    "latitude": 49.86667,
+    "longitude": 19.33333,
+    "population": 18655
+  },
+  {
+    "wikidataId": "Q567332",
+    "name": "Annopol",
+    "voivodeship": "lubelskie",
+    "latitude": 50.88333,
+    "longitude": 21.86667,
+    "population": 2335
+  },
+  {
+    "wikidataId": "Q464763",
+    "name": "Augustów",
+    "voivodeship": "podlaskie",
+    "latitude": 53.85,
+    "longitude": 22.96667,
+    "population": 29494
+  },
+  {
+    "wikidataId": "Q797713",
+    "name": "Babimost",
+    "voivodeship": "lubuskie",
+    "latitude": 52.1649,
+    "longitude": 15.82908,
+    "population": 3865
+  },
+  {
+    "wikidataId": "Q592262",
+    "name": "Baborów",
+    "voivodeship": "opolskie",
+    "latitude": 50.15778,
+    "longitude": 17.98,
+    "population": 2870
+  },
+  {
+    "wikidataId": "Q807271",
+    "name": "Baranów Sandomierski",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.5,
+    "longitude": 21.53333,
+    "population": 1425
+  },
+  {
+    "wikidataId": "Q1007355",
+    "name": "Barcin",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.85,
+    "longitude": 17.95,
+    "population": 7179
+  },
+  {
+    "wikidataId": "Q807991",
+    "name": "Barczewo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.83055,
+    "longitude": 20.69112,
+    "population": 7476
+  },
+  {
+    "wikidataId": "Q808036",
+    "name": "Bardo",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.50583,
+    "longitude": 16.73972,
+    "population": 2451
+  },
+  {
+    "wikidataId": "Q808344",
+    "name": "Barlinek",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53,
+    "longitude": 15.2,
+    "population": 13119
+  },
+  {
+    "wikidataId": "Q809585",
+    "name": "Bartoszyce",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.25354,
+    "longitude": 20.80819,
+    "population": 22281
+  },
+  {
+    "wikidataId": "Q809664",
+    "name": "Barwice",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.73333,
+    "longitude": 16.35,
+    "population": 3533
+  },
+  {
+    "wikidataId": "Q157992",
+    "name": "Bełchatów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.36667,
+    "longitude": 19.36667,
+    "population": 54338
+  },
+  {
+    "wikidataId": "Q854624",
+    "name": "Bełżyce",
+    "voivodeship": "lubelskie",
+    "latitude": 51.17427,
+    "longitude": 22.28024,
+    "population": 6142
+  },
+  {
+    "wikidataId": "Q461513",
+    "name": "Będzin",
+    "voivodeship": "śląskie",
+    "latitude": 50.325,
+    "longitude": 19.13333,
+    "population": 55695
+  },
+  {
+    "wikidataId": "Q248144",
+    "name": "Biała",
+    "voivodeship": "opolskie",
+    "latitude": 50.38587,
+    "longitude": 17.66035,
+    "population": 2348
+  },
+  {
+    "wikidataId": "Q855940",
+    "name": "Biała Piska",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.61191,
+    "longitude": 22.06321,
+    "population": 3818
+  },
+  {
+    "wikidataId": "Q209932",
+    "name": "Biała Podlaska",
+    "voivodeship": "lubelskie",
+    "latitude": 52.03333,
+    "longitude": 23.13333,
+    "population": 55429
+  },
+  {
+    "wikidataId": "Q148956",
+    "name": "Biała Rawska",
+    "voivodeship": "łódzkie",
+    "latitude": 51.8,
+    "longitude": 20.48333,
+    "population": 3124
+  },
+  {
+    "wikidataId": "Q4902737",
+    "name": "Białaczów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.3,
+    "longitude": 20.3,
+    "population": 1068
+  },
+  {
+    "wikidataId": "Q855976",
+    "name": "Białobrzegi",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.64695,
+    "longitude": 20.95041,
+    "population": 6615
+  },
+  {
+    "wikidataId": "Q161919",
+    "name": "Białogard",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.00696,
+    "longitude": 15.98751,
+    "population": 23142
+  },
+  {
+    "wikidataId": "Q856028",
+    "name": "Biały Bór",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.89861,
+    "longitude": 16.83778,
+    "population": 2091
+  },
+  {
+    "wikidataId": "Q761",
+    "name": "Białystok",
+    "voivodeship": "podlaskie",
+    "latitude": 53.13236,
+    "longitude": 23.16867,
+    "population": 290386
+  },
+  {
+    "wikidataId": "Q460971",
+    "name": "Biecz",
+    "voivodeship": "małopolskie",
+    "latitude": 49.73596,
+    "longitude": 21.26301,
+    "population": 4445
+  },
+  {
+    "wikidataId": "Q857331",
+    "name": "Bielawa",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.69075,
+    "longitude": 16.623,
+    "population": 28896
+  },
+  {
+    "wikidataId": "Q850714",
+    "name": "Bielsk Podlaski",
+    "voivodeship": "podlaskie",
+    "latitude": 52.7641,
+    "longitude": 23.1902,
+    "population": 24633
+  },
+  {
+    "wikidataId": "Q106583",
+    "name": "Bielsko-Biała",
+    "voivodeship": "śląskie",
+    "latitude": 49.8225,
+    "longitude": 19.04444,
+    "population": 165127
+  },
+  {
+    "wikidataId": "Q325108",
+    "name": "Bieruń",
+    "voivodeship": "śląskie",
+    "latitude": 50.08972,
+    "longitude": 19.09278,
+    "population": 19100
+  },
+  {
+    "wikidataId": "Q858130",
+    "name": "Bierutów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.13333,
+    "longitude": 17.53333,
+    "population": 4631
+  },
+  {
+    "wikidataId": "Q858312",
+    "name": "Bieżuń",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.96107,
+    "longitude": 19.88976,
+    "population": 1758
+  },
+  {
+    "wikidataId": "Q319445",
+    "name": "Biłgoraj",
+    "voivodeship": "lubelskie",
+    "latitude": 50.55,
+    "longitude": 22.73333,
+    "population": 25459
+  },
+  {
+    "wikidataId": "Q2481888",
+    "name": "Bircza",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.69173,
+    "longitude": 22.47854,
+    "population": 986
+  },
+  {
+    "wikidataId": "Q201186",
+    "name": "Biskupiec",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.86467,
+    "longitude": 20.95692,
+    "population": 10163
+  },
+  {
+    "wikidataId": "Q510842",
+    "name": "Bisztynek",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.08556,
+    "longitude": 20.9,
+    "population": 2249
+  },
+  {
+    "wikidataId": "Q1483871",
+    "name": "Blachownia",
+    "voivodeship": "śląskie",
+    "latitude": 50.78015,
+    "longitude": 18.96389,
+    "population": 9334
+  },
+  {
+    "wikidataId": "Q989423",
+    "name": "Błaszki",
+    "voivodeship": "łódzkie",
+    "latitude": 51.65,
+    "longitude": 18.43333,
+    "population": 2094
+  },
+  {
+    "wikidataId": "Q122758",
+    "name": "Błażowa",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.88333,
+    "longitude": 22.1,
+    "population": 2116
+  },
+  {
+    "wikidataId": "Q608376",
+    "name": "Błonie",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.2,
+    "longitude": 20.61667,
+    "population": 12152
+  },
+  {
+    "wikidataId": "Q511956",
+    "name": "Bobolice",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.95,
+    "longitude": 16.58333,
+    "population": 3848
+  },
+  {
+    "wikidataId": "Q2341034",
+    "name": "Bobowa",
+    "voivodeship": "małopolskie",
+    "latitude": 49.70861,
+    "longitude": 20.94472,
+    "population": 3094
+  },
+  {
+    "wikidataId": "Q888877",
+    "name": "Bobrowniki",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.77913,
+    "longitude": 18.95515,
+    "population": null
+  },
+  {
+    "wikidataId": "Q815903",
+    "name": "Bochnia",
+    "voivodeship": "małopolskie",
+    "latitude": 49.96889,
+    "longitude": 20.43028,
+    "population": 28692
+  },
+  {
+    "wikidataId": "Q544822",
+    "name": "Bodzanów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.50111,
+    "longitude": 20.02806,
+    "population": 1122
+  },
+  {
+    "wikidataId": "Q890126",
+    "name": "Bodzentyn",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.94115,
+    "longitude": 20.95719,
+    "population": 2156
+  },
+  {
+    "wikidataId": "Q123438",
+    "name": "Bogatynia",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.9075,
+    "longitude": 14.95389,
+    "population": 16647
+  },
+  {
+    "wikidataId": "Q2141621",
+    "name": "Bogoria",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.65,
+    "longitude": 21.25,
+    "population": 1076
+  },
+  {
+    "wikidataId": "Q890681",
+    "name": "Boguchwała",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.98333,
+    "longitude": 21.93333,
+    "population": 6220
+  },
+  {
+    "wikidataId": "Q890709",
+    "name": "Boguszów-Gorce",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.75514,
+    "longitude": 16.20494,
+    "population": 14648
+  },
+  {
+    "wikidataId": "Q987012",
+    "name": "Bojanowo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.7,
+    "longitude": 16.75,
+    "population": 2856
+  },
+  {
+    "wikidataId": "Q156828",
+    "name": "Bolesławiec",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.26667,
+    "longitude": 15.56667,
+    "population": 37559
+  },
+  {
+    "wikidataId": "Q891331",
+    "name": "Bolesławiec",
+    "voivodeship": "łódzkie",
+    "latitude": 51.19861,
+    "longitude": 18.19056,
+    "population": null
+  },
+  {
+    "wikidataId": "Q627392",
+    "name": "Bolimów",
+    "voivodeship": "łódzkie",
+    "latitude": 52.06667,
+    "longitude": 20.16667,
+    "population": 934
+  },
+  {
+    "wikidataId": "Q774352",
+    "name": "Bolków",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.92173,
+    "longitude": 16.10083,
+    "population": 4748
+  },
+  {
+    "wikidataId": "Q1005972",
+    "name": "Borek Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.91674,
+    "longitude": 17.24133,
+    "population": 2440
+  },
+  {
+    "wikidataId": "Q1027526",
+    "name": "Borne Sulinowo",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.57661,
+    "longitude": 16.53395,
+    "population": 5032
+  },
+  {
+    "wikidataId": "Q735041",
+    "name": "Branice",
+    "voivodeship": "opolskie",
+    "latitude": 50.05,
+    "longitude": 17.78333,
+    "population": 1996
+  },
+  {
+    "wikidataId": "Q160814",
+    "name": "Braniewo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.38194,
+    "longitude": 19.82361,
+    "population": 16480
+  },
+  {
+    "wikidataId": "Q607410",
+    "name": "Brańsk",
+    "voivodeship": "podlaskie",
+    "latitude": 52.7444,
+    "longitude": 22.83774,
+    "population": 3583
+  },
+  {
+    "wikidataId": "Q690030",
+    "name": "Brodnica",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.25803,
+    "longitude": 19.40542,
+    "population": 28865
+  },
+  {
+    "wikidataId": "Q149790",
+    "name": "Brody",
+    "voivodeship": "lubuskie",
+    "latitude": 51.78706,
+    "longitude": 14.77524,
+    "population": 892
+  },
+  {
+    "wikidataId": "Q925506",
+    "name": "Brok",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.7,
+    "longitude": 21.85,
+    "population": 1777
+  },
+  {
+    "wikidataId": "Q994662",
+    "name": "Brusy",
+    "voivodeship": "pomorskie",
+    "latitude": 53.88556,
+    "longitude": 17.72194,
+    "population": 5112
+  },
+  {
+    "wikidataId": "Q985661",
+    "name": "Brwinów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.14167,
+    "longitude": 20.71667,
+    "population": 14448
+  },
+  {
+    "wikidataId": "Q214640",
+    "name": "Brzeg",
+    "voivodeship": "opolskie",
+    "latitude": 50.86667,
+    "longitude": 17.46667,
+    "population": 34492
+  },
+  {
+    "wikidataId": "Q995429",
+    "name": "Brzeg Dolny",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.27299,
+    "longitude": 16.70815,
+    "population": 12765
+  },
+  {
+    "wikidataId": "Q324884",
+    "name": "Brzesko",
+    "voivodeship": "małopolskie",
+    "latitude": 49.96778,
+    "longitude": 20.60694,
+    "population": 16193
+  },
+  {
+    "wikidataId": "Q916514",
+    "name": "Brzeszcze",
+    "voivodeship": "małopolskie",
+    "latitude": 49.9819,
+    "longitude": 19.1473,
+    "population": 11049
+  },
+  {
+    "wikidataId": "Q985649",
+    "name": "Brześć Kujawski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.605,
+    "longitude": 18.89806,
+    "population": 4562
+  },
+  {
+    "wikidataId": "Q324917",
+    "name": "Brzeziny",
+    "voivodeship": "łódzkie",
+    "latitude": 51.8,
+    "longitude": 19.75,
+    "population": 12117
+  },
+  {
+    "wikidataId": "Q776418",
+    "name": "Brzostek",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.87917,
+    "longitude": 21.41222,
+    "population": 2722
+  },
+  {
+    "wikidataId": "Q653797",
+    "name": "Brzozów",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.69528,
+    "longitude": 22.01944,
+    "population": 7366
+  },
+  {
+    "wikidataId": "Q984755",
+    "name": "Budzyń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.88944,
+    "longitude": 16.98861,
+    "population": 4648
+  },
+  {
+    "wikidataId": "Q667588",
+    "name": "Buk",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.35532,
+    "longitude": 16.51958,
+    "population": 5718
+  },
+  {
+    "wikidataId": "Q985653",
+    "name": "Bukowno",
+    "voivodeship": "małopolskie",
+    "latitude": 50.26806,
+    "longitude": 19.46306,
+    "population": 9791
+  },
+  {
+    "wikidataId": "Q256782",
+    "name": "Busko-Zdrój",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.46667,
+    "longitude": 20.71667,
+    "population": 15014
+  },
+  {
+    "wikidataId": "Q995820",
+    "name": "Bychawa",
+    "voivodeship": "lubelskie",
+    "latitude": 51.01667,
+    "longitude": 22.53333,
+    "population": 4677
+  },
+  {
+    "wikidataId": "Q990828",
+    "name": "Byczyna",
+    "voivodeship": "opolskie",
+    "latitude": 51.11306,
+    "longitude": 18.21111,
+    "population": 3476
+  },
+  {
+    "wikidataId": "Q41252",
+    "name": "Bydgoszcz",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.11667,
+    "longitude": 18,
+    "population": 324984
+  },
+  {
+    "wikidataId": "Q991022",
+    "name": "Bystrzyca Kłodzka",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.3,
+    "longitude": 16.65,
+    "population": 9414
+  },
+  {
+    "wikidataId": "Q102350",
+    "name": "Bytom",
+    "voivodeship": "śląskie",
+    "latitude": 50.347,
+    "longitude": 18.923,
+    "population": 148687
+  },
+  {
+    "wikidataId": "Q987471",
+    "name": "Bytom Odrzański",
+    "voivodeship": "lubuskie",
+    "latitude": 51.73333,
+    "longitude": 15.81667,
+    "population": 4051
+  },
+  {
+    "wikidataId": "Q326577",
+    "name": "Bytów",
+    "voivodeship": "pomorskie",
+    "latitude": 54.16667,
+    "longitude": 17.5,
+    "population": 16739
+  },
+  {
+    "wikidataId": "Q954143",
+    "name": "Cedynia",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.87944,
+    "longitude": 14.2025,
+    "population": 1472
+  },
+  {
+    "wikidataId": "Q2406134",
+    "name": "Cegłów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.14782,
+    "longitude": 21.73739,
+    "population": 2321
+  },
+  {
+    "wikidataId": "Q234184",
+    "name": "Chełm",
+    "voivodeship": "lubelskie",
+    "latitude": 51.13333,
+    "longitude": 23.48333,
+    "population": 59546
+  },
+  {
+    "wikidataId": "Q985669",
+    "name": "Chełmek",
+    "voivodeship": "małopolskie",
+    "latitude": 50.10163,
+    "longitude": 19.24801,
+    "population": 8669
+  },
+  {
+    "wikidataId": "Q161962",
+    "name": "Chełmno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.34917,
+    "longitude": 18.42605,
+    "population": 18837
+  },
+  {
+    "wikidataId": "Q850688",
+    "name": "Chełmża",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.2,
+    "longitude": 18.6,
+    "population": 14045
+  },
+  {
+    "wikidataId": "Q991924",
+    "name": "Chęciny",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.80021,
+    "longitude": 20.46229,
+    "population": 4364
+  },
+  {
+    "wikidataId": "Q991973",
+    "name": "Chmielnik",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.61167,
+    "longitude": 20.74972,
+    "population": 3549
+  },
+  {
+    "wikidataId": "Q1075607",
+    "name": "Chocianów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.41867,
+    "longitude": 15.90172,
+    "population": 7576
+  },
+  {
+    "wikidataId": "Q1021263",
+    "name": "Chociwel",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.46611,
+    "longitude": 15.33972,
+    "population": 3041
+  },
+  {
+    "wikidataId": "Q984765",
+    "name": "Chocz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.96667,
+    "longitude": 17.86667,
+    "population": 1691
+  },
+  {
+    "wikidataId": "Q987986",
+    "name": "Chodecz",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.40528,
+    "longitude": 19.02833,
+    "population": 1796
+  },
+  {
+    "wikidataId": "Q51434",
+    "name": "Chodzież",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.99009,
+    "longitude": 16.91219,
+    "population": 19830
+  },
+  {
+    "wikidataId": "Q954157",
+    "name": "Chojna",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.96389,
+    "longitude": 14.42797,
+    "population": 7356
+  },
+  {
+    "wikidataId": "Q740241",
+    "name": "Chojnice",
+    "voivodeship": "pomorskie",
+    "latitude": 53.69554,
+    "longitude": 17.55701,
+    "population": 39275
+  },
+  {
+    "wikidataId": "Q478869",
+    "name": "Chojnów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.26667,
+    "longitude": 15.93333,
+    "population": 12769
+  },
+  {
+    "wikidataId": "Q924100",
+    "name": "Choroszcz",
+    "voivodeship": "podlaskie",
+    "latitude": 53.14167,
+    "longitude": 22.98333,
+    "population": 5961
+  },
+  {
+    "wikidataId": "Q991962",
+    "name": "Chorzele",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.25,
+    "longitude": 20.9,
+    "population": 2990
+  },
+  {
+    "wikidataId": "Q104302",
+    "name": "Chorzów",
+    "voivodeship": "śląskie",
+    "latitude": 50.2884,
+    "longitude": 18.9628,
+    "population": 101184
+  },
+  {
+    "wikidataId": "Q640223",
+    "name": "Choszczno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.17,
+    "longitude": 15.41667,
+    "population": 14399
+  },
+  {
+    "wikidataId": "Q93323",
+    "name": "Chrzanów",
+    "voivodeship": "małopolskie",
+    "latitude": 50.13333,
+    "longitude": 19.4,
+    "population": 35091
+  },
+  {
+    "wikidataId": "Q995159",
+    "name": "Ciechanowiec",
+    "voivodeship": "podlaskie",
+    "latitude": 52.68333,
+    "longitude": 22.5,
+    "population": 4500
+  },
+  {
+    "wikidataId": "Q745051",
+    "name": "Ciechanów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.88333,
+    "longitude": 20.61667,
+    "population": 42705
+  },
+  {
+    "wikidataId": "Q985659",
+    "name": "Ciechocinek",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.88333,
+    "longitude": 18.78333,
+    "population": 10415
+  },
+  {
+    "wikidataId": "Q994016",
+    "name": "Ciepielów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.24838,
+    "longitude": 21.57475,
+    "population": 741
+  },
+  {
+    "wikidataId": "Q653855",
+    "name": "Cieszanów",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.24564,
+    "longitude": 23.13163,
+    "population": 1867
+  },
+  {
+    "wikidataId": "Q321197",
+    "name": "Cieszyn",
+    "voivodeship": "śląskie",
+    "latitude": 49.75,
+    "longitude": 18.63333,
+    "population": 33958
+  },
+  {
+    "wikidataId": "Q959508",
+    "name": "Ciężkowice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.8,
+    "longitude": 20.96667,
+    "population": 2503
+  },
+  {
+    "wikidataId": "Q999269",
+    "name": "Cybinka",
+    "voivodeship": "lubuskie",
+    "latitude": 52.19167,
+    "longitude": 14.8,
+    "population": 2745
+  },
+  {
+    "wikidataId": "Q679238",
+    "name": "Czaplinek",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.5575,
+    "longitude": 16.23333,
+    "population": 6876
+  },
+  {
+    "wikidataId": "Q584966",
+    "name": "Czarna Białostocka",
+    "voivodeship": "podlaskie",
+    "latitude": 53.3,
+    "longitude": 23.28333,
+    "population": 8943
+  },
+  {
+    "wikidataId": "Q551750",
+    "name": "Czarna Woda",
+    "voivodeship": "pomorskie",
+    "latitude": 53.83333,
+    "longitude": 18.1,
+    "population": 2741
+  },
+  {
+    "wikidataId": "Q1015157",
+    "name": "Czarne",
+    "voivodeship": "pomorskie",
+    "latitude": 53.6842,
+    "longitude": 16.93834,
+    "population": 5749
+  },
+  {
+    "wikidataId": "Q51438",
+    "name": "Czarnków",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.9,
+    "longitude": 16.56667,
+    "population": 10097
+  },
+  {
+    "wikidataId": "Q2368603",
+    "name": "Czarny Dunajec",
+    "voivodeship": "małopolskie",
+    "latitude": 49.44028,
+    "longitude": 19.85333,
+    "population": 3813
+  },
+  {
+    "wikidataId": "Q1003264",
+    "name": "Czchów",
+    "voivodeship": "małopolskie",
+    "latitude": 49.85,
+    "longitude": 20.68333,
+    "population": 2364
+  },
+  {
+    "wikidataId": "Q263684",
+    "name": "Czechowice-Dziedzice",
+    "voivodeship": "śląskie",
+    "latitude": 49.91333,
+    "longitude": 19.00472,
+    "population": 35261
+  },
+  {
+    "wikidataId": "Q161605",
+    "name": "Czeladź",
+    "voivodeship": "śląskie",
+    "latitude": 50.33333,
+    "longitude": 19.08333,
+    "population": 30681
+  },
+  {
+    "wikidataId": "Q2557505",
+    "name": "Czemierniki",
+    "voivodeship": "lubelskie",
+    "latitude": 51.67417,
+    "longitude": 22.63806,
+    "population": 1300
+  },
+  {
+    "wikidataId": "Q51441",
+    "name": "Czempiń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.145,
+    "longitude": 16.76056,
+    "population": 4825
+  },
+  {
+    "wikidataId": "Q1149495",
+    "name": "Czerniejewo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.4264,
+    "longitude": 17.48925,
+    "population": 2576
+  },
+  {
+    "wikidataId": "Q1015160",
+    "name": "Czersk",
+    "voivodeship": "pomorskie",
+    "latitude": 53.79278,
+    "longitude": 17.97389,
+    "population": 9997
+  },
+  {
+    "wikidataId": "Q777802",
+    "name": "Czerwieńsk",
+    "voivodeship": "lubuskie",
+    "latitude": 52.01278,
+    "longitude": 15.42306,
+    "population": 3907
+  },
+  {
+    "wikidataId": "Q1025875",
+    "name": "Czerwińsk nad Wisłą",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.39444,
+    "longitude": 20.30944,
+    "population": 1033
+  },
+  {
+    "wikidataId": "Q1005538",
+    "name": "Czerwionka-Leszczyny",
+    "voivodeship": "śląskie",
+    "latitude": 50.18333,
+    "longitude": 18.68333,
+    "population": 27014
+  },
+  {
+    "wikidataId": "Q103217",
+    "name": "Częstochowa",
+    "voivodeship": "śląskie",
+    "latitude": 50.80964,
+    "longitude": 19.12217,
+    "population": 204730
+  },
+  {
+    "wikidataId": "Q990841",
+    "name": "Człopa",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.08856,
+    "longitude": 16.12098,
+    "population": 2232
+  },
+  {
+    "wikidataId": "Q640469",
+    "name": "Człuchów",
+    "voivodeship": "pomorskie",
+    "latitude": 53.66722,
+    "longitude": 17.35861,
+    "population": 13343
+  },
+  {
+    "wikidataId": "Q2355915",
+    "name": "Czyżew",
+    "voivodeship": "podlaskie",
+    "latitude": 52.8,
+    "longitude": 22.31667,
+    "population": 2528
+  },
+  {
+    "wikidataId": "Q336448",
+    "name": "Ćmielów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.89028,
+    "longitude": 21.51472,
+    "population": 2876
+  },
+  {
+    "wikidataId": "Q2507925",
+    "name": "Daleszyce",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.80361,
+    "longitude": 20.8075,
+    "population": 2835
+  },
+  {
+    "wikidataId": "Q497138",
+    "name": "Darłowo",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.42083,
+    "longitude": 16.41056,
+    "population": 13081
+  },
+  {
+    "wikidataId": "Q1005435",
+    "name": "Dąbie",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.08861,
+    "longitude": 18.82556,
+    "population": 1787
+  },
+  {
+    "wikidataId": "Q986406",
+    "name": "Dąbrowa Białostocka",
+    "voivodeship": "podlaskie",
+    "latitude": 53.65,
+    "longitude": 23.35,
+    "population": 5257
+  },
+  {
+    "wikidataId": "Q108672",
+    "name": "Dąbrowa Górnicza",
+    "voivodeship": "śląskie",
+    "latitude": 50.33087,
+    "longitude": 19.20789,
+    "population": 112876
+  },
+  {
+    "wikidataId": "Q324971",
+    "name": "Dąbrowa Tarnowska",
+    "voivodeship": "małopolskie",
+    "latitude": 50.175,
+    "longitude": 20.98333,
+    "population": 11549
+  },
+  {
+    "wikidataId": "Q985780",
+    "name": "Dąbrowice",
+    "voivodeship": "łódzkie",
+    "latitude": 52.31361,
+    "longitude": 19.08389,
+    "population": 847
+  },
+  {
+    "wikidataId": "Q990837",
+    "name": "Debrzno",
+    "voivodeship": "pomorskie",
+    "latitude": 53.53806,
+    "longitude": 17.23639,
+    "population": 5020
+  },
+  {
+    "wikidataId": "Q947404",
+    "name": "Dębica",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.05146,
+    "longitude": 21.41141,
+    "population": 44047
+  },
+  {
+    "wikidataId": "Q983732",
+    "name": "Dęblin",
+    "voivodeship": "lubelskie",
+    "latitude": 51.56667,
+    "longitude": 21.86139,
+    "population": 14791
+  },
+  {
+    "wikidataId": "Q335446",
+    "name": "Dębno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.73889,
+    "longitude": 14.69778,
+    "population": 13291
+  },
+  {
+    "wikidataId": "Q1003279",
+    "name": "Dobczyce",
+    "voivodeship": "małopolskie",
+    "latitude": 49.9,
+    "longitude": 20.1,
+    "population": 6263
+  },
+  {
+    "wikidataId": "Q988628",
+    "name": "Dobiegniew",
+    "voivodeship": "lubuskie",
+    "latitude": 52.96667,
+    "longitude": 15.75,
+    "population": 3055
+  },
+  {
+    "wikidataId": "Q555150",
+    "name": "Dobra",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.9,
+    "longitude": 18.6,
+    "population": 1358
+  },
+  {
+    "wikidataId": "Q558579",
+    "name": "Dobra",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.58333,
+    "longitude": 15.30833,
+    "population": 2103
+  },
+  {
+    "wikidataId": "Q2584782",
+    "name": "Dobre",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.32097,
+    "longitude": 21.67881,
+    "population": 1820
+  },
+  {
+    "wikidataId": "Q1505099",
+    "name": "Dobre Miasto",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.9875,
+    "longitude": 20.39583,
+    "population": 9629
+  },
+  {
+    "wikidataId": "Q1780345",
+    "name": "Dobrodzień",
+    "voivodeship": "opolskie",
+    "latitude": 50.72778,
+    "longitude": 18.44444,
+    "population": 3510
+  },
+  {
+    "wikidataId": "Q988639",
+    "name": "Dobrzany",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.35861,
+    "longitude": 15.42611,
+    "population": 2183
+  },
+  {
+    "wikidataId": "Q476436",
+    "name": "Dobrzyca",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.85,
+    "longitude": 17.6,
+    "population": 2949
+  },
+  {
+    "wikidataId": "Q995806",
+    "name": "Dobrzyń nad Wisłą",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.63778,
+    "longitude": 19.32139,
+    "population": 2043
+  },
+  {
+    "wikidataId": "Q990785",
+    "name": "Dolsk",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.9818,
+    "longitude": 17.06273,
+    "population": 1568
+  },
+  {
+    "wikidataId": "Q988638",
+    "name": "Drawno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.21972,
+    "longitude": 15.75944,
+    "population": 2187
+  },
+  {
+    "wikidataId": "Q326123",
+    "name": "Drawsko Pomorskie",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.53333,
+    "longitude": 15.8,
+    "population": 11515
+  },
+  {
+    "wikidataId": "Q836961",
+    "name": "Drezdenko",
+    "voivodeship": "lubuskie",
+    "latitude": 52.83333,
+    "longitude": 15.83333,
+    "population": 9800
+  },
+  {
+    "wikidataId": "Q1006081",
+    "name": "Drobin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.73775,
+    "longitude": 19.98928,
+    "population": 2711
+  },
+  {
+    "wikidataId": "Q769631",
+    "name": "Drohiczyn",
+    "voivodeship": "podlaskie",
+    "latitude": 52.4,
+    "longitude": 22.65,
+    "population": 1848
+  },
+  {
+    "wikidataId": "Q1005409",
+    "name": "Drzewica",
+    "voivodeship": "łódzkie",
+    "latitude": 51.45,
+    "longitude": 20.46667,
+    "population": 3616
+  },
+  {
+    "wikidataId": "Q2612477",
+    "name": "Dubiecko",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.82608,
+    "longitude": 22.39117,
+    "population": 845
+  },
+  {
+    "wikidataId": "Q336386",
+    "name": "Dukla",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.55833,
+    "longitude": 21.68333,
+    "population": 2037
+  },
+  {
+    "wikidataId": "Q1001225",
+    "name": "Duszniki-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.40306,
+    "longitude": 16.39083,
+    "population": 4240
+  },
+  {
+    "wikidataId": "Q910985",
+    "name": "Dynów",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.81506,
+    "longitude": 22.23388,
+    "population": 6085
+  },
+  {
+    "wikidataId": "Q983720",
+    "name": "Działdowo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.23333,
+    "longitude": 20.18333,
+    "population": 20670
+  },
+  {
+    "wikidataId": "Q571185",
+    "name": "Działoszyce",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.36667,
+    "longitude": 20.35,
+    "population": 881
+  },
+  {
+    "wikidataId": "Q1015152",
+    "name": "Działoszyn",
+    "voivodeship": "łódzkie",
+    "latitude": 51.11778,
+    "longitude": 18.87,
+    "population": 5477
+  },
+  {
+    "wikidataId": "Q551422",
+    "name": "Dzierzgoń",
+    "voivodeship": "pomorskie",
+    "latitude": 53.92333,
+    "longitude": 19.35139,
+    "population": 5129
+  },
+  {
+    "wikidataId": "Q778251",
+    "name": "Dzierżoniów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.72806,
+    "longitude": 16.65111,
+    "population": 31866
+  },
+  {
+    "wikidataId": "Q990830",
+    "name": "Dziwnów",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.01667,
+    "longitude": 14.75,
+    "population": 2451
+  },
+  {
+    "wikidataId": "Q104712",
+    "name": "Elbląg",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.15222,
+    "longitude": 19.40889,
+    "population": 115220
+  },
+  {
+    "wikidataId": "Q61480",
+    "name": "Ełk",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.82278,
+    "longitude": 22.35278,
+    "population": 60390
+  },
+  {
+    "wikidataId": "Q985646",
+    "name": "Frampol",
+    "voivodeship": "lubelskie",
+    "latitude": 50.68333,
+    "longitude": 22.66667,
+    "population": 1361
+  },
+  {
+    "wikidataId": "Q497115",
+    "name": "Frombork",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.35833,
+    "longitude": 19.68333,
+    "population": 2159
+  },
+  {
+    "wikidataId": "Q583896",
+    "name": "Garwolin",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.9,
+    "longitude": 21.61667,
+    "population": 17279
+  },
+  {
+    "wikidataId": "Q990808",
+    "name": "Gąbin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.4,
+    "longitude": 19.73333,
+    "population": 4117
+  },
+  {
+    "wikidataId": "Q1021761",
+    "name": "Gąsawa",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.76667,
+    "longitude": 17.75,
+    "population": 1402
+  },
+  {
+    "wikidataId": "Q1792",
+    "name": "Gdańsk",
+    "voivodeship": "pomorskie",
+    "latitude": 54.34829,
+    "longitude": 18.65402,
+    "population": 487834
+  },
+  {
+    "wikidataId": "Q385",
+    "name": "Gdynia",
+    "voivodeship": "pomorskie",
+    "latitude": 54.5175,
+    "longitude": 18.54,
+    "population": 242141
+  },
+  {
+    "wikidataId": "Q2441134",
+    "name": "Gielniów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.40076,
+    "longitude": 20.48126,
+    "population": 899
+  },
+  {
+    "wikidataId": "Q841356",
+    "name": "Giżycko",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.04,
+    "longitude": 21.75889,
+    "population": 28233
+  },
+  {
+    "wikidataId": "Q988185",
+    "name": "Glinojeck",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.81667,
+    "longitude": 20.28333,
+    "population": 2858
+  },
+  {
+    "wikidataId": "Q105084",
+    "name": "Gliwice",
+    "voivodeship": "śląskie",
+    "latitude": 50.29417,
+    "longitude": 18.66583,
+    "population": 174016
+  },
+  {
+    "wikidataId": "Q66013",
+    "name": "Głogów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.65889,
+    "longitude": 16.08028,
+    "population": 64261
+  },
+  {
+    "wikidataId": "Q1025309",
+    "name": "Głogów Małopolski",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.16667,
+    "longitude": 21.96667,
+    "population": 10232
+  },
+  {
+    "wikidataId": "Q954748",
+    "name": "Głogówek",
+    "voivodeship": "opolskie",
+    "latitude": 50.35355,
+    "longitude": 17.86405,
+    "population": 5642
+  },
+  {
+    "wikidataId": "Q942482",
+    "name": "Głowaczów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.62308,
+    "longitude": 21.31785,
+    "population": 821
+  },
+  {
+    "wikidataId": "Q867358",
+    "name": "Głowno",
+    "voivodeship": "łódzkie",
+    "latitude": 51.96417,
+    "longitude": 19.71167,
+    "population": 13506
+  },
+  {
+    "wikidataId": "Q717947",
+    "name": "Głubczyce",
+    "voivodeship": "opolskie",
+    "latitude": 50.2,
+    "longitude": 17.83333,
+    "population": 12100
+  },
+  {
+    "wikidataId": "Q678425",
+    "name": "Głuchołazy",
+    "voivodeship": "opolskie",
+    "latitude": 50.31306,
+    "longitude": 17.37417,
+    "population": 13143
+  },
+  {
+    "wikidataId": "Q701606",
+    "name": "Głuszyca",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.68722,
+    "longitude": 16.37167,
+    "population": 6095
+  },
+  {
+    "wikidataId": "Q305067",
+    "name": "Gniew",
+    "voivodeship": "pomorskie",
+    "latitude": 53.83333,
+    "longitude": 18.83333,
+    "population": 6285
+  },
+  {
+    "wikidataId": "Q990799",
+    "name": "Gniewkowo",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.89461,
+    "longitude": 18.40785,
+    "population": 6879
+  },
+  {
+    "wikidataId": "Q51432",
+    "name": "Gniezno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.53333,
+    "longitude": 17.6,
+    "population": 65452
+  },
+  {
+    "wikidataId": "Q1001307",
+    "name": "Gogolin",
+    "voivodeship": "opolskie",
+    "latitude": 50.48806,
+    "longitude": 18.02389,
+    "population": 6429
+  },
+  {
+    "wikidataId": "Q591213",
+    "name": "Golczewo",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.82611,
+    "longitude": 14.98194,
+    "population": 2545
+  },
+  {
+    "wikidataId": "Q329597",
+    "name": "Goleniów",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.56392,
+    "longitude": 14.82854,
+    "population": 22166
+  },
+  {
+    "wikidataId": "Q1192513",
+    "name": "Golina",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.24315,
+    "longitude": 18.09268,
+    "population": 4395
+  },
+  {
+    "wikidataId": "Q325251",
+    "name": "Golub-Dobrzyń",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.1,
+    "longitude": 19.05,
+    "population": 11722
+  },
+  {
+    "wikidataId": "Q52828",
+    "name": "Gołańcz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.94833,
+    "longitude": 17.30139,
+    "population": 3194
+  },
+  {
+    "wikidataId": "Q947414",
+    "name": "Gołdap",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.30631,
+    "longitude": 22.30362,
+    "population": 13378
+  },
+  {
+    "wikidataId": "Q985386",
+    "name": "Goniądz",
+    "voivodeship": "podlaskie",
+    "latitude": 53.48917,
+    "longitude": 22.73778,
+    "population": 1785
+  },
+  {
+    "wikidataId": "Q1893589",
+    "name": "Goraj",
+    "voivodeship": "lubelskie",
+    "latitude": 50.71667,
+    "longitude": 22.65,
+    "population": 883
+  },
+  {
+    "wikidataId": "Q947521",
+    "name": "Gorlice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.65563,
+    "longitude": 21.16035,
+    "population": 26405
+  },
+  {
+    "wikidataId": "Q995828",
+    "name": "Gorzów Śląski",
+    "voivodeship": "opolskie",
+    "latitude": 51.03333,
+    "longitude": 18.43333,
+    "population": 2430
+  },
+  {
+    "wikidataId": "Q104731",
+    "name": "Gorzów Wielkopolski",
+    "voivodeship": "lubuskie",
+    "latitude": 52.73333,
+    "longitude": 15.25,
+    "population": 119964
+  },
+  {
+    "wikidataId": "Q983735",
+    "name": "Gostynin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.42938,
+    "longitude": 19.46194,
+    "population": 17624
+  },
+  {
+    "wikidataId": "Q422286",
+    "name": "Gostyń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.87917,
+    "longitude": 17.0125,
+    "population": 20210
+  },
+  {
+    "wikidataId": "Q1511713",
+    "name": "Gościno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.05083,
+    "longitude": 15.6525,
+    "population": 2611
+  },
+  {
+    "wikidataId": "Q2599348",
+    "name": "Gowarczów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.27861,
+    "longitude": 20.43889,
+    "population": 1345
+  },
+  {
+    "wikidataId": "Q985667",
+    "name": "Gozdnica",
+    "voivodeship": "lubuskie",
+    "latitude": 51.43889,
+    "longitude": 15.09556,
+    "population": 2847
+  },
+  {
+    "wikidataId": "Q746395",
+    "name": "Góra",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.66806,
+    "longitude": 16.53944,
+    "population": 11173
+  },
+  {
+    "wikidataId": "Q985642",
+    "name": "Góra Kalwaria",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.98438,
+    "longitude": 21.21402,
+    "population": 11887
+  },
+  {
+    "wikidataId": "Q987197",
+    "name": "Górowo Iławeckie",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.28559,
+    "longitude": 20.48886,
+    "population": 3797
+  },
+  {
+    "wikidataId": "Q1023746",
+    "name": "Górzno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.19779,
+    "longitude": 19.64317,
+    "population": 1405
+  },
+  {
+    "wikidataId": "Q985746",
+    "name": "Grabów",
+    "voivodeship": "łódzkie",
+    "latitude": 52.12833,
+    "longitude": 19.00944,
+    "population": 998
+  },
+  {
+    "wikidataId": "Q206125",
+    "name": "Grabów nad Prosną",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.5,
+    "longitude": 18.11667,
+    "population": 1917
+  },
+  {
+    "wikidataId": "Q336204",
+    "name": "Grajewo",
+    "voivodeship": "podlaskie",
+    "latitude": 53.65,
+    "longitude": 22.45,
+    "population": 21395
+  },
+  {
+    "wikidataId": "Q941844",
+    "name": "Grodków",
+    "voivodeship": "opolskie",
+    "latitude": 50.68333,
+    "longitude": 17.36667,
+    "population": 8210
+  },
+  {
+    "wikidataId": "Q924078",
+    "name": "Grodzisk Mazowiecki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.10889,
+    "longitude": 20.625,
+    "population": 33708
+  },
+  {
+    "wikidataId": "Q52829",
+    "name": "Grodzisk Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.23333,
+    "longitude": 16.36667,
+    "population": 15131
+  },
+  {
+    "wikidataId": "Q391461",
+    "name": "Grójec",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.86556,
+    "longitude": 20.8675,
+    "population": 17037
+  },
+  {
+    "wikidataId": "Q123511",
+    "name": "Grudziądz",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.4875,
+    "longitude": 18.755,
+    "population": 90890
+  },
+  {
+    "wikidataId": "Q990669",
+    "name": "Grybów",
+    "voivodeship": "małopolskie",
+    "latitude": 49.62444,
+    "longitude": 20.94833,
+    "population": 5928
+  },
+  {
+    "wikidataId": "Q167744",
+    "name": "Gryfice",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.91667,
+    "longitude": 15.2,
+    "population": 15863
+  },
+  {
+    "wikidataId": "Q186441",
+    "name": "Gryfino",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.25243,
+    "longitude": 14.48831,
+    "population": 20297
+  },
+  {
+    "wikidataId": "Q988179",
+    "name": "Gryfów Śląski",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.028,
+    "longitude": 15.41479,
+    "population": 6386
+  },
+  {
+    "wikidataId": "Q312061",
+    "name": "Gubin",
+    "voivodeship": "lubuskie",
+    "latitude": 51.95,
+    "longitude": 14.73333,
+    "population": 16114
+  },
+  {
+    "wikidataId": "Q276859",
+    "name": "Hajnówka",
+    "voivodeship": "podlaskie",
+    "latitude": 52.73333,
+    "longitude": 23.56667,
+    "population": 19667
+  },
+  {
+    "wikidataId": "Q991912",
+    "name": "Halinów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.2288,
+    "longitude": 21.3551,
+    "population": 3740
+  },
+  {
+    "wikidataId": "Q848973",
+    "name": "Hel",
+    "voivodeship": "pomorskie",
+    "latitude": 54.61667,
+    "longitude": 18.78333,
+    "population": 2975
+  },
+  {
+    "wikidataId": "Q924103",
+    "name": "Hrubieszów",
+    "voivodeship": "lubelskie",
+    "latitude": 50.8,
+    "longitude": 23.91667,
+    "population": 16832
+  },
+  {
+    "wikidataId": "Q8194",
+    "name": "Iława",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.59639,
+    "longitude": 19.56556,
+    "population": 32664
+  },
+  {
+    "wikidataId": "Q161909",
+    "name": "Iłowa",
+    "voivodeship": "lubuskie",
+    "latitude": 51.50194,
+    "longitude": 15.20583,
+    "population": 3725
+  },
+  {
+    "wikidataId": "Q1355984",
+    "name": "Iłża",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.16313,
+    "longitude": 21.23979,
+    "population": 4478
+  },
+  {
+    "wikidataId": "Q185798",
+    "name": "Imielin",
+    "voivodeship": "śląskie",
+    "latitude": 50.14778,
+    "longitude": 19.18139,
+    "population": 9313
+  },
+  {
+    "wikidataId": "Q1898628",
+    "name": "Inowłódz",
+    "voivodeship": "łódzkie",
+    "latitude": 51.51667,
+    "longitude": 20.21667,
+    "population": null
+  },
+  {
+    "wikidataId": "Q378821",
+    "name": "Inowrocław",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.79583,
+    "longitude": 18.26111,
+    "population": 69576
+  },
+  {
+    "wikidataId": "Q988582",
+    "name": "Ińsko",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.43583,
+    "longitude": 15.55028,
+    "population": 1823
+  },
+  {
+    "wikidataId": "Q2781592",
+    "name": "Iwaniska",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.73167,
+    "longitude": 21.275,
+    "population": 1236
+  },
+  {
+    "wikidataId": "Q655412",
+    "name": "Iwonicz-Zdrój",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.58333,
+    "longitude": 21.8,
+    "population": 1619
+  },
+  {
+    "wikidataId": "Q2039456",
+    "name": "Izbica",
+    "voivodeship": "lubelskie",
+    "latitude": 50.88333,
+    "longitude": 23.16667,
+    "population": 879
+  },
+  {
+    "wikidataId": "Q1002533",
+    "name": "Izbica Kujawska",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.41944,
+    "longitude": 18.76028,
+    "population": 2526
+  },
+  {
+    "wikidataId": "Q643761",
+    "name": "Jabłonowo Pomorskie",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.39194,
+    "longitude": 19.15778,
+    "population": 3693
+  },
+  {
+    "wikidataId": "Q1871384",
+    "name": "Jadów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.47849,
+    "longitude": 21.63199,
+    "population": 927
+  },
+  {
+    "wikidataId": "Q748037",
+    "name": "Janikowo",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.75,
+    "longitude": 18.1,
+    "population": 8354
+  },
+  {
+    "wikidataId": "Q948367",
+    "name": "Janowiec Wielkopolski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.75694,
+    "longitude": 17.48806,
+    "population": 3835
+  },
+  {
+    "wikidataId": "Q2628514",
+    "name": "Janów",
+    "voivodeship": "śląskie",
+    "latitude": 50.71667,
+    "longitude": 19.43333,
+    "population": null
+  },
+  {
+    "wikidataId": "Q991840",
+    "name": "Janów Lubelski",
+    "voivodeship": "lubelskie",
+    "latitude": 50.7,
+    "longitude": 22.4,
+    "population": 11308
+  },
+  {
+    "wikidataId": "Q2199195",
+    "name": "Janów Podlaski",
+    "voivodeship": "lubelskie",
+    "latitude": 52.18333,
+    "longitude": 23.2,
+    "population": 2659
+  },
+  {
+    "wikidataId": "Q667845",
+    "name": "Jaraczewo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.96667,
+    "longitude": 17.28333,
+    "population": 1369
+  },
+  {
+    "wikidataId": "Q52840",
+    "name": "Jarocin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.96667,
+    "longitude": 17.5,
+    "population": 26399
+  },
+  {
+    "wikidataId": "Q721928",
+    "name": "Jarosław",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.01623,
+    "longitude": 22.67776,
+    "population": 36303
+  },
+  {
+    "wikidataId": "Q164241",
+    "name": "Jasień",
+    "voivodeship": "lubuskie",
+    "latitude": 51.75139,
+    "longitude": 15.0175,
+    "population": 4155
+  },
+  {
+    "wikidataId": "Q848983",
+    "name": "Jasło",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.73333,
+    "longitude": 21.46667,
+    "population": 33830
+  },
+  {
+    "wikidataId": "Q497154",
+    "name": "Jastarnia",
+    "voivodeship": "pomorskie",
+    "latitude": 54.7,
+    "longitude": 18.66667,
+    "population": 2665
+  },
+  {
+    "wikidataId": "Q199970",
+    "name": "Jastrowie",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.42167,
+    "longitude": 16.81556,
+    "population": 8344
+  },
+  {
+    "wikidataId": "Q929504",
+    "name": "Jastrząb",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.24725,
+    "longitude": 20.94758,
+    "population": 1065
+  },
+  {
+    "wikidataId": "Q107106",
+    "name": "Jastrzębie-Zdrój",
+    "voivodeship": "śląskie",
+    "latitude": 49.95,
+    "longitude": 18.58333,
+    "population": 82788
+  },
+  {
+    "wikidataId": "Q731805",
+    "name": "Jawor",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.05,
+    "longitude": 16.18333,
+    "population": 21494
+  },
+  {
+    "wikidataId": "Q2149342",
+    "name": "Jawornik Polski",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.88867,
+    "longitude": 22.28497,
+    "population": 1177
+  },
+  {
+    "wikidataId": "Q158006",
+    "name": "Jaworzno",
+    "voivodeship": "śląskie",
+    "latitude": 50.2,
+    "longitude": 19.275,
+    "population": 86812
+  },
+  {
+    "wikidataId": "Q990188",
+    "name": "Jaworzyna Śląska",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.9134,
+    "longitude": 16.43241,
+    "population": 5086
+  },
+  {
+    "wikidataId": "Q655210",
+    "name": "Jedlicze",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.71639,
+    "longitude": 21.64556,
+    "population": 5574
+  },
+  {
+    "wikidataId": "Q987991",
+    "name": "Jedlina-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.72416,
+    "longitude": 16.33956,
+    "population": 4792
+  },
+  {
+    "wikidataId": "Q282380",
+    "name": "Jedwabne",
+    "voivodeship": "podlaskie",
+    "latitude": 53.28333,
+    "longitude": 22.3,
+    "population": 1701
+  },
+  {
+    "wikidataId": "Q1025302",
+    "name": "Jelcz-Laskowice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.03333,
+    "longitude": 17.33333,
+    "population": 15380
+  },
+  {
+    "wikidataId": "Q147934",
+    "name": "Jelenia Góra",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.9,
+    "longitude": 15.73333,
+    "population": 75429
+  },
+  {
+    "wikidataId": "Q1001496",
+    "name": "Jeziorany",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.9759,
+    "longitude": 20.74758,
+    "population": 3055
+  },
+  {
+    "wikidataId": "Q724474",
+    "name": "Jeżów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.8,
+    "longitude": 19.96667,
+    "population": 1279
+  },
+  {
+    "wikidataId": "Q249259",
+    "name": "Jędrzejów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.63333,
+    "longitude": 20.3,
+    "population": 14592
+  },
+  {
+    "wikidataId": "Q514407",
+    "name": "Jordanów",
+    "voivodeship": "małopolskie",
+    "latitude": 49.66667,
+    "longitude": 19.83333,
+    "population": 5313
+  },
+  {
+    "wikidataId": "Q2788555",
+    "name": "Józefosław",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.1005,
+    "longitude": 21.04629,
+    "population": 14806
+  },
+  {
+    "wikidataId": "Q1025336",
+    "name": "Józefów",
+    "voivodeship": "lubelskie",
+    "latitude": 50.48333,
+    "longitude": 23.05,
+    "population": 2388
+  },
+  {
+    "wikidataId": "Q985534",
+    "name": "Józefów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.13556,
+    "longitude": 21.23694,
+    "population": 21035
+  },
+  {
+    "wikidataId": "Q4534209",
+    "name": "Józefów nad Wisłą",
+    "voivodeship": "lubelskie",
+    "latitude": 51.04083,
+    "longitude": 21.82917,
+    "population": 833
+  },
+  {
+    "wikidataId": "Q1005837",
+    "name": "Jutrosin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.64722,
+    "longitude": 17.16944,
+    "population": 1910
+  },
+  {
+    "wikidataId": "Q1007247",
+    "name": "Kaczory",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.1,
+    "longitude": 16.88333,
+    "population": 7870
+  },
+  {
+    "wikidataId": "Q1001239",
+    "name": "Kalety",
+    "voivodeship": "śląskie",
+    "latitude": 50.56364,
+    "longitude": 18.88575,
+    "population": 8252
+  },
+  {
+    "wikidataId": "Q52842",
+    "name": "Kalisz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.757,
+    "longitude": 18.083,
+    "population": 95905
+  },
+  {
+    "wikidataId": "Q989561",
+    "name": "Kalisz Pomorski",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.29833,
+    "longitude": 15.90583,
+    "population": 4121
+  },
+  {
+    "wikidataId": "Q389860",
+    "name": "Kalwaria Zebrzydowska",
+    "voivodeship": "małopolskie",
+    "latitude": 49.86667,
+    "longitude": 19.68333,
+    "population": 4418
+  },
+  {
+    "wikidataId": "Q987160",
+    "name": "Kałuszyn",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.20669,
+    "longitude": 21.80838,
+    "population": 2731
+  },
+  {
+    "wikidataId": "Q686680",
+    "name": "Kamieniec Ząbkowicki",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.52541,
+    "longitude": 16.87921,
+    "population": 4429
+  },
+  {
+    "wikidataId": "Q219110",
+    "name": "Kamienna Góra",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.78333,
+    "longitude": 16.03333,
+    "population": 18425
+  },
+  {
+    "wikidataId": "Q1021223",
+    "name": "Kamień Krajeński",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.53352,
+    "longitude": 17.52019,
+    "population": 2358
+  },
+  {
+    "wikidataId": "Q161887",
+    "name": "Kamień Pomorski",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.97,
+    "longitude": 14.7725,
+    "population": 8564
+  },
+  {
+    "wikidataId": "Q991887",
+    "name": "Kamieńsk",
+    "voivodeship": "łódzkie",
+    "latitude": 51.2,
+    "longitude": 19.5,
+    "population": 2679
+  },
+  {
+    "wikidataId": "Q130536",
+    "name": "Kamionka",
+    "voivodeship": "lubelskie",
+    "latitude": 51.47165,
+    "longitude": 22.46275,
+    "population": 1739
+  },
+  {
+    "wikidataId": "Q653844",
+    "name": "Kańczuga",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.98333,
+    "longitude": 22.41667,
+    "population": 2986
+  },
+  {
+    "wikidataId": "Q991950",
+    "name": "Karczew",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.07655,
+    "longitude": 21.24962,
+    "population": 9566
+  },
+  {
+    "wikidataId": "Q280407",
+    "name": "Kargowa",
+    "voivodeship": "lubuskie",
+    "latitude": 52.07139,
+    "longitude": 15.86139,
+    "population": 3838
+  },
+  {
+    "wikidataId": "Q988593",
+    "name": "Karlino",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.03917,
+    "longitude": 15.87861,
+    "population": 5582
+  },
+  {
+    "wikidataId": "Q606126",
+    "name": "Karpacz",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.76667,
+    "longitude": 15.75,
+    "population": 4457
+  },
+  {
+    "wikidataId": "Q640355",
+    "name": "Kartuzy",
+    "voivodeship": "pomorskie",
+    "latitude": 54.33424,
+    "longitude": 18.19735,
+    "population": 14204
+  },
+  {
+    "wikidataId": "Q588",
+    "name": "Katowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.25,
+    "longitude": 19,
+    "population": 278090
+  },
+  {
+    "wikidataId": "Q2421655",
+    "name": "Kazanów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.27194,
+    "longitude": 21.45639,
+    "population": 398
+  },
+  {
+    "wikidataId": "Q774098",
+    "name": "Kazimierz Dolny",
+    "voivodeship": "lubelskie",
+    "latitude": 51.32222,
+    "longitude": 21.9475,
+    "population": 3255
+  },
+  {
+    "wikidataId": "Q1406641",
+    "name": "Kazimierza Wielka",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.27361,
+    "longitude": 20.48444,
+    "population": 5212
+  },
+  {
+    "wikidataId": "Q992920",
+    "name": "Kąty Wrocławskie",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.03333,
+    "longitude": 16.76667,
+    "population": 7176
+  },
+  {
+    "wikidataId": "Q1003283",
+    "name": "Kcynia",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.99194,
+    "longitude": 17.48444,
+    "population": 4252
+  },
+  {
+    "wikidataId": "Q605483",
+    "name": "Kędzierzyn-Koźle",
+    "voivodeship": "opolskie",
+    "latitude": 50.33333,
+    "longitude": 18.2,
+    "population": 56931
+  },
+  {
+    "wikidataId": "Q988604",
+    "name": "Kępice",
+    "voivodeship": "pomorskie",
+    "latitude": 54.24111,
+    "longitude": 16.88972,
+    "population": 3418
+  },
+  {
+    "wikidataId": "Q640493",
+    "name": "Kępno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.2784,
+    "longitude": 17.98908,
+    "population": 13951
+  },
+  {
+    "wikidataId": "Q319397",
+    "name": "Kętrzyn",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.07667,
+    "longitude": 21.37528,
+    "population": 26174
+  },
+  {
+    "wikidataId": "Q773227",
+    "name": "Kęty",
+    "voivodeship": "małopolskie",
+    "latitude": 49.88214,
+    "longitude": 19.22333,
+    "population": 18067
+  },
+  {
+    "wikidataId": "Q102317",
+    "name": "Kielce",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.86621,
+    "longitude": 20.62723,
+    "population": 186894
+  },
+  {
+    "wikidataId": "Q582219",
+    "name": "Kiełczów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.14056,
+    "longitude": 17.17833,
+    "population": 10572
+  },
+  {
+    "wikidataId": "Q769820",
+    "name": "Kiernozia",
+    "voivodeship": "łódzkie",
+    "latitude": 52.26861,
+    "longitude": 19.87028,
+    "population": 829
+  },
+  {
+    "wikidataId": "Q999384",
+    "name": "Kietrz",
+    "voivodeship": "opolskie",
+    "latitude": 50.0825,
+    "longitude": 18.00278,
+    "population": 5638
+  },
+  {
+    "wikidataId": "Q984964",
+    "name": "Kikół",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.90994,
+    "longitude": 19.12016,
+    "population": 1991
+  },
+  {
+    "wikidataId": "Q989801",
+    "name": "Kisielice",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.60855,
+    "longitude": 19.2635,
+    "population": 2097
+  },
+  {
+    "wikidataId": "Q1355994",
+    "name": "Kleczew",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.37111,
+    "longitude": 18.17639,
+    "population": 3980
+  },
+  {
+    "wikidataId": "Q578026",
+    "name": "Kleszczele",
+    "voivodeship": "podlaskie",
+    "latitude": 52.57314,
+    "longitude": 23.32539,
+    "population": 1128
+  },
+  {
+    "wikidataId": "Q1903588",
+    "name": "Klimontów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.65,
+    "longitude": 21.45,
+    "population": 1784
+  },
+  {
+    "wikidataId": "Q79322",
+    "name": "Kluczbork",
+    "voivodeship": "opolskie",
+    "latitude": 50.98333,
+    "longitude": 18.21667,
+    "population": 22703
+  },
+  {
+    "wikidataId": "Q994061",
+    "name": "Kłecko",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.63333,
+    "longitude": 17.43333,
+    "population": 2608
+  },
+  {
+    "wikidataId": "Q324934",
+    "name": "Kłobuck",
+    "voivodeship": "śląskie",
+    "latitude": 50.90081,
+    "longitude": 18.93674,
+    "population": 12513
+  },
+  {
+    "wikidataId": "Q988663",
+    "name": "Kłodawa",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.25,
+    "longitude": 18.91667,
+    "population": 6074
+  },
+  {
+    "wikidataId": "Q284604",
+    "name": "Kłodzko",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.43861,
+    "longitude": 16.655,
+    "population": 25113
+  },
+  {
+    "wikidataId": "Q276860",
+    "name": "Knurów",
+    "voivodeship": "śląskie",
+    "latitude": 50.21667,
+    "longitude": 18.68333,
+    "population": 36498
+  },
+  {
+    "wikidataId": "Q668322",
+    "name": "Knyszyn",
+    "voivodeship": "podlaskie",
+    "latitude": 53.31306,
+    "longitude": 22.9175,
+    "population": 2688
+  },
+  {
+    "wikidataId": "Q990816",
+    "name": "Kobylin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.7,
+    "longitude": 17.23333,
+    "population": 3190
+  },
+  {
+    "wikidataId": "Q14724815",
+    "name": "Kobylnica",
+    "voivodeship": "pomorskie",
+    "latitude": 54.43333,
+    "longitude": 17,
+    "population": 4767
+  },
+  {
+    "wikidataId": "Q953221",
+    "name": "Kobyłka",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.33953,
+    "longitude": 21.19589,
+    "population": 27185
+  },
+  {
+    "wikidataId": "Q991819",
+    "name": "Kock",
+    "voivodeship": "lubelskie",
+    "latitude": 51.64134,
+    "longitude": 22.44798,
+    "population": 2976
+  },
+  {
+    "wikidataId": "Q991797",
+    "name": "Kolbuszowa",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.2441,
+    "longitude": 21.7761,
+    "population": 8710
+  },
+  {
+    "wikidataId": "Q1614791",
+    "name": "Kolno",
+    "voivodeship": "podlaskie",
+    "latitude": 53.41056,
+    "longitude": 21.93389,
+    "population": 9999
+  },
+  {
+    "wikidataId": "Q1005453",
+    "name": "Kolonowskie",
+    "voivodeship": "opolskie",
+    "latitude": 50.65338,
+    "longitude": 18.38493,
+    "population": 3183
+  },
+  {
+    "wikidataId": "Q403929",
+    "name": "Koluszki",
+    "voivodeship": "łódzkie",
+    "latitude": 51.75,
+    "longitude": 19.81667,
+    "population": 12396
+  },
+  {
+    "wikidataId": "Q2218834",
+    "name": "Kołaczyce",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.8,
+    "longitude": 21.43333,
+    "population": 1390
+  },
+  {
+    "wikidataId": "Q52853",
+    "name": "Koło",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.2,
+    "longitude": 18.63333,
+    "population": 20380
+  },
+  {
+    "wikidataId": "Q110011",
+    "name": "Kołobrzeg",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.17611,
+    "longitude": 15.57611,
+    "population": 44340
+  },
+  {
+    "wikidataId": "Q985063",
+    "name": "Komorniki",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.26667,
+    "longitude": 16.7,
+    "population": 10990
+  },
+  {
+    "wikidataId": "Q1003267",
+    "name": "Koniecpol",
+    "voivodeship": "śląskie",
+    "latitude": 50.78333,
+    "longitude": 19.68333,
+    "population": 5582
+  },
+  {
+    "wikidataId": "Q52845",
+    "name": "Konin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.2275,
+    "longitude": 18.26139,
+    "population": 69858
+  },
+  {
+    "wikidataId": "Q985687",
+    "name": "Konstancin-Jeziorna",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.08333,
+    "longitude": 21.11667,
+    "population": 17157
+  },
+  {
+    "wikidataId": "Q867349",
+    "name": "Konstantynów Łódzki",
+    "voivodeship": "łódzkie",
+    "latitude": 51.74776,
+    "longitude": 19.32564,
+    "population": 18960
+  },
+  {
+    "wikidataId": "Q776499",
+    "name": "Końskie",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.2,
+    "longitude": 20.41667,
+    "population": 18201
+  },
+  {
+    "wikidataId": "Q1959",
+    "name": "Końskowola",
+    "voivodeship": "lubelskie",
+    "latitude": 51.40889,
+    "longitude": 22.05278,
+    "population": 1985
+  },
+  {
+    "wikidataId": "Q991929",
+    "name": "Koprzywnica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.59056,
+    "longitude": 21.58361,
+    "population": 2389
+  },
+  {
+    "wikidataId": "Q1005503",
+    "name": "Korfantów",
+    "voivodeship": "opolskie",
+    "latitude": 50.48917,
+    "longitude": 17.59694,
+    "population": 1723
+  },
+  {
+    "wikidataId": "Q611297",
+    "name": "Koronowo",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.3137,
+    "longitude": 17.93698,
+    "population": 10974
+  },
+  {
+    "wikidataId": "Q1015165",
+    "name": "Korsze",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.17139,
+    "longitude": 21.14111,
+    "population": 4073
+  },
+  {
+    "wikidataId": "Q1025320",
+    "name": "Kosów Lacki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.59541,
+    "longitude": 22.14707,
+    "population": 2013
+  },
+  {
+    "wikidataId": "Q52850",
+    "name": "Kostrzyn",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.39414,
+    "longitude": 17.22211,
+    "population": 9809
+  },
+  {
+    "wikidataId": "Q156837",
+    "name": "Kostrzyn nad Odrą",
+    "voivodeship": "lubuskie",
+    "latitude": 52.58833,
+    "longitude": 14.66667,
+    "population": 17899
+  },
+  {
+    "wikidataId": "Q62868",
+    "name": "Koszalin",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.19028,
+    "longitude": 16.18167,
+    "population": 105883
+  },
+  {
+    "wikidataId": "Q1958570",
+    "name": "Koszyce",
+    "voivodeship": "małopolskie",
+    "latitude": 50.17008,
+    "longitude": 20.57911,
+    "population": 780
+  },
+  {
+    "wikidataId": "Q52889",
+    "name": "Kościan",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.08333,
+    "longitude": 16.65,
+    "population": 24022
+  },
+  {
+    "wikidataId": "Q935784",
+    "name": "Kościerzyna",
+    "voivodeship": "pomorskie",
+    "latitude": 54.12194,
+    "longitude": 17.98111,
+    "population": 23723
+  },
+  {
+    "wikidataId": "Q992010",
+    "name": "Kowal",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.5325,
+    "longitude": 19.145,
+    "population": 3386
+  },
+  {
+    "wikidataId": "Q1288480",
+    "name": "Kowalewo Pomorskie",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.15417,
+    "longitude": 18.89861,
+    "population": 4109
+  },
+  {
+    "wikidataId": "Q985656",
+    "name": "Kowary",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.79167,
+    "longitude": 15.83333,
+    "population": 10217
+  },
+  {
+    "wikidataId": "Q555042",
+    "name": "Koziegłowy",
+    "voivodeship": "śląskie",
+    "latitude": 50.60083,
+    "longitude": 19.16472,
+    "population": 2409
+  },
+  {
+    "wikidataId": "Q6435290",
+    "name": "Koziegłowy",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.43333,
+    "longitude": 16.98333,
+    "population": 11599
+  },
+  {
+    "wikidataId": "Q990651",
+    "name": "Kozienice",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.58556,
+    "longitude": 21.55111,
+    "population": 16192
+  },
+  {
+    "wikidataId": "Q159573",
+    "name": "Kozy",
+    "voivodeship": "śląskie",
+    "latitude": 49.84756,
+    "longitude": 19.14891,
+    "population": 13098
+  },
+  {
+    "wikidataId": "Q679745",
+    "name": "Koźmin Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.82389,
+    "longitude": 17.45528,
+    "population": 6304
+  },
+  {
+    "wikidataId": "Q986029",
+    "name": "Koźminek",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.79836,
+    "longitude": 18.33864,
+    "population": 1874
+  },
+  {
+    "wikidataId": "Q142101",
+    "name": "Kożuchów",
+    "voivodeship": "lubuskie",
+    "latitude": 51.75,
+    "longitude": 15.6,
+    "population": 9086
+  },
+  {
+    "wikidataId": "Q51408",
+    "name": "Kórnik",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.23667,
+    "longitude": 17.09861,
+    "population": 8246
+  },
+  {
+    "wikidataId": "Q741667",
+    "name": "Krajenka",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.28333,
+    "longitude": 16.98333,
+    "population": 3586
+  },
+  {
+    "wikidataId": "Q31487",
+    "name": "Kraków",
+    "voivodeship": "małopolskie",
+    "latitude": 50.06139,
+    "longitude": 19.93722,
+    "population": 804237
+  },
+  {
+    "wikidataId": "Q983729",
+    "name": "Krapkowice",
+    "voivodeship": "opolskie",
+    "latitude": 50.47515,
+    "longitude": 17.96539,
+    "population": 15786
+  },
+  {
+    "wikidataId": "Q999623",
+    "name": "Krasnobród",
+    "voivodeship": "lubelskie",
+    "latitude": 50.54472,
+    "longitude": 23.21528,
+    "population": 3013
+  },
+  {
+    "wikidataId": "Q155088",
+    "name": "Krasnystaw",
+    "voivodeship": "lubelskie",
+    "latitude": 51,
+    "longitude": 23.16667,
+    "population": 17519
+  },
+  {
+    "wikidataId": "Q983723",
+    "name": "Kraśnik",
+    "voivodeship": "lubelskie",
+    "latitude": 50.92139,
+    "longitude": 22.22083,
+    "population": 32593
+  },
+  {
+    "wikidataId": "Q556944",
+    "name": "Krobia",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.775,
+    "longitude": 16.98333,
+    "population": 4412
+  },
+  {
+    "wikidataId": "Q826068",
+    "name": "Krosno",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.6937,
+    "longitude": 21.76517,
+    "population": 45057
+  },
+  {
+    "wikidataId": "Q148947",
+    "name": "Krosno Odrzańskie",
+    "voivodeship": "lubuskie",
+    "latitude": 52.05417,
+    "longitude": 15.1,
+    "population": 10905
+  },
+  {
+    "wikidataId": "Q999644",
+    "name": "Krośniewice",
+    "voivodeship": "łódzkie",
+    "latitude": 52.25361,
+    "longitude": 19.17,
+    "population": 4141
+  },
+  {
+    "wikidataId": "Q984538",
+    "name": "Krotoszyn",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.69702,
+    "longitude": 17.43569,
+    "population": 28704
+  },
+  {
+    "wikidataId": "Q166717",
+    "name": "Kruszwica",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.67722,
+    "longitude": 18.32917,
+    "population": 9288
+  },
+  {
+    "wikidataId": "Q935756",
+    "name": "Krynica Morska",
+    "voivodeship": "pomorskie",
+    "latitude": 54.3825,
+    "longitude": 19.44444,
+    "population": 1172
+  },
+  {
+    "wikidataId": "Q259497",
+    "name": "Krynica-Zdrój",
+    "voivodeship": "małopolskie",
+    "latitude": 49.42225,
+    "longitude": 20.95942,
+    "population": 9504
+  },
+  {
+    "wikidataId": "Q286696",
+    "name": "Krynki",
+    "voivodeship": "podlaskie",
+    "latitude": 53.26528,
+    "longitude": 23.77194,
+    "population": 2217
+  },
+  {
+    "wikidataId": "Q924124",
+    "name": "Krzanowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.01822,
+    "longitude": 18.12251,
+    "population": 2039
+  },
+  {
+    "wikidataId": "Q1005511",
+    "name": "Krzepice",
+    "voivodeship": "śląskie",
+    "latitude": 50.96722,
+    "longitude": 18.73194,
+    "population": 4244
+  },
+  {
+    "wikidataId": "Q146509",
+    "name": "Krzeszowice",
+    "voivodeship": "małopolskie",
+    "latitude": 50.13333,
+    "longitude": 19.63333,
+    "population": 9868
+  },
+  {
+    "wikidataId": "Q1323393",
+    "name": "Krzywiń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.96333,
+    "longitude": 16.82,
+    "population": 1674
+  },
+  {
+    "wikidataId": "Q1021294",
+    "name": "Krzyż Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.87917,
+    "longitude": 16.00833,
+    "population": 6017
+  },
+  {
+    "wikidataId": "Q4289557",
+    "name": "Książ Wielki",
+    "voivodeship": "małopolskie",
+    "latitude": 50.44222,
+    "longitude": 20.14028,
+    "population": 812
+  },
+  {
+    "wikidataId": "Q1007342",
+    "name": "Książ Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.06167,
+    "longitude": 17.23952,
+    "population": 2643
+  },
+  {
+    "wikidataId": "Q954130",
+    "name": "Kudowa-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.44297,
+    "longitude": 16.24397,
+    "population": 9627
+  },
+  {
+    "wikidataId": "Q1025311",
+    "name": "Kunów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.95861,
+    "longitude": 21.28306,
+    "population": 2782
+  },
+  {
+    "wikidataId": "Q2316",
+    "name": "Kurów",
+    "voivodeship": "lubelskie",
+    "latitude": 51.38944,
+    "longitude": 22.185,
+    "population": 2795
+  },
+  {
+    "wikidataId": "Q202160",
+    "name": "Kutno",
+    "voivodeship": "łódzkie",
+    "latitude": 52.23333,
+    "longitude": 19.36667,
+    "population": 42255
+  },
+  {
+    "wikidataId": "Q554824",
+    "name": "Kuźnia Raciborska",
+    "voivodeship": "śląskie",
+    "latitude": 50.21667,
+    "longitude": 18.3,
+    "population": 4794
+  },
+  {
+    "wikidataId": "Q326582",
+    "name": "Kwidzyn",
+    "voivodeship": "pomorskie",
+    "latitude": 53.735,
+    "longitude": 18.93556,
+    "population": 37175
+  },
+  {
+    "wikidataId": "Q2347920",
+    "name": "Latowicz",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.02636,
+    "longitude": 21.80829,
+    "population": 1377
+  },
+  {
+    "wikidataId": "Q995889",
+    "name": "Lądek-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.34361,
+    "longitude": 16.87972,
+    "population": 5195
+  },
+  {
+    "wikidataId": "Q730944",
+    "name": "Legionowo",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.39523,
+    "longitude": 20.93083,
+    "population": 53216
+  },
+  {
+    "wikidataId": "Q106274",
+    "name": "Legnica",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.21006,
+    "longitude": 16.1619,
+    "population": 94878
+  },
+  {
+    "wikidataId": "Q611086",
+    "name": "Lesko",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.46611,
+    "longitude": 22.32889,
+    "population": 5254
+  },
+  {
+    "wikidataId": "Q52892",
+    "name": "Leszno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.84034,
+    "longitude": 16.57494,
+    "population": 61791
+  },
+  {
+    "wikidataId": "Q161905",
+    "name": "Leśna",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.02417,
+    "longitude": 15.26389,
+    "population": 4203
+  },
+  {
+    "wikidataId": "Q1003016",
+    "name": "Leśnica",
+    "voivodeship": "opolskie",
+    "latitude": 50.42917,
+    "longitude": 18.18111,
+    "population": 2599
+  },
+  {
+    "wikidataId": "Q264172",
+    "name": "Lewin Brzeski",
+    "voivodeship": "opolskie",
+    "latitude": 50.7487,
+    "longitude": 17.61688,
+    "population": 5668
+  },
+  {
+    "wikidataId": "Q614145",
+    "name": "Leżajsk",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.2655,
+    "longitude": 22.4186,
+    "population": 13164
+  },
+  {
+    "wikidataId": "Q497148",
+    "name": "Lębork",
+    "voivodeship": "pomorskie",
+    "latitude": 54.55,
+    "longitude": 17.75,
+    "population": 34500
+  },
+  {
+    "wikidataId": "Q276858",
+    "name": "Lędziny",
+    "voivodeship": "śląskie",
+    "latitude": 50.12694,
+    "longitude": 19.11222,
+    "population": 16530
+  },
+  {
+    "wikidataId": "Q991998",
+    "name": "Libiąż",
+    "voivodeship": "małopolskie",
+    "latitude": 50.11667,
+    "longitude": 19.31667,
+    "population": 16385
+  },
+  {
+    "wikidataId": "Q1005464",
+    "name": "Lidzbark",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.26028,
+    "longitude": 19.82111,
+    "population": 7471
+  },
+  {
+    "wikidataId": "Q751123",
+    "name": "Lidzbark Warmiński",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.11667,
+    "longitude": 20.58333,
+    "population": 14878
+  },
+  {
+    "wikidataId": "Q324964",
+    "name": "Limanowa",
+    "voivodeship": "małopolskie",
+    "latitude": 49.7,
+    "longitude": 20.43333,
+    "population": 14635
+  },
+  {
+    "wikidataId": "Q558614",
+    "name": "Lipiany",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.00028,
+    "longitude": 14.95861,
+    "population": 3819
+  },
+  {
+    "wikidataId": "Q324922",
+    "name": "Lipno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.85,
+    "longitude": 19.16667,
+    "population": 13752
+  },
+  {
+    "wikidataId": "Q995145",
+    "name": "Lipsk",
+    "voivodeship": "podlaskie",
+    "latitude": 53.73333,
+    "longitude": 23.4,
+    "population": 2048
+  },
+  {
+    "wikidataId": "Q2342620",
+    "name": "Lipsko",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.15954,
+    "longitude": 21.64933,
+    "population": 5199
+  },
+  {
+    "wikidataId": "Q931022",
+    "name": "Lubaczów",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.1556,
+    "longitude": 23.12299,
+    "population": 11619
+  },
+  {
+    "wikidataId": "Q115723",
+    "name": "Lubań",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.11667,
+    "longitude": 15.3,
+    "population": 20096
+  },
+  {
+    "wikidataId": "Q283885",
+    "name": "Lubartów",
+    "voivodeship": "lubelskie",
+    "latitude": 51.46667,
+    "longitude": 22.6,
+    "population": 20494
+  },
+  {
+    "wikidataId": "Q987188",
+    "name": "Lubawa",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.505,
+    "longitude": 19.75167,
+    "population": 10626
+  },
+  {
+    "wikidataId": "Q1005403",
+    "name": "Lubawka",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.70333,
+    "longitude": 16.00194,
+    "population": 5722
+  },
+  {
+    "wikidataId": "Q1005855",
+    "name": "Lubień Kujawski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.40472,
+    "longitude": 19.16472,
+    "population": 1360
+  },
+  {
+    "wikidataId": "Q237512",
+    "name": "Lubin",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.4,
+    "longitude": 16.2,
+    "population": 70016
+  },
+  {
+    "wikidataId": "Q37333",
+    "name": "Lublin",
+    "voivodeship": "lubelskie",
+    "latitude": 51.25,
+    "longitude": 22.56667,
+    "population": 334681
+  },
+  {
+    "wikidataId": "Q985238",
+    "name": "Lubliniec",
+    "voivodeship": "śląskie",
+    "latitude": 50.66897,
+    "longitude": 18.6844,
+    "population": 23427
+  },
+  {
+    "wikidataId": "Q931553",
+    "name": "Lubniewice",
+    "voivodeship": "lubuskie",
+    "latitude": 52.51639,
+    "longitude": 15.24972,
+    "population": 2015
+  },
+  {
+    "wikidataId": "Q120740",
+    "name": "Lubomierz",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.01667,
+    "longitude": 15.51667,
+    "population": 1792
+  },
+  {
+    "wikidataId": "Q50973",
+    "name": "Luboń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.33333,
+    "longitude": 16.88333,
+    "population": 33024
+  },
+  {
+    "wikidataId": "Q2551179",
+    "name": "Lubowidz",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.11667,
+    "longitude": 19.83333,
+    "population": 1587
+  },
+  {
+    "wikidataId": "Q1007479",
+    "name": "Lubraniec",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.54194,
+    "longitude": 18.83556,
+    "population": 2825
+  },
+  {
+    "wikidataId": "Q149111",
+    "name": "Lubsko",
+    "voivodeship": "lubuskie",
+    "latitude": 51.78766,
+    "longitude": 14.97238,
+    "population": 13240
+  },
+  {
+    "wikidataId": "Q2667171",
+    "name": "Lubycza Królewska",
+    "voivodeship": "lubelskie",
+    "latitude": 50.33333,
+    "longitude": 23.53333,
+    "population": 2204
+  },
+  {
+    "wikidataId": "Q1006764",
+    "name": "Lutomiersk",
+    "voivodeship": "łódzkie",
+    "latitude": 51.75,
+    "longitude": 19.2,
+    "population": 1546
+  },
+  {
+    "wikidataId": "Q800009",
+    "name": "Lututów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.37236,
+    "longitude": 18.43225,
+    "population": 2214
+  },
+  {
+    "wikidataId": "Q1005905",
+    "name": "Lwówek",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.44778,
+    "longitude": 16.18083,
+    "population": 2938
+  },
+  {
+    "wikidataId": "Q219382",
+    "name": "Lwówek Śląski",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.11667,
+    "longitude": 15.58333,
+    "population": 8490
+  },
+  {
+    "wikidataId": "Q345163",
+    "name": "Łabiszyn",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.95306,
+    "longitude": 17.91444,
+    "population": 4494
+  },
+  {
+    "wikidataId": "Q2300732",
+    "name": "Łagów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.76667,
+    "longitude": 21.08333,
+    "population": 1554
+  },
+  {
+    "wikidataId": "Q345331",
+    "name": "Łańcut",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.06871,
+    "longitude": 22.22912,
+    "population": 17768
+  },
+  {
+    "wikidataId": "Q345243",
+    "name": "Łapy",
+    "voivodeship": "podlaskie",
+    "latitude": 52.99167,
+    "longitude": 22.88333,
+    "population": 14790
+  },
+  {
+    "wikidataId": "Q345233",
+    "name": "Łasin",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.51639,
+    "longitude": 19.09,
+    "population": 3145
+  },
+  {
+    "wikidataId": "Q324897",
+    "name": "Łask",
+    "voivodeship": "łódzkie",
+    "latitude": 51.59242,
+    "longitude": 19.13316,
+    "population": 16576
+  },
+  {
+    "wikidataId": "Q1753147",
+    "name": "Łaskarzew",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.79,
+    "longitude": 21.5925,
+    "population": 4575
+  },
+  {
+    "wikidataId": "Q2167485",
+    "name": "Łaszczów",
+    "voivodeship": "lubelskie",
+    "latitude": 50.53333,
+    "longitude": 23.73333,
+    "population": 2010
+  },
+  {
+    "wikidataId": "Q345293",
+    "name": "Łaziska Górne",
+    "voivodeship": "śląskie",
+    "latitude": 50.14944,
+    "longitude": 18.84194,
+    "population": 21592
+  },
+  {
+    "wikidataId": "Q345316",
+    "name": "Łazy",
+    "voivodeship": "śląskie",
+    "latitude": 50.42769,
+    "longitude": 19.39465,
+    "population": 6591
+  },
+  {
+    "wikidataId": "Q345339",
+    "name": "Łeba",
+    "voivodeship": "pomorskie",
+    "latitude": 54.7581,
+    "longitude": 17.5541,
+    "population": 3228
+  },
+  {
+    "wikidataId": "Q384433",
+    "name": "Łęczna",
+    "voivodeship": "lubelskie",
+    "latitude": 51.3,
+    "longitude": 22.88333,
+    "population": 17826
+  },
+  {
+    "wikidataId": "Q325727",
+    "name": "Łęczyca",
+    "voivodeship": "łódzkie",
+    "latitude": 52.05833,
+    "longitude": 19.2,
+    "population": 13587
+  },
+  {
+    "wikidataId": "Q318346",
+    "name": "Łęknica",
+    "voivodeship": "lubuskie",
+    "latitude": 51.53333,
+    "longitude": 14.73333,
+    "population": 2324
+  },
+  {
+    "wikidataId": "Q196163",
+    "name": "Łobez",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.63917,
+    "longitude": 15.62139,
+    "population": 9792
+  },
+  {
+    "wikidataId": "Q345386",
+    "name": "Łobżenica",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.26667,
+    "longitude": 17.25,
+    "population": 2853
+  },
+  {
+    "wikidataId": "Q345389",
+    "name": "Łochów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.53333,
+    "longitude": 21.7,
+    "population": 6689
+  },
+  {
+    "wikidataId": "Q1906235",
+    "name": "Łomianki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.33333,
+    "longitude": 20.88333,
+    "population": 18124
+  },
+  {
+    "wikidataId": "Q215633",
+    "name": "Łomża",
+    "voivodeship": "podlaskie",
+    "latitude": 53.18333,
+    "longitude": 22.08333,
+    "population": 60848
+  },
+  {
+    "wikidataId": "Q2475995",
+    "name": "Łopuszno",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.93333,
+    "longitude": 20.25,
+    "population": 1395
+  },
+  {
+    "wikidataId": "Q1913327",
+    "name": "Łosice",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.2125,
+    "longitude": 22.71889,
+    "population": 7033
+  },
+  {
+    "wikidataId": "Q109992",
+    "name": "Łowicz",
+    "voivodeship": "łódzkie",
+    "latitude": 52.1,
+    "longitude": 19.93333,
+    "population": 26928
+  },
+  {
+    "wikidataId": "Q580",
+    "name": "Łódź",
+    "voivodeship": "łódzkie",
+    "latitude": 51.75,
+    "longitude": 19.46667,
+    "population": 648711
+  },
+  {
+    "wikidataId": "Q384244",
+    "name": "Łuków",
+    "voivodeship": "lubelskie",
+    "latitude": 51.91667,
+    "longitude": 22.38333,
+    "population": 27906
+  },
+  {
+    "wikidataId": "Q2616257",
+    "name": "Maciejowice",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.69222,
+    "longitude": 21.55342,
+    "population": null
+  },
+  {
+    "wikidataId": "Q2406383",
+    "name": "Magnuszew",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.75,
+    "longitude": 21.38333,
+    "population": 958
+  },
+  {
+    "wikidataId": "Q983871",
+    "name": "Maków Mazowiecki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.86667,
+    "longitude": 21.1,
+    "population": 9173
+  },
+  {
+    "wikidataId": "Q1280822",
+    "name": "Maków Podhalański",
+    "voivodeship": "małopolskie",
+    "latitude": 49.73008,
+    "longitude": 19.67711,
+    "population": 5625
+  },
+  {
+    "wikidataId": "Q146820",
+    "name": "Malbork",
+    "voivodeship": "pomorskie",
+    "latitude": 54.02846,
+    "longitude": 19.04435,
+    "population": 37635
+  },
+  {
+    "wikidataId": "Q993913",
+    "name": "Małkinia Górna",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.6922,
+    "longitude": 22.02836,
+    "population": 5514
+  },
+  {
+    "wikidataId": "Q592809",
+    "name": "Małogoszcz",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.81333,
+    "longitude": 20.26833,
+    "population": 3519
+  },
+  {
+    "wikidataId": "Q995847",
+    "name": "Małomice",
+    "voivodeship": "lubuskie",
+    "latitude": 51.55556,
+    "longitude": 15.45028,
+    "population": 3457
+  },
+  {
+    "wikidataId": "Q990186",
+    "name": "Margonin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.96667,
+    "longitude": 17.08333,
+    "population": 3019
+  },
+  {
+    "wikidataId": "Q1615800",
+    "name": "Marki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.33333,
+    "longitude": 21.1,
+    "population": 42252
+  },
+  {
+    "wikidataId": "Q989419",
+    "name": "Maszewo",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.49639,
+    "longitude": 15.06139,
+    "population": 3309
+  },
+  {
+    "wikidataId": "Q1002962",
+    "name": "Miasteczko Krajeńskie",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.09861,
+    "longitude": 17.00833,
+    "population": 1080
+  },
+  {
+    "wikidataId": "Q651788",
+    "name": "Miasteczko Śląskie",
+    "voivodeship": "śląskie",
+    "latitude": 50.49122,
+    "longitude": 18.92264,
+    "population": 7103
+  },
+  {
+    "wikidataId": "Q255385",
+    "name": "Miastko",
+    "voivodeship": "pomorskie",
+    "latitude": 53.99917,
+    "longitude": 16.97639,
+    "population": 9491
+  },
+  {
+    "wikidataId": "Q2364639",
+    "name": "Michałowo",
+    "voivodeship": "podlaskie",
+    "latitude": 53.03667,
+    "longitude": 23.60361,
+    "population": 2821
+  },
+  {
+    "wikidataId": "Q324927",
+    "name": "Miechów",
+    "voivodeship": "małopolskie",
+    "latitude": 50.35778,
+    "longitude": 20.0325,
+    "population": 11215
+  },
+  {
+    "wikidataId": "Q1421485",
+    "name": "Miejska Górka",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.65556,
+    "longitude": 16.96111,
+    "population": 3152
+  },
+  {
+    "wikidataId": "Q658861",
+    "name": "Mielec",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.28333,
+    "longitude": 21.43333,
+    "population": 58213
+  },
+  {
+    "wikidataId": "Q1013119",
+    "name": "Mielno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.26,
+    "longitude": 16.06083,
+    "population": 2836
+  },
+  {
+    "wikidataId": "Q995865",
+    "name": "Mieroszów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.66694,
+    "longitude": 16.18972,
+    "population": 3871
+  },
+  {
+    "wikidataId": "Q988644",
+    "name": "Mieszkowice",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.7873,
+    "longitude": 14.49346,
+    "population": 3449
+  },
+  {
+    "wikidataId": "Q984749",
+    "name": "Mieścisko",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.74333,
+    "longitude": 17.33167,
+    "population": 2361
+  },
+  {
+    "wikidataId": "Q1003276",
+    "name": "Międzybórz",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.39917,
+    "longitude": 17.66556,
+    "population": 2373
+  },
+  {
+    "wikidataId": "Q556484",
+    "name": "Międzychód",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.601,
+    "longitude": 15.88988,
+    "population": 10288
+  },
+  {
+    "wikidataId": "Q995839",
+    "name": "Międzylesie",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.14778,
+    "longitude": 16.66722,
+    "population": 2481
+  },
+  {
+    "wikidataId": "Q34267",
+    "name": "Międzyrzec Podlaski",
+    "voivodeship": "lubelskie",
+    "latitude": 51.98333,
+    "longitude": 22.8,
+    "population": 15830
+  },
+  {
+    "wikidataId": "Q639241",
+    "name": "Międzyrzecz",
+    "voivodeship": "lubuskie",
+    "latitude": 52.44722,
+    "longitude": 15.57833,
+    "population": 17400
+  },
+  {
+    "wikidataId": "Q148615",
+    "name": "Międzyzdroje",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.92833,
+    "longitude": 14.45056,
+    "population": 5032
+  },
+  {
+    "wikidataId": "Q521851",
+    "name": "Miękinia",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.19,
+    "longitude": 16.73611,
+    "population": 2082
+  },
+  {
+    "wikidataId": "Q984462",
+    "name": "Mikołajki",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.80278,
+    "longitude": 21.57,
+    "population": 3506
+  },
+  {
+    "wikidataId": "Q659905",
+    "name": "Mikołów",
+    "voivodeship": "śląskie",
+    "latitude": 50.17083,
+    "longitude": 18.90389,
+    "population": 41266
+  },
+  {
+    "wikidataId": "Q1551924",
+    "name": "Mikstat",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.53194,
+    "longitude": 17.97306,
+    "population": 1743
+  },
+  {
+    "wikidataId": "Q422283",
+    "name": "Milanówek",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.1243,
+    "longitude": 20.6654,
+    "population": 16490
+  },
+  {
+    "wikidataId": "Q717933",
+    "name": "Milicz",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.532,
+    "longitude": 17.27525,
+    "population": 11025
+  },
+  {
+    "wikidataId": "Q1006813",
+    "name": "Miłakowo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.00911,
+    "longitude": 20.06918,
+    "population": 2488
+  },
+  {
+    "wikidataId": "Q995877",
+    "name": "Miłomłyn",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.76449,
+    "longitude": 19.838,
+    "population": 2415
+  },
+  {
+    "wikidataId": "Q1025299",
+    "name": "Miłosław",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.20318,
+    "longitude": 17.48955,
+    "population": 3492
+  },
+  {
+    "wikidataId": "Q648071",
+    "name": "Mińsk Mazowiecki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.18333,
+    "longitude": 21.56667,
+    "population": 40467
+  },
+  {
+    "wikidataId": "Q988632",
+    "name": "Mirosławiec",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.3425,
+    "longitude": 16.08667,
+    "population": 3037
+  },
+  {
+    "wikidataId": "Q991849",
+    "name": "Mirsk",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.97054,
+    "longitude": 15.38567,
+    "population": 3706
+  },
+  {
+    "wikidataId": "Q983868",
+    "name": "Mława",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.11667,
+    "longitude": 20.36667,
+    "population": 30919
+  },
+  {
+    "wikidataId": "Q1006788",
+    "name": "Młynary",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.18778,
+    "longitude": 19.72278,
+    "population": 1694
+  },
+  {
+    "wikidataId": "Q2135041",
+    "name": "Modliborzyce",
+    "voivodeship": "lubelskie",
+    "latitude": 50.7525,
+    "longitude": 22.32944,
+    "population": 1413
+  },
+  {
+    "wikidataId": "Q2160056",
+    "name": "Mogielnica",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.68972,
+    "longitude": 20.72306,
+    "population": 2206
+  },
+  {
+    "wikidataId": "Q325627",
+    "name": "Mogilno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.65833,
+    "longitude": 17.95,
+    "population": 11453
+  },
+  {
+    "wikidataId": "Q911020",
+    "name": "Mońki",
+    "voivodeship": "podlaskie",
+    "latitude": 53.40694,
+    "longitude": 22.79716,
+    "population": 9675
+  },
+  {
+    "wikidataId": "Q2778284",
+    "name": "Morawica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.73333,
+    "longitude": 20.61667,
+    "population": 1723
+  },
+  {
+    "wikidataId": "Q139725",
+    "name": "Morąg",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.91528,
+    "longitude": 19.92722,
+    "population": 13317
+  },
+  {
+    "wikidataId": "Q1906245",
+    "name": "Mordy",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.20806,
+    "longitude": 22.51194,
+    "population": 1630
+  },
+  {
+    "wikidataId": "Q988602",
+    "name": "Moryń",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.8575,
+    "longitude": 14.39861,
+    "population": 1630
+  },
+  {
+    "wikidataId": "Q50968",
+    "name": "Mosina",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.24389,
+    "longitude": 16.85056,
+    "population": 14511
+  },
+  {
+    "wikidataId": "Q745085",
+    "name": "Mrągowo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.86417,
+    "longitude": 21.305,
+    "population": 21325
+  },
+  {
+    "wikidataId": "Q761508",
+    "name": "Mrocza",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.2425,
+    "longitude": 17.59889,
+    "population": 4168
+  },
+  {
+    "wikidataId": "Q2413233",
+    "name": "Mrozy",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.15,
+    "longitude": 21.8,
+    "population": 3600
+  },
+  {
+    "wikidataId": "Q731325",
+    "name": "Mszana Dolna",
+    "voivodeship": "małopolskie",
+    "latitude": 49.66667,
+    "longitude": 20.06667,
+    "population": 7854
+  },
+  {
+    "wikidataId": "Q477955",
+    "name": "Mszczonów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.97417,
+    "longitude": 20.52667,
+    "population": 6159
+  },
+  {
+    "wikidataId": "Q51003",
+    "name": "Murowana Goślina",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.57444,
+    "longitude": 17.00917,
+    "population": 10247
+  },
+  {
+    "wikidataId": "Q1642884",
+    "name": "Muszyna",
+    "voivodeship": "małopolskie",
+    "latitude": 49.35661,
+    "longitude": 20.89718,
+    "population": 4432
+  },
+  {
+    "wikidataId": "Q161595",
+    "name": "Mysłowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.21194,
+    "longitude": 19.14778,
+    "population": 71473
+  },
+  {
+    "wikidataId": "Q731079",
+    "name": "Myszków",
+    "voivodeship": "śląskie",
+    "latitude": 50.5752,
+    "longitude": 19.32461,
+    "population": 30415
+  },
+  {
+    "wikidataId": "Q101704",
+    "name": "Myszyniec",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.38333,
+    "longitude": 21.35,
+    "population": 3270
+  },
+  {
+    "wikidataId": "Q325550",
+    "name": "Myślenice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.83333,
+    "longitude": 19.93333,
+    "population": 18051
+  },
+  {
+    "wikidataId": "Q640453",
+    "name": "Myślibórz",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.925,
+    "longitude": 14.86667,
+    "population": 10649
+  },
+  {
+    "wikidataId": "Q988576",
+    "name": "Nakło nad Notecią",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.13889,
+    "longitude": 17.59944,
+    "population": 17620
+  },
+  {
+    "wikidataId": "Q1916952",
+    "name": "Nałęczów",
+    "voivodeship": "lubelskie",
+    "latitude": 51.28333,
+    "longitude": 22.21667,
+    "population": 3697
+  },
+  {
+    "wikidataId": "Q717774",
+    "name": "Namysłów",
+    "voivodeship": "opolskie",
+    "latitude": 51.0767,
+    "longitude": 17.71676,
+    "population": 16942
+  },
+  {
+    "wikidataId": "Q2439514",
+    "name": "Narol",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.35028,
+    "longitude": 23.32722,
+    "population": 2031
+  },
+  {
+    "wikidataId": "Q1579038",
+    "name": "Nasielsk",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.58972,
+    "longitude": 20.80417,
+    "population": 7480
+  },
+  {
+    "wikidataId": "Q1005827",
+    "name": "Nekla",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.36472,
+    "longitude": 17.41306,
+    "population": 3831
+  },
+  {
+    "wikidataId": "Q527768",
+    "name": "Nidzica",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.35833,
+    "longitude": 20.425,
+    "population": 13052
+  },
+  {
+    "wikidataId": "Q389412",
+    "name": "Niemcza",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.71583,
+    "longitude": 16.835,
+    "population": 2801
+  },
+  {
+    "wikidataId": "Q1003112",
+    "name": "Niemodlin",
+    "voivodeship": "opolskie",
+    "latitude": 50.63333,
+    "longitude": 17.6,
+    "population": 5926
+  },
+  {
+    "wikidataId": "Q989498",
+    "name": "Niepołomice",
+    "voivodeship": "małopolskie",
+    "latitude": 50.03389,
+    "longitude": 20.21722,
+    "population": 15697
+  },
+  {
+    "wikidataId": "Q682046",
+    "name": "Nieszawa",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.83667,
+    "longitude": 18.90139,
+    "population": 1770
+  },
+  {
+    "wikidataId": "Q983983",
+    "name": "Nisko",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.53333,
+    "longitude": 22.13333,
+    "population": 14874
+  },
+  {
+    "wikidataId": "Q610917",
+    "name": "Nowa Dęba",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.43333,
+    "longitude": 21.76667,
+    "population": 10647
+  },
+  {
+    "wikidataId": "Q246264",
+    "name": "Nowa Ruda",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.58,
+    "longitude": 16.50139,
+    "population": 21264
+  },
+  {
+    "wikidataId": "Q1946089",
+    "name": "Nowa Sarzyna",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.32222,
+    "longitude": 22.31861,
+    "population": 5599
+  },
+  {
+    "wikidataId": "Q2518084",
+    "name": "Nowa Słupia",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.85,
+    "longitude": 21.08333,
+    "population": 1346
+  },
+  {
+    "wikidataId": "Q157190",
+    "name": "Nowa Sól",
+    "voivodeship": "lubuskie",
+    "latitude": 51.80333,
+    "longitude": 15.71694,
+    "population": 36843
+  },
+  {
+    "wikidataId": "Q164023",
+    "name": "Nowe",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.64944,
+    "longitude": 18.72556,
+    "population": 5579
+  },
+  {
+    "wikidataId": "Q2341047",
+    "name": "Nowe Brzesko",
+    "voivodeship": "małopolskie",
+    "latitude": 50.13722,
+    "longitude": 20.38472,
+    "population": 1628
+  },
+  {
+    "wikidataId": "Q431628",
+    "name": "Nowe Miasteczko",
+    "voivodeship": "lubuskie",
+    "latitude": 51.69083,
+    "longitude": 15.73167,
+    "population": 2694
+  },
+  {
+    "wikidataId": "Q3077833",
+    "name": "Nowe Miasto",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.65611,
+    "longitude": 20.63056,
+    "population": 1545
+  },
+  {
+    "wikidataId": "Q176229",
+    "name": "Nowe Miasto Lubawskie",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.42389,
+    "longitude": 19.59278,
+    "population": 10492
+  },
+  {
+    "wikidataId": "Q1019505",
+    "name": "Nowe Miasto nad Pilicą",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.61944,
+    "longitude": 20.57611,
+    "population": 3649
+  },
+  {
+    "wikidataId": "Q557257",
+    "name": "Nowe Skalmierzyce",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.71028,
+    "longitude": 17.9925,
+    "population": 4754
+  },
+  {
+    "wikidataId": "Q337814",
+    "name": "Nowe Warpno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.7225,
+    "longitude": 14.28944,
+    "population": 1111
+  },
+  {
+    "wikidataId": "Q989427",
+    "name": "Nowogard",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.67194,
+    "longitude": 15.11917,
+    "population": 16102
+  },
+  {
+    "wikidataId": "Q998476",
+    "name": "Nowogrodziec",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.19714,
+    "longitude": 15.39869,
+    "population": 4157
+  },
+  {
+    "wikidataId": "Q1921003",
+    "name": "Nowogród",
+    "voivodeship": "podlaskie",
+    "latitude": 53.22639,
+    "longitude": 21.87944,
+    "population": 2134
+  },
+  {
+    "wikidataId": "Q1023760",
+    "name": "Nowogród Bobrzański",
+    "voivodeship": "lubuskie",
+    "latitude": 51.79864,
+    "longitude": 15.2365,
+    "population": 4850
+  },
+  {
+    "wikidataId": "Q604251",
+    "name": "Nowy Dwór Gdański",
+    "voivodeship": "pomorskie",
+    "latitude": 54.21667,
+    "longitude": 19.11667,
+    "population": 9618
+  },
+  {
+    "wikidataId": "Q690039",
+    "name": "Nowy Dwór Mazowiecki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.43028,
+    "longitude": 20.71583,
+    "population": 28651
+  },
+  {
+    "wikidataId": "Q1008390",
+    "name": "Nowy Korczyn",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.29917,
+    "longitude": 20.80889,
+    "population": 903
+  },
+  {
+    "wikidataId": "Q802",
+    "name": "Nowy Sącz",
+    "voivodeship": "małopolskie",
+    "latitude": 49.625,
+    "longitude": 20.69556,
+    "population": 81281
+  },
+  {
+    "wikidataId": "Q1021282",
+    "name": "Nowy Staw",
+    "voivodeship": "pomorskie",
+    "latitude": 54.13583,
+    "longitude": 19.00889,
+    "population": 4101
+  },
+  {
+    "wikidataId": "Q231593",
+    "name": "Nowy Targ",
+    "voivodeship": "małopolskie",
+    "latitude": 49.47778,
+    "longitude": 20.03222,
+    "population": 33273
+  },
+  {
+    "wikidataId": "Q52893",
+    "name": "Nowy Tomyśl",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.31944,
+    "longitude": 16.12833,
+    "population": 14116
+  },
+  {
+    "wikidataId": "Q1011553",
+    "name": "Nowy Wiśnicz",
+    "voivodeship": "małopolskie",
+    "latitude": 49.915,
+    "longitude": 20.451,
+    "population": 2788
+  },
+  {
+    "wikidataId": "Q815721",
+    "name": "Nysa",
+    "voivodeship": "opolskie",
+    "latitude": 50.47139,
+    "longitude": 17.33389,
+    "population": 42151
+  },
+  {
+    "wikidataId": "Q639212",
+    "name": "Oborniki",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.65,
+    "longitude": 16.81667,
+    "population": 17629
+  },
+  {
+    "wikidataId": "Q936101",
+    "name": "Oborniki Śląskie",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.30222,
+    "longitude": 16.90889,
+    "population": 9101
+  },
+  {
+    "wikidataId": "Q52894",
+    "name": "Obrzycko",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.70639,
+    "longitude": 16.52917,
+    "population": 2379
+  },
+  {
+    "wikidataId": "Q745567",
+    "name": "Odolanów",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.57419,
+    "longitude": 17.67434,
+    "population": 5011
+  },
+  {
+    "wikidataId": "Q2043183",
+    "name": "Odrzywół",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.51667,
+    "longitude": 20.55,
+    "population": 963
+  },
+  {
+    "wikidataId": "Q1006772",
+    "name": "Ogrodzieniec",
+    "voivodeship": "śląskie",
+    "latitude": 50.45,
+    "longitude": 19.51667,
+    "population": 4222
+  },
+  {
+    "wikidataId": "Q1021272",
+    "name": "Okonek",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.53611,
+    "longitude": 16.85139,
+    "population": 3686
+  },
+  {
+    "wikidataId": "Q950436",
+    "name": "Olecko",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.03361,
+    "longitude": 22.50694,
+    "population": 16076
+  },
+  {
+    "wikidataId": "Q717404",
+    "name": "Olesno",
+    "voivodeship": "opolskie",
+    "latitude": 50.875,
+    "longitude": 18.41667,
+    "population": 9122
+  },
+  {
+    "wikidataId": "Q867005",
+    "name": "Oleszyce",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.16694,
+    "longitude": 23.03083,
+    "population": 2875
+  },
+  {
+    "wikidataId": "Q138229",
+    "name": "Oleśnica",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.21278,
+    "longitude": 17.38306,
+    "population": 35856
+  },
+  {
+    "wikidataId": "Q2532403",
+    "name": "Oleśnica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.45,
+    "longitude": 21.05,
+    "population": 1752
+  },
+  {
+    "wikidataId": "Q764943",
+    "name": "Olkusz",
+    "voivodeship": "małopolskie",
+    "latitude": 50.27917,
+    "longitude": 19.55972,
+    "population": 33462
+  },
+  {
+    "wikidataId": "Q369699",
+    "name": "Olsztyn",
+    "voivodeship": "śląskie",
+    "latitude": 50.75194,
+    "longitude": 19.26778,
+    "population": 2498
+  },
+  {
+    "wikidataId": "Q82765",
+    "name": "Olsztyn",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.78,
+    "longitude": 20.49417,
+    "population": 170225
+  },
+  {
+    "wikidataId": "Q999614",
+    "name": "Olsztynek",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.58333,
+    "longitude": 20.28333,
+    "population": 7343
+  },
+  {
+    "wikidataId": "Q616551",
+    "name": "Olszyna",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.06722,
+    "longitude": 15.37889,
+    "population": 4366
+  },
+  {
+    "wikidataId": "Q924049",
+    "name": "Oława",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.94389,
+    "longitude": 17.2925,
+    "population": 33268
+  },
+  {
+    "wikidataId": "Q202889",
+    "name": "Opalenica",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.30778,
+    "longitude": 16.41361,
+    "population": 9360
+  },
+  {
+    "wikidataId": "Q2091673",
+    "name": "Opatowiec",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.23333,
+    "longitude": 20.71667,
+    "population": 314
+  },
+  {
+    "wikidataId": "Q275694",
+    "name": "Opatów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.805,
+    "longitude": 21.42472,
+    "population": 6154
+  },
+  {
+    "wikidataId": "Q737790",
+    "name": "Opatówek",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.73989,
+    "longitude": 18.21653,
+    "population": 3575
+  },
+  {
+    "wikidataId": "Q994271",
+    "name": "Opoczno",
+    "voivodeship": "łódzkie",
+    "latitude": 51.38333,
+    "longitude": 20.28333,
+    "population": 19246
+  },
+  {
+    "wikidataId": "Q92212",
+    "name": "Opole",
+    "voivodeship": "opolskie",
+    "latitude": 50.66667,
+    "longitude": 17.92417,
+    "population": 127387
+  },
+  {
+    "wikidataId": "Q1906256",
+    "name": "Opole Lubelskie",
+    "voivodeship": "lubelskie",
+    "latitude": 51.15,
+    "longitude": 21.96667,
+    "population": 8135
+  },
+  {
+    "wikidataId": "Q1025330",
+    "name": "Orneta",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.11278,
+    "longitude": 20.13167,
+    "population": 8292
+  },
+  {
+    "wikidataId": "Q1001207",
+    "name": "Orzesze",
+    "voivodeship": "śląskie",
+    "latitude": 50.14389,
+    "longitude": 18.77556,
+    "population": 21631
+  },
+  {
+    "wikidataId": "Q989833",
+    "name": "Orzysz",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.80556,
+    "longitude": 21.94583,
+    "population": 5402
+  },
+  {
+    "wikidataId": "Q2501167",
+    "name": "Osieck",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.96653,
+    "longitude": 21.41913,
+    "population": null
+  },
+  {
+    "wikidataId": "Q382587",
+    "name": "Osieczna",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.90583,
+    "longitude": 16.67639,
+    "population": 2425
+  },
+  {
+    "wikidataId": "Q554417",
+    "name": "Osiek",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.52167,
+    "longitude": 21.44306,
+    "population": 1966
+  },
+  {
+    "wikidataId": "Q985766",
+    "name": "Osjaków",
+    "voivodeship": "łódzkie",
+    "latitude": 51.28833,
+    "longitude": 18.7925,
+    "population": 1346
+  },
+  {
+    "wikidataId": "Q461287",
+    "name": "Ostrołęka",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.08333,
+    "longitude": 21.56667,
+    "population": 48712
+  },
+  {
+    "wikidataId": "Q1005885",
+    "name": "Ostroróg",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.62639,
+    "longitude": 16.44972,
+    "population": 1878
+  },
+  {
+    "wikidataId": "Q730929",
+    "name": "Ostrowiec Świętokrzyski",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.93333,
+    "longitude": 21.4,
+    "population": 64796
+  },
+  {
+    "wikidataId": "Q899751",
+    "name": "Ostróda",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.69667,
+    "longitude": 19.96472,
+    "population": 32052
+  },
+  {
+    "wikidataId": "Q1946017",
+    "name": "Ostrów Lubelski",
+    "voivodeship": "lubelskie",
+    "latitude": 51.49111,
+    "longitude": 22.855,
+    "population": 2033
+  },
+  {
+    "wikidataId": "Q841352",
+    "name": "Ostrów Mazowiecka",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.8,
+    "longitude": 21.9,
+    "population": 22013
+  },
+  {
+    "wikidataId": "Q52895",
+    "name": "Ostrów Wielkopolski",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.65472,
+    "longitude": 17.80722,
+    "population": 70725
+  },
+  {
+    "wikidataId": "Q642192",
+    "name": "Ostrzeszów",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.4,
+    "longitude": 18,
+    "population": 14036
+  },
+  {
+    "wikidataId": "Q1005350",
+    "name": "Ośno Lubuskie",
+    "voivodeship": "lubuskie",
+    "latitude": 52.45528,
+    "longitude": 14.87694,
+    "population": 3880
+  },
+  {
+    "wikidataId": "Q7342",
+    "name": "Oświęcim",
+    "voivodeship": "małopolskie",
+    "latitude": 50.03806,
+    "longitude": 19.22139,
+    "population": 36956
+  },
+  {
+    "wikidataId": "Q1005442",
+    "name": "Otmuchów",
+    "voivodeship": "opolskie",
+    "latitude": 50.465,
+    "longitude": 17.1725,
+    "population": 6360
+  },
+  {
+    "wikidataId": "Q745059",
+    "name": "Otwock",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.11667,
+    "longitude": 21.26667,
+    "population": 44524
+  },
+  {
+    "wikidataId": "Q991590",
+    "name": "Otyń",
+    "voivodeship": "lubuskie",
+    "latitude": 51.85,
+    "longitude": 15.71667,
+    "population": 1666
+  },
+  {
+    "wikidataId": "Q567827",
+    "name": "Ozimek",
+    "voivodeship": "opolskie",
+    "latitude": 50.67889,
+    "longitude": 18.21361,
+    "population": 8211
+  },
+  {
+    "wikidataId": "Q628460",
+    "name": "Ozorków",
+    "voivodeship": "łódzkie",
+    "latitude": 51.96667,
+    "longitude": 19.28333,
+    "population": 18721
+  },
+  {
+    "wikidataId": "Q1922317",
+    "name": "Ożarów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.88798,
+    "longitude": 21.66658,
+    "population": 4390
+  },
+  {
+    "wikidataId": "Q1902266",
+    "name": "Ożarów Mazowiecki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.21039,
+    "longitude": 20.79716,
+    "population": 14375
+  },
+  {
+    "wikidataId": "Q158589",
+    "name": "Pabianice",
+    "voivodeship": "łódzkie",
+    "latitude": 51.66417,
+    "longitude": 19.35,
+    "population": 60598
+  },
+  {
+    "wikidataId": "Q455701",
+    "name": "Pacanów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.40031,
+    "longitude": 21.04148,
+    "population": 1074
+  },
+  {
+    "wikidataId": "Q988574",
+    "name": "Paczków",
+    "voivodeship": "opolskie",
+    "latitude": 50.46389,
+    "longitude": 17.00639,
+    "population": 6941
+  },
+  {
+    "wikidataId": "Q325631",
+    "name": "Pajęczno",
+    "voivodeship": "łódzkie",
+    "latitude": 51.15,
+    "longitude": 19,
+    "population": 6548
+  },
+  {
+    "wikidataId": "Q999632",
+    "name": "Pakość",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.80178,
+    "longitude": 18.0853,
+    "population": 5329
+  },
+  {
+    "wikidataId": "Q2343396",
+    "name": "Parczew",
+    "voivodeship": "lubelskie",
+    "latitude": 51.63333,
+    "longitude": 22.86667,
+    "population": 10519
+  },
+  {
+    "wikidataId": "Q985854",
+    "name": "Parzęczew",
+    "voivodeship": "łódzkie",
+    "latitude": 51.94056,
+    "longitude": 19.20556,
+    "population": 914
+  },
+  {
+    "wikidataId": "Q988651",
+    "name": "Pasłęk",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.06193,
+    "longitude": 19.66379,
+    "population": 12074
+  },
+  {
+    "wikidataId": "Q1005483",
+    "name": "Pasym",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.65111,
+    "longitude": 20.79194,
+    "population": 2407
+  },
+  {
+    "wikidataId": "Q1027142",
+    "name": "Pelplin",
+    "voivodeship": "pomorskie",
+    "latitude": 53.92611,
+    "longitude": 18.70111,
+    "population": 7456
+  },
+  {
+    "wikidataId": "Q989441",
+    "name": "Pełczyce",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.04333,
+    "longitude": 15.30528,
+    "population": 2468
+  },
+  {
+    "wikidataId": "Q741876",
+    "name": "Piaseczno",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.07474,
+    "longitude": 21.02709,
+    "population": 51945
+  },
+  {
+    "wikidataId": "Q1008761",
+    "name": "Piaski",
+    "voivodeship": "lubelskie",
+    "latitude": 51.13892,
+    "longitude": 22.84856,
+    "population": 2480
+  },
+  {
+    "wikidataId": "Q778313",
+    "name": "Piastów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.18435,
+    "longitude": 20.83952,
+    "population": 23281
+  },
+  {
+    "wikidataId": "Q984274",
+    "name": "Piątek",
+    "voivodeship": "łódzkie",
+    "latitude": 52.06899,
+    "longitude": 19.47997,
+    "population": 1637
+  },
+  {
+    "wikidataId": "Q988074",
+    "name": "Piechowice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.84944,
+    "longitude": 15.59861,
+    "population": 5952
+  },
+  {
+    "wikidataId": "Q158488",
+    "name": "Piekary Śląskie",
+    "voivodeship": "śląskie",
+    "latitude": 50.38333,
+    "longitude": 18.95,
+    "population": 51876
+  },
+  {
+    "wikidataId": "Q2439211",
+    "name": "Piekoszów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.86667,
+    "longitude": 20.45,
+    "population": null
+  },
+  {
+    "wikidataId": "Q768689",
+    "name": "Pieniężno",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.23889,
+    "longitude": 20.12472,
+    "population": 2490
+  },
+  {
+    "wikidataId": "Q161914",
+    "name": "Pieńsk",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.24639,
+    "longitude": 15.04611,
+    "population": 5645
+  },
+  {
+    "wikidataId": "Q3079381",
+    "name": "Pierzchnica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.68333,
+    "longitude": 20.75,
+    "population": 1261
+  },
+  {
+    "wikidataId": "Q206197",
+    "name": "Pieszyce",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.71278,
+    "longitude": 16.58222,
+    "population": 6959
+  },
+  {
+    "wikidataId": "Q1946077",
+    "name": "Pilawa",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.96056,
+    "longitude": 21.53222,
+    "population": 4424
+  },
+  {
+    "wikidataId": "Q555053",
+    "name": "Pilica",
+    "voivodeship": "śląskie",
+    "latitude": 50.46639,
+    "longitude": 19.65667,
+    "population": 1790
+  },
+  {
+    "wikidataId": "Q1051750",
+    "name": "Pilzno",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.97883,
+    "longitude": 21.29228,
+    "population": 4931
+  },
+  {
+    "wikidataId": "Q556200",
+    "name": "Piła",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.15,
+    "longitude": 16.73333,
+    "population": 71735
+  },
+  {
+    "wikidataId": "Q986091",
+    "name": "Piława Górna",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.68357,
+    "longitude": 16.74359,
+    "population": 6126
+  },
+  {
+    "wikidataId": "Q275592",
+    "name": "Pińczów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.52052,
+    "longitude": 20.52649,
+    "population": 10078
+  },
+  {
+    "wikidataId": "Q1753143",
+    "name": "Pionki",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.47604,
+    "longitude": 21.44995,
+    "population": 16779
+  },
+  {
+    "wikidataId": "Q999638",
+    "name": "Piotrków Kujawski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.55111,
+    "longitude": 18.49917,
+    "population": 4290
+  },
+  {
+    "wikidataId": "Q158004",
+    "name": "Piotrków Trybunalski",
+    "voivodeship": "łódzkie",
+    "latitude": 51.4,
+    "longitude": 19.68333,
+    "population": 66901
+  },
+  {
+    "wikidataId": "Q985005",
+    "name": "Pisz",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.62744,
+    "longitude": 21.81253,
+    "population": 18245
+  },
+  {
+    "wikidataId": "Q2921762",
+    "name": "Piszczac",
+    "voivodeship": "lubelskie",
+    "latitude": 51.96667,
+    "longitude": 23.38333,
+    "population": null
+  },
+  {
+    "wikidataId": "Q1280603",
+    "name": "Piwniczna-Zdrój",
+    "voivodeship": "małopolskie",
+    "latitude": 49.43528,
+    "longitude": 20.71139,
+    "population": 5448
+  },
+  {
+    "wikidataId": "Q555876",
+    "name": "Pleszew",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.89736,
+    "longitude": 17.78561,
+    "population": 16641
+  },
+  {
+    "wikidataId": "Q2017869",
+    "name": "Plewiska",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.36639,
+    "longitude": 16.80889,
+    "population": 14160
+  },
+  {
+    "wikidataId": "Q104725",
+    "name": "Płock",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.55,
+    "longitude": 19.7,
+    "population": 112483
+  },
+  {
+    "wikidataId": "Q270656",
+    "name": "Płońsk",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.62333,
+    "longitude": 20.37528,
+    "population": 21800
+  },
+  {
+    "wikidataId": "Q305697",
+    "name": "Płoty",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.80806,
+    "longitude": 15.26472,
+    "population": 3816
+  },
+  {
+    "wikidataId": "Q52896",
+    "name": "Pniewy",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.50889,
+    "longitude": 16.25639,
+    "population": 8161
+  },
+  {
+    "wikidataId": "Q50992",
+    "name": "Pobiedziska",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.47792,
+    "longitude": 17.26711,
+    "population": 9755
+  },
+  {
+    "wikidataId": "Q324903",
+    "name": "Poddębice",
+    "voivodeship": "łódzkie",
+    "latitude": 51.9,
+    "longitude": 18.96667,
+    "population": 6985
+  },
+  {
+    "wikidataId": "Q422177",
+    "name": "Podkowa Leśna",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.11667,
+    "longitude": 20.73333,
+    "population": 3867
+  },
+  {
+    "wikidataId": "Q990791",
+    "name": "Pogorzela",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.8222,
+    "longitude": 17.23017,
+    "population": 2048
+  },
+  {
+    "wikidataId": "Q403100",
+    "name": "Polanica-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.40373,
+    "longitude": 16.51271,
+    "population": 6230
+  },
+  {
+    "wikidataId": "Q988622",
+    "name": "Polanów",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.11944,
+    "longitude": 16.68833,
+    "population": 2908
+  },
+  {
+    "wikidataId": "Q208022",
+    "name": "Police",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.55,
+    "longitude": 14.57083,
+    "population": 30623
+  },
+  {
+    "wikidataId": "Q246685",
+    "name": "Polkowice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.50111,
+    "longitude": 16.0675,
+    "population": 21786
+  },
+  {
+    "wikidataId": "Q988658",
+    "name": "Połaniec",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.43333,
+    "longitude": 21.28333,
+    "population": 7702
+  },
+  {
+    "wikidataId": "Q772458",
+    "name": "Połczyn-Zdrój",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.76667,
+    "longitude": 16.1,
+    "population": 7469
+  },
+  {
+    "wikidataId": "Q986912",
+    "name": "Poniatowa",
+    "voivodeship": "lubelskie",
+    "latitude": 51.18333,
+    "longitude": 22.06667,
+    "population": 8517
+  },
+  {
+    "wikidataId": "Q1002670",
+    "name": "Poniec",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.76343,
+    "longitude": 16.80867,
+    "population": 2945
+  },
+  {
+    "wikidataId": "Q149009",
+    "name": "Poręba",
+    "voivodeship": "śląskie",
+    "latitude": 50.4891,
+    "longitude": 19.331,
+    "population": 8288
+  },
+  {
+    "wikidataId": "Q268",
+    "name": "Poznań",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.40833,
+    "longitude": 16.93361,
+    "population": 546859
+  },
+  {
+    "wikidataId": "Q988169",
+    "name": "Prabuty",
+    "voivodeship": "pomorskie",
+    "latitude": 53.75583,
+    "longitude": 19.1975,
+    "population": 8289
+  },
+  {
+    "wikidataId": "Q569938",
+    "name": "Praszka",
+    "voivodeship": "opolskie",
+    "latitude": 51.05,
+    "longitude": 18.45,
+    "population": 7322
+  },
+  {
+    "wikidataId": "Q988485",
+    "name": "Prochowice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.27417,
+    "longitude": 16.365,
+    "population": 3572
+  },
+  {
+    "wikidataId": "Q324880",
+    "name": "Proszowice",
+    "voivodeship": "małopolskie",
+    "latitude": 50.2,
+    "longitude": 20.3,
+    "population": 5936
+  },
+  {
+    "wikidataId": "Q1001200",
+    "name": "Prószków",
+    "voivodeship": "opolskie",
+    "latitude": 50.57639,
+    "longitude": 17.87139,
+    "population": 2544
+  },
+  {
+    "wikidataId": "Q2114405",
+    "name": "Pruchnik",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.90611,
+    "longitude": 22.51611,
+    "population": 3621
+  },
+  {
+    "wikidataId": "Q986984",
+    "name": "Prudnik",
+    "voivodeship": "opolskie",
+    "latitude": 50.31972,
+    "longitude": 17.57917,
+    "population": 19747
+  },
+  {
+    "wikidataId": "Q644079",
+    "name": "Prusice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.37111,
+    "longitude": 16.96194,
+    "population": 2222
+  },
+  {
+    "wikidataId": "Q984900",
+    "name": "Pruszcz",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.33,
+    "longitude": 18.19889,
+    "population": 2798
+  },
+  {
+    "wikidataId": "Q988590",
+    "name": "Pruszcz Gdański",
+    "voivodeship": "pomorskie",
+    "latitude": 54.26667,
+    "longitude": 18.63333,
+    "population": 31582
+  },
+  {
+    "wikidataId": "Q721937",
+    "name": "Pruszków",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.16667,
+    "longitude": 20.8,
+    "population": 65283
+  },
+  {
+    "wikidataId": "Q672964",
+    "name": "Przasnysz",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.01667,
+    "longitude": 20.88333,
+    "population": 16662
+  },
+  {
+    "wikidataId": "Q2372031",
+    "name": "Przecław",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.19306,
+    "longitude": 21.47833,
+    "population": 1794
+  },
+  {
+    "wikidataId": "Q737984",
+    "name": "Przedbórz",
+    "voivodeship": "łódzkie",
+    "latitude": 51.08333,
+    "longitude": 19.88333,
+    "population": 3313
+  },
+  {
+    "wikidataId": "Q986966",
+    "name": "Przedecz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.28333,
+    "longitude": 18.9,
+    "population": 1566
+  },
+  {
+    "wikidataId": "Q1005428",
+    "name": "Przemków",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.52528,
+    "longitude": 15.79417,
+    "population": 5841
+  },
+  {
+    "wikidataId": "Q208473",
+    "name": "Przemyśl",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.78345,
+    "longitude": 22.78424,
+    "population": 56466
+  },
+  {
+    "wikidataId": "Q983875",
+    "name": "Przeworsk",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.05912,
+    "longitude": 22.49408,
+    "population": 14881
+  },
+  {
+    "wikidataId": "Q2073620",
+    "name": "Przyrów",
+    "voivodeship": "śląskie",
+    "latitude": 50.80051,
+    "longitude": 19.52794,
+    "population": 1144
+  },
+  {
+    "wikidataId": "Q985528",
+    "name": "Przysucha",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.36667,
+    "longitude": 20.61667,
+    "population": 5572
+  },
+  {
+    "wikidataId": "Q600023",
+    "name": "Przytyk",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.46528,
+    "longitude": 20.90694,
+    "population": 885
+  },
+  {
+    "wikidataId": "Q948304",
+    "name": "Pszczyna",
+    "voivodeship": "śląskie",
+    "latitude": 49.97806,
+    "longitude": 18.94167,
+    "population": 25565
+  },
+  {
+    "wikidataId": "Q1001243",
+    "name": "Pszów",
+    "voivodeship": "śląskie",
+    "latitude": 50.03994,
+    "longitude": 18.39472,
+    "population": 13295
+  },
+  {
+    "wikidataId": "Q628962",
+    "name": "Puck",
+    "voivodeship": "pomorskie",
+    "latitude": 54.72039,
+    "longitude": 18.41133,
+    "population": 10868
+  },
+  {
+    "wikidataId": "Q320007",
+    "name": "Puławy",
+    "voivodeship": "lubelskie",
+    "latitude": 51.41655,
+    "longitude": 21.96939,
+    "population": 45267
+  },
+  {
+    "wikidataId": "Q62937",
+    "name": "Pułtusk",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.71667,
+    "longitude": 21.1,
+    "population": 19327
+  },
+  {
+    "wikidataId": "Q50978",
+    "name": "Puszczykowo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.28167,
+    "longitude": 16.85417,
+    "population": 9470
+  },
+  {
+    "wikidataId": "Q219093",
+    "name": "Pyrzyce",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.14611,
+    "longitude": 14.8925,
+    "population": 12041
+  },
+  {
+    "wikidataId": "Q1001326",
+    "name": "Pyskowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.39806,
+    "longitude": 18.6275,
+    "population": 17394
+  },
+  {
+    "wikidataId": "Q990779",
+    "name": "Pyzdry",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.16667,
+    "longitude": 17.68333,
+    "population": 3014
+  },
+  {
+    "wikidataId": "Q1005356",
+    "name": "Rabka-Zdrój",
+    "voivodeship": "małopolskie",
+    "latitude": 49.60889,
+    "longitude": 19.96654,
+    "population": 12468
+  },
+  {
+    "wikidataId": "Q615367",
+    "name": "Raciąż",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.77944,
+    "longitude": 20.11528,
+    "population": 4146
+  },
+  {
+    "wikidataId": "Q25302",
+    "name": "Racibórz",
+    "voivodeship": "śląskie",
+    "latitude": 50.09194,
+    "longitude": 18.21917,
+    "population": 51257
+  },
+  {
+    "wikidataId": "Q995855",
+    "name": "Radków",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.50389,
+    "longitude": 16.40333,
+    "population": 2310
+  },
+  {
+    "wikidataId": "Q924678",
+    "name": "Radlin",
+    "voivodeship": "śląskie",
+    "latitude": 50.01667,
+    "longitude": 18.48333,
+    "population": 17206
+  },
+  {
+    "wikidataId": "Q1280983",
+    "name": "Radłów",
+    "voivodeship": "małopolskie",
+    "latitude": 50.08333,
+    "longitude": 20.85,
+    "population": 2684
+  },
+  {
+    "wikidataId": "Q104740",
+    "name": "Radom",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.41667,
+    "longitude": 21.15,
+    "population": 201601
+  },
+  {
+    "wikidataId": "Q158796",
+    "name": "Radomsko",
+    "voivodeship": "łódzkie",
+    "latitude": 51.06667,
+    "longitude": 19.45,
+    "population": 44441
+  },
+  {
+    "wikidataId": "Q867431",
+    "name": "Radomyśl Wielki",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.19472,
+    "longitude": 21.27333,
+    "population": 3329
+  },
+  {
+    "wikidataId": "Q3141156",
+    "name": "Radoszyce",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.06667,
+    "longitude": 20.25,
+    "population": 2959
+  },
+  {
+    "wikidataId": "Q336217",
+    "name": "Radymno",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.95,
+    "longitude": 22.81639,
+    "population": 5193
+  },
+  {
+    "wikidataId": "Q324875",
+    "name": "Radziejów",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.63333,
+    "longitude": 18.51667,
+    "population": 5253
+  },
+  {
+    "wikidataId": "Q584055",
+    "name": "Radzionków",
+    "voivodeship": "śląskie",
+    "latitude": 50.4016,
+    "longitude": 18.901,
+    "population": 16253
+  },
+  {
+    "wikidataId": "Q609246",
+    "name": "Radzymin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.41592,
+    "longitude": 21.18415,
+    "population": 14314
+  },
+  {
+    "wikidataId": "Q991917",
+    "name": "Radzyń Chełmiński",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.38556,
+    "longitude": 18.93639,
+    "population": 1825
+  },
+  {
+    "wikidataId": "Q983866",
+    "name": "Radzyń Podlaski",
+    "voivodeship": "lubelskie",
+    "latitude": 51.78333,
+    "longitude": 22.61667,
+    "population": 14806
+  },
+  {
+    "wikidataId": "Q1906266",
+    "name": "Rajgród",
+    "voivodeship": "podlaskie",
+    "latitude": 53.73028,
+    "longitude": 22.6925,
+    "population": 1467
+  },
+  {
+    "wikidataId": "Q1587810",
+    "name": "Rakoniewice",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.14083,
+    "longitude": 16.27306,
+    "population": 3658
+  },
+  {
+    "wikidataId": "Q990795",
+    "name": "Raszków",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.71828,
+    "longitude": 17.72571,
+    "population": 2130
+  },
+  {
+    "wikidataId": "Q149059",
+    "name": "Rawa Mazowiecka",
+    "voivodeship": "łódzkie",
+    "latitude": 51.76667,
+    "longitude": 20.25,
+    "population": 16429
+  },
+  {
+    "wikidataId": "Q52898",
+    "name": "Rawicz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.60917,
+    "longitude": 16.8575,
+    "population": 20305
+  },
+  {
+    "wikidataId": "Q989432",
+    "name": "Recz",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.25972,
+    "longitude": 15.54694,
+    "population": 2760
+  },
+  {
+    "wikidataId": "Q936933",
+    "name": "Reda",
+    "voivodeship": "pomorskie",
+    "latitude": 54.60528,
+    "longitude": 18.34694,
+    "population": 28506
+  },
+  {
+    "wikidataId": "Q3912975",
+    "name": "Rejowiec",
+    "voivodeship": "lubelskie",
+    "latitude": 51.08333,
+    "longitude": 23.26667,
+    "population": 1982
+  },
+  {
+    "wikidataId": "Q1906301",
+    "name": "Rejowiec Fabryczny",
+    "voivodeship": "lubelskie",
+    "latitude": 51.11944,
+    "longitude": 23.245,
+    "population": 4102
+  },
+  {
+    "wikidataId": "Q558723",
+    "name": "Resko",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.8,
+    "longitude": 15.4,
+    "population": 4039
+  },
+  {
+    "wikidataId": "Q986841",
+    "name": "Reszel",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.05042,
+    "longitude": 21.14585,
+    "population": 4167
+  },
+  {
+    "wikidataId": "Q987193",
+    "name": "Rogoźno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.74917,
+    "longitude": 16.99972,
+    "population": 10959
+  },
+  {
+    "wikidataId": "Q336375",
+    "name": "Ropczyce",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.08333,
+    "longitude": 21.63333,
+    "population": 15815
+  },
+  {
+    "wikidataId": "Q2100357",
+    "name": "Rozprza",
+    "voivodeship": "łódzkie",
+    "latitude": 51.30139,
+    "longitude": 19.64417,
+    "population": 1680
+  },
+  {
+    "wikidataId": "Q995141",
+    "name": "Różan",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.88278,
+    "longitude": 21.38556,
+    "population": 2647
+  },
+  {
+    "wikidataId": "Q557906",
+    "name": "Ruciane-Nida",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.65064,
+    "longitude": 21.56272,
+    "population": 4186
+  },
+  {
+    "wikidataId": "Q108679",
+    "name": "Ruda Śląska",
+    "voivodeship": "śląskie",
+    "latitude": 50.27006,
+    "longitude": 18.87424,
+    "population": 131062
+  },
+  {
+    "wikidataId": "Q1028027",
+    "name": "Rudnik nad Sanem",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.44389,
+    "longitude": 22.24083,
+    "population": 6565
+  },
+  {
+    "wikidataId": "Q78712",
+    "name": "Rumia",
+    "voivodeship": "pomorskie",
+    "latitude": 54.57083,
+    "longitude": 18.38778,
+    "population": 51879
+  },
+  {
+    "wikidataId": "Q107094",
+    "name": "Rybnik",
+    "voivodeship": "śląskie",
+    "latitude": 50.08333,
+    "longitude": 18.5,
+    "population": 133772
+  },
+  {
+    "wikidataId": "Q477360",
+    "name": "Rychtal",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.145,
+    "longitude": 17.84833,
+    "population": 1343
+  },
+  {
+    "wikidataId": "Q259489",
+    "name": "Rychwał",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.07111,
+    "longitude": 18.17167,
+    "population": 2402
+  },
+  {
+    "wikidataId": "Q948281",
+    "name": "Rydułtowy",
+    "voivodeship": "śląskie",
+    "latitude": 50.0578,
+    "longitude": 18.4173,
+    "population": 20749
+  },
+  {
+    "wikidataId": "Q995872",
+    "name": "Rydzyna",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.78639,
+    "longitude": 16.6675,
+    "population": 2878
+  },
+  {
+    "wikidataId": "Q1280831",
+    "name": "Ryglice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.88333,
+    "longitude": 21.13333,
+    "population": 2735
+  },
+  {
+    "wikidataId": "Q1922307",
+    "name": "Ryki",
+    "voivodeship": "lubelskie",
+    "latitude": 51.63333,
+    "longitude": 21.93333,
+    "population": 9229
+  },
+  {
+    "wikidataId": "Q2588425",
+    "name": "Rymanów",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.56667,
+    "longitude": 21.88333,
+    "population": 3634
+  },
+  {
+    "wikidataId": "Q616895",
+    "name": "Ryn",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.93778,
+    "longitude": 21.54806,
+    "population": 2765
+  },
+  {
+    "wikidataId": "Q325244",
+    "name": "Rypin",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.06694,
+    "longitude": 19.40694,
+    "population": 15832
+  },
+  {
+    "wikidataId": "Q990823",
+    "name": "Rzepin",
+    "voivodeship": "lubuskie",
+    "latitude": 52.34639,
+    "longitude": 14.83222,
+    "population": 6486
+  },
+  {
+    "wikidataId": "Q598",
+    "name": "Rzeszów",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.04111,
+    "longitude": 21.99889,
+    "population": 195871
+  },
+  {
+    "wikidataId": "Q403112",
+    "name": "Rzgów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.66222,
+    "longitude": 19.45972,
+    "population": 3432
+  },
+  {
+    "wikidataId": "Q193177",
+    "name": "Sandomierz",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.68333,
+    "longitude": 21.75,
+    "population": 22189
+  },
+  {
+    "wikidataId": "Q986130",
+    "name": "Sanniki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.33389,
+    "longitude": 19.86583,
+    "population": 1833
+  },
+  {
+    "wikidataId": "Q201729",
+    "name": "Sanok",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.55,
+    "longitude": 22.21667,
+    "population": 35546
+  },
+  {
+    "wikidataId": "Q826076",
+    "name": "Sejny",
+    "voivodeship": "podlaskie",
+    "latitude": 54.1,
+    "longitude": 23.35,
+    "population": 5075
+  },
+  {
+    "wikidataId": "Q569838",
+    "name": "Serock",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.51306,
+    "longitude": 21.06944,
+    "population": 4959
+  },
+  {
+    "wikidataId": "Q999607",
+    "name": "Sędziszów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.5659,
+    "longitude": 20.05563,
+    "population": 6305
+  },
+  {
+    "wikidataId": "Q867704",
+    "name": "Sędziszów Małopolski",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.06944,
+    "longitude": 21.70139,
+    "population": 12313
+  },
+  {
+    "wikidataId": "Q1010153",
+    "name": "Sępopol",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.26889,
+    "longitude": 21.01444,
+    "population": 1925
+  },
+  {
+    "wikidataId": "Q324888",
+    "name": "Sępólno Krajeńskie",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.45,
+    "longitude": 17.53,
+    "population": 8914
+  },
+  {
+    "wikidataId": "Q988586",
+    "name": "Sianów",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.23139,
+    "longitude": 16.30028,
+    "population": 6545
+  },
+  {
+    "wikidataId": "Q1765382",
+    "name": "Siechnice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.03384,
+    "longitude": 17.14743,
+    "population": 9957
+  },
+  {
+    "wikidataId": "Q319813",
+    "name": "Siedlce",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.18333,
+    "longitude": 22.28333,
+    "population": 76357
+  },
+  {
+    "wikidataId": "Q172946",
+    "name": "Siedliszcze",
+    "voivodeship": "lubelskie",
+    "latitude": 51.19444,
+    "longitude": 23.16389,
+    "population": 1367
+  },
+  {
+    "wikidataId": "Q158485",
+    "name": "Siemianowice Śląskie",
+    "voivodeship": "śląskie",
+    "latitude": 50.31231,
+    "longitude": 19.0232,
+    "population": 63657
+  },
+  {
+    "wikidataId": "Q218980",
+    "name": "Siemiatycze",
+    "voivodeship": "podlaskie",
+    "latitude": 52.42722,
+    "longitude": 22.8625,
+    "population": 13782
+  },
+  {
+    "wikidataId": "Q377994",
+    "name": "Sieniawa",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.17806,
+    "longitude": 22.61056,
+    "population": 2031
+  },
+  {
+    "wikidataId": "Q2605940",
+    "name": "Siennica",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.09111,
+    "longitude": 21.61944,
+    "population": 2308
+  },
+  {
+    "wikidataId": "Q3077850",
+    "name": "Sienno",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.08333,
+    "longitude": 21.46667,
+    "population": 920
+  },
+  {
+    "wikidataId": "Q745074",
+    "name": "Sieradz",
+    "voivodeship": "łódzkie",
+    "latitude": 51.59583,
+    "longitude": 18.73,
+    "population": 40014
+  },
+  {
+    "wikidataId": "Q987997",
+    "name": "Sieraków",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.65,
+    "longitude": 16.1,
+    "population": 5930
+  },
+  {
+    "wikidataId": "Q928392",
+    "name": "Sierpc",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.88333,
+    "longitude": 19.66667,
+    "population": 17308
+  },
+  {
+    "wikidataId": "Q989846",
+    "name": "Siewierz",
+    "voivodeship": "śląskie",
+    "latitude": 50.46657,
+    "longitude": 19.23028,
+    "population": 5635
+  },
+  {
+    "wikidataId": "Q1813609",
+    "name": "Skalbmierz",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.31993,
+    "longitude": 20.39929,
+    "population": 1219
+  },
+  {
+    "wikidataId": "Q1280559",
+    "name": "Skała",
+    "voivodeship": "małopolskie",
+    "latitude": 50.23333,
+    "longitude": 19.86667,
+    "population": 3834
+  },
+  {
+    "wikidataId": "Q1015036",
+    "name": "Skarszewy",
+    "voivodeship": "pomorskie",
+    "latitude": 54.06722,
+    "longitude": 18.44583,
+    "population": 6851
+  },
+  {
+    "wikidataId": "Q991895",
+    "name": "Skaryszew",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.30889,
+    "longitude": 21.24861,
+    "population": 4410
+  },
+  {
+    "wikidataId": "Q644002",
+    "name": "Skarżysko-Kamienna",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.11667,
+    "longitude": 20.88333,
+    "population": 43067
+  },
+  {
+    "wikidataId": "Q301924",
+    "name": "Skawina",
+    "voivodeship": "małopolskie",
+    "latitude": 49.97528,
+    "longitude": 19.8275,
+    "population": 24177
+  },
+  {
+    "wikidataId": "Q607132",
+    "name": "Skępe",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.86611,
+    "longitude": 19.34694,
+    "population": 3509
+  },
+  {
+    "wikidataId": "Q2734",
+    "name": "Skierniewice",
+    "voivodeship": "łódzkie",
+    "latitude": 51.95686,
+    "longitude": 20.143,
+    "population": 46437
+  },
+  {
+    "wikidataId": "Q987786",
+    "name": "Skoczów",
+    "voivodeship": "śląskie",
+    "latitude": 49.80089,
+    "longitude": 18.7877,
+    "population": 13814
+  },
+  {
+    "wikidataId": "Q557306",
+    "name": "Skoki",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.67222,
+    "longitude": 17.16083,
+    "population": 4634
+  },
+  {
+    "wikidataId": "Q954116",
+    "name": "Skórcz",
+    "voivodeship": "pomorskie",
+    "latitude": 53.79667,
+    "longitude": 18.52611,
+    "population": 3513
+  },
+  {
+    "wikidataId": "Q994585",
+    "name": "Skwierzyna",
+    "voivodeship": "lubuskie",
+    "latitude": 52.6,
+    "longitude": 15.5,
+    "population": 9272
+  },
+  {
+    "wikidataId": "Q1005492",
+    "name": "Sława",
+    "voivodeship": "lubuskie",
+    "latitude": 51.87611,
+    "longitude": 16.07194,
+    "population": 4170
+  },
+  {
+    "wikidataId": "Q841380",
+    "name": "Sławków",
+    "voivodeship": "śląskie",
+    "latitude": 50.29943,
+    "longitude": 19.38967,
+    "population": 6942
+  },
+  {
+    "wikidataId": "Q161967",
+    "name": "Sławno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.3625,
+    "longitude": 16.67861,
+    "population": 12028
+  },
+  {
+    "wikidataId": "Q1281172",
+    "name": "Słomniki",
+    "voivodeship": "małopolskie",
+    "latitude": 50.25,
+    "longitude": 20.1,
+    "population": 4226
+  },
+  {
+    "wikidataId": "Q200709",
+    "name": "Słubice",
+    "voivodeship": "lubuskie",
+    "latitude": 52.35,
+    "longitude": 14.56667,
+    "population": 16495
+  },
+  {
+    "wikidataId": "Q639224",
+    "name": "Słupca",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.3,
+    "longitude": 17.86667,
+    "population": 13353
+  },
+  {
+    "wikidataId": "Q105048",
+    "name": "Słupsk",
+    "voivodeship": "pomorskie",
+    "latitude": 54.46667,
+    "longitude": 17.03333,
+    "population": 87660
+  },
+  {
+    "wikidataId": "Q1950652",
+    "name": "Sobków",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.69999,
+    "longitude": 20.45062,
+    "population": null
+  },
+  {
+    "wikidataId": "Q992910",
+    "name": "Sobótka",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.89861,
+    "longitude": 16.74444,
+    "population": 7025
+  },
+  {
+    "wikidataId": "Q250485",
+    "name": "Sochaczew",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.225,
+    "longitude": 20.23333,
+    "population": 34439
+  },
+  {
+    "wikidataId": "Q3078177",
+    "name": "Sochocin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.68715,
+    "longitude": 20.47259,
+    "population": 1967
+  },
+  {
+    "wikidataId": "Q867039",
+    "name": "Sokołów Małopolski",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.22909,
+    "longitude": 22.11968,
+    "population": 4264
+  },
+  {
+    "wikidataId": "Q1613105",
+    "name": "Sokołów Podlaski",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.4,
+    "longitude": 22.25,
+    "population": 18526
+  },
+  {
+    "wikidataId": "Q818403",
+    "name": "Sokółka",
+    "voivodeship": "podlaskie",
+    "latitude": 53.40501,
+    "longitude": 23.49673,
+    "population": 17616
+  },
+  {
+    "wikidataId": "Q161912",
+    "name": "Solec Kujawski",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.08056,
+    "longitude": 18.22222,
+    "population": 15458
+  },
+  {
+    "wikidataId": "Q2035016",
+    "name": "Solec nad Wisłą",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.13633,
+    "longitude": 21.76563,
+    "population": 796
+  },
+  {
+    "wikidataId": "Q1001517",
+    "name": "Sompolno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.38806,
+    "longitude": 18.50167,
+    "population": 3429
+  },
+  {
+    "wikidataId": "Q92689",
+    "name": "Sopot",
+    "voivodeship": "pomorskie",
+    "latitude": 54.44185,
+    "longitude": 18.54782,
+    "population": 32115
+  },
+  {
+    "wikidataId": "Q105060",
+    "name": "Sosnowiec",
+    "voivodeship": "śląskie",
+    "latitude": 50.3,
+    "longitude": 19.16667,
+    "population": 185930
+  },
+  {
+    "wikidataId": "Q777091",
+    "name": "Sośnicowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.28333,
+    "longitude": 18.53333,
+    "population": 1940
+  },
+  {
+    "wikidataId": "Q751140",
+    "name": "Stalowa Wola",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.58333,
+    "longitude": 22.05,
+    "population": 57620
+  },
+  {
+    "wikidataId": "Q2114006",
+    "name": "Stanisławów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.29083,
+    "longitude": 21.54861,
+    "population": 1770
+  },
+  {
+    "wikidataId": "Q751094",
+    "name": "Starachowice",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.05,
+    "longitude": 21.06667,
+    "population": 46270
+  },
+  {
+    "wikidataId": "Q106268",
+    "name": "Stargard",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.33872,
+    "longitude": 15.04475,
+    "population": 67348
+  },
+  {
+    "wikidataId": "Q503146",
+    "name": "Starogard Gdański",
+    "voivodeship": "pomorskie",
+    "latitude": 53.96667,
+    "longitude": 18.53333,
+    "population": 46373
+  },
+  {
+    "wikidataId": "Q2287092",
+    "name": "Staroźreby",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.63333,
+    "longitude": 19.98333,
+    "population": 2155
+  },
+  {
+    "wikidataId": "Q1280257",
+    "name": "Stary Sącz",
+    "voivodeship": "małopolskie",
+    "latitude": 49.56364,
+    "longitude": 20.63496,
+    "population": 8746
+  },
+  {
+    "wikidataId": "Q324892",
+    "name": "Staszów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.56056,
+    "longitude": 21.16667,
+    "population": 14158
+  },
+  {
+    "wikidataId": "Q1906278",
+    "name": "Stawiski",
+    "voivodeship": "podlaskie",
+    "latitude": 53.37975,
+    "longitude": 22.15494,
+    "population": 2095
+  },
+  {
+    "wikidataId": "Q1002685",
+    "name": "Stawiszyn",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.91833,
+    "longitude": 18.11139,
+    "population": 1425
+  },
+  {
+    "wikidataId": "Q671366",
+    "name": "Stąporków",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.15,
+    "longitude": 20.55,
+    "population": 5274
+  },
+  {
+    "wikidataId": "Q638725",
+    "name": "Stęszew",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.27894,
+    "longitude": 16.70808,
+    "population": 5964
+  },
+  {
+    "wikidataId": "Q219106",
+    "name": "Stoczek Łukowski",
+    "voivodeship": "lubelskie",
+    "latitude": 51.96667,
+    "longitude": 21.96667,
+    "population": 2431
+  },
+  {
+    "wikidataId": "Q986052",
+    "name": "Stopnica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.44018,
+    "longitude": 20.9378,
+    "population": 1187
+  },
+  {
+    "wikidataId": "Q1025304",
+    "name": "Stronie Śląskie",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.29554,
+    "longitude": 16.87397,
+    "population": 5178
+  },
+  {
+    "wikidataId": "Q1005359",
+    "name": "Strumień",
+    "voivodeship": "śląskie",
+    "latitude": 49.91667,
+    "longitude": 18.76667,
+    "population": 3608
+  },
+  {
+    "wikidataId": "Q114093",
+    "name": "Stryków",
+    "voivodeship": "łódzkie",
+    "latitude": 51.90111,
+    "longitude": 19.61083,
+    "population": 3337
+  },
+  {
+    "wikidataId": "Q246288",
+    "name": "Strzegom",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.95861,
+    "longitude": 16.34833,
+    "population": 15371
+  },
+  {
+    "wikidataId": "Q717399",
+    "name": "Strzelce Krajeńskie",
+    "voivodeship": "lubuskie",
+    "latitude": 52.88333,
+    "longitude": 15.51667,
+    "population": 9912
+  },
+  {
+    "wikidataId": "Q510827",
+    "name": "Strzelce Opolskie",
+    "voivodeship": "opolskie",
+    "latitude": 50.5,
+    "longitude": 18.28333,
+    "population": 17512
+  },
+  {
+    "wikidataId": "Q1746267",
+    "name": "Strzeleczki",
+    "voivodeship": "opolskie",
+    "latitude": 50.46028,
+    "longitude": 17.85333,
+    "population": 1540
+  },
+  {
+    "wikidataId": "Q719954",
+    "name": "Strzelin",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.78333,
+    "longitude": 17.06667,
+    "population": 12131
+  },
+  {
+    "wikidataId": "Q1005414",
+    "name": "Strzelno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.62944,
+    "longitude": 18.17,
+    "population": 5389
+  },
+  {
+    "wikidataId": "Q835423",
+    "name": "Strzyżów",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.87083,
+    "longitude": 21.79111,
+    "population": 8482
+  },
+  {
+    "wikidataId": "Q745005",
+    "name": "Sucha Beskidzka",
+    "voivodeship": "małopolskie",
+    "latitude": 49.74028,
+    "longitude": 19.58861,
+    "population": 8951
+  },
+  {
+    "wikidataId": "Q1021286",
+    "name": "Suchań",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.27861,
+    "longitude": 15.32472,
+    "population": 1403
+  },
+  {
+    "wikidataId": "Q1946041",
+    "name": "Suchedniów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.04776,
+    "longitude": 20.82922,
+    "population": 7820
+  },
+  {
+    "wikidataId": "Q547381",
+    "name": "Suchowola",
+    "voivodeship": "podlaskie",
+    "latitude": 53.57667,
+    "longitude": 23.10167,
+    "population": 2113
+  },
+  {
+    "wikidataId": "Q457865",
+    "name": "Sulechów",
+    "voivodeship": "lubuskie",
+    "latitude": 52.08333,
+    "longitude": 15.61667,
+    "population": 16063
+  },
+  {
+    "wikidataId": "Q1015172",
+    "name": "Sulejów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.35278,
+    "longitude": 19.88472,
+    "population": 6036
+  },
+  {
+    "wikidataId": "Q953198",
+    "name": "Sulejówek",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.24417,
+    "longitude": 21.28,
+    "population": 21248
+  },
+  {
+    "wikidataId": "Q718038",
+    "name": "Sulęcin",
+    "voivodeship": "lubuskie",
+    "latitude": 52.44167,
+    "longitude": 15.11667,
+    "population": 9978
+  },
+  {
+    "wikidataId": "Q991856",
+    "name": "Sulmierzyce",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.6,
+    "longitude": 17.53333,
+    "population": 2772
+  },
+  {
+    "wikidataId": "Q1003272",
+    "name": "Sułkowice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.83778,
+    "longitude": 19.79556,
+    "population": 6542
+  },
+  {
+    "wikidataId": "Q1906334",
+    "name": "Supraśl",
+    "voivodeship": "podlaskie",
+    "latitude": 53.21667,
+    "longitude": 23.33333,
+    "population": 4427
+  },
+  {
+    "wikidataId": "Q1823772",
+    "name": "Suraż",
+    "voivodeship": "podlaskie",
+    "latitude": 52.95,
+    "longitude": 22.95,
+    "population": 975
+  },
+  {
+    "wikidataId": "Q986821",
+    "name": "Susz",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.72,
+    "longitude": 19.33722,
+    "population": 5309
+  },
+  {
+    "wikidataId": "Q236083",
+    "name": "Suwałki",
+    "voivodeship": "podlaskie",
+    "latitude": 54.1,
+    "longitude": 22.93333,
+    "population": 68752
+  },
+  {
+    "wikidataId": "Q50991",
+    "name": "Swarzędz",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.41036,
+    "longitude": 17.07711,
+    "population": 29295
+  },
+  {
+    "wikidataId": "Q1001322",
+    "name": "Syców",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.31,
+    "longitude": 17.72361,
+    "population": 10102
+  },
+  {
+    "wikidataId": "Q743910",
+    "name": "Szadek",
+    "voivodeship": "łódzkie",
+    "latitude": 51.69174,
+    "longitude": 18.97549,
+    "population": 1821
+  },
+  {
+    "wikidataId": "Q995859",
+    "name": "Szamocin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.03028,
+    "longitude": 17.12056,
+    "population": 4007
+  },
+  {
+    "wikidataId": "Q51427",
+    "name": "Szamotuły",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.61194,
+    "longitude": 16.57778,
+    "population": 18398
+  },
+  {
+    "wikidataId": "Q1000438",
+    "name": "Szczawnica",
+    "voivodeship": "małopolskie",
+    "latitude": 49.42528,
+    "longitude": 20.4825,
+    "population": 5465
+  },
+  {
+    "wikidataId": "Q1001231",
+    "name": "Szczawno-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.80352,
+    "longitude": 16.25655,
+    "population": 5362
+  },
+  {
+    "wikidataId": "Q436",
+    "name": "Szczebrzeszyn",
+    "voivodeship": "lubelskie",
+    "latitude": 50.7,
+    "longitude": 22.96667,
+    "population": 4849
+  },
+  {
+    "wikidataId": "Q393",
+    "name": "Szczecin",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.42472,
+    "longitude": 14.55528,
+    "population": 387700
+  },
+  {
+    "wikidataId": "Q848999",
+    "name": "Szczecinek",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.70778,
+    "longitude": 16.69917,
+    "population": 38446
+  },
+  {
+    "wikidataId": "Q305154",
+    "name": "Szczekociny",
+    "voivodeship": "śląskie",
+    "latitude": 50.62611,
+    "longitude": 19.81889,
+    "population": 3436
+  },
+  {
+    "wikidataId": "Q1280869",
+    "name": "Szczucin",
+    "voivodeship": "małopolskie",
+    "latitude": 50.30889,
+    "longitude": 21.07472,
+    "population": 4149
+  },
+  {
+    "wikidataId": "Q958747",
+    "name": "Szczuczyn",
+    "voivodeship": "podlaskie",
+    "latitude": 53.56667,
+    "longitude": 22.3,
+    "population": 3235
+  },
+  {
+    "wikidataId": "Q581609",
+    "name": "Szczyrk",
+    "voivodeship": "śląskie",
+    "latitude": 49.6965,
+    "longitude": 19.008,
+    "population": 5496
+  },
+  {
+    "wikidataId": "Q1025323",
+    "name": "Szczytna",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.41343,
+    "longitude": 16.44743,
+    "population": 4886
+  },
+  {
+    "wikidataId": "Q953181",
+    "name": "Szczytno",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.56667,
+    "longitude": 21,
+    "population": 22389
+  },
+  {
+    "wikidataId": "Q2342112",
+    "name": "Szepietowo",
+    "voivodeship": "podlaskie",
+    "latitude": 52.86972,
+    "longitude": 22.54083,
+    "population": 2073
+  },
+  {
+    "wikidataId": "Q186495",
+    "name": "Szklarska Poręba",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.82567,
+    "longitude": 15.52274,
+    "population": 5933
+  },
+  {
+    "wikidataId": "Q991866",
+    "name": "Szlichtyngowa",
+    "voivodeship": "lubuskie",
+    "latitude": 51.71222,
+    "longitude": 16.24427,
+    "population": 1256
+  },
+  {
+    "wikidataId": "Q165066",
+    "name": "Szprotawa",
+    "voivodeship": "lubuskie",
+    "latitude": 51.56427,
+    "longitude": 15.53589,
+    "population": 11068
+  },
+  {
+    "wikidataId": "Q640368",
+    "name": "Sztum",
+    "voivodeship": "pomorskie",
+    "latitude": 53.92056,
+    "longitude": 19.03056,
+    "population": 9515
+  },
+  {
+    "wikidataId": "Q999598",
+    "name": "Szubin",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.0096,
+    "longitude": 17.7423,
+    "population": 9563
+  },
+  {
+    "wikidataId": "Q974977",
+    "name": "Szydłowiec",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.23333,
+    "longitude": 20.85,
+    "population": 10959
+  },
+  {
+    "wikidataId": "Q787968",
+    "name": "Szydłów",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.59056,
+    "longitude": 21.00278,
+    "population": 985
+  },
+  {
+    "wikidataId": "Q387095",
+    "name": "Ścinawa",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.41653,
+    "longitude": 16.42597,
+    "population": 5356
+  },
+  {
+    "wikidataId": "Q387117",
+    "name": "Ślesin",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.36667,
+    "longitude": 18.3,
+    "population": 3179
+  },
+  {
+    "wikidataId": "Q387194",
+    "name": "Śmigiel",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.01339,
+    "longitude": 16.52704,
+    "population": 5648
+  },
+  {
+    "wikidataId": "Q387260",
+    "name": "Śrem",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.08861,
+    "longitude": 17.015,
+    "population": 28835
+  },
+  {
+    "wikidataId": "Q387307",
+    "name": "Środa Śląska",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.16389,
+    "longitude": 16.595,
+    "population": 9525
+  },
+  {
+    "wikidataId": "Q52903",
+    "name": "Środa Wielkopolska",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.23333,
+    "longitude": 17.28333,
+    "population": 24225
+  },
+  {
+    "wikidataId": "Q1280261",
+    "name": "Świątniki Górne",
+    "voivodeship": "małopolskie",
+    "latitude": 49.93333,
+    "longitude": 19.95,
+    "population": 2418
+  },
+  {
+    "wikidataId": "Q387396",
+    "name": "Świdnica",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.84378,
+    "longitude": 16.48859,
+    "population": 54792
+  },
+  {
+    "wikidataId": "Q387387",
+    "name": "Świdnik",
+    "voivodeship": "lubelskie",
+    "latitude": 51.23333,
+    "longitude": 22.7,
+    "population": 37884
+  },
+  {
+    "wikidataId": "Q387406",
+    "name": "Świdwin",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.77444,
+    "longitude": 15.77667,
+    "population": 14937
+  },
+  {
+    "wikidataId": "Q387449",
+    "name": "Świebodzice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.85833,
+    "longitude": 16.31667,
+    "population": 22219
+  },
+  {
+    "wikidataId": "Q387463",
+    "name": "Świebodzin",
+    "voivodeship": "lubuskie",
+    "latitude": 52.25,
+    "longitude": 15.53333,
+    "population": 21399
+  },
+  {
+    "wikidataId": "Q387502",
+    "name": "Świecie",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.40944,
+    "longitude": 18.4475,
+    "population": 24796
+  },
+  {
+    "wikidataId": "Q387561",
+    "name": "Świeradów-Zdrój",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.91667,
+    "longitude": 15.35,
+    "population": 4094
+  },
+  {
+    "wikidataId": "Q387591",
+    "name": "Świerzawa",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.01361,
+    "longitude": 15.895,
+    "population": 2111
+  },
+  {
+    "wikidataId": "Q45197",
+    "name": "Świętochłowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.28547,
+    "longitude": 18.93086,
+    "population": 45644
+  },
+  {
+    "wikidataId": "Q41599",
+    "name": "Świnoujście",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.91028,
+    "longitude": 14.24694,
+    "population": 38728
+  },
+  {
+    "wikidataId": "Q1922330",
+    "name": "Tarczyn",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.97861,
+    "longitude": 20.83361,
+    "population": 4248
+  },
+  {
+    "wikidataId": "Q28516",
+    "name": "Tarnobrzeg",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.58333,
+    "longitude": 21.68333,
+    "population": 44901
+  },
+  {
+    "wikidataId": "Q777169",
+    "name": "Tarnogród",
+    "voivodeship": "lubelskie",
+    "latitude": 50.36056,
+    "longitude": 22.74222,
+    "population": 3207
+  },
+  {
+    "wikidataId": "Q329833",
+    "name": "Tarnowskie Góry",
+    "voivodeship": "śląskie",
+    "latitude": 50.44528,
+    "longitude": 18.86139,
+    "population": 61288
+  },
+  {
+    "wikidataId": "Q106281",
+    "name": "Tarnów",
+    "voivodeship": "małopolskie",
+    "latitude": 50.0125,
+    "longitude": 20.98833,
+    "population": 101614
+  },
+  {
+    "wikidataId": "Q474697",
+    "name": "Tczew",
+    "voivodeship": "pomorskie",
+    "latitude": 54.09111,
+    "longitude": 18.78639,
+    "population": 57990
+  },
+  {
+    "wikidataId": "Q218897",
+    "name": "Terespol",
+    "voivodeship": "lubelskie",
+    "latitude": 52.08333,
+    "longitude": 23.56667,
+    "population": 5309
+  },
+  {
+    "wikidataId": "Q1826232",
+    "name": "Tłuszcz",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.43333,
+    "longitude": 21.45,
+    "population": 8039
+  },
+  {
+    "wikidataId": "Q989863",
+    "name": "Tolkmicko",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.32056,
+    "longitude": 19.53056,
+    "population": 2464
+  },
+  {
+    "wikidataId": "Q911009",
+    "name": "Tomaszów Lubelski",
+    "voivodeship": "lubelskie",
+    "latitude": 50.45,
+    "longitude": 23.41667,
+    "population": 18567
+  },
+  {
+    "wikidataId": "Q157994",
+    "name": "Tomaszów Mazowiecki",
+    "voivodeship": "łódzkie",
+    "latitude": 51.53139,
+    "longitude": 20.00889,
+    "population": 59388
+  },
+  {
+    "wikidataId": "Q47554",
+    "name": "Toruń",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.0144,
+    "longitude": 18.6014,
+    "population": 198273
+  },
+  {
+    "wikidataId": "Q995903",
+    "name": "Torzym",
+    "voivodeship": "lubuskie",
+    "latitude": 52.31306,
+    "longitude": 15.08222,
+    "population": 2468
+  },
+  {
+    "wikidataId": "Q1000938",
+    "name": "Toszek",
+    "voivodeship": "śląskie",
+    "latitude": 50.45511,
+    "longitude": 18.51806,
+    "population": 3557
+  },
+  {
+    "wikidataId": "Q934785",
+    "name": "Trzcianka",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.04056,
+    "longitude": 16.45611,
+    "population": 16831
+  },
+  {
+    "wikidataId": "Q523287",
+    "name": "Trzciel",
+    "voivodeship": "lubuskie",
+    "latitude": 52.36667,
+    "longitude": 15.88333,
+    "population": 2282
+  },
+  {
+    "wikidataId": "Q558719",
+    "name": "Trzcińsko-Zdrój",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 52.96487,
+    "longitude": 14.60667,
+    "population": 2173
+  },
+  {
+    "wikidataId": "Q326142",
+    "name": "Trzebiatów",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 54.06139,
+    "longitude": 15.26472,
+    "population": 9591
+  },
+  {
+    "wikidataId": "Q686167",
+    "name": "Trzebinia",
+    "voivodeship": "małopolskie",
+    "latitude": 50.16667,
+    "longitude": 19.48333,
+    "population": 19134
+  },
+  {
+    "wikidataId": "Q717942",
+    "name": "Trzebnica",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.31056,
+    "longitude": 17.06306,
+    "population": 13631
+  },
+  {
+    "wikidataId": "Q1002696",
+    "name": "Trzemeszno",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.56139,
+    "longitude": 17.82306,
+    "population": 7522
+  },
+  {
+    "wikidataId": "Q325910",
+    "name": "Tuchola",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.58808,
+    "longitude": 17.85903,
+    "population": 13408
+  },
+  {
+    "wikidataId": "Q1922294",
+    "name": "Tuchów",
+    "voivodeship": "małopolskie",
+    "latitude": 49.9,
+    "longitude": 21.05,
+    "population": 6339
+  },
+  {
+    "wikidataId": "Q989973",
+    "name": "Tuczno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.19361,
+    "longitude": 16.15361,
+    "population": 1838
+  },
+  {
+    "wikidataId": "Q1421516",
+    "name": "Tuliszków",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.06667,
+    "longitude": 18.28333,
+    "population": 3120
+  },
+  {
+    "wikidataId": "Q2731869",
+    "name": "Tułowice",
+    "voivodeship": "opolskie",
+    "latitude": 50.59556,
+    "longitude": 17.65306,
+    "population": 3748
+  },
+  {
+    "wikidataId": "Q924132",
+    "name": "Turek",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.01548,
+    "longitude": 18.50055,
+    "population": 24788
+  },
+  {
+    "wikidataId": "Q2595900",
+    "name": "Turobin",
+    "voivodeship": "lubelskie",
+    "latitude": 50.81667,
+    "longitude": 22.73333,
+    "population": 871
+  },
+  {
+    "wikidataId": "Q403941",
+    "name": "Tuszyn",
+    "voivodeship": "łódzkie",
+    "latitude": 51.60917,
+    "longitude": 19.53,
+    "population": 7221
+  },
+  {
+    "wikidataId": "Q1005419",
+    "name": "Twardogóra",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.36472,
+    "longitude": 17.46972,
+    "population": 6381
+  },
+  {
+    "wikidataId": "Q2305215",
+    "name": "Tychowo",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.92774,
+    "longitude": 16.25771,
+    "population": 2354
+  },
+  {
+    "wikidataId": "Q11977",
+    "name": "Tychy",
+    "voivodeship": "śląskie",
+    "latitude": 50.12361,
+    "longitude": 18.98667,
+    "population": 122605
+  },
+  {
+    "wikidataId": "Q1946067",
+    "name": "Tyczyn",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.96384,
+    "longitude": 22.03398,
+    "population": 4325
+  },
+  {
+    "wikidataId": "Q941451",
+    "name": "Tykocin",
+    "voivodeship": "podlaskie",
+    "latitude": 53.2,
+    "longitude": 22.78333,
+    "population": 1917
+  },
+  {
+    "wikidataId": "Q1946027",
+    "name": "Tyszowce",
+    "voivodeship": "lubelskie",
+    "latitude": 50.61833,
+    "longitude": 23.70972,
+    "population": 1926
+  },
+  {
+    "wikidataId": "Q1005394",
+    "name": "Ujazd",
+    "voivodeship": "opolskie",
+    "latitude": 50.38917,
+    "longitude": 18.34917,
+    "population": 1776
+  },
+  {
+    "wikidataId": "Q2199861",
+    "name": "Ujazd",
+    "voivodeship": "łódzkie",
+    "latitude": 51.59444,
+    "longitude": 19.92694,
+    "population": 1717
+  },
+  {
+    "wikidataId": "Q556193",
+    "name": "Ujście",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.06667,
+    "longitude": 16.73333,
+    "population": 3488
+  },
+  {
+    "wikidataId": "Q867437",
+    "name": "Ulanów",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.49031,
+    "longitude": 22.26362,
+    "population": 1406
+  },
+  {
+    "wikidataId": "Q500552",
+    "name": "Uniejów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.97428,
+    "longitude": 18.79308,
+    "population": 2932
+  },
+  {
+    "wikidataId": "Q2044194",
+    "name": "Urzędów",
+    "voivodeship": "lubelskie",
+    "latitude": 50.99306,
+    "longitude": 22.1425,
+    "population": 1701
+  },
+  {
+    "wikidataId": "Q321010",
+    "name": "Ustka",
+    "voivodeship": "pomorskie",
+    "latitude": 54.58028,
+    "longitude": 16.86194,
+    "population": 14321
+  },
+  {
+    "wikidataId": "Q1001297",
+    "name": "Ustroń",
+    "voivodeship": "śląskie",
+    "latitude": 49.72139,
+    "longitude": 18.80194,
+    "population": 16118
+  },
+  {
+    "wikidataId": "Q1906346",
+    "name": "Ustrzyki Dolne",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.4304,
+    "longitude": 22.59381,
+    "population": 8717
+  },
+  {
+    "wikidataId": "Q212856",
+    "name": "Wadowice",
+    "voivodeship": "małopolskie",
+    "latitude": 49.88333,
+    "longitude": 19.5,
+    "population": 17905
+  },
+  {
+    "wikidataId": "Q110732",
+    "name": "Wałbrzych",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.76667,
+    "longitude": 16.28333,
+    "population": 104401
+  },
+  {
+    "wikidataId": "Q935744",
+    "name": "Wałcz",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.26667,
+    "longitude": 16.46667,
+    "population": 24167
+  },
+  {
+    "wikidataId": "Q276857",
+    "name": "Warka",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.7851,
+    "longitude": 21.18338,
+    "population": 12003
+  },
+  {
+    "wikidataId": "Q270",
+    "name": "Warszawa",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.23,
+    "longitude": 21.01111,
+    "population": 1862402
+  },
+  {
+    "wikidataId": "Q1005472",
+    "name": "Warta",
+    "voivodeship": "łódzkie",
+    "latitude": 51.71033,
+    "longitude": 18.62508,
+    "population": 3073
+  },
+  {
+    "wikidataId": "Q1906290",
+    "name": "Wasilków",
+    "voivodeship": "podlaskie",
+    "latitude": 53.205,
+    "longitude": 23.20444,
+    "population": 12147
+  },
+  {
+    "wikidataId": "Q324912",
+    "name": "Wąbrzeźno",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.28333,
+    "longitude": 18.95,
+    "population": 13317
+  },
+  {
+    "wikidataId": "Q439",
+    "name": "Wąchock",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 51.07417,
+    "longitude": 21.01361,
+    "population": 2568
+  },
+  {
+    "wikidataId": "Q645022",
+    "name": "Wągrowiec",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.80833,
+    "longitude": 17.19944,
+    "population": 25773
+  },
+  {
+    "wikidataId": "Q1006065",
+    "name": "Wąsosz",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.55,
+    "longitude": 16.7,
+    "population": 2603
+  },
+  {
+    "wikidataId": "Q1947607",
+    "name": "Wąwolnica",
+    "voivodeship": "lubelskie",
+    "latitude": 51.29444,
+    "longitude": 22.14722,
+    "population": 970
+  },
+  {
+    "wikidataId": "Q672949",
+    "name": "Wejherowo",
+    "voivodeship": "pomorskie",
+    "latitude": 54.60556,
+    "longitude": 18.23556,
+    "population": 46446
+  },
+  {
+    "wikidataId": "Q328402",
+    "name": "Węgliniec",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.28833,
+    "longitude": 15.22556,
+    "population": 2704
+  },
+  {
+    "wikidataId": "Q751153",
+    "name": "Węgorzewo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 54.21667,
+    "longitude": 21.75,
+    "population": 10669
+  },
+  {
+    "wikidataId": "Q997447",
+    "name": "Węgorzyno",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.54083,
+    "longitude": 15.55944,
+    "population": 2657
+  },
+  {
+    "wikidataId": "Q953156",
+    "name": "Węgrów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.39954,
+    "longitude": 22.01634,
+    "population": 11993
+  },
+  {
+    "wikidataId": "Q999604",
+    "name": "Wiązów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.81528,
+    "longitude": 17.20361,
+    "population": 2311
+  },
+  {
+    "wikidataId": "Q999482",
+    "name": "Wielbark",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.39833,
+    "longitude": 20.94611,
+    "population": 2996
+  },
+  {
+    "wikidataId": "Q988612",
+    "name": "Wieleń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.89222,
+    "longitude": 16.17361,
+    "population": 5878
+  },
+  {
+    "wikidataId": "Q1002658",
+    "name": "Wielichowo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.11889,
+    "longitude": 16.34944,
+    "population": 1725
+  },
+  {
+    "wikidataId": "Q472621",
+    "name": "Wieliczka",
+    "voivodeship": "małopolskie",
+    "latitude": 49.98944,
+    "longitude": 20.06611,
+    "population": 26599
+  },
+  {
+    "wikidataId": "Q101530",
+    "name": "Wieluń",
+    "voivodeship": "łódzkie",
+    "latitude": 51.22056,
+    "longitude": 18.57,
+    "population": 21270
+  },
+  {
+    "wikidataId": "Q324907",
+    "name": "Wieruszów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.3,
+    "longitude": 18.15,
+    "population": 8514
+  },
+  {
+    "wikidataId": "Q991829",
+    "name": "Więcbork",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 53.35,
+    "longitude": 17.48333,
+    "population": 5799
+  },
+  {
+    "wikidataId": "Q948267",
+    "name": "Wilamowice",
+    "voivodeship": "śląskie",
+    "latitude": 49.9,
+    "longitude": 19.15,
+    "population": 3164
+  },
+  {
+    "wikidataId": "Q655956",
+    "name": "Wiskitki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.08831,
+    "longitude": 20.38708,
+    "population": 1423
+  },
+  {
+    "wikidataId": "Q257561",
+    "name": "Wisła",
+    "voivodeship": "śląskie",
+    "latitude": 49.65611,
+    "longitude": 18.85889,
+    "population": 10887
+  },
+  {
+    "wikidataId": "Q945288",
+    "name": "Wiślica",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.34861,
+    "longitude": 20.67417,
+    "population": 487
+  },
+  {
+    "wikidataId": "Q1122800",
+    "name": "Witkowo",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.43639,
+    "longitude": 17.77417,
+    "population": 7623
+  },
+  {
+    "wikidataId": "Q988636",
+    "name": "Witnica",
+    "voivodeship": "lubuskie",
+    "latitude": 52.67778,
+    "longitude": 14.89139,
+    "population": 6524
+  },
+  {
+    "wikidataId": "Q1025316",
+    "name": "Wleń",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.01667,
+    "longitude": 15.67056,
+    "population": 1630
+  },
+  {
+    "wikidataId": "Q836965",
+    "name": "Władysławowo",
+    "voivodeship": "pomorskie",
+    "latitude": 54.83389,
+    "longitude": 18.31556,
+    "population": 9613
+  },
+  {
+    "wikidataId": "Q106681",
+    "name": "Włocławek",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.65,
+    "longitude": 19.05,
+    "population": 104705
+  },
+  {
+    "wikidataId": "Q751076",
+    "name": "Włodawa",
+    "voivodeship": "lubelskie",
+    "latitude": 51.55,
+    "longitude": 23.55,
+    "population": 12500
+  },
+  {
+    "wikidataId": "Q2405929",
+    "name": "Włodowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.5556,
+    "longitude": 19.45155,
+    "population": null
+  },
+  {
+    "wikidataId": "Q611784",
+    "name": "Włoszczowa",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.85417,
+    "longitude": 19.96694,
+    "population": 9750
+  },
+  {
+    "wikidataId": "Q2917229",
+    "name": "Wodzisław",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.51667,
+    "longitude": 20.18333,
+    "population": 971
+  },
+  {
+    "wikidataId": "Q500260",
+    "name": "Wodzisław Śląski",
+    "voivodeship": "śląskie",
+    "latitude": 50,
+    "longitude": 18.45,
+    "population": 45949
+  },
+  {
+    "wikidataId": "Q987981",
+    "name": "Wojcieszów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.95194,
+    "longitude": 15.92185,
+    "population": 3486
+  },
+  {
+    "wikidataId": "Q985640",
+    "name": "Wojkowice",
+    "voivodeship": "śląskie",
+    "latitude": 50.36509,
+    "longitude": 19.03652,
+    "population": 8604
+  },
+  {
+    "wikidataId": "Q1089052",
+    "name": "Wojnicz",
+    "voivodeship": "małopolskie",
+    "latitude": 49.95778,
+    "longitude": 20.83833,
+    "population": 3113
+  },
+  {
+    "wikidataId": "Q386659",
+    "name": "Wolbórz",
+    "voivodeship": "łódzkie",
+    "latitude": 51.50083,
+    "longitude": 19.83222,
+    "population": 2263
+  },
+  {
+    "wikidataId": "Q1906323",
+    "name": "Wolbrom",
+    "voivodeship": "małopolskie",
+    "latitude": 50.37944,
+    "longitude": 19.75806,
+    "population": 8361
+  },
+  {
+    "wikidataId": "Q1862",
+    "name": "Wolin",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.84139,
+    "longitude": 14.61139,
+    "population": 4702
+  },
+  {
+    "wikidataId": "Q852363",
+    "name": "Wolsztyn",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.11667,
+    "longitude": 16.11667,
+    "population": 12504
+  },
+  {
+    "wikidataId": "Q1005384",
+    "name": "Wołczyn",
+    "voivodeship": "opolskie",
+    "latitude": 51.01833,
+    "longitude": 18.05694,
+    "population": 5542
+  },
+  {
+    "wikidataId": "Q930149",
+    "name": "Wołomin",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.34006,
+    "longitude": 21.24207,
+    "population": 36311
+  },
+  {
+    "wikidataId": "Q983726",
+    "name": "Wołów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.33639,
+    "longitude": 16.64417,
+    "population": 12275
+  },
+  {
+    "wikidataId": "Q554829",
+    "name": "Woźniki",
+    "voivodeship": "śląskie",
+    "latitude": 50.58667,
+    "longitude": 19.06056,
+    "population": 4228
+  },
+  {
+    "wikidataId": "Q1799",
+    "name": "Wrocław",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.11,
+    "longitude": 17.0325,
+    "population": 673531
+  },
+  {
+    "wikidataId": "Q52900",
+    "name": "Wronki",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.7,
+    "longitude": 16.38333,
+    "population": 10918
+  },
+  {
+    "wikidataId": "Q52902",
+    "name": "Września",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.325,
+    "longitude": 17.565,
+    "population": 31986
+  },
+  {
+    "wikidataId": "Q717938",
+    "name": "Wschowa",
+    "voivodeship": "lubuskie",
+    "latitude": 51.8,
+    "longitude": 16.3,
+    "population": 13533
+  },
+  {
+    "wikidataId": "Q988588",
+    "name": "Wyrzysk",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.15,
+    "longitude": 17.26667,
+    "population": 5085
+  },
+  {
+    "wikidataId": "Q556344",
+    "name": "Wysoka",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.18083,
+    "longitude": 17.08333,
+    "population": 2577
+  },
+  {
+    "wikidataId": "Q335580",
+    "name": "Wysokie Mazowieckie",
+    "voivodeship": "podlaskie",
+    "latitude": 52.91917,
+    "longitude": 22.51444,
+    "population": 9155
+  },
+  {
+    "wikidataId": "Q910997",
+    "name": "Wyszków",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.59278,
+    "longitude": 21.4584,
+    "population": 26349
+  },
+  {
+    "wikidataId": "Q569804",
+    "name": "Wyszogród",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.39167,
+    "longitude": 20.2,
+    "population": 2456
+  },
+  {
+    "wikidataId": "Q432353",
+    "name": "Wyśmierzyce",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.62361,
+    "longitude": 20.82,
+    "population": 869
+  },
+  {
+    "wikidataId": "Q1906311",
+    "name": "Zabłudów",
+    "voivodeship": "podlaskie",
+    "latitude": 53.01667,
+    "longitude": 23.33333,
+    "population": 2475
+  },
+  {
+    "wikidataId": "Q103892",
+    "name": "Zabrze",
+    "voivodeship": "śląskie",
+    "latitude": 50.3,
+    "longitude": 18.78333,
+    "population": 154642
+  },
+  {
+    "wikidataId": "Q140476",
+    "name": "Zagórów",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.16556,
+    "longitude": 17.89167,
+    "population": 2861
+  },
+  {
+    "wikidataId": "Q1946049",
+    "name": "Zagórz",
+    "voivodeship": "podkarpackie",
+    "latitude": 49.51667,
+    "longitude": 22.26667,
+    "population": 5046
+  },
+  {
+    "wikidataId": "Q945651",
+    "name": "Zakliczyn",
+    "voivodeship": "małopolskie",
+    "latitude": 49.85,
+    "longitude": 20.81667,
+    "population": 1594
+  },
+  {
+    "wikidataId": "Q2319835",
+    "name": "Zaklików",
+    "voivodeship": "podkarpackie",
+    "latitude": 50.76667,
+    "longitude": 22.11667,
+    "population": 2849
+  },
+  {
+    "wikidataId": "Q144786",
+    "name": "Zakopane",
+    "voivodeship": "małopolskie",
+    "latitude": 49.29944,
+    "longitude": 19.95194,
+    "population": 25562
+  },
+  {
+    "wikidataId": "Q144773",
+    "name": "Zakroczym",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.43333,
+    "longitude": 20.61667,
+    "population": 3177
+  },
+  {
+    "wikidataId": "Q1001571",
+    "name": "Zalewo",
+    "voivodeship": "warmińsko-mazurskie",
+    "latitude": 53.84588,
+    "longitude": 19.60612,
+    "population": 2078
+  },
+  {
+    "wikidataId": "Q145719",
+    "name": "Zambrów",
+    "voivodeship": "podlaskie",
+    "latitude": 52.98528,
+    "longitude": 22.24222,
+    "population": 21351
+  },
+  {
+    "wikidataId": "Q145972",
+    "name": "Zamość",
+    "voivodeship": "lubelskie",
+    "latitude": 50.72056,
+    "longitude": 23.25861,
+    "population": 59274
+  },
+  {
+    "wikidataId": "Q146933",
+    "name": "Zaniemyśl",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.15,
+    "longitude": 17.15,
+    "population": 2583
+  },
+  {
+    "wikidataId": "Q1281557",
+    "name": "Zator",
+    "voivodeship": "małopolskie",
+    "latitude": 49.99583,
+    "longitude": 19.43778,
+    "population": 3615
+  },
+  {
+    "wikidataId": "Q167731",
+    "name": "Zawadzkie",
+    "voivodeship": "opolskie",
+    "latitude": 50.60944,
+    "longitude": 18.48,
+    "population": 6639
+  },
+  {
+    "wikidataId": "Q1922299",
+    "name": "Zawichost",
+    "voivodeship": "świętokrzyskie",
+    "latitude": 50.80667,
+    "longitude": 21.85639,
+    "population": 1648
+  },
+  {
+    "wikidataId": "Q167756",
+    "name": "Zawidów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.02615,
+    "longitude": 15.06238,
+    "population": 3938
+  },
+  {
+    "wikidataId": "Q148827",
+    "name": "Zawiercie",
+    "voivodeship": "śląskie",
+    "latitude": 50.48766,
+    "longitude": 19.41679,
+    "population": 47689
+  },
+  {
+    "wikidataId": "Q248999",
+    "name": "Ząbki",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.29278,
+    "longitude": 21.11611,
+    "population": 43740
+  },
+  {
+    "wikidataId": "Q246693",
+    "name": "Ząbkowice Śląskie",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.58969,
+    "longitude": 16.81239,
+    "population": 14178
+  },
+  {
+    "wikidataId": "Q168902",
+    "name": "Zbąszynek",
+    "voivodeship": "lubuskie",
+    "latitude": 52.24222,
+    "longitude": 15.81639,
+    "population": 4930
+  },
+  {
+    "wikidataId": "Q168905",
+    "name": "Zbąszyń",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.25306,
+    "longitude": 15.91778,
+    "population": 7209
+  },
+  {
+    "wikidataId": "Q169224",
+    "name": "Zduny",
+    "voivodeship": "wielkopolskie",
+    "latitude": 51.63333,
+    "longitude": 17.36667,
+    "population": 4387
+  },
+  {
+    "wikidataId": "Q169237",
+    "name": "Zduńska Wola",
+    "voivodeship": "łódzkie",
+    "latitude": 51.6,
+    "longitude": 18.93333,
+    "population": 39846
+  },
+  {
+    "wikidataId": "Q1002944",
+    "name": "Zdzieszowice",
+    "voivodeship": "opolskie",
+    "latitude": 50.41917,
+    "longitude": 18.12361,
+    "population": 10380
+  },
+  {
+    "wikidataId": "Q189273",
+    "name": "Zelów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.46667,
+    "longitude": 19.21667,
+    "population": 7297
+  },
+  {
+    "wikidataId": "Q104407",
+    "name": "Zgierz",
+    "voivodeship": "łódzkie",
+    "latitude": 51.85639,
+    "longitude": 19.40611,
+    "population": 55079
+  },
+  {
+    "wikidataId": "Q147929",
+    "name": "Zgorzelec",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.15278,
+    "longitude": 15,
+    "population": 29966
+  },
+  {
+    "wikidataId": "Q104720",
+    "name": "Zielona Góra",
+    "voivodeship": "lubuskie",
+    "latitude": 51.93972,
+    "longitude": 15.505,
+    "population": 140002
+  },
+  {
+    "wikidataId": "Q199017",
+    "name": "Zielonka",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.30083,
+    "longitude": 21.15861,
+    "population": 18219
+  },
+  {
+    "wikidataId": "Q207100",
+    "name": "Ziębice",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.60078,
+    "longitude": 17.04056,
+    "population": 8195
+  },
+  {
+    "wikidataId": "Q249049",
+    "name": "Złocieniec",
+    "voivodeship": "zachodniopomorskie",
+    "latitude": 53.52694,
+    "longitude": 16.01222,
+    "population": 12373
+  },
+  {
+    "wikidataId": "Q249059",
+    "name": "Złoczew",
+    "voivodeship": "łódzkie",
+    "latitude": 51.41472,
+    "longitude": 18.60722,
+    "population": 3444
+  },
+  {
+    "wikidataId": "Q161899",
+    "name": "Złotoryja",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.12637,
+    "longitude": 15.91979,
+    "population": 14656
+  },
+  {
+    "wikidataId": "Q249166",
+    "name": "Złotów",
+    "voivodeship": "wielkopolskie",
+    "latitude": 53.36028,
+    "longitude": 17.04083,
+    "population": 18768
+  },
+  {
+    "wikidataId": "Q249122",
+    "name": "Złoty Stok",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.44472,
+    "longitude": 16.87586,
+    "population": 2556
+  },
+  {
+    "wikidataId": "Q1946056",
+    "name": "Zwierzyniec",
+    "voivodeship": "lubelskie",
+    "latitude": 50.61667,
+    "longitude": 22.96667,
+    "population": 2918
+  },
+  {
+    "wikidataId": "Q1897640",
+    "name": "Zwoleń",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.35542,
+    "longitude": 21.58768,
+    "population": 7417
+  },
+  {
+    "wikidataId": "Q392988",
+    "name": "Żabno",
+    "voivodeship": "małopolskie",
+    "latitude": 50.13333,
+    "longitude": 20.88333,
+    "population": 4177
+  },
+  {
+    "wikidataId": "Q158459",
+    "name": "Żagań",
+    "voivodeship": "lubuskie",
+    "latitude": 51.61667,
+    "longitude": 15.31667,
+    "population": 24424
+  },
+  {
+    "wikidataId": "Q149411",
+    "name": "Żarki",
+    "voivodeship": "śląskie",
+    "latitude": 50.62806,
+    "longitude": 19.37028,
+    "population": 4434
+  },
+  {
+    "wikidataId": "Q2461854",
+    "name": "Żarnów",
+    "voivodeship": "łódzkie",
+    "latitude": 51.24722,
+    "longitude": 20.17056,
+    "population": 1072
+  },
+  {
+    "wikidataId": "Q393043",
+    "name": "Żarów",
+    "voivodeship": "dolnośląskie",
+    "latitude": 50.94111,
+    "longitude": 16.49444,
+    "population": 6603
+  },
+  {
+    "wikidataId": "Q148849",
+    "name": "Żary",
+    "voivodeship": "lubuskie",
+    "latitude": 51.64194,
+    "longitude": 15.13722,
+    "population": 36004
+  },
+  {
+    "wikidataId": "Q393091",
+    "name": "Żelechów",
+    "voivodeship": "mazowieckie",
+    "latitude": 51.8,
+    "longitude": 21.9,
+    "population": 3790
+  },
+  {
+    "wikidataId": "Q393119",
+    "name": "Żerków",
+    "voivodeship": "wielkopolskie",
+    "latitude": 52.06667,
+    "longitude": 17.56667,
+    "population": 2078
+  },
+  {
+    "wikidataId": "Q393138",
+    "name": "Żmigród",
+    "voivodeship": "dolnośląskie",
+    "latitude": 51.47028,
+    "longitude": 16.905,
+    "population": 6339
+  },
+  {
+    "wikidataId": "Q324941",
+    "name": "Żnin",
+    "voivodeship": "kujawsko-pomorskie",
+    "latitude": 52.84958,
+    "longitude": 17.71992,
+    "population": 13268
+  },
+  {
+    "wikidataId": "Q393171",
+    "name": "Żory",
+    "voivodeship": "śląskie",
+    "latitude": 50.045,
+    "longitude": 18.70056,
+    "population": 61793
+  },
+  {
+    "wikidataId": "Q161893",
+    "name": "Żukowo",
+    "voivodeship": "pomorskie",
+    "latitude": 54.34583,
+    "longitude": 18.36056,
+    "population": 6652
+  },
+  {
+    "wikidataId": "Q393220",
+    "name": "Żuromin",
+    "voivodeship": "mazowieckie",
+    "latitude": 53.06611,
+    "longitude": 19.90894,
+    "population": 8592
+  },
+  {
+    "wikidataId": "Q393228",
+    "name": "Żychlin",
+    "voivodeship": "łódzkie",
+    "latitude": 52.24528,
+    "longitude": 19.62361,
+    "population": 7815
+  },
+  {
+    "wikidataId": "Q393251",
+    "name": "Żyrardów",
+    "voivodeship": "mazowieckie",
+    "latitude": 52.05,
+    "longitude": 20.43333,
+    "population": 39374
+  },
+  {
+    "wikidataId": "Q373059",
+    "name": "Żywiec",
+    "voivodeship": "śląskie",
+    "latitude": 49.68333,
+    "longitude": 19.21667,
+    "population": 30334
+  }
+]

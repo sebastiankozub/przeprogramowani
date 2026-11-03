@@ -44,7 +44,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | F-01 | prod-postgres-connection | (foundation) production app reads/writes a managed Postgres; schema migrates on deploy | —                | FR-001, NFR-03                    | done |
 | S-01 | register-and-login       | register with email + password, log in, and land on a gated home                     | F-01             | FR-001, US-01, NFR-03, §Access Control | done |
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | done |
-| S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | proposed |
+| S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | in-progress |
 | S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | done |
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | proposed |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | proposed |
@@ -131,7 +131,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Unknowns:**
   - Which public dataset of Polish locations with coordinates to seed from, and its license. — Owner: user. Block: no.
 - **Risk:** Introduces the seeded Polish location lookup with coordinates and fixes the location data shape that the distance-decay scoring in S-05 consumes; the guardrail "never expose exact location" is established here.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-04: Want-to-watch list
 

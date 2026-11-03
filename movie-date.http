@@ -94,3 +94,28 @@ Content-Type: application/json
 DELETE {{MovieDate_HostAddress}}/api/watchlist/{{movieId}}
 
 ###
+
+### Cities — search (signed in; q < 2 chars → []; prefix matches first, then larger places; max 20; 401 without cookie)
+### Responses carry only id, name, voivodeship — never coordinates or population.
+GET {{MovieDate_HostAddress}}/api/cities?q=war
+Accept: application/json
+
+### Cities — search "kra"
+GET {{MovieDate_HostAddress}}/api/cities?q=kra
+Accept: application/json
+
+### Profile — email + home city (city: null until set; 401 without cookie)
+GET {{MovieDate_HostAddress}}/api/profile
+Accept: application/json
+
+### Profile — set or change the home city (200 with the profile; 404 unknown city)
+# Take cityId from a search result above.
+@cityId = 1
+PUT {{MovieDate_HostAddress}}/api/profile/city
+Content-Type: application/json
+
+{
+  "cityId": {{cityId}}
+}
+
+###

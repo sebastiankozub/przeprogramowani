@@ -7,7 +7,7 @@ public static class MigrationRunner
     public const string Flag = "--migrate";
 
     /// <summary>
-    /// Applies pending EF Core migrations, then upserts the movie catalog seed;
+    /// Applies pending EF Core migrations, then upserts the movie and city catalog seeds;
     /// returns a process exit code (0 = success). A seed failure fails the release like a migration failure.
     /// </summary>
     public static async Task<int> RunAsync(IServiceProvider services)
@@ -29,6 +29,9 @@ public static class MigrationRunner
 
             var (inserted, updated) = await MovieCatalogSeeder.SeedAsync(db);
             logger.LogInformation("Movie catalog seeded: {Inserted} inserted, {Updated} updated.", inserted, updated);
+
+            (inserted, updated) = await CityCatalogSeeder.SeedAsync(db);
+            logger.LogInformation("City catalog seeded: {Inserted} inserted, {Updated} updated.", inserted, updated);
 
             return 0;
         }

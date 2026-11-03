@@ -56,6 +56,6 @@ public static class MoviesEndpoints
     }
 
     /// <summary>Escapes LIKE wildcards so user input is matched literally (escape character: backslash).</summary>
-    private static string EscapeLikePattern(string value) =>
+    internal static string EscapeLikePattern(string value) =>
         value.Replace("\\", "\\\\").Replace("%", "\\%").Replace("_", "\\_");
 }

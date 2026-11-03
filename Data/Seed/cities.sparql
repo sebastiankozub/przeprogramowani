@@ -1,0 +1,72 @@
+# City catalog seed for MovieDate (Data/Seed/cities.json).
+# Normalize the result with Data/Seed/normalize-cities.mjs (see its header); it picks the latest-dated
+# population, strips Wikipedia-style disambiguators and applies manual corrections.
+# Settlements located in Poland (P17 = Q36) that either
+#   - have town (city) rights: a current, non-deprecated P31 statement (no end time P582) of one of the
+#     classes Wikidata uses for Polish towns — city, town, city with powiat rights, big city, urban
+#     municipality (merged town+gmina items), city or town, small city; plus two towns typed only as
+#     "spa town" / "Hanseatic city" upstream (Lądek-Zdrój, Kamień Pomorski), or
+#   - are a village of Poland (Q3558970) with population (P1082) >= 10,000,
+# without a dissolved/abolished date (P576), with coordinates (P625), a Polish label (falling back to the
+# language-neutral "mul" label, which many Polish towns now carry instead of "pl") and one of the
+# 16 current voivodeships reached through the P131 (located in) chain (gmina -> powiat -> voivodeship).
+# The chain is unrolled to at most four steps (P131+ times out); historical voivodeships are excluded by
+# matching only the 16 current ones. All population statements are returned as "value|date|rank" for the
+# normalizer to choose from.
+# Run:
+#   curl -G https://query.wikidata.org/sparql --data-urlencode query@Data/Seed/cities.sparql \
+#     -H "Accept: application/sparql-results+json" -H "User-Agent: MovieDate-seed/1.0 (course project)"
+SELECT ?item ?kind
+       (SAMPLE(COALESCE(?plLabel, ?mulLabel)) AS ?name)
+       (SAMPLE(?coord) AS ?coords)
+       (GROUP_CONCAT(DISTINCT ?voivLabel; SEPARATOR = ",") AS ?voivodeships)
+       (GROUP_CONCAT(DISTINCT CONCAT(STR(?pop), "|", COALESCE(STR(?popDate), ""), "|", STRAFTER(STR(?popRank), "#"));
+                     SEPARATOR = ",") AS ?populations)
+WITH {
+  SELECT DISTINCT ?item ?kind WHERE {
+      {
+        VALUES ?townClass { wd:Q515 wd:Q3957 wd:Q925381 wd:Q1549591 wd:Q2616791 wd:Q7930989 wd:Q18466176 }
+        ?item p:P31 ?classStatement .
+        ?classStatement ps:P31 ?townClass .
+        FILTER NOT EXISTS { ?classStatement pq:P582 [] }
+        FILTER NOT EXISTS { ?classStatement wikibase:rank wikibase:DeprecatedRank }
+        ?item wdt:P17 wd:Q36 .
+        BIND("town" AS ?kind)
+      }
+      UNION
+      {
+        VALUES ?item { wd:Q995889 wd:Q161887 }
+        BIND("town" AS ?kind)
+      }
+      UNION
+      {
+        ?item wdt:P31 wd:Q3558970 ;
+              wdt:P17 wd:Q36 ;
+              wdt:P1082 ?villagePopulation .
+        FILTER(?villagePopulation >= 10000)
+        BIND("village" AS ?kind)
+      }
+      FILTER NOT EXISTS { ?item wdt:P576 [] }
+  }
+} AS %candidates
+WHERE {
+  INCLUDE %candidates
+  OPTIONAL { ?item rdfs:label ?plLabel . FILTER(LANG(?plLabel) = "pl") }
+  OPTIONAL { ?item rdfs:label ?mulLabel . FILTER(LANG(?mulLabel) = "mul") }
+  FILTER(BOUND(?plLabel) || BOUND(?mulLabel))
+  ?item wdt:P625 ?coord .
+  ?item wdt:P131 ?a1 .
+  OPTIONAL { ?a1 wdt:P131 ?a2 . OPTIONAL { ?a2 wdt:P131 ?a3 . OPTIONAL { ?a3 wdt:P131 ?a4 . } } }
+  VALUES ?voivodeship { wd:Q54150 wd:Q54153 wd:Q54155 wd:Q54157 wd:Q54158 wd:Q54159 wd:Q54169 wd:Q54171
+                        wd:Q54175 wd:Q54177 wd:Q54180 wd:Q54181 wd:Q54183 wd:Q54184 wd:Q54187 wd:Q54188 }
+  FILTER(?voivodeship IN (?a1, ?a2, ?a3, ?a4))
+  ?voivodeship rdfs:label ?voivLabel . FILTER(LANG(?voivLabel) = "pl")
+  OPTIONAL {
+    ?item p:P1082 ?popStatement .
+    ?popStatement ps:P1082 ?pop ;
+                  wikibase:rank ?popRank .
+    FILTER(?popRank != wikibase:DeprecatedRank)
+    OPTIONAL { ?popStatement pq:P585 ?popDate . }
+  }
+}
+GROUP BY ?item ?kind

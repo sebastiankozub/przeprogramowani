@@ -26,6 +26,13 @@
     <EmbeddedResource Include="Data/Seed/movies.json" LogicalName="MovieDate.Data.Seed.movies.json" />
   </ItemGroup>
 
+  <!-- City catalog seed (generated from Data/Seed/cities.sparql), upserted by MigrationRunner. -->
+  <ItemGroup>
+    <None Remove="Data/Seed/cities.json" />
+    <Content Remove="Data/Seed/cities.json" />
+    <EmbeddedResource Include="Data/Seed/cities.json" LogicalName="MovieDate.Data.Seed.cities.json" />
+  </ItemGroup>
+
   <!-- Test projects live under tests/ and are built separately; keep them out of the app's compilation. -->
   <ItemGroup>
     <Compile Remove="tests/**" />
