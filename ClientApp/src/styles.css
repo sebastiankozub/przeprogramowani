@@ -83,3 +83,20 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+/* Route loading bar: fixed at the very top so it never shifts the layout. */
+.app-navigating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* "Ładowanie…" placeholder while a page waits for its first data. */
+.page-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}

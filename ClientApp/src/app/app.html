@@ -28,6 +28,9 @@
     </nav>
   }
 </mat-toolbar>
+@if (navigating()) {
+  <mat-progress-bar class="app-navigating" mode="indeterminate" aria-label="Ładowanie strony" />
+}
 <main>
   <router-outlet />
 </main>

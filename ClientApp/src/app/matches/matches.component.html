@@ -23,6 +23,10 @@
     <p class="auth-error" role="alert">{{ message }}</p>
   }
 
+  @if (!loaded()) {
+    <app-loading />
+  }
+
   @if (loaded()) {
     @if (matches().length === 0) {
       @if (!pending() && !profileIncomplete()) {

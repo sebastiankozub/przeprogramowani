@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { catchError, debounceTime, distinctUntilChanged, firstValueFrom, map, of, startWith, switchMap, tap } from 'rxjs';
 import { MoviesError } from '../shared/api-errors';
 import { City, DISPLAY_NAME_MAX_LENGTH, Profile, ProfileService, cityLabel } from './profile.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 const SEARCH_DEBOUNCE_MS = 300;
 const MIN_QUERY_LENGTH = 2;
@@ -18,7 +19,7 @@ const MIN_QUERY_LENGTH = 2;
  */
 @Component({
   selector: 'app-profile',
-  imports: [ReactiveFormsModule, MatAutocompleteModule, MatButtonModule, MatFormFieldModule, MatInputModule],
+  imports: [LoadingComponent, ReactiveFormsModule, MatAutocompleteModule, MatButtonModule, MatFormFieldModule, MatInputModule],
   templateUrl: './profile.component.html',
 })
 export class ProfileComponent implements OnInit {

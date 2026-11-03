@@ -8,6 +8,7 @@ import { Movie } from '../movies/movies.service';
 import { cityLabel } from '../profile/profile.service';
 import { MoviesError } from '../shared/api-errors';
 import { Match, MatchesService, PROFILE_INCOMPLETE } from './matches.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 /** How often the status is re-checked while a background recompute is pending. */
 export const STATUS_POLL_INTERVAL_MS = 2000;
@@ -20,7 +21,7 @@ export const STATUS_POLL_TIMEOUT_MS = 30000;
  */
 @Component({
   selector: 'app-matches',
-  imports: [MatButtonModule, MatProgressBarModule, RouterLink],
+  imports: [LoadingComponent, MatButtonModule, MatProgressBarModule, RouterLink],
   templateUrl: './matches.component.html',
 })
 export class MatchesComponent implements OnInit, OnDestroy {

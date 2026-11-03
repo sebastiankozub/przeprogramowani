@@ -15,6 +15,10 @@
     }
   }
 
+  @if (!loaded()) {
+    <app-loading />
+  }
+
   @if (loaded()) {
     <form class="movies-add" (submit)="$event.preventDefault(); saveName()">
       <mat-form-field class="movies-search">

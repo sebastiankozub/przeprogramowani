@@ -15,6 +15,10 @@
     <p class="auth-error" role="alert">{{ message }}</p>
   }
 
+  @if (!loaded()) {
+    <app-loading />
+  }
+
   @if (loaded() && !notAllowed() && other(); as person) {
     @if (messages().length === 0) {
       <p>Nie ma jeszcze wiadomości. Napisz pierwszą!</p>

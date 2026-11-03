@@ -7,10 +7,11 @@ import { MovieSearchComponent } from '../movies/movie-search.component';
 import { MAX_RATING, MIN_RATING, Movie } from '../movies/movies.service';
 import { MoviesError } from '../shared/api-errors';
 import { WatchlistItem, WatchlistService } from './watchlist.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 @Component({
   selector: 'app-watchlist',
-  imports: [MatButtonModule, MatFormFieldModule, MatSelectModule, MovieSearchComponent],
+  imports: [LoadingComponent, MatButtonModule, MatFormFieldModule, MatSelectModule, MovieSearchComponent],
   templateUrl: './watchlist.component.html',
 })
 export class WatchlistComponent implements OnInit {
