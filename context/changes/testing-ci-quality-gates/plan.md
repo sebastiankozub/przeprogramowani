@@ -74,9 +74,9 @@ A PR shows three green CI jobs — `backend`, `frontend`, `e2e`. A red test in a
 
 #### Automated
 
-- [ ] 1.1 CI jobs backend, frontend, e2e green on the PR
-- [ ] 1.2 Agent review comment posted on the PR
+- [x] 1.1 CI jobs backend, frontend, e2e green on the PR — 31b5890
+- [x] 1.2 Agent review comment posted on the PR — 31b5890
 
 #### Manual
 
-- [ ] 1.3 Actions tab shows three jobs with the expected test counts
+- [x] 1.3 Actions tab shows three jobs with the expected test counts — 31b5890

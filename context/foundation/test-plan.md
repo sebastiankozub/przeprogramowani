@@ -64,7 +64,7 @@ orchestrator updates Status as artifacts appear on disk.
 | # | Phase name | Goal (one line) | Risks covered | Test types | Status | Change folder |
 |---|------------|-----------------|---------------|------------|--------|---------------|
 | 1 | Critical-path browser coverage | Prove a fresh user can go register → profile → rate → `/matches` and see the list update by itself in a real browser | #1, #4 | e2e (Playwright) | complete | context/changes/testing-critical-path-e2e/ |
-| 2 | Quality gates in CI | Prove that a red backend, SPA or e2e test blocks a pull request | #5 | CI gate (GitHub Actions) | implementing | context/changes/testing-ci-quality-gates/ |
+| 2 | Quality gates in CI | Prove that a red backend, SPA or e2e test blocks a pull request | #5 | CI gate (GitHub Actions) | complete | context/changes/testing-ci-quality-gates/ |
 | 3 | Privacy and ranking contract | Prove responses never leak another user's private data and that ranking follows PRD checkpoints, with oracles taken from the PRD | #2, #3 | integration + unit | not started | — |
 
 ## 4. Stack

@@ -12,12 +12,14 @@ permissions:
 
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  # Cancel superseded runs on PR branches only; every push to main keeps its own gate result.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   backend:
     name: backend (build + integration tests)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-dotnet@v4
@@ -32,6 +34,7 @@ jobs:
   frontend:
     name: frontend (unit tests + production build)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     defaults:
       run:
         working-directory: ClientApp
@@ -51,6 +54,7 @@ jobs:
   e2e:
     name: e2e (Playwright critical path)
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     services:
       # Same credentials as appsettings.Development.json / compose.yaml.
       postgres:
