@@ -277,9 +277,9 @@ Not applicable. There are no schema or data changes. Test users accumulate in th
 
 #### Automated
 
-- [x] 3.1 Test plan §3 Phase 1 row is `complete`
-- [x] 3.2 No "TBD — see §3 Phase 1" placeholder remains
+- [x] 3.1 Test plan §3 Phase 1 row is `complete` — 82ef429
+- [x] 3.2 No "TBD — see §3 Phase 1" placeholder remains — 82ef429
 
 #### Manual
 
-- [ ] 3.3 §6.3 reads as a usable e2e recipe
+- [x] 3.3 §6.3 reads as a usable e2e recipe — 82ef429

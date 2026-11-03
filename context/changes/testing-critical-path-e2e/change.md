@@ -1,7 +1,7 @@
 ---
 change_id: testing-critical-path-e2e
 title: Critical-path browser coverage (test rollout phase 1)
-status: implementing
+status: implemented
 created: 2026-11-03
 updated: 2026-11-03
 archived_at: null
