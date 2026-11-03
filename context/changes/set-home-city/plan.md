@@ -300,11 +300,11 @@ Deploy, verify on production, record it.
 
 #### Automated
 
-- [ ] 3.1 New release completes
-- [ ] 3.2 Prod `/api/cities?q=war` → `401`
-- [ ] 3.3 Prod `/health` → `{"status":"ok"}`
+- [x] 3.1 New release completes
+- [x] 3.2 Prod `/api/cities?q=war` → `401`
+- [x] 3.3 Prod `/health` → `{"status":"ok"}`
 
 #### Manual
 
-- [ ] 3.4 Prod flow: set and change the city, home shows it, no coordinates in responses
-- [ ] 3.5 `deploy-plan.md` updated with the new known-good release
+- [x] 3.4 Prod flow: set and change the city, home shows it, no coordinates in responses
+- [x] 3.5 `deploy-plan.md` updated with the new known-good release
