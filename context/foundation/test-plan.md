@@ -64,7 +64,7 @@ orchestrator updates Status as artifacts appear on disk.
 | # | Phase name | Goal (one line) | Risks covered | Test types | Status | Change folder |
 |---|------------|-----------------|---------------|------------|--------|---------------|
 | 1 | Critical-path browser coverage | Prove a fresh user can go register → profile → rate → `/matches` and see the list update by itself in a real browser | #1, #4 | e2e (Playwright) | complete | context/changes/testing-critical-path-e2e/ |
-| 2 | Quality gates in CI | Prove that a red backend, SPA or e2e test blocks a pull request | #5 | CI gate (GitHub Actions) | not started | — |
+| 2 | Quality gates in CI | Prove that a red backend, SPA or e2e test blocks a pull request | #5 | CI gate (GitHub Actions) | implementing | context/changes/testing-ci-quality-gates/ |
 | 3 | Privacy and ranking contract | Prove responses never leak another user's private data and that ranking follows PRD checkpoints, with oracles taken from the PRD | #2, #3 | integration + unit | not started | — |
 
 ## 4. Stack
@@ -75,7 +75,7 @@ orchestrator updates Status as artifacts appear on disk.
 | database for tests | Testcontainers.PostgreSql | 4.16.0 | throwaway Postgres per run; needs Docker |
 | SPA unit | Vitest via `ng test` | vitest ^5.0.0, Angular ^22.2.0 | 8 spec files, 33 tests |
 | e2e | Playwright Test (`ClientApp/playwright.config.ts`) | @playwright/test 1.64.1 | 2 specs in `ClientApp/e2e/`; starts API + `ng serve`; details in `context/foundation/test-stack.md` |
-| CI | none yet — see Phase 2 | — | only a manual deploy workflow exists |
+| CI | GitHub Actions `.github/workflows/ci.yml` | — | jobs backend, frontend, e2e on every PR and push to main; agent review in `impl-review.yml` |
 
 Test-base profile: `meaningful` — backend integration suite across every feature plus SPA unit specs; no browser-level test and no automatic gate.
 
@@ -89,10 +89,10 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 
 | Gate | Where | Required? | Catches |
 |------|-------|-----------|---------|
-| build (`dotnet build`, `ng build`) | local + CI | required after §3 Phase 2 | compile and template errors |
-| backend integration (`dotnet test`) | local + CI | required after §3 Phase 2 | API, matching and persistence regressions |
-| SPA unit (`ng test`) | local + CI | required after §3 Phase 2 | component and service regressions |
-| e2e on the critical path (`npm run e2e` in `ClientApp/`) | local now, CI on PR after §3 Phase 2 | required (local) since §3 Phase 1; CI after Phase 2 | broken primary user path, `/matches` not refreshing itself |
+| build (`dotnet build`, `ng build`) | local + CI | required (CI) | compile and template errors |
+| backend integration (`dotnet test`) | local + CI | required (CI) | API, matching and persistence regressions |
+| SPA unit (`ng test`) | local + CI | required (CI) | component and service regressions |
+| e2e on the critical path (`npm run e2e` in `ClientApp/`) | local + CI on PR | required (CI) | broken primary user path, `/matches` not refreshing itself |
 | privacy and ranking contract tests | local + CI | required after §3 Phase 3 | data leaks, ranking drift |
 
 ## 6. Cookbook Patterns

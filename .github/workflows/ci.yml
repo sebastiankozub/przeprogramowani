@@ -1,0 +1,94 @@
+# Quality gates (test-plan.md §5, rollout Phase 2): every PR and every push to main runs
+# backend build + integration tests, SPA unit tests + production build, and the Playwright e2e suite.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: backend (build + integration tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - name: Build
+        run: dotnet build movie-date.csproj
+      # Testcontainers starts its own throwaway Postgres; Docker is available on ubuntu-latest.
+      - name: Integration tests
+        run: dotnet test tests/MovieDate.Tests
+
+  frontend:
+    name: frontend (unit tests + production build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ClientApp
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: ClientApp/package-lock.json
+      - run: npm ci
+      - name: Unit tests
+        run: npx ng test --watch=false
+      - name: Production build
+        run: npm run build
+
+  e2e:
+    name: e2e (Playwright critical path)
+    runs-on: ubuntu-latest
+    services:
+      # Same credentials as appsettings.Development.json / compose.yaml.
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: moviedate
+          POSTGRES_USER: moviedate
+          POSTGRES_PASSWORD: moviedate_dev
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U moviedate"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    defaults:
+      run:
+        working-directory: ClientApp
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: ClientApp/package-lock.json
+      - run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      # playwright.config.ts starts the API (--migrate, then run) and ng serve itself.
+      - name: E2E tests
+        run: npm run e2e
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: ClientApp/playwright-report/
+          retention-days: 7
