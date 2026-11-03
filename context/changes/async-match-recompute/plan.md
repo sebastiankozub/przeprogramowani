@@ -286,20 +286,20 @@ Additive: two nullable columns. Existing users get `NULL` stamps, which the pend
 
 #### Manual
 
-- [x] 2.4 Rate a movie, open `/matches` immediately: "Trwa aktualizacja dopasowań…" appears, then the list updates on its own
-- [x] 2.5 Account without city/name: `/matches` shows the profile message and link, no spinner forever
+- [x] 2.4 Rate a movie, open `/matches` immediately: "Trwa aktualizacja dopasowań…" appears, then the list updates on its own — 43d29b8
+- [x] 2.5 Account without city/name: `/matches` shows the profile message and link, no spinner forever — 43d29b8
 - [x] 2.6 No "Szukaj dopasowań" button anywhere
 
 ### Phase 3: Production — deploy + verify
 
 #### Automated
 
-- [x] 3.1 Release completes on Fly (release command applies `AddMatchRecomputeStamps`)
-- [x] 3.2 Production `/api/matches/status` → `401`
-- [x] 3.3 Production `/health` → ok
+- [x] 3.1 Release completes on Fly (release command applies `AddMatchRecomputeStamps`) — 43d29b8
+- [x] 3.2 Production `/api/matches/status` → `401` — 43d29b8
+- [x] 3.3 Production `/health` → ok — 43d29b8
 
 #### Manual
 
-- [x] 3.4 Logged in as `sebastiankozub@o2.pl`, `/matches` shows the pending indicator once, then a list (self-heal for the pre-S-06 account)
-- [x] 3.5 On an `mdtest-*` account rate Casablanca ≥ 7: the reference account's `/matches` shows the change within ~10 s without any click
+- [x] 3.4 Logged in as `sebastiankozub@o2.pl`, `/matches` shows the pending indicator once, then a list (self-heal for the pre-S-06 account) — 43d29b8
+- [x] 3.5 On an `mdtest-*` account rate Casablanca ≥ 7: the reference account's `/matches` shows the change within ~10 s without any click — 43d29b8
 - [x] 3.6 `deploy-plan.md` updated with the new known-good release
