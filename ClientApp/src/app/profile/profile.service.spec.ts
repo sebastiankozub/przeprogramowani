@@ -3,7 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 import { MoviesError } from '../shared/api-errors';
-import { ProfileService, UNKNOWN_CITY, cityLabel } from './profile.service';
+import { INVALID_DISPLAY_NAME, ProfileService, UNKNOWN_CITY, cityLabel } from './profile.service';
 
 describe('ProfileService', () => {
   let service: ProfileService;
@@ -33,7 +33,7 @@ describe('ProfileService', () => {
   });
 
   it('loads the profile', async () => {
-    const profile = { email: 'a@example.com', city: null };
+    const profile = { email: 'a@example.com', displayName: null, city: null };
     const call = firstValueFrom(service.get());
 
     const req = http.expectOne('/api/profile');
@@ -44,7 +44,7 @@ describe('ProfileService', () => {
   });
 
   it('sets the city by putting cityId', async () => {
-    const profile = { email: 'a@example.com', city: krakow };
+    const profile = { email: 'a@example.com', displayName: null, city: krakow };
     const call = firstValueFrom(service.setCity(7));
 
     const req = http.expectOne('/api/profile/city');
@@ -63,6 +63,33 @@ describe('ProfileService', () => {
     expect(err).toBeInstanceOf(MoviesError);
     expect((err as MoviesError).message).toBe(UNKNOWN_CITY);
     expect((err as MoviesError).status).toBe(404);
+  });
+
+  it('sets the display name by putting displayName', async () => {
+    const profile = { email: 'a@example.com', displayName: 'Ania', city: null };
+    const call = firstValueFrom(service.setDisplayName('Ania'));
+
+    const req = http.expectOne('/api/profile/display-name');
+    expect(req.request.method).toBe('PUT');
+    expect(req.request.body).toEqual({ displayName: 'Ania' });
+    req.flush(profile);
+
+    await expect(call).resolves.toEqual(profile);
+  });
+
+  it('maps a 400 on the display name to the Polish validation message', async () => {
+    const call = firstValueFrom(service.setDisplayName('   ')).catch((e: unknown) => e);
+    http
+      .expectOne('/api/profile/display-name')
+      .flush(
+        { title: 'One or more validation errors occurred.', errors: { displayName: ['Invalid display name.'] } },
+        { status: 400, statusText: 'Bad Request' },
+      );
+
+    const err = await call;
+    expect(err).toBeInstanceOf(MoviesError);
+    expect((err as MoviesError).message).toBe(INVALID_DISPLAY_NAME);
+    expect((err as MoviesError).status).toBe(400);
   });
 
   it('labels a city with its voivodeship', () => {

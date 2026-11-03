@@ -12,6 +12,8 @@ export interface City {
 
 export interface Profile {
   email: string;
+  /** Public name shown to other users in matches; null until the user sets one. */
+  displayName: string | null;
   city: City | null;
 }
 
@@ -19,6 +21,9 @@ const PROFILE_API = '/api/profile';
 const CITIES_API = '/api/cities';
 
 export const UNKNOWN_CITY = 'Nie znaleziono tego miasta.';
+/** Mirrors the backend limit, applied after trimming. */
+export const DISPLAY_NAME_MAX_LENGTH = 40;
+export const INVALID_DISPLAY_NAME = `Nazwa musi mieć od 1 do ${DISPLAY_NAME_MAX_LENGTH} znaków.`;
 
 /** "Nazwa (województwo)". */
 export function cityLabel(city: City): string {
@@ -39,6 +44,16 @@ export class ProfileService {
       mapErrors({
         notFound: UNKNOWN_CITY,
         fallback: 'Nie udało się zapisać miasta.',
+      }),
+    );
+  }
+
+  /** The server trims the name and requires 1–40 characters after trimming. */
+  setDisplayName(displayName: string): Observable<Profile> {
+    return this.http.put<Profile>(`${PROFILE_API}/display-name`, { displayName }).pipe(
+      mapErrors({
+        badRequest: INVALID_DISPLAY_NAME,
+        fallback: 'Nie udało się zapisać nazwy.',
       }),
     );
   }

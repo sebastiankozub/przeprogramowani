@@ -19,13 +19,17 @@ export class HomeComponent implements OnInit {
   protected readonly error = signal<string | null>(null);
   /** The home city; undefined until the profile loads (and when it fails — then home shows neither city nor nudge). */
   protected readonly city = signal<City | null | undefined>(undefined);
+  /** The display name; undefined until the profile loads (and when it fails), like the city. */
+  protected readonly displayName = signal<string | null | undefined>(undefined);
   protected readonly cityLabel = cityLabel;
 
   async ngOnInit(): Promise<void> {
     try {
-      this.city.set((await firstValueFrom(this.profiles.get())).city);
+      const profile = await firstValueFrom(this.profiles.get());
+      this.displayName.set(profile.displayName);
+      this.city.set(profile.city);
     } catch {
-      // The city line is optional on home; a failed load just leaves it out.
+      // The name and city lines are optional on home; a failed load just leaves them out.
     }
   }
 

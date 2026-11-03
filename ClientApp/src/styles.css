@@ -70,3 +70,11 @@
 .movies-search-field {
   width: 100%;
 }
+
+.matches-actions {
+  margin-bottom: 8px;
+}
+
+.matches-score {
+  font-size: 1.25rem;
+}

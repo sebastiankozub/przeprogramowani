@@ -21,6 +21,12 @@ export const routes: Routes = [
     title: 'Do obejrzenia',
   },
   {
+    path: 'matches',
+    loadComponent: () => import('./matches/matches.component').then((m) => m.MatchesComponent),
+    canActivate: [authGuard],
+    title: 'Dopasowania',
+  },
+  {
     path: 'profile',
     loadComponent: () => import('./profile/profile.component').then((m) => m.ProfileComponent),
     canActivate: [authGuard],

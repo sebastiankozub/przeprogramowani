@@ -3,6 +3,11 @@
 
   @if (profile(); as current) {
     <p>Email: <strong>{{ current.email }}</strong></p>
+    @if (current.displayName; as name) {
+      <p>Twoja nazwa: <strong>{{ name }}</strong></p>
+    } @else {
+      <p>Nie ustawiono nazwy</p>
+    }
     @if (current.city; as city) {
       <p>Twoje miasto: <strong>{{ cityLabel(city) }}</strong></p>
     } @else {
@@ -11,6 +16,15 @@
   }
 
   @if (loaded()) {
+    <form class="movies-add" (submit)="$event.preventDefault(); saveName()">
+      <mat-form-field class="movies-search">
+        <mat-label>Twoja nazwa</mat-label>
+        <input matInput type="text" [formControl]="nameControl" autocomplete="nickname" />
+        <mat-hint>Widoczna dla Twoich dopasowań, od 1 do {{ displayNameMaxLength }} znaków</mat-hint>
+      </mat-form-field>
+      <button mat-flat-button type="submit" [disabled]="!canSaveName()">Zapisz nazwę</button>
+    </form>
+
     <form class="movies-add" (submit)="$event.preventDefault(); save()">
       <mat-form-field class="movies-search">
         <mat-label>Wybierz miasto</mat-label>

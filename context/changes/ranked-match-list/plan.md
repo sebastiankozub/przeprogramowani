@@ -384,9 +384,9 @@ Ship the slice, create demo accounts in production through the public API, and v
 
 #### Automated
 
-- [ ] 3.1 Frontend tests pass: `npx ng test --watch=false`
-- [ ] 3.2 Frontend production build passes
-- [ ] 3.3 Docker image builds
+- [x] 3.1 Frontend tests pass: `npx ng test --watch=false`
+- [x] 3.2 Frontend production build passes
+- [x] 3.3 Docker image builds
 
 #### Manual
 

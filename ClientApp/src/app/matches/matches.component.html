@@ -1,0 +1,66 @@
+<section class="movies">
+  <h1>Dopasowania</h1>
+
+  <div class="matches-actions">
+    <button mat-flat-button type="button" [disabled]="searching()" (click)="search()">Szukaj dopasowań</button>
+  </div>
+  @if (searching()) {
+    <mat-progress-bar mode="indeterminate" aria-label="Szukanie dopasowań" />
+  }
+
+  @if (profileIncomplete()) {
+    <p class="auth-error" role="alert">
+      {{ profileIncompleteMessage }}
+      <a routerLink="/profile">Przejdź do profilu</a>
+    </p>
+  }
+  @if (error(); as message) {
+    <p class="auth-error" role="alert">{{ message }}</p>
+  }
+
+  @if (loaded()) {
+    @if (matches().length === 0) {
+      @if (searched()) {
+        <p>Nie znaleziono jeszcze dopasowań. Oceń więcej filmów lub dodaj je do listy do obejrzenia i spróbuj ponownie.</p>
+      } @else {
+        <p>Nie masz jeszcze dopasowań. Kliknij „Szukaj dopasowań”, aby znaleźć osoby o podobnym guście filmowym.</p>
+      }
+    } @else {
+      <ol class="movies-list">
+        @for (match of matches(); track match.userId) {
+          <li class="movies-item">
+            <div class="movies-item-text">
+              <strong>{{ match.displayName }}</strong>
+              <span>{{ cityLabel(match.city) }}</span>
+              @if (match.sharedFavoritesCount > 0 || match.sharedFavorites.length > 0) {
+                <span>
+                  Wspólne ulubione ({{ match.sharedFavoritesCount }}):
+                  @for (movie of match.sharedFavorites; track movie.id; let last = $last) {
+                    {{ movieLabel(movie) }}{{ last ? '' : ', ' }}
+                  }
+                  @if (moreCount(match.sharedFavoritesCount, match.sharedFavorites); as more) {
+                    i jeszcze {{ more }}
+                  }
+                </span>
+              }
+              @if (match.sharedWatchlistCount > 0 || match.sharedWatchlist.length > 0) {
+                <span>
+                  Wspólne do obejrzenia ({{ match.sharedWatchlistCount }}):
+                  @for (movie of match.sharedWatchlist; track movie.id; let last = $last) {
+                    {{ movieLabel(movie) }}{{ last ? '' : ', ' }}
+                  }
+                  @if (moreCount(match.sharedWatchlistCount, match.sharedWatchlist); as more) {
+                    i jeszcze {{ more }}
+                  }
+                </span>
+              }
+            </div>
+            <strong class="matches-score" [attr.aria-label]="'Dopasowanie ' + match.score + ' na 100'"
+              >{{ match.score }}/100</strong
+            >
+          </li>
+        }
+      </ol>
+    }
+  }
+</section>
