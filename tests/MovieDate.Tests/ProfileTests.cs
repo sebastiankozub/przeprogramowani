@@ -14,7 +14,7 @@ public sealed class ProfileTests(PostgresAppFixture factory)
 
     private record CityBody(int Id, string Name, string Voivodeship);
 
-    private record ProfileBody(string Email, CityBody? City);
+    private record ProfileBody(string Email, string? DisplayName, CityBody? City);
 
     private record MeBody(string Email);
 
@@ -35,6 +35,118 @@ public sealed class ProfileTests(PostgresAppFixture factory)
 
     private static Task<HttpResponseMessage> SetCity(HttpClient client, int cityId) =>
         client.PutAsJsonAsync("/api/profile/city", new { cityId });
+
+    private static Task<HttpResponseMessage> SetDisplayName(HttpClient client, string? displayName) =>
+        client.PutAsJsonAsync("/api/profile/display-name", new { displayName });
+
+    [Fact]
+    public async Task New_user_profile_has_no_display_name()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        Assert.Null((await Profile(client)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Set_display_name_trims_and_profile_shows_it()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        var set = await SetDisplayName(client, "  Ania ");
+
+        Assert.Equal(HttpStatusCode.OK, set.StatusCode);
+        Assert.Equal("Ania", (await set.Content.ReadFromJsonAsync<ProfileBody>())?.DisplayName);
+        Assert.Equal("Ania", (await Profile(client)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Change_display_name_replaces_it()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+        Assert.Equal(HttpStatusCode.OK, (await SetDisplayName(client, "Ania")).StatusCode);
+
+        var change = await SetDisplayName(client, "Ola");
+
+        Assert.Equal(HttpStatusCode.OK, change.StatusCode);
+        Assert.Equal("Ola", (await Profile(client)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Display_name_at_max_length_is_accepted()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+        var name = new string('a', AppUser.DisplayNameMaxLength);
+
+        Assert.Equal(HttpStatusCode.OK, (await SetDisplayName(client, name)).StatusCode);
+        Assert.Equal(name, (await Profile(client)).DisplayName);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    [InlineData(null)]
+    public async Task Empty_or_missing_display_name_returns_400_and_keeps_current(string? displayName)
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+        Assert.Equal(HttpStatusCode.OK, (await SetDisplayName(client, "Ania")).StatusCode);
+
+        var response = await SetDisplayName(client, displayName);
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Contains("displayName", await response.Content.ReadAsStringAsync());
+        Assert.Equal("Ania", (await Profile(client)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Display_name_over_max_length_returns_400()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        var response = await SetDisplayName(client, new string('a', AppUser.DisplayNameMaxLength + 1));
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Contains("displayName", await response.Content.ReadAsStringAsync());
+        Assert.Null((await Profile(client)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Missing_display_name_field_returns_400()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+
+        var response = await client.PutAsJsonAsync("/api/profile/display-name", new { });
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Other_user_does_not_see_my_display_name()
+    {
+        using var alice = await TestUsers.NewSignedInClient(factory);
+        using var bob = await TestUsers.NewSignedInClient(factory);
+        Assert.Equal(HttpStatusCode.OK, (await SetDisplayName(alice, "Alice")).StatusCode);
+
+        Assert.Null((await Profile(bob)).DisplayName);
+    }
+
+    [Fact]
+    public async Task Set_display_name_rotates_concurrency_stamp()
+    {
+        using var client = await TestUsers.NewSignedInClient(factory);
+        var me = await client.GetFromJsonAsync<MeBody>("/api/auth/me");
+
+        async Task<string?> Stamp()
+        {
+            await using var scope = factory.Services.CreateAsyncScope();
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            return await db.Users.Where(u => u.Email == me!.Email).Select(u => u.ConcurrencyStamp).SingleAsync();
+        }
+
+        var before = await Stamp();
+        Assert.Equal(HttpStatusCode.OK, (await SetDisplayName(client, "Ania")).StatusCode);
+
+        Assert.NotEqual(before, await Stamp());
+    }
 
     [Fact]
     public async Task New_user_profile_has_email_and_no_city()
@@ -144,8 +256,10 @@ public sealed class ProfileTests(PostgresAppFixture factory)
 
         var get = await client.GetAsync("/api/profile");
         var put = await SetCity(client, 1);
+        var putName = await SetDisplayName(client, "Ania");
 
         Assert.Equal(HttpStatusCode.Unauthorized, get.StatusCode);
         Assert.Equal(HttpStatusCode.Unauthorized, put.StatusCode);
+        Assert.Equal(HttpStatusCode.Unauthorized, putName.StatusCode);
     }
 }

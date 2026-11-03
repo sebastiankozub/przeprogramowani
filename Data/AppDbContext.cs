@@ -18,6 +18,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
 
     public DbSet<City> Cities => Set<City>();
 
+    public DbSet<Match> Matches => Set<Match>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -32,6 +34,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
 
         builder.Entity<AppUser>(user =>
         {
+            user.Property(u => u.DisplayName).HasMaxLength(AppUser.DisplayNameMaxLength);
+
             // Catalog rows are never deleted while a user lives there.
             user.HasOne(u => u.City)
                 .WithMany()
@@ -84,6 +88,27 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
                 .WithMany()
                 .HasForeignKey(w => w.MovieId)
                 .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        builder.Entity<Match>(match =>
+        {
+            match.HasKey(m => new { m.UserId, m.CandidateId });
+
+            // Both sides keyed on AspNetUsers.Id (never the email) — deleting either account removes the pair.
+            match.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(m => m.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            match.HasOne<AppUser>()
+                .WithMany()
+                .HasForeignKey(m => m.CandidateId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // The PK serves lookups by UserId; this index serves lookups by CandidateId.
+            match.HasIndex(m => m.CandidateId);
+
+            match.ToTable(t => t.HasCheckConstraint("CK_Matches_NotSelf", "\"UserId\" <> \"CandidateId\""));
         });
     }
 }

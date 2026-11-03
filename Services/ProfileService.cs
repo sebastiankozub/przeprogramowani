@@ -11,6 +11,9 @@ public enum ProfileOutcome
 
     /// <summary>Unknown city (set), or the user row no longer exists (e.g. a deleted account's cookie).</summary>
     NotFound,
+
+    /// <summary>The display name is empty/whitespace or longer than <see cref="AppUser.DisplayNameMaxLength"/> after trimming.</summary>
+    InvalidDisplayName,
 }
 
 public sealed record ProfileResult(ProfileOutcome Outcome, ProfileResponse? Value = null)
@@ -18,10 +21,12 @@ public sealed record ProfileResult(ProfileOutcome Outcome, ProfileResponse? Valu
     public static ProfileResult Ok(ProfileResponse value) => new(ProfileOutcome.Success, value);
 
     public static readonly ProfileResult NotFound = new(ProfileOutcome.NotFound);
+
+    public static readonly ProfileResult InvalidDisplayName = new(ProfileOutcome.InvalidDisplayName);
 }
 
 /// <summary>
-/// The user's profile (email + home city). Every operation is keyed on the given user id (AspNetUsers.Id),
+/// The user's profile (email + display name + home city). Every operation is keyed on the given user id (AspNetUsers.Id),
 /// never on the email claim.
 /// </summary>
 public sealed class ProfileService(AppDbContext db)
@@ -33,6 +38,7 @@ public sealed class ProfileService(AppDbContext db)
             .Where(u => u.Id == userId)
             .Select(u => new ProfileResponse(
                 u.Email ?? string.Empty,
+                u.DisplayName,
                 u.City == null ? null : new CityResponse(u.City.Id, u.City.Name, u.City.Voivodeship)))
             .FirstOrDefaultAsync(ct);
 
@@ -66,6 +72,26 @@ public sealed class ProfileService(AppDbContext db)
             // The city was deleted between the existence check above and the update.
             return ProfileResult.NotFound;
         }
+
+        return updated == 0 ? ProfileResult.NotFound : await GetAsync(userId, ct);
+    }
+
+    public async Task<ProfileResult> SetDisplayNameAsync(string userId, string displayName,
+        CancellationToken ct = default)
+    {
+        // The body binder leaves a missing "displayName" as null despite the non-nullable contract.
+        var trimmed = displayName?.Trim();
+        if (string.IsNullOrEmpty(trimmed) || trimmed.Length > AppUser.DisplayNameMaxLength)
+        {
+            return ProfileResult.InvalidDisplayName;
+        }
+
+        // Same direct update + ConcurrencyStamp rotation as SetCityAsync (see the comment there).
+        var updated = await db.Users
+            .Where(u => u.Id == userId)
+            .ExecuteUpdateAsync(s => s
+                .SetProperty(u => u.DisplayName, trimmed)
+                .SetProperty(u => u.ConcurrencyStamp, Guid.NewGuid().ToString()), ct);
 
         return updated == 0 ? ProfileResult.NotFound : await GetAsync(userId, ct);
     }

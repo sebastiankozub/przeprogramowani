@@ -42,6 +42,16 @@ public static class ProfileEndpoints
             })
             .WithName("SetProfileCity");
 
+        group.MapPut("/display-name", async (SetDisplayNameRequest request, ClaimsPrincipal user,
+                UserManager<AppUser> users, ProfileService service, CancellationToken ct) =>
+            {
+                var userId = users.GetUserId(user);
+                return userId is null
+                    ? Results.Unauthorized()
+                    : ToResult(await service.SetDisplayNameAsync(userId, request.DisplayName, ct));
+            })
+            .WithName("SetProfileDisplayName");
+
         return app;
     }
 
@@ -49,6 +59,10 @@ public static class ProfileEndpoints
     {
         ProfileOutcome.Success => Results.Ok(result.Value),
         ProfileOutcome.NotFound => Results.NotFound(),
+        ProfileOutcome.InvalidDisplayName => Results.ValidationProblem(new Dictionary<string, string[]>
+        {
+            ["displayName"] = [$"Display name must be 1–{AppUser.DisplayNameMaxLength} characters (not just spaces)."],
+        }),
         _ => throw new ArgumentOutOfRangeException(nameof(result), result.Outcome, "Unknown outcome."),
     };
 }

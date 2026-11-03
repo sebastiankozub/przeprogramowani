@@ -46,7 +46,7 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-02 | rate-watched-movies      | pick movies from the catalog and add, edit, remove them with a rating                 | S-01             | FR-002, US-01                     | done |
 | S-03 | set-home-city            | set their city from a list of Polish locations                                       | S-01             | FR-004, US-01, NFR-04             | done |
 | S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | done |
-| S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | proposed |
+| S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | in-progress |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | proposed |
 | S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
 | S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | proposed |
@@ -157,7 +157,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
   - Relative weights of taste overlap vs. proximity, and the "highly-rated" threshold. — Owner: user. Block: no (PRD fixes the decay curve; weights proposed in the plan).
   - How to demonstrate > 1 candidate in production with few real users (seeded demo users vs. several test accounts). — Owner: user. Block: no.
 - **Risk:** This is the core domain rule and the riskiest logic in the PRD (append-only list + never-zero decay + fallback); it gets the deepest testing. Recompute here is computed when the user requests a match; the background refresh is S-06.
-- **Status:** proposed
+- **Status:** in-progress
 
 ### S-06: Asynchronous match recompute
 

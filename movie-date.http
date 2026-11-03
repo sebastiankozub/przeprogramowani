@@ -118,4 +118,20 @@ Content-Type: application/json
   "cityId": {{cityId}}
 }
 
+### Profile — set or change the display name (trimmed; 200 with the profile; 400 empty/whitespace or > 40 chars)
+PUT {{MovieDate_HostAddress}}/api/profile/display-name
+Content-Type: application/json
+
+{
+  "displayName": "Ania"
+}
+
+### Profile — whitespace-only display name → 400 ValidationProblem (displayName)
+PUT {{MovieDate_HostAddress}}/api/profile/display-name
+Content-Type: application/json
+
+{
+  "displayName": "   "
+}
+
 ###

@@ -188,6 +188,10 @@ namespace MovieDate.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("text");
 
+                    b.Property<string>("DisplayName")
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
@@ -280,6 +284,39 @@ namespace MovieDate.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("MovieDate.Data.Match", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CandidateId")
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("FirstMatchedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<double>("Score")
+                        .HasColumnType("double precision");
+
+                    b.Property<int>("SharedFavorites")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SharedWatchlist")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("UserId", "CandidateId");
+
+                    b.HasIndex("CandidateId");
+
+                    b.ToTable("Matches", t =>
+                        {
+                            t.HasCheckConstraint("CK_Matches_NotSelf", "\"UserId\" <> \"CandidateId\"");
+                        });
                 });
 
             modelBuilder.Entity("MovieDate.Data.Movie", b =>
@@ -419,6 +456,21 @@ namespace MovieDate.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("City");
+                });
+
+            modelBuilder.Entity("MovieDate.Data.Match", b =>
+                {
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieDate.Data.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MovieDate.Data.WatchedMovie", b =>
