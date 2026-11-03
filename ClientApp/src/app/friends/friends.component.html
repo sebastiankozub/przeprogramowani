@@ -5,6 +5,10 @@
     <p class="auth-error" role="alert">{{ message }}</p>
   }
 
+  @if (!loaded()) {
+    <app-loading />
+  }
+
   @if (loaded() && !error()) {
     @if (isEmpty()) {
       <p>

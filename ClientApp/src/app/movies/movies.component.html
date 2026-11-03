@@ -18,6 +18,10 @@
     <p class="auth-error" role="alert">{{ message }}</p>
   }
 
+  @if (!loaded()) {
+    <app-loading />
+  }
+
   @if (loaded()) {
     @if (watched().length === 0) {
       <p>Nie oceniłeś jeszcze żadnego filmu.</p>

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { of } from 'rxjs';
+import { Subject, of } from 'rxjs';
 import { FriendsComponent } from './friends.component';
 import { Friend, FriendsList, FriendsService } from './friends.service';
 
@@ -55,5 +55,27 @@ describe('FriendsComponent', () => {
     expect(text(el)).toContain('Nie masz jeszcze znajomych');
     expect(el.querySelector('a[href="/matches"]')).not.toBeNull();
     expect(el.querySelector('ul')).toBeNull();
+  });
+
+  it('shows "Ładowanie…" until the list arrives, then hides it', async () => {
+    const pending = new Subject<FriendsList>();
+    TestBed.configureTestingModule({
+      imports: [FriendsComponent],
+      providers: [provideRouter([]), { provide: FriendsService, useValue: { list: () => pending } }],
+    });
+    const fixture = TestBed.createComponent(FriendsComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+
+    expect(el.querySelector('[role="status"]')?.textContent).toContain('Ładowanie…');
+    expect(text(el)).not.toContain('Nie masz jeszcze znajomych');
+
+    pending.next({ friends: [ania], addedMe: [] });
+    pending.complete();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(el.querySelector('[role="status"]')).toBeNull();
+    expect(text(el)).toContain('Ania');
   });
 });

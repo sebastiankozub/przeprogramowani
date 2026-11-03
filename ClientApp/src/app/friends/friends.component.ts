@@ -5,11 +5,12 @@ import { firstValueFrom } from 'rxjs';
 import { cityLabel } from '../profile/profile.service';
 import { MoviesError } from '../shared/api-errors';
 import { FriendsList, FriendsService } from './friends.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 /** The signed-in user's friends, plus the people who added them, each with a link to the conversation. */
 @Component({
   selector: 'app-friends',
-  imports: [MatButtonModule, RouterLink],
+  imports: [LoadingComponent, MatButtonModule, RouterLink],
   templateUrl: './friends.component.html',
 })
 export class FriendsComponent implements OnInit {

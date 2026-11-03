@@ -8,10 +8,11 @@ import { firstValueFrom } from 'rxjs';
 import { MovieSearchComponent } from './movie-search.component';
 import { MoviesError } from '../shared/api-errors';
 import { MAX_RATING, MIN_RATING, Movie, MoviesService, WatchedMovie } from './movies.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 @Component({
   selector: 'app-movies',
-  imports: [ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MovieSearchComponent],
+  imports: [LoadingComponent, ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MovieSearchComponent],
   templateUrl: './movies.component.html',
 })
 export class MoviesComponent implements OnInit {

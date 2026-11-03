@@ -9,11 +9,12 @@ import { RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { MoviesError } from '../shared/api-errors';
 import { CONVERSATION_NOT_ALLOWED, Friend, FriendsService, MESSAGE_MAX_LENGTH, Message } from './friends.service';
+import { LoadingComponent } from '../shared/loading.component';
 
 /** The stored conversation with one friend (latest 100 messages) and a form to send the next one. */
 @Component({
   selector: 'app-conversation',
-  imports: [DatePipe, ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatInputModule, RouterLink],
+  imports: [LoadingComponent, DatePipe, ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatInputModule, RouterLink],
   templateUrl: './conversation.component.html',
 })
 export class ConversationComponent {
