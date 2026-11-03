@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { INVALID_RATING, Movie, WatchedMovie, mapErrors } from '../movies/movies.service';
+import { INVALID_RATING, Movie, WatchedMovie } from '../movies/movies.service';
+import { mapErrors } from '../shared/api-errors';
 
 export interface WatchlistItem {
   movie: Movie;

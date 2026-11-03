@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { mapErrors } from '../movies/movies.service';
+import { mapErrors } from '../shared/api-errors';
 
 /** A city from the catalog — the API exposes no coordinates. */
 export interface City {

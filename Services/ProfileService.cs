@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MovieDate.Contracts;
 using MovieDate.Data;
+using Npgsql;
 
 namespace MovieDate.Services;
 
@@ -45,12 +46,31 @@ public sealed class ProfileService(AppDbContext db)
             return ProfileResult.NotFound;
         }
 
-        // Direct column update: leaves Identity's ConcurrencyStamp/SecurityStamp untouched, so a concurrent
-        // Identity change cannot make this fail with a concurrency exception. Cities are never deleted.
-        var updated = await db.Users
-            .Where(u => u.Id == userId)
-            .ExecuteUpdateAsync(s => s.SetProperty(u => u.CityId, (int?)cityId), ct);
+        // Direct column update that also rotates Identity's ConcurrencyStamp (SecurityStamp stays untouched,
+        // so the user's sessions remain valid). Both directions of a race with Identity's UserStore.UpdateAsync
+        // (e.g. /api/auth/manage/info, failed-login lockout counting), which writes every column:
+        // - Identity writes first: this update has no stamp check, so it simply wins on CityId.
+        // - This update lands between Identity's load and write: the rotated stamp makes Identity's optimistic
+        //   concurrency check fail with ConcurrencyFailure instead of silently reverting the city.
+        int updated;
+        try
+        {
+            updated = await db.Users
+                .Where(u => u.Id == userId)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(u => u.CityId, (int?)cityId)
+                    .SetProperty(u => u.ConcurrencyStamp, Guid.NewGuid().ToString()), ct);
+        }
+        catch (Exception ex) when (IsForeignKeyViolation(ex))
+        {
+            // The city was deleted between the existence check above and the update.
+            return ProfileResult.NotFound;
+        }
 
         return updated == 0 ? ProfileResult.NotFound : await GetAsync(userId, ct);
     }
+
+    // ExecuteUpdateAsync bypasses SaveChanges, so the provider exception may arrive unwrapped.
+    private static bool IsForeignKeyViolation(Exception ex) =>
+        (ex as PostgresException ?? ex.InnerException as PostgresException)?.SqlState == PostgresErrorCodes.ForeignKeyViolation;
 }

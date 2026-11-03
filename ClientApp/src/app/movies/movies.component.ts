@@ -6,7 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { firstValueFrom } from 'rxjs';
 import { MovieSearchComponent } from './movie-search.component';
-import { MAX_RATING, MIN_RATING, Movie, MoviesError, MoviesService, WatchedMovie } from './movies.service';
+import { MoviesError } from '../shared/api-errors';
+import { MAX_RATING, MIN_RATING, Movie, MoviesService, WatchedMovie } from './movies.service';
 
 @Component({
   selector: 'app-movies',

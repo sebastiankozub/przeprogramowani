@@ -11,8 +11,6 @@ public static class CitiesEndpoints
     public const int MaxResults = 20;
     public const int MaxQueryLength = 100;
 
-    private const string LikeEscape = "\\";
-
     public static IEndpointRouteBuilder MapCitiesEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup(RoutePrefix).RequireAuthorization();
@@ -33,15 +31,15 @@ public static class CitiesEndpoints
                     term = term[..MaxQueryLength];
                 }
 
-                var escaped = MoviesEndpoints.EscapeLikePattern(term);
+                var escaped = LikePattern.Escape(term);
                 var contains = $"%{escaped}%";
                 var prefix = $"{escaped}%";
 
                 // Unknown population sorts last (Postgres puts NULLs first in DESC order, hence ?? -1).
                 var cities = await db.Cities
                     .AsNoTracking()
-                    .Where(c => EF.Functions.ILike(c.Name, contains, LikeEscape))
-                    .OrderByDescending(c => EF.Functions.ILike(c.Name, prefix, LikeEscape))
+                    .Where(c => EF.Functions.ILike(c.Name, contains, LikePattern.EscapeChar))
+                    .OrderByDescending(c => EF.Functions.ILike(c.Name, prefix, LikePattern.EscapeChar))
                     .ThenByDescending(c => c.Population ?? -1)
                     .ThenBy(c => c.Name)
                     .ThenBy(c => c.Id)

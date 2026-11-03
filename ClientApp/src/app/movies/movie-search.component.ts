@@ -5,7 +5,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { catchError, debounceTime, distinctUntilChanged, map, of, startWith, switchMap, tap } from 'rxjs';
-import { Movie, MoviesError, MoviesService } from './movies.service';
+import { MoviesError } from '../shared/api-errors';
+import { Movie, MoviesService } from './movies.service';
 
 const SEARCH_DEBOUNCE_MS = 300;
 const MIN_QUERY_LENGTH = 2;

@@ -1,6 +1,7 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, catchError, map, throwError } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { mapErrors } from '../shared/api-errors';
 
 export interface Movie {
   id: number;
@@ -21,21 +22,8 @@ export const MAX_RATING = 10;
 const MOVIES_API = '/api/movies';
 const WATCHED_API = '/api/watched';
 
-const NETWORK_ERROR = 'Nie udało się połączyć z serwerem. Spróbuj ponownie.';
 export const INVALID_RATING = `Ocena musi być liczbą od ${MIN_RATING} do ${MAX_RATING}.`;
-const SESSION_EXPIRED = 'Sesja wygasła. Zaloguj się ponownie.';
 export const DUPLICATE_MESSAGE = 'Ten film jest już na Twojej liście — zmień ocenę poniżej.';
-
-/** Error carrying a user-facing (Polish) message, emitted by MoviesService methods. */
-export class MoviesError extends Error {
-  /** HTTP status of the failed call (0 = network error or non-HTTP failure). */
-  constructor(
-    message: string,
-    readonly status = 0,
-  ) {
-    super(message);
-  }
-}
 
 /** Thin wrapper over the movie catalog and the signed-in user's watched list. */
 @Injectable({ providedIn: 'root' })
@@ -59,6 +47,7 @@ export class MoviesService {
       mapErrors({
         badRequest: INVALID_RATING,
         notFound: 'Nie znaleziono tego filmu w katalogu.',
+        conflict: DUPLICATE_MESSAGE,
         fallback: 'Nie udało się dodać filmu.',
       }),
     );
@@ -82,41 +71,5 @@ export class MoviesService {
         fallback: 'Nie udało się usunąć filmu.',
       }),
     );
-  }
-}
-
-export interface ErrorMessages {
-  /** Only operations that send a rating can fail validation; others fall back. */
-  badRequest?: string;
-  notFound?: string;
-  /** Defaults to the watched-list duplicate message. */
-  conflict?: string;
-  fallback: string;
-}
-
-/** Converts HTTP failures into MoviesError with a Polish message (401 redirect is the interceptor's job). */
-export function mapErrors<T>(messages: ErrorMessages) {
-  return catchError<T, Observable<never>>((err: unknown) =>
-    throwError(() => new MoviesError(errorMessage(err, messages), err instanceof HttpErrorResponse ? err.status : 0)),
-  );
-}
-
-function errorMessage(err: unknown, messages: ErrorMessages): string {
-  if (!(err instanceof HttpErrorResponse)) {
-    return messages.fallback;
-  }
-  switch (err.status) {
-    case 0:
-      return NETWORK_ERROR;
-    case 400:
-      return messages.badRequest ?? messages.fallback;
-    case 401:
-      return SESSION_EXPIRED;
-    case 404:
-      return messages.notFound ?? messages.fallback;
-    case 409:
-      return messages.conflict ?? DUPLICATE_MESSAGE;
-    default:
-      return messages.fallback;
   }
 }

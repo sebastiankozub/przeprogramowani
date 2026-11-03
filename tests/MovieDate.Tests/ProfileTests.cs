@@ -49,6 +49,27 @@ public sealed class ProfileTests(PostgresAppFixture factory)
     }
 
     [Fact]
+    public async Task Set_city_rotates_concurrency_stamp()
+    {
+        // A stale Identity UpdateAsync (loaded before the city save) must then fail its concurrency check
+        // instead of silently writing the old CityId back.
+        using var client = await TestUsers.NewSignedInClient(factory);
+        var me = await client.GetFromJsonAsync<MeBody>("/api/auth/me");
+
+        async Task<string?> Stamp()
+        {
+            await using var scope = factory.Services.CreateAsyncScope();
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            return await db.Users.Where(u => u.Email == me!.Email).Select(u => u.ConcurrencyStamp).SingleAsync();
+        }
+
+        var before = await Stamp();
+        Assert.Equal(HttpStatusCode.OK, (await SetCity(client, await CityId(Warszawa))).StatusCode);
+
+        Assert.NotEqual(before, await Stamp());
+    }
+
+    [Fact]
     public async Task Set_city_then_profile_shows_it()
     {
         using var client = await TestUsers.NewSignedInClient(factory);
@@ -102,7 +123,11 @@ public sealed class ProfileTests(PostgresAppFixture factory)
     public async Task Profile_response_has_no_coordinates_or_population()
     {
         using var client = await TestUsers.NewSignedInClient(factory);
-        Assert.Equal(HttpStatusCode.OK, (await SetCity(client, await CityId(Warszawa))).StatusCode);
+        var put = await SetCity(client, await CityId(Warszawa));
+        Assert.Equal(HttpStatusCode.OK, put.StatusCode);
+        var putJson = await put.Content.ReadAsStringAsync();
+        Assert.Contains("Warszawa", putJson);
+        CitiesTests.AssertNoCoordinatesOrPopulation(putJson);
 
         var response = await client.GetAsync("/api/profile");
 

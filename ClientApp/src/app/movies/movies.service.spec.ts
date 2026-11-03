@@ -2,7 +2,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
-import { DUPLICATE_MESSAGE, MoviesError, MoviesService } from './movies.service';
+import { MoviesError } from '../shared/api-errors';
+import { DUPLICATE_MESSAGE, MoviesService } from './movies.service';
 
 describe('MoviesService', () => {
   let service: MoviesService;

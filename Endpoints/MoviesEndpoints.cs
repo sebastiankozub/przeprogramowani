@@ -11,8 +11,6 @@ public static class MoviesEndpoints
     public const int MaxResults = 20;
     public const int MaxQueryLength = 100;
 
-    private const string LikeEscape = "\\";
-
     public static IEndpointRouteBuilder MapMoviesEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup(RoutePrefix).RequireAuthorization();
@@ -32,16 +30,16 @@ public static class MoviesEndpoints
                     term = term[..MaxQueryLength];
                 }
 
-                var escaped = EscapeLikePattern(term);
+                var escaped = LikePattern.Escape(term);
                 var contains = $"%{escaped}%";
                 var prefix = $"{escaped}%";
 
                 var movies = await db.Movies
                     .AsNoTracking()
-                    .Where(m => EF.Functions.ILike(m.Title, contains, LikeEscape)
-                                || (m.OriginalTitle != null && EF.Functions.ILike(m.OriginalTitle, contains, LikeEscape)))
-                    .OrderByDescending(m => EF.Functions.ILike(m.Title, prefix, LikeEscape)
-                                            || (m.OriginalTitle != null && EF.Functions.ILike(m.OriginalTitle, prefix, LikeEscape)))
+                    .Where(m => EF.Functions.ILike(m.Title, contains, LikePattern.EscapeChar)
+                                || (m.OriginalTitle != null && EF.Functions.ILike(m.OriginalTitle, contains, LikePattern.EscapeChar)))
+                    .OrderByDescending(m => EF.Functions.ILike(m.Title, prefix, LikePattern.EscapeChar)
+                                            || (m.OriginalTitle != null && EF.Functions.ILike(m.OriginalTitle, prefix, LikePattern.EscapeChar)))
                     .ThenBy(m => m.Title)
                     .ThenBy(m => m.Id)
                     .Take(MaxResults)
@@ -54,8 +52,4 @@ public static class MoviesEndpoints
 
         return app;
     }
-
-    /// <summary>Escapes LIKE wildcards so user input is matched literally (escape character: backslash).</summary>
-    internal static string EscapeLikePattern(string value) =>
-        value.Replace("\\", "\\\\").Replace("%", "\\%").Replace("_", "\\_");
 }

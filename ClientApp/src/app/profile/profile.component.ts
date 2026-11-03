@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { catchError, debounceTime, distinctUntilChanged, firstValueFrom, map, of, startWith, switchMap, tap } from 'rxjs';
-import { MoviesError } from '../movies/movies.service';
+import { MoviesError } from '../shared/api-errors';
 import { City, Profile, ProfileService, cityLabel } from './profile.service';
 
 const SEARCH_DEBOUNCE_MS = 300;

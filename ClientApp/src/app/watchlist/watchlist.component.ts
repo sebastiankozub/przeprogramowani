@@ -4,7 +4,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { firstValueFrom } from 'rxjs';
 import { MovieSearchComponent } from '../movies/movie-search.component';
-import { MAX_RATING, MIN_RATING, Movie, MoviesError } from '../movies/movies.service';
+import { MAX_RATING, MIN_RATING, Movie } from '../movies/movies.service';
+import { MoviesError } from '../shared/api-errors';
 import { WatchlistItem, WatchlistService } from './watchlist.service';
 
 @Component({

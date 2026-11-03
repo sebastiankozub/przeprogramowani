@@ -1,7 +1,7 @@
 ---
 change_id: set-home-city
 title: Set home city
-status: implemented
+status: impl_reviewed
 created: 2026-11-03
 updated: 2026-11-03
 archived_at: null

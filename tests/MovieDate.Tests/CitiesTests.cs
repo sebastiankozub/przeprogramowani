@@ -134,16 +134,26 @@ public sealed class CitiesTests(PostgresAppFixture factory)
             await db.SaveChangesAsync();
         }
 
-        using var client = await TestUsers.NewSignedInClient(factory);
+        try
+        {
+            using var client = await TestUsers.NewSignedInClient(factory);
 
-        var results = await Search(client, $"zq{token}_x%zq");
+            var results = await Search(client, $"zq{token}_x%zq");
 
-        var found = Assert.Single(results);
-        Assert.Equal($"Zq{token}_x%Zq literal", found.Name);
+            var found = Assert.Single(results);
+            Assert.Equal($"Zq{token}_x%Zq literal", found.Name);
+        }
+        finally
+        {
+            // Keep the shared collection database free of test-only cities.
+            await using var scope = factory.Services.CreateAsyncScope();
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            await db.Cities.Where(c => c.WikidataId.StartsWith($"QT-{token}")).ExecuteDeleteAsync();
+        }
     }
 
     [Fact]
-    public async Task Search_caps_overlong_query()
+    public async Task Search_with_overlong_query_does_not_fail()
     {
         using var client = await TestUsers.NewSignedInClient(factory);
 
