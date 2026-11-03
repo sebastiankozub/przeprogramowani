@@ -1,10 +1,10 @@
 ---
 change_id: first-message-to-friend
 title: First message to friend
-status: implemented
+status: archived
 created: 2026-11-03
 updated: 2026-11-03
-archived_at: null
+archived_at: 2026-11-03T20:07:36Z
 ---
 
 ## Notes

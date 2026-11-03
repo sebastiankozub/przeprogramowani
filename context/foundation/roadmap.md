@@ -48,8 +48,8 @@ Mainstream dating apps match on photos and short bios, so matches often fizzle a
 | S-04 | want-to-watch-list       | add and remove movies on a "want to watch" list                                      | S-02             | FR-003, US-01                     | done |
 | S-05 | ranked-match-list        | request a match and see a ranked list of candidates scored on taste and distance     | S-02, S-03, S-04 | FR-005, US-01, NFR-01, NFR-04, §Business Logic | done |
 | S-06 | async-match-recompute    | see their match list refresh within ~10 s after changing their movies, without waiting | S-05             | FR-002, FR-003, FR-005, NFR-02    | done |
-| S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | proposed |
-| S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | in-progress |
+| S-07 | add-match-as-friend      | add a candidate from their match list as a friend                                    | S-05             | FR-006, US-01                     | done |
+| S-08 | first-message-to-friend  | send a message to a friend and read the stored conversation history                  | S-07             | FR-007, US-01, §Success Criteria (Guardrails) | done |
 
 NFR numbering follows the order in PRD §Non-Functional Requirements: NFR-01 match list < 2 s, NFR-02 write is non-blocking + ~10 s visibility, NFR-03 credentials never plain text, NFR-04 only city-level location exposed.
 
@@ -182,7 +182,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Small, but it is the gate the messaging guardrail relies on — only candidates actually on the user's match list may be friended.
-- **Status:** proposed
+- **Status:** done
 
 ### S-08: First message to a friend
 
@@ -194,7 +194,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** The north star; closes the primary success criterion. The main risk is the privacy guardrail (messages leaking to non-participants), so per-conversation authorization must be tested explicitly.
-- **Status:** in-progress
+- **Status:** done
 
 ## Backlog Handoff
 
@@ -241,3 +241,5 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **S-03: user can pick their city from a predefined list of Polish cities/counties/voivodeships and see it on their profile; coordinates are stored but never shown to other users.** — Archived 2026-11-03 → `context/archive/2026-11-03-set-home-city/`. Lesson: —.
 - **S-06: user who adds, edits, or removes a watched or watchlist movie gets an immediate response and sees their match list updated within roughly 10 seconds, with candidates only added or re-scored, never removed.** — Archived 2026-11-03 → `context/archive/2026-11-03-async-match-recompute/`. Lesson: —.
 - **S-05: user who has rated movies, has a watchlist, and has set a city can request a match and see a ranked list of more than one candidate, scored on shared highly-rated movies, shared watchlist movies, and distance-decayed proximity; with no strong matches they see the closest candidates instead of an empty list, and a candidate once listed never disappears.** — Archived 2026-11-03 → `context/archive/2026-11-03-ranked-match-list/`. Lesson: —.
+- **S-07: user can add a candidate from their match list as a friend (one-sided, no acceptance needed) and see them in a friends list.** — Delivered together with S-08 by change `first-message-to-friend`; Archived 2026-11-03 → `context/archive/2026-11-03-first-message-to-friend/`. Lesson: —.
+- **S-08: user can send a message to a friend and open the stored conversation history with them; nobody outside that pair can read it.** — Archived 2026-11-03 → `context/archive/2026-11-03-first-message-to-friend/`. Lesson: —.
