@@ -1,7 +1,7 @@
 ---
 change_id: testing-ci-quality-gates
 title: Quality gates in CI (test rollout phase 2)
-status: implementing
+status: impl_reviewed
 created: 2026-11-03
 updated: 2026-11-03
 archived_at: null
