@@ -280,9 +280,9 @@ Additive: two nullable columns. Existing users get `NULL` stamps, which the pend
 
 #### Automated
 
-- [x] 2.1 Frontend tests pass: `npx ng test --watch=false`
-- [x] 2.2 Frontend production build passes
-- [x] 2.3 Docker image builds
+- [x] 2.1 Frontend tests pass: `npx ng test --watch=false` — 9d378c5
+- [x] 2.2 Frontend production build passes — 9d378c5
+- [x] 2.3 Docker image builds — 9d378c5
 
 #### Manual
 
