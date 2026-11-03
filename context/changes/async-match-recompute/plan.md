@@ -288,7 +288,7 @@ Additive: two nullable columns. Existing users get `NULL` stamps, which the pend
 
 - [x] 2.4 Rate a movie, open `/matches` immediately: "Trwa aktualizacja dopasowań…" appears, then the list updates on its own — 43d29b8
 - [x] 2.5 Account without city/name: `/matches` shows the profile message and link, no spinner forever — 43d29b8
-- [x] 2.6 No "Szukaj dopasowań" button anywhere
+- [x] 2.6 No "Szukaj dopasowań" button anywhere — 43d29b8
 
 ### Phase 3: Production — deploy + verify
 
@@ -302,4 +302,4 @@ Additive: two nullable columns. Existing users get `NULL` stamps, which the pend
 
 - [x] 3.4 Logged in as `sebastiankozub@o2.pl`, `/matches` shows the pending indicator once, then a list (self-heal for the pre-S-06 account) — 43d29b8
 - [x] 3.5 On an `mdtest-*` account rate Casablanca ≥ 7: the reference account's `/matches` shows the change within ~10 s without any click — 43d29b8
-- [x] 3.6 `deploy-plan.md` updated with the new known-good release
+- [x] 3.6 `deploy-plan.md` updated with the new known-good release — 43d29b8
