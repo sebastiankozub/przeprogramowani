@@ -395,13 +395,13 @@ One browser spec for the full journey, gated in CI, then delivery through a PR a
 
 #### Automated
 
-- [x] 2.1 SPA unit tests pass
-- [x] 2.2 Production build passes
-- [x] 2.3 Existing e2e suite still passes
+- [x] 2.1 SPA unit tests pass — 14407d3
+- [x] 2.2 Production build passes — 14407d3
+- [x] 2.3 Existing e2e suite still passes — 14407d3
 
 #### Manual
 
-- [x] 2.4 Two-browser local check: add, message, recipient replies
+- [x] 2.4 Two-browser local check: add, message, recipient replies — 14407d3
 
 ### Phase 3: E2E journey, PR and production
 

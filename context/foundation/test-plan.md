@@ -100,6 +100,7 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 ### 6.1 Adding a backend integration test
 
 - TBD — see §3 Phase 3 (privacy and ranking contract). Existing suite under `tests/MovieDate.Tests/` is the current reference until then.
+- Risk #2 for friends and messages (2026-11-03, `first-message-to-friend`): `tests/MovieDate.Tests/FriendsTests.cs` and `ConversationsTests.cs` prove a stranger gets 404 and no data; matched pairs are seeded with a shared helper on the no-recompute fixture, because the top-up can match strangers.
 
 ### 6.2 Adding a unit test for scoring rules
 
@@ -109,7 +110,7 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 
 - **When**: only for a risk that crosses browser → auth → API → DB or lives only in the rendered UI. One test per risk; anything an integration test can prove goes to `tests/MovieDate.Tests/` instead.
 - **Location / naming**: `ClientApp/e2e/<scenario>.spec.ts`, one test per file, provenance header naming the test-plan risk; shared helpers in `ClientApp/e2e/support/`.
-- **Reference tests**: `ClientApp/e2e/auth-guard.spec.ts` (seed: signed-out path), `ClientApp/e2e/critical-path.spec.ts` (full path + background update).
+- **Reference tests**: `ClientApp/e2e/auth-guard.spec.ts` (seed: signed-out path), `ClientApp/e2e/critical-path.spec.ts` (full path + background update), `ClientApp/e2e/messaging.spec.ts` (second journey: add friend → write → partner replies through the API; user set up via `page.request` + `completeProfile`, partner context kept alive).
 - **Users and data**: never log in a shared account — create a throwaway `e2e-<id>@moviedate.test` user per test with `registerViaApi`; seed other users through the public API (`createPartner`, fresh `request.newContext`), drive only the user under test through the UI. No delete-account endpoint exists, so accounts stay in the local DB; unique ids keep runs independent.
 - **Locators and waits**: `getByRole` / `getByLabel` only; Material autocompletes need the option clicked (`getByRole('option', …)`); "Zapisz" needs `exact: true`. Wrap the first form submit in `expect(async () => …).toPass()` (SPA hydration); never `waitForTimeout`.
 - **Background recompute**: the e2e API runs with `MatchRecompute` quiet 5 s / max 15 s, so `/matches` opened right after a write still shows "Trwa aktualizacja dopasowań…". Write first, then open the page — an already-open page does not refresh.
