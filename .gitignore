@@ -487,3 +487,7 @@ Screenshot*.png
 .env.local
 # Playwright CLI output (may contain credentials)
 .playwright-cli/
+
+# Course materials and certification screenshots (never publish)
+lekcje/
+certyfikacja/
