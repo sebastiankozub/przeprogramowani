@@ -407,10 +407,10 @@ One browser spec for the full journey, gated in CI, then delivery through a PR a
 
 #### Automated
 
-- [x] 3.1 New messaging spec passes locally
-- [ ] 3.2 PR shows green backend, frontend and e2e CI jobs
-- [ ] 3.3 PR receives a non-REJECTED impl-review verdict
+- [x] 3.1 New messaging spec passes locally — 68cc48a
+- [x] 3.2 PR shows green backend, frontend and e2e CI jobs — 68cc48a
+- [x] 3.3 PR receives a non-REJECTED impl-review verdict — 8570beb
 
 #### Manual
 
-- [ ] 3.4 Production check with demo accounts, including a third-account 404
+- [x] 3.4 Production check with demo accounts, including a third-account 404 — 8cb5cd9

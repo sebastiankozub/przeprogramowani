@@ -1,7 +1,7 @@
 ---
 change_id: first-message-to-friend
 title: First message to friend
-status: impl_reviewed
+status: implemented
 created: 2026-11-03
 updated: 2026-11-03
 archived_at: null
