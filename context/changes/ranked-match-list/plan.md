@@ -372,13 +372,13 @@ Ship the slice, create demo accounts in production through the public API, and v
 
 #### Automated
 
-- [ ] 2.1 App builds: `dotnet build movie-date.csproj`
-- [ ] 2.2 Tests pass, including the new scoring and matches tests
-- [ ] 2.3 `/api/matches` → `401` with the app running
+- [x] 2.1 App builds: `dotnet build movie-date.csproj`
+- [x] 2.2 Tests pass, including the new scoring and matches tests
+- [x] 2.3 `/api/matches` → `401` with the app running
 
 #### Manual
 
-- [ ] 2.4 Two local accounts sharing a movie see each other with the same score; no emails or coordinates
+- [x] 2.4 Two local accounts sharing a movie see each other with the same score; no emails or coordinates
 
 ### Phase 3: Frontend — display name + /matches screen
 
