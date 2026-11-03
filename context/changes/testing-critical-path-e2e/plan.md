@@ -253,32 +253,32 @@ Not applicable. There are no schema or data changes. Test users accumulate in th
 
 #### Automated
 
-- [x] 1.1 `npm run e2e -- auth-guard` passes
-- [x] 1.2 SPA unit tests still pass
-- [x] 1.3 Backend tests still pass
+- [x] 1.1 `npm run e2e -- auth-guard` passes — 163477a
+- [x] 1.2 SPA unit tests still pass — 163477a
+- [x] 1.3 Backend tests still pass — 163477a
 
 #### Manual
 
-- [ ] 1.4 Seed test report shows a readable trace
+- [x] 1.4 Seed test report shows a readable trace — 163477a
 
 ### Phase 2: Critical-path test
 
 #### Automated
 
-- [x] 2.1 `npm run e2e` passes (both specs)
-- [x] 2.2 Break-check: removing the list reload makes critical-path red
-- [x] 2.3 SPA unit tests still pass
+- [x] 2.1 `npm run e2e` passes (both specs) — 805dac0
+- [x] 2.2 Break-check: removing the list reload makes critical-path red — 805dac0
+- [x] 2.3 SPA unit tests still pass — 805dac0
 
 #### Manual
 
-- [ ] 2.4 Trace shows the pending indicator and the partner row without a click
+- [x] 2.4 Trace shows the pending indicator and the partner row without a click — 805dac0
 
 ### Phase 3: Close out the test plan
 
 #### Automated
 
-- [ ] 3.1 Test plan §3 Phase 1 row is `complete`
-- [ ] 3.2 No "TBD — see §3 Phase 1" placeholder remains
+- [x] 3.1 Test plan §3 Phase 1 row is `complete`
+- [x] 3.2 No "TBD — see §3 Phase 1" placeholder remains
 
 #### Manual
 

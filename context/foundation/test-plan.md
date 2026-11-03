@@ -49,7 +49,7 @@ research's job, see §1 principle #3).
 
 | Risk | What would prove protection | Must challenge | Context `/10x-research` must ground | Likely cheapest layer | Anti-pattern to avoid |
 |------|-----------------------------|----------------|--------------------------------------|-----------------------|-----------------------|
-| #1 | After a rating write, the user's `/matches` shows the new or re-scored candidate by itself, without pressing anything, and the pending indicator clears | "The write returned 201, so matches will update" | write → trigger → debounce → worker path; how the SPA learns that an update landed; which backend integration tests already cover the server side | e2e (one browser test on top of existing integration tests) | fixed `sleep` instead of waiting for a visible outcome; driving the API directly and calling it e2e |
+| #1 | After a rating write, opening `/matches` announces the pending update and then shows the new or re-scored candidate by itself, without pressing anything, and the indicator clears. (Research 2026-11-03: pending is checked when the page loads; an already-open `/matches` is not refreshed — out of S-06 scope, so the test writes first, then opens the page.) | "The write returned 201, so matches will update" | write → trigger → debounce → worker path; how the SPA learns that an update landed; which backend integration tests already cover the server side | e2e (one browser test on top of existing integration tests) | fixed `sleep` instead of waiting for a visible outcome; driving the API directly and calling it e2e |
 | #2 | Every response describing another user carries only display name, city and score; requests for another user's resource id return 404/403 and change nothing | "Authenticated means authorized" | which endpoints return data about other users; ownership checks on per-user resources; what existing tests assert about response bodies | integration | happy-path-only; expected field list copied from the response DTO instead of from PRD NFR-04 |
 | #3 | Scores match independent checkpoints taken from the PRD text; a candidate stays listed after the owner's data changes so the pair no longer qualifies | "The current output is correct" | where the decay and taste weights live; which existing tests compute their expected value with the production formula | unit (scoring) + integration (append-only) | oracle problem — expected value computed by the same formula as production |
 | #4 | A fresh user completes the primary path in a real browser against the real app and database | "API green means the UI works" | auth/session shape between SPA and API, route guards, how the app is served for tests, data isolation between runs | e2e (single critical-path test) | many brittle e2e tests instead of one critical one; selectors tied to styling |
@@ -63,7 +63,7 @@ orchestrator updates Status as artifacts appear on disk.
 
 | # | Phase name | Goal (one line) | Risks covered | Test types | Status | Change folder |
 |---|------------|-----------------|---------------|------------|--------|---------------|
-| 1 | Critical-path browser coverage | Prove a fresh user can go register → profile → rate → `/matches` and see the list update by itself in a real browser | #1, #4 | e2e (Playwright) | implementing | context/changes/testing-critical-path-e2e/ |
+| 1 | Critical-path browser coverage | Prove a fresh user can go register → profile → rate → `/matches` and see the list update by itself in a real browser | #1, #4 | e2e (Playwright) | complete | context/changes/testing-critical-path-e2e/ |
 | 2 | Quality gates in CI | Prove that a red backend, SPA or e2e test blocks a pull request | #5 | CI gate (GitHub Actions) | not started | — |
 | 3 | Privacy and ranking contract | Prove responses never leak another user's private data and that ranking follows PRD checkpoints, with oracles taken from the PRD | #2, #3 | integration + unit | not started | — |
 
@@ -74,7 +74,7 @@ orchestrator updates Status as artifacts appear on disk.
 | backend unit + integration | xUnit + `Microsoft.AspNetCore.Mvc.Testing` | xunit 2.9.3, Mvc.Testing 10.0.14 | 11 test classes, 136 tests; real API in-process |
 | database for tests | Testcontainers.PostgreSql | 4.16.0 | throwaway Postgres per run; needs Docker |
 | SPA unit | Vitest via `ng test` | vitest ^5.0.0, Angular ^22.2.0 | 8 spec files, 33 tests |
-| e2e | none yet — see Phase 1 | — | Playwright planned |
+| e2e | Playwright Test (`ClientApp/playwright.config.ts`) | @playwright/test 1.64.1 | 2 specs in `ClientApp/e2e/`; starts API + `ng serve`; details in `context/foundation/test-stack.md` |
 | CI | none yet — see Phase 2 | — | only a manual deploy workflow exists |
 
 Test-base profile: `meaningful` — backend integration suite across every feature plus SPA unit specs; no browser-level test and no automatic gate.
@@ -92,7 +92,7 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 | build (`dotnet build`, `ng build`) | local + CI | required after §3 Phase 2 | compile and template errors |
 | backend integration (`dotnet test`) | local + CI | required after §3 Phase 2 | API, matching and persistence regressions |
 | SPA unit (`ng test`) | local + CI | required after §3 Phase 2 | component and service regressions |
-| e2e on the critical path | local, then CI on PR | required after §3 Phase 1 (local) / Phase 2 (CI) | broken primary user path |
+| e2e on the critical path (`npm run e2e` in `ClientApp/`) | local now, CI on PR after §3 Phase 2 | required (local) since §3 Phase 1; CI after Phase 2 | broken primary user path, `/matches` not refreshing itself |
 | privacy and ranking contract tests | local + CI | required after §3 Phase 3 | data leaks, ranking drift |
 
 ## 6. Cookbook Patterns
@@ -107,7 +107,14 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 
 ### 6.3 Adding an e2e test
 
-- TBD — see §3 Phase 1 (critical path: rating a movie updates `/matches` without a click).
+- **When**: only for a risk that crosses browser → auth → API → DB or lives only in the rendered UI. One test per risk; anything an integration test can prove goes to `tests/MovieDate.Tests/` instead.
+- **Location / naming**: `ClientApp/e2e/<scenario>.spec.ts`, one test per file, provenance header naming the test-plan risk; shared helpers in `ClientApp/e2e/support/`.
+- **Reference tests**: `ClientApp/e2e/auth-guard.spec.ts` (seed: signed-out path), `ClientApp/e2e/critical-path.spec.ts` (full path + background update).
+- **Users and data**: never log in a shared account — create a throwaway `e2e-<id>@moviedate.test` user per test with `registerViaApi`; seed other users through the public API (`createPartner`, fresh `request.newContext`), drive only the user under test through the UI. No delete-account endpoint exists, so accounts stay in the local DB; unique ids keep runs independent.
+- **Locators and waits**: `getByRole` / `getByLabel` only; Material autocompletes need the option clicked (`getByRole('option', …)`); "Zapisz" needs `exact: true`. Wrap the first form submit in `expect(async () => …).toPass()` (SPA hydration); never `waitForTimeout`.
+- **Background recompute**: the e2e API runs with `MatchRecompute` quiet 5 s / max 15 s, so `/matches` opened right after a write still shows "Trwa aktualizacja dopasowań…". Write first, then open the page — an already-open page does not refresh.
+- **Run locally**: `docker compose up -d`, stop any local `dotnet run`, then `cd ClientApp; npm run e2e` (one spec: `npx playwright test e2e/<name>.spec.ts`; trace: add `--trace on`, then `npx playwright show-report`).
+- **Prove it protects**: break the behavior the risk targets, re-run, see red on the risk assertion, restore.
 
 ### 6.4 Adding a test for a new endpoint that returns data about other users
 
@@ -115,7 +122,7 @@ Test-base profile: `meaningful` — backend integration suite across every featu
 
 ### 6.5 Per-rollout-phase notes
 
-(Appended as phases land.)
+- Phase 1 (2026-11-03, `testing-critical-path-e2e`): risk #1 had to be reframed to "write, then open /matches" — the SPA checks pending on load only. MaxDelay had to go up to 15 s because three profile/rating writes in a row could trigger the recompute before the page opened.
 
 ## 7. What We Deliberately Don't Test
 
