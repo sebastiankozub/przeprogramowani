@@ -1,7 +1,7 @@
 ---
 change_id: refactor-opportunities
 title: Rank refactor opportunities from the match-flow technical debt
-status: new
+status: preparing
 created: 2026-11-04
 updated: 2026-11-04
 archived_at: null
