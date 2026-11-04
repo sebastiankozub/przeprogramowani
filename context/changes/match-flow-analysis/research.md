@@ -9,6 +9,7 @@ tags: [research, match-flow, matching, match-recompute, movie-ratings, watchlist
 status: complete
 last_updated: 2026-11-04
 last_updated_by: Claude Code (Opus 5.5)
+last_updated_note: "Structural claims verified with ast-grep 0.51.1 (M4L3 step 2); 11 offset queue/worker anchors corrected; trigger-gate shape, Clock usage and Matches-writer claims refined. See 'Structural verification (ast-grep)'."
 ---
 
 # Research: the match flow
@@ -102,7 +103,9 @@ sequenceDiagram
 
 ### A. Write paths (movie-ratings, watchlist, profile-city)
 
-All 8 write routes call the trigger only on a success outcome, after the service has committed. Each error outcome returns early without triggering.
+All 8 write routes call the trigger only on a success outcome, after the service has committed. Each error outcome returns early without triggering. The success gate has two shapes (ast-grep, see the verification section):
+- 4 sites use a guard clause, `if (Outcome != Success) return …;` and then the trigger: `WatchedMoviesEndpoints.cs:51,73,93` and `WatchlistEndpoints.cs:83`.
+- 3 sites put the trigger inside `if (Outcome == Success) { … }`: `WatchlistEndpoints.cs:52,102` and `ProfileEndpoints.cs:68`.
 
 | Route | Endpoint → service | Commit | Trigger |
 |---|---|---|---|
@@ -123,15 +126,15 @@ All 8 write routes call the trigger only on a success outcome, after the service
 - **Trigger** `Services/MatchRecomputeTrigger.cs:13-24`.
   - A separate `ExecuteUpdateAsync` sets `MatchesRequestedAt = Clock.Now()` with `CancellationToken.None`, then calls `queue.Enqueue`.
   - The comment at `:15-17` admits that a missing stamp "is the one case the status self-heal cannot detect" [E].
-- **Queue** `Services/MatchRecomputeQueue.cs:51-98`.
+- **Queue** `Services/MatchRecomputeQueue.cs:26-73`.
   - In-memory `Dictionary` per process behind a lock; one entry per user, so a burst collapses [E].
-  - A user is due after a quiet period of 2 s or a max delay of 5 s (defaults `:36,39`, bound from `appsettings.json` `MatchRecompute`) [E].
-  - `TakeDue` removes users as it hands them out (`:78-95`) [E].
-  - It uses an injectable `TimeProvider` (`:51`) [E].
-- **Worker** `Services/MatchRecomputeWorker.cs:109-151`.
+  - A user is due after a quiet period of 2 s or a max delay of 5 s (defaults `:11,14`, bound from `appsettings.json` `MatchRecompute`) [E].
+  - `TakeDue` removes users as it hands them out (`:53-70`) [E].
+  - It uses an injectable `TimeProvider` (`:26`) [E].
+- **Worker** `Services/MatchRecomputeWorker.cs:11-53`.
   - A `PeriodicTimer` polls every 250 ms. Users are processed one at a time per machine, each in a new DI scope [E].
-  - Any exception is logged and the job dropped, with no retry (`:147-150`) [E].
-  - On shutdown, users already taken stay pending only in the DB (`:128-131`) [E].
+  - Any exception is logged and the job dropped, with no retry (`:49-52`) [E].
+  - On shutdown, users already taken stay pending only in the DB (`:30-33`) [E].
 - **Pending rule** `Services/MatchService.cs:129-131`: `ProfileComplete && (ComputedAt is null || RequestedAt > ComputedAt)` [E].
   - `start = Clock.Now()` is captured right after `BEGIN` (`:176-180`).
   - `ComputedAt = start` is written forward-only (`:279-283`).
@@ -199,7 +202,7 @@ Rows marked "covered" were read in test code; no coverage tool was run [E].
 | All 8 write routes request a recompute | Yes: one theory over the 8 routes, `tests/MovieDate.Tests/MatchRecomputeTests.cs:76-126` | The theory is hand-extended for new routes |
 | Failure branches do **not** trigger | Most: `MatchRecomputeTests.cs:128-161` | Not covered: watchlist add 409 duplicate, mark-watched 400, mark-watched 409 rollback |
 | Queue debounce | Yes: unit tests with a manual `TimeProvider` (`MatchRecomputeTests.cs:362-430`) and a live burst test (`:163-187`) | The live burst test depends on wall-clock time (300 ms quiet), so it is a possible CI flake [I] |
-| Worker survives a failing job | **No**: `:189-212` covers a ProfileIncomplete *outcome*, not an exception | `catch (Exception)` at `MatchRecomputeWorker.cs:147` is unexercised |
+| Worker survives a failing job | **No**: `:189-212` covers a ProfileIncomplete *outcome*, not an exception | `catch (Exception)` at `MatchRecomputeWorker.cs:49` is unexercised |
 | Restart / durability | Partial: `:214-239` nulls the stamps and checks `/status` re-enqueues | No real host restart; no "RequestedAt > ComputedAt with an empty queue"; no two-machine case |
 | FK retry loop; forward-only `ComputedAt`; write during a running recompute | **No** | Static `Clock.Now()` (`Services/Clock.cs`) prevents deterministic time control |
 | Scoring, ranking, fallback, mirror, append-only (lost favourite), concurrent recomputes, no PII | Yes: `MatchScoringTests.cs:15-103`, `MatchesTests.cs:88-253` | No test of the 20-new-strong cap, `MaxSharedTitles`, or append-only after a city move |
@@ -241,13 +244,13 @@ Ordered by risk to the flow. Each item carries its label.
    - It also places match-recompute's DI registration inside matching's `AddAppMatches` [E].
 3. **No startup sweep; self-heal runs only through `/status`** [E: one hosted service, `MatchesEndpoints.cs:31`; re-enqueue at `:69-72`].
    - [I] After a deploy or restart, a pending user is recomputed only when they next open `/matches`. Until then their row on other users' lists is stale too.
-4. **A failed recompute is logged and dropped, with no retry or backoff** [E: `MatchRecomputeWorker.cs:147-150`; the FK retry gives up after 3 attempts, `MatchService.cs:157`].
+4. **A failed recompute is logged and dropped, with no retry or backoff** [E: `MatchRecomputeWorker.cs:49-52`; the FK retry gives up after 3 attempts, `MatchService.cs:157`].
    - [I] A user whose recompute fails persistently is retried only while their page polls (up to 30 s), then abandoned with `slow = true`.
    - There is no error tracker in the repo (repo map, Limitations), so these failures exist only in logs.
 5. **The pending comparison mixes clocks across machines** [I from `Clock.cs` (static `DateTimeOffset.UtcNow`), `MatchRecomputeTrigger.cs:21`, `MatchService.cs:180`].
    - `RequestedAt` comes from the write machine; `start` comes from the recompute machine.
    - If the recompute machine's clock runs ahead, a write that lands during that recompute can be silently lost.
-   - Also, `Clock.Now()` is static, so stamp ordering cannot be tested deterministically [E].
+   - Also, `Clock.Now()` is static, so stamp ordering cannot be tested deterministically [E]. ast-grep finds 8 `Clock.Now()` call sites in 6 files under `Services/`, including both pending-stamp sources (`MatchRecomputeTrigger.cs:21`, `MatchService.cs:180`) and the upsert time (`MatchService.cs:311`). `TimeProvider` is referenced only by `MatchRecomputeQueue.cs:26` and its registration at `MatchesEndpoints.cs:28` [E].
 6. **The access gates rely on mirror rows through a one-direction query** [E: `FriendsService.cs:102`, `ConversationService.cs:39`].
    - Safe today because the upsert writes both rows in one statement and never deletes.
    - [I] Any future expiry, partial delete or non-mirrored write breaks messaging asymmetrically.
@@ -263,14 +266,42 @@ Ordered by risk to the flow. Each item carries its label.
     - the 20-candidate cap;
     - gates driven by real recompute output at the API level.
 
+## Structural verification (ast-grep)
+
+Every structural claim in this report (counts, "only", "never", "no call site", repeated call shapes) was checked with ast-grep 0.51.1 (`ast-grep run -p` / `ast-grep scan --inline-rules`) at 7734e90 over `Endpoints/ Services/ Data/ Program.cs` (plus `tests/` and `ClientApp/src` where stated). Every zero result was cross-checked with plain `grep` to tell a real absence from a bad pattern.
+
+| # | Claim | ast-grep pattern / rule | Result | Verdict |
+|---|---|---|---|---|
+| 1 | Exactly 7 trigger call sites, all in endpoints, none in `Services/` | `$T.RequestAsync($$$A)` | 7: `WatchedMoviesEndpoints.cs:51,73,93`, `WatchlistEndpoints.cs:52,83,102`, `ProfileEndpoints.cs:68` | **confirmed** |
+| 2 | 8 write routes reach the trigger (profile helper serves 2) | `ToTriggeringResult($$$A)` | 2: `ProfileEndpoints.cs:43,55` → 6 direct + 2 via helper = 8 | **confirmed** |
+| 3 | Write services know nothing about recompute | rule `kind: identifier, regex ^MatchRecomputeTrigger$` | 11: its own class (`MatchRecomputeTrigger.cs:11`), 9 endpoint lambda/helper parameters, 1 DI registration (`MatchesEndpoints.cs:30`). 0 in any other `Services/` file | **confirmed** |
+| 4 | Each site triggers only on success | `RequestAsync` `inside: if_statement` vs `not: inside: if_statement` | 3 inside `if (== Success)`; 4 after a `!= Success → return` guard (checked by reading each gate line) | **refined**: two gate shapes, both success-only (section A) |
+| 5 | The only hosted service is the worker, so there is no startup sweep | `$S.AddHostedService<$T>()` | 1: `MatchesEndpoints.cs:31` (`MatchRecomputeWorker`) | **confirmed** |
+| 6 | Gates query `Matches` in one direction | rule `member_access_expression, regex ^db\.Matches$` | 4 reads: `FriendsService.cs:102`, `ConversationService.cs:39`, `MatchService.cs:56`, `MatchService.cs:204`. All 4 filter `m.UserId == userId` (caller side); none filters `CandidateId == userId` | **confirmed and extended**: the list read and the recompute's "already listed" read are caller-side too, so all `Matches` reads depend on the mirror |
+| 7 | No DELETE on `Matches`; rows go only by FK cascade | `$X.ExecuteDeleteAsync($$$A)`; `db.Matches.Remove($$$)`; rule on string kinds `regex (?i)delete\s+from` | 3 `ExecuteDeleteAsync`, all on `WatchlistItems`/`WatchedMovies` (`WatchlistService.cs:84,143`, `WatchedMoviesService.cs:125`); 0 `Remove`; 0 SQL `DELETE FROM` (grep: 0) | **confirmed** |
+| 8 | One raw-SQL upsert is the only product-code writer of `Matches` | `$D.Database.ExecuteSqlAsync($$$A)`; rule `interpolated_string_expression, regex (INSERT\|DELETE\|UPDATE)…"Matches"` | 1 + 1: `MatchService.cs:313-314`. The first attempt with `kind: raw_string_literal` returned **0**, but grep found `INSERT INTO "Matches"` at `:315`. That zero was a wrong node kind (the SQL is an interpolated raw string `$"""…"""`), not an absence | **confirmed** (after correcting the pattern) |
+| 9 | Tests seed match rows directly as entities | `new Match { $$$A }` | 2: `tests/MovieDate.Tests/TestPairs.cs:54,55` (both mirror rows); grep agrees | **confirmed** |
+| 10 | `MatchesRequestedAt` is written only by the trigger; `MatchesComputedAt` only by the recompute, for the requester only | `$S.SetProperty($L, $V)` + grep on both names | `RequestedAt`: `MatchRecomputeTrigger.cs:21` only. `ComputedAt`: `MatchService.cs:283` only, filtered `u.Id == userId` (`:282`). The other 4 `SetProperty` hits (`ProfileService.cs:66,92`) set `CityId`/`DisplayName`/`ConcurrencyStamp` | **confirmed** (debt item 7) |
+| 11 | Worker: catch-all logs and drops; the FK retry is the only other `Exception` handler on the path | rule `kind: catch_clause` | `MatchRecomputeWorker.cs:30,45` (cancellation), `:49` `catch (Exception ex)`; `MatchService.cs:157` `when (IsForeignKeyViolation(ex) && attempt < MaxAttempts)` | **confirmed**; **anchors corrected** (see below) |
+| 12 | Static `Clock` vs injectable `TimeProvider` | `Clock.Now()`; rule `identifier ^TimeProvider$` | 8 `Clock.Now()` in 6 `Services/` files; `TimeProvider` 2 (queue ctor `:26`, DI `MatchesEndpoints.cs:28`) | **refined** (debt item 5) |
+| 13 | `GET /api/matches` never returns 409 (dead SPA mapping) | rule `identifier, regex Status409Conflict` | 1: `MatchesEndpoints.cs:92`, inside `POST /recompute` (`:78-99`) | **confirmed** |
+| 14 | The SPA never calls `POST /recompute` | `this.http.$M($$$A)` (TS) | **0**, a bad pattern: generic calls `this.http.get<T>(…)` don't match. grep shows exactly 2 calls, both `http.get` (`matches.service.ts:45,55`); the string rule `regex recompute` over `ClientApp/src` hits only the spec asserting no recompute method (`matches.service.spec.ts:79-80`) | **confirmed** (via grep; ast-grep pattern defective) |
+| 15 | The friends list does not re-check the match | grep `Matches` in `FriendsService.cs:85-95` | 0 | **confirmed** |
+
+**Corrections applied to this report.** The first draft cited queue and worker line numbers taken from a `cat -n` of three concatenated files. That offset them by 25 (queue) and 98 (worker) lines. ast-grep's file-local positions exposed it (the worker's `catch (Exception)` is at `:49`, not `:147`). These anchors were corrected in sections B, F, Technical debt #4 and Code References:
+- Queue `:51-98 → :26-73`, `:36,39 → :11,14`, `:78-95 → :53-70`, `:51 → :26`.
+- Worker `:109-151 → :11-53`, `:115-151 → :17-53`, `:128-131 → :30-33`, `:147(-150) → :49(-52)`.
+
+No claim was **refuted**.
+
 ## Code References
 
 - `Endpoints/WatchedMoviesEndpoints.cs:51,73,93`: trigger call sites for rating add, update and delete
 - `Endpoints/WatchlistEndpoints.cs:52,83,102`: trigger call sites for watchlist add, delete and mark-watched
 - `Endpoints/ProfileEndpoints.cs:63-69`: `ToTriggeringResult` (city and display name)
 - `Services/MatchRecomputeTrigger.cs:13-24`: separate stamp + enqueue; the self-heal blind-spot comment
-- `Services/MatchRecomputeQueue.cs:51-98`: in-memory debounce queue
-- `Services/MatchRecomputeWorker.cs:115-151`: poll loop; catch-log-drop
+- `Services/MatchRecomputeQueue.cs:26-73`: in-memory debounce queue
+- `Services/MatchRecomputeWorker.cs:17-53`: poll loop; catch-log-drop
 - `Endpoints/MatchesEndpoints.cs:17-33`: DI of the queue, trigger and worker; `:54-76` status + self-heal
 - `Services/MatchService.cs:129-131`: pending rule; `:176-180` start stamp; `:279-283` forward-only `ComputedAt`; `:289-327` mirrored raw-SQL upsert; `:39,42,45,49` caps and retry constants
 - `Services/MatchScoringService.cs:32-59`: scoring formulas
